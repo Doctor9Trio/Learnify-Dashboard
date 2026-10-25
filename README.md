@@ -1,31 +1,39 @@
-# Sarthak Dashboard 🚀
+# Sarthak Dashboard Product Suites 🚀
 
-A modern, pixel-perfect sales and operations dashboard built for omnichannel retail (online store & physical shops). Featuring 13 interactive Single Page Application (SPA) views, real-time analytics charts, slide-out drawer sheets, ⌘K universal search, and fluid multi-palette dark/light themes.
+A flagship collection of pixel-perfect, zero-dependency, ultra-modern web application suites built for omnichannel retail operations and multi-network social media management.
+
+Featuring a master launcher portal, full Single Page Application (SPA) routing, real-time interactive charts, slide-out drawer sheets, ⌘K universal command palettes, elastic ink-pill navigation, and zero-flash multi-palette light/dark theming.
 
 ---
 
-## ✨ Features
+## 🌟 Included Suites
 
-- **📊 Comprehensive 13-Page Suite**:
-  - **Dashboard**: Live health score gauge, dual-year revenue chart, hourly visitor heatmap, and channel donut.
-  - **Orders**: Status filtering, live search, customer details, and slide-out side sheet with fulfillment workflows.
-  - **Products**: Real-time stock meters (in-stock, low-stock, out-of-stock), margins, ratings, and catalog management.
-  - **Customers (CRM)**: Customer directory, order history, and 6-month spend charts.
-  - **Deep Analytics**: Conversion funnel, period comparisons (7D/30D/90D/12M), traffic sources, and leaderboard.
-  - **Messages**: 2-pane split inbox with conversation threads and quick reply composer.
-  - **Email Campaigns**, **Automations**, **Integrations**, **Workspace (Kanban)**, **Help Center**, **Feedback**, and **Settings**.
+### 1. 🛍️ Corbel Omnichannel Retail Suite (`/corbel/`)
+*Pixel-perfect clone & enhancement of Corbel demo.*
+- **Interactive Semicircular Gauge**: Live health score gauge with animated SVG stroke transitions and channel performance metrics.
+- **Dynamic Revenue & Analytics**: Dual-year revenue bar chart (`2025`/`2026`) with animated height transitions and hover tooltips.
+- **Hourly Visitor Heatmap & Channel Donut**: Peak engagement heatmaps and sales channel breakdown.
+- **13 Interactive SPA Pages**:
+  - `Dashboard`, `Orders` (with slide-out order fulfillment sheets), `Products` (inventory meters & stock tracking), `Customers (CRM)`, `Analytics`, `Messages`, `Email Campaigns`, `Automations`, `Integrations`, `Workspace (Kanban boards)`, `Help Center`, `Feedback`, and `Settings`.
+- **Theme Engine**: Instant toggle between Light & Dark themes, plus 4 curated palettes (`Mono`, `Pastel`, `Ocean`, `Sage`).
 
-- **🎨 Design & Micro-Interactions**:
-  - **Elastic Ink Pill Slider**: Fluid physics-based navigation tab tracking.
-  - **Floating Dock Navigation**: Quick launcher with ⌘K search, tooltips, and theme toggle.
-  - **Multi-Palette Theming**: Instant zero-flash toggle between Light & Dark modes, plus 4 curated color themes (`Mono`, `Pastel`, `Ocean`, `Sage`).
-  - **Responsive Design**: Flawless experience across desktop, tablet, and mobile.
+### 2. 📱 Murmura Social Media Management Suite (`/murmura/`)
+*Pixel-perfect clone & enhancement of Murmura social suite.*
+- **8-Network Multi-Publishing**: Schedule, draft, and publish to Instagram, Facebook, X, LinkedIn, TikTok, YouTube, Pinterest, and Threads.
+- **Unified Social Inbox**: Real-time cross-platform conversation threads, comment responses, and direct messaging.
+- **Multi-Tier Approval Workflows**: Role-based access control, pending review states, and publishing controls.
+- **Visual Publishing Calendar**: Weekly and monthly view with campaign tags, time slot scheduling, and unscheduled drafts drawer.
+- **Cross-Channel Analytics & Social Listening**: Follower growth, reach, sentiment analysis, and brand mention monitors.
+- **Floating Dock & Ink Pill Navigation**: Physics-based tab indicators, quick action dock, and ambient background mesh gradient shaders.
+
+### 3. 🌐 Master Portal Hub (`/index.html`)
+- Unified executive landing page showcasing both product suites with live cards, feature highlights, and direct launch links.
 
 ---
 
 ## 🛠️ Quick Start
 
-No complex build pipeline required! You can run it with any static HTTP server:
+Zero build step or compilation required! Runs directly in any modern browser via static HTTP server:
 
 ```bash
 # Using npx http-server
@@ -35,4 +43,15 @@ npx http-server -p 3456
 python -m http.server 3456
 ```
 
-Open `http://localhost:3456` in your browser.
+Open `http://localhost:3456` in your browser:
+- Master Hub: `http://localhost:3456/`
+- Corbel Retail Dashboard: `http://localhost:3456/corbel/#/dashboard`
+- Murmura Social Media Suite: `http://localhost:3456/murmura/#/overview`
+
+---
+
+## 🎨 Technology Stack
+- **Core**: Vanilla HTML5, Modern ECMAScript (ES6 Modules)
+- **Styling**: Vanilla CSS with CSS Custom Properties tokens, responsive viewport queries, fluid physics animations
+- **Vector Graphics**: Pure inline SVG icons, gauges, charts, and sparklines
+- **Build**: Zero build step runtime (Vite production asset bundles)

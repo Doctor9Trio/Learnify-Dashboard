@@ -1,210 +1,330 @@
 <!doctype html>
-<!-- Sarthak Dashboard — sales dashboard for an online and in-store shop — © 2026 Sarthak Dashboard. All rights reserved. -->
-<html lang="en" data-theme="light" data-palette="mono">
+<html lang="en" data-theme="dark">
 <head>
-  <meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Sarthak Dashboard — sales dashboard for an online and in-store shop</title>
-  <meta name="description" content="Sarthak Dashboard is an animated sales dashboard for a shop that sells online and in store: live revenue, a sales score, monthly analytics, visits by hour and device, products, orders, customers, an inbox, email campaigns, automations, integrations, project boards, help, feedback and settings — light and dark." />
-  <meta name="theme-color" content="#efefed" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sarthak Dashboard — sales dashboard" />
-  <meta property="og:description" content="Revenue, orders, customers and campaigns in one animated dashboard." />
+  <title>Sarthak Product Suites — Flagship Dashboards</title>
+  <meta name="description" content="Sarthak Flagship Dashboards: Corbel Retail Sales Dashboard and Murmura Social Media Management Suite." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400..700&display=swap" rel="stylesheet" />
-  <script>
-    /* Before first paint: the saved theme and palette, so the page never flashes the
-       wrong colours. The app is hidden only under html.js (the load
-       choreography reveals it); the failsafe shows it if the script never runs. */
-    (function (d) {
-      d.classList.add('js');
-      var rec = /[?&]record\b/.test(location.search);   /* a rig is filming: light, wait for it */
-      if (rec) d.classList.add('is-record');
-      try {
-        var t = rec ? 'light' : JSON.parse(localStorage.getItem('corbel:theme') || '"light"');
-        d.dataset.theme = t === 'dark' ? 'dark' : 'light';
-        /* the colour palette (Settings → Appearance); black and white unless chosen */
-        var p = rec ? 'mono' : JSON.parse(localStorage.getItem('corbel:palette') || '"mono"');
-        d.dataset.palette = /^(mono|pastel|ocean|sage)$/.test(p) ? p : 'mono';
-      } catch (e) {}
-      if (!rec) setTimeout(function () { d.classList.add('failsafe'); }, 4000);
-    })(document.documentElement);
-  </script>
-  <script type="module" crossorigin src="./assets/index-CPU6Hf-a.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-RTUh9KzA.css">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400..800&family=Inter:wght@400..700&display=swap" rel="stylesheet" />
   <style>
-  .cc-preview-pill{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:var(--cc-lift,max(16px,env(safe-area-inset-bottom)));z-index:2147483647;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;box-sizing:border-box;background:#FF5722;color:#ffffff;font:700 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid #fff;box-shadow:4px 4px 0 rgba(0,0,0,.35);border-radius:6px;transition:background 0.2s,transform 0.15s;}
-  .cc-preview-pill:hover{background:#ff6f43;transform:translateY(-1px);}
-  .cc-preview-pill:focus-visible{outline:3px solid #161616;outline-offset:2px;box-shadow:0 0 0 7px #fff}
-  .cc-preview-pill__short{display:none}
-  @media (max-width:480px){.cc-preview-pill{right:max(10px,env(safe-area-inset-right));bottom:var(--cc-lift,max(10px,env(safe-area-inset-bottom)));padding:0 12px;font-size:11px}.cc-preview-pill__long{display:none}.cc-preview-pill__short{display:inline}}
+    :root {
+      --bg: #0c1216;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --card-hover: rgba(255, 255, 255, 0.08);
+      --text: #e8eef1;
+      --text-muted: #8d9aa3;
+      --accent-coral: #FF5722;
+      --accent-mint: #22C55E;
+      --accent-sky: #38bdf8;
+      --font: 'Urbanist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg: #f4f5f2;
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-border: rgba(0, 0, 0, 0.08);
+      --card-hover: #ffffff;
+      --text: #14202a;
+      --text-muted: #5f6d78;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      position: relative;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    /* Ambient Mesh */
+    .mesh {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .mesh i {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.5;
+    }
+    .mesh__a { width: 50vmax; height: 50vmax; top: -20vmax; left: -10vmax; background: radial-gradient(closest-side, #38bdf840, transparent); }
+    .mesh__b { width: 60vmax; height: 60vmax; bottom: -20vmax; right: -15vmax; background: radial-gradient(closest-side, #22c55e30, transparent); }
+    .mesh__c { width: 40vmax; height: 40vmax; top: 30%; right: 20%; background: radial-gradient(closest-side, #ff572225, transparent); }
+
+    .container {
+      max-width: 1100px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 87, 34, 0.12);
+      color: var(--accent-coral);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 87, 34, 0.25);
+    }
+
+    .title {
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      line-height: 1.5;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+      width: 100%;
+    }
+
+    .suite-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s, border-color 0.25s, background 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .suite-card:hover {
+      transform: translateY(-4px);
+      background: var(--card-hover);
+      border-color: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .suite-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .icon-corbel {
+      background: #14202a;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .icon-murmura {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+    }
+
+    .suite-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+    }
+
+    .suite-name {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-top: 14px;
+      margin-bottom: 6px;
+    }
+
+    .suite-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .feature-item {
+      font-size: 13.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-coral);
+    }
+
+    .feature-dot.mint { background: var(--accent-mint); }
+
+    .btn-launch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      background: var(--text);
+      color: var(--bg);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .suite-card:hover .btn-launch {
+      background: var(--accent-coral);
+      color: #ffffff;
+      transform: translateX(4px);
+    }
+
+    .theme-switcher {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 100;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      padding: 10px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      backdrop-filter: blur(12px);
+      transition: background 0.2s;
+    }
   </style>
 </head>
 <body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="i-logo" viewBox="0 0 24 24"><path d="M4.5 3.5h15v4.2h-4.6v4.4h-4.4v4.4H6.6v4h-2.1z" fill="currentColor" stroke="none"/></symbol>
-      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
-      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6"/></symbol>
-      <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></symbol>
-      <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.6l2-8H6.3"/><circle cx="9" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></symbol>
-      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.3-5.5 6.5-5.5s5.9 1.9 6.5 5.5"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.8c2 .7 3.2 2.4 3.5 5.2"/></symbol>
-      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5z"/></symbol>
-      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></symbol>
-      <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2.5 4.5 13.5H12l-1 8 8.5-11H12z"/></symbol>
-      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M21 20H3"/></symbol>
-      <symbol id="i-plug" viewBox="0 0 24 24"><path d="M9 2.5v5M15 2.5v5M6.5 7.5h11V11a5.5 5.5 0 0 1-11 0zM12 16.5v5"/></symbol>
-      <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8 1c0 1.7-2.4 2.1-2.4 3.7M12 17.2v.1"/></symbol>
-      <symbol id="i-feedback" viewBox="0 0 24 24"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4h13A1.5 1.5 0 0 1 20 5.5v9a1.5 1.5 0 0 1-1.5 1.5H10l-4.5 4v-4A1.5 1.5 0 0 1 4 14.5z"/><path d="M8.5 9h7M8.5 12h4"/></symbol>
-      <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></symbol>
-      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7zM19 16c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3z"/></symbol>
-      <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></symbol>
-      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
-      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></symbol>
-      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
-      <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
-      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7.5 11 12 15.5 16.5 11M5 19.5h14"/></symbol>
-      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
-      <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
-      <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
-      <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.1"/></symbol>
-      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-      <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 5h16l-6 7.5V19l-4-1.8v-4.7z"/></symbol>
-      <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="5.5" cy="12" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/><circle cx="18.5" cy="12" r="1.3" fill="currentColor"/></symbol>
-      <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/></symbol>
-      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></symbol>
-      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9.5 7V4.5h5V7M6 7l1 13h10l1-13"/></symbol>
-      <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="m13.5 6.5 4 4"/></symbol>
-      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
-      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3 3.5V16h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
-      <symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9.5 5.5 4h13L20 9.5M4 9.5h16M4 9.5a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0 2.7 2.7 0 0 0 5.3 0M5 11.5V20h14v-8.5M10 20v-5h4v5"/></symbol>
-      <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9S14.6 18.4 12 21c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></symbol>
-      <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.4"/><path d="M11 18.5h2"/></symbol>
-      <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8.5 20.5h7M12 16.5v4"/></symbol>
-      <symbol id="i-tablet" viewBox="0 0 24 24"><rect x="4.5" y="2.5" width="15" height="19" rx="2.4"/><path d="M11 18.5h2"/></symbol>
-      <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1.4 1.4 0 0 1 0 2l-6.4 6.4a1.4 1.4 0 0 1-2 0z"/><circle cx="8" cy="8" r="1.4"/></symbol>
-      <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19z"/><path d="M12 10v4.5M12 17.2v.1"/></symbol>
-      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
-      <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></symbol>
-      <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
-      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 5.5 16H8"/></symbol>
-      <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3.6-3.6a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3.6 3.6a4 4 0 0 0 5.7 5.7l1-1"/></symbol>
-      <symbol id="i-paperclip" viewBox="0 0 24 24"><path d="m20 11.5-8 8a5 5 0 0 1-7-7l8.5-8.5a3.3 3.3 0 0 1 4.7 4.7L9.7 17.2a1.7 1.7 0 0 1-2.4-2.4L15 7.2"/></symbol>
-      <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5zM4 19.5A1.5 1.5 0 0 0 5.5 21H20"/></symbol>
-      <symbol id="i-board" viewBox="0 0 24 24"><rect x="3.5" y="4" width="17" height="16" rx="2.4"/><path d="M9.2 4v16M14.8 4v16"/></symbol>
-      <symbol id="i-sidebar" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2.6"/><path d="M9.5 4.5v15M6 8.5h1.4M6 11.5h1.4"/></symbol>
-      <symbol id="i-logout" viewBox="0 0 24 24"><path d="M14 4h4.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H14M9 8l-4 4 4 4M5 12h10"/></symbol>
-    </defs>
-  </svg>
+  <div class="mesh" aria-hidden="true">
+    <i class="mesh__a"></i>
+    <i class="mesh__b"></i>
+    <i class="mesh__c"></i>
+  </div>
 
-  <a class="skip" href="#main">Skip to content</a>
-  <div class="mesh" aria-hidden="true"><i class="mesh__a"></i><i class="mesh__b"></i><i class="mesh__c"></i></div>
-
-  <div class="app">
-    <header class="top">
-      <a class="brand" href="#/dashboard" aria-label="Sarthak Dashboard">
-        <span class="brand__mark" style="font-weight:800; font-size:16px;">S</span>
-        <span class="brand__txt"><b>Sarthak Dashboard</b><small>Pro trial, 9 days left</small></span>
-      </a>
-      <nav class="tabs" aria-label="Primary">
-        <div class="tabs__track">
-          <a class="tab" href="#/dashboard" data-route="dashboard">Dashboard</a>
-          <a class="tab" href="#/orders" data-route="orders">Orders<span class="tab__count" data-count="orders"></span></a>
-          <a class="tab" href="#/products" data-route="products">Products</a>
-          <a class="tab" href="#/customers" data-route="customers">Customers</a>
-          <a class="tab" href="#/messages" data-route="messages">Messages<span class="tab__count" data-count="messages"></span></a>
-          <a class="tab" href="#/analytics" data-route="analytics">Analytics</a>
-          <a class="tab" href="#/automations" data-route="automations">Automations</a>
-          <!-- The ink pill is a clipped layer holding a light copy of the labels:
-               its two edges move on their own, so it stretches without ever
-               scaling, and the label colour changes exactly at its edge. -->
-          <span class="tabs__pill" aria-hidden="true"></span>
-        </div>
-      </nav>
-      <div class="top__tools">
-        <button class="ibtn ibtn--glass" type="button" id="bell-btn" aria-label="Notifications" aria-haspopup="dialog" aria-expanded="false"><svg class="ico"><use href="#i-bell"/></svg><span class="bell__dot" hidden></span></button>
-        <div class="team" aria-label="Team online: 4 people">
-          <span class="av av--sm" style="--h:206">MR</span><span class="av av--sm" style="--h:162">JO</span><span class="av av--sm" style="--h:12">AP</span><span class="av av--sm av--more">+2</span>
-        </div>
-        <a class="me" href="#/settings" aria-label="Your profile: Sarthak"><span class="av" style="--h:206">SD</span></a>
-      </div>
+  <div class="container">
+    <header class="header">
+      <div class="brand-badge">Sarthak Product Suite</div>
+      <h1 class="title">Flagship Experience Dashboards</h1>
+      <p class="subtitle">100% pixel-perfect clones reverse-engineered with REA. Explore the Retail Sales Dashboard or the Social Media Management Suite.</p>
     </header>
 
-    <!-- the dock: places that sit outside the daily tabs, plus search and the theme -->
-    <nav class="dock" aria-label="Workspace and tools">
-      <button class="dock__btn" type="button" id="open-finder" aria-haspopup="dialog" aria-label="Search (⌘K)"><svg class="ico"><use href="#i-search"/></svg><span class="dock__tip">Search <kbd>&#8984;K</kbd></span></button>
-      <span class="dock__sep" aria-hidden="true"></span>
-      <a class="dock__btn" href="#/workspace" data-route="workspace" aria-label="Workspace"><svg class="ico"><use href="#i-board"/></svg><span class="dock__count" data-count="workspace"></span><span class="dock__tip">Workspace</span></a>
-      <a class="dock__btn" href="#/settings" data-route="settings" aria-label="Settings"><svg class="ico"><use href="#i-gear"/></svg><span class="dock__tip">Settings</span></a>
-      <a class="dock__btn" href="#/help" data-route="help" aria-label="Help center"><svg class="ico"><use href="#i-help"/></svg><span class="dock__tip">Help center</span></a>
-      <span class="dock__sep" aria-hidden="true"></span>
-      <a class="dock__btn dock__upgrade" href="#/settings/plan" aria-label="Unlock forecasting: upgrade to Sarthak Plus"><svg class="ico"><use href="#i-spark"/></svg><span class="dock__tip">Upgrade to Sarthak Plus</span></a>
-      <button class="dock__btn" type="button" id="theme-btn" aria-label="Switch to dark theme"><svg class="ico theme-ico"><use href="#i-moon"/></svg><span class="dock__tip">Theme</span></button>
-    </nav>
-
-    <main class="main" id="main" tabindex="-1">
-      <div class="head">
-        <h1 class="head__title" id="page-title" tabindex="-1">Dashboard</h1>
-        <!-- grouped tabs (Customers, Messages, Automations, Workspace) open a glass row of their pages -->
-        <nav class="subtabs" aria-label="In this section" hidden>
-          <div class="subtabs__track"><span class="subtabs__pill" aria-hidden="true"></span></div>
-        </nav>
-        <div class="live" title="Shoppers on the website and in the two stores right now">
-          <span class="live__dot" aria-hidden="true"></span>
-          <span class="live__n" id="live-n" aria-hidden="true"></span>
-          <span class="sr-only" id="live-sr"></span>
-          <span class="live__label">live now</span>
+    <div class="grid">
+      <!-- Corbel Retail Dashboard -->
+      <a href="./corbel/#/dashboard" class="suite-card">
+        <div>
+          <div class="card-top">
+            <div class="suite-icon icon-corbel">S</div>
+            <span class="suite-tag">Retail &amp; eCommerce</span>
+          </div>
+          <h2 class="suite-name">Sarthak Dashboard</h2>
+          <p class="suite-desc">Sales performance, health score semicircle gauge, dual-year revenue chart, hourly visits heatmap, products inventory &amp; CRM order side-sheets.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-dot"></span> 13 full Single Page Application views</li>
+            <li class="feature-item"><span class="feature-dot"></span> Elastic GSAP ink-pill navigation tabs</li>
+            <li class="feature-item"><span class="feature-dot"></span> 4 themes (Mono, Pastel, Ocean, Sage)</li>
+          </ul>
         </div>
-      </div>
+        <div class="btn-launch">
+          Launch Corbel Dashboard →
+        </div>
+      </a>
 
-      <div class="views">
-        <section class="view" data-view="dashboard" hidden></section>
-        <section class="view" data-view="products" hidden></section>
-        <section class="view" data-view="orders" hidden></section>
-        <section class="view" data-view="customers" hidden></section>
-        <section class="view" data-view="messages" hidden></section>
-        <section class="view" data-view="email" hidden></section>
-        <section class="view" data-view="automations" hidden></section>
-        <section class="view" data-view="analytics" hidden></section>
-        <section class="view" data-view="integrations" hidden></section>
-        <section class="view" data-view="workspace" hidden></section>
-        <section class="view" data-view="help" hidden></section>
-        <section class="view" data-view="feedback" hidden></section>
-        <section class="view" data-view="settings" hidden></section>
-      </div>
-    </main>
-  </div>
-
-  <!-- notifications -->
-  <div class="pop" id="bell-pop" role="dialog" aria-label="Notifications" hidden>
-    <div class="pop__head"><b>Notifications</b><button class="link-btn" type="button" id="read-all">Mark all read</button></div>
-    <ul class="pop__list" id="bell-list"></ul>
-  </div>
-
-  <!-- ⌘K -->
-  <dialog class="finder" id="finder" aria-label="Search">
-    <div class="finder__box">
-      <label class="finder__field">
-        <svg class="ico"><use href="#i-search"/></svg>
-        <input id="finder-q" type="text" placeholder="Search pages, products, orders, customers…" autocomplete="off" spellcheck="false"
-          role="combobox" aria-expanded="true" aria-controls="finder-list" aria-autocomplete="list" />
-        <kbd>Esc</kbd>
-      </label>
-      <ul class="finder__list" id="finder-list" role="listbox" aria-label="Results"></ul>
+      <!-- Murmura Social Media Suite -->
+      <a href="./murmura/#/overview" class="suite-card">
+        <div>
+          <div class="card-top">
+            <div class="suite-icon icon-murmura">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5c2.2-3.6 4.4-3.6 6.6 0s4.4 3.6 6.6 0"/><path d="M6.5 10c1.6-2.4 3.2-2.4 4.8 0s3.2 2.4 4.8 0"/><circle cx="19.2" cy="8.2" r="1.3" fill="currentColor"/></svg>
+            </div>
+            <span class="suite-tag">Social &amp; Publishing</span>
+          </div>
+          <h2 class="suite-name">Sarthak Murmura</h2>
+          <p class="suite-desc">Multi-network publishing workspace: cross-platform scheduler, approval queues, unified comment &amp; DM inbox, and brand listening.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-dot mint"></span> Interactive week/month publishing calendar</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> 8 networks (IG, FB, TikTok, X, LinkedIn, etc.)</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> Team roles, approvals &amp; brand switcher</li>
+          </ul>
+        </div>
+        <div class="btn-launch">
+          Launch Murmura Suite →
+        </div>
+      </a>
     </div>
-  </dialog>
+  </div>
 
-  <!-- shared modal + side sheet -->
-  <dialog class="modal" id="modal"></dialog>
-  <dialog class="sheet" id="sheet"></dialog>
-
-  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
-
-  <a class="cc-preview-pill" href="#" aria-label="START FREE TRIAL"><span class="cc-preview-pill__long">START FREE TRIAL →</span><span class="cc-preview-pill__short">START →</span></a>
-  <script>(()=>{const p=document.querySelector('.cc-preview-pill');if(!p)return;const fit=()=>{p.style.removeProperty('--cc-lift');const a=p.getBoundingClientRect(),h=innerHeight;let top=h;for(const el of document.body.querySelectorAll('*')){if(el===p||p.contains(el))continue;const s=getComputedStyle(el);if((s.position!=='fixed'&&s.position!=='sticky')||s.display==='none'||s.visibility==='hidden'||s.opacity==='0')continue;const r=el.getBoundingClientRect();if(r.height&&r.height<200&&r.top>h/2&&r.bottom>=h-40&&r.left<a.right&&r.right>a.left)top=Math.min(top,r.top)}if(top<h)p.style.setProperty('--cc-lift',h-top+10+'px')};addEventListener('load',()=>{fit();setTimeout(fit,1500)});addEventListener('resize',fit)})()</script>
+  <button class="theme-switcher" id="theme-btn" onclick="
+    const current = document.documentElement.dataset.theme;
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    this.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
+  ">☀️ Light</button>
 </body>
 </html>
