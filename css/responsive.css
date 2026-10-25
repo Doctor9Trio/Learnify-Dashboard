@@ -1,0 +1,227 @@
+/* ============================================================
+   responsive.css — Mobile & Tablet Breakpoints
+   Structured breakpoints: Mobile (<768px), Tablet (768-1023px),
+   Laptop (1024-1279px), Desktop (≥1280px)
+   ============================================================ */
+
+/* ============================================================
+   1. MOBILE (< 768px)
+   ============================================================ */
+@media (max-width: 767px) {
+  /* Hide sidebar on mobile */
+  .sidebar {
+    display: none;
+  }
+
+  /* Main area full width */
+  .main-area {
+    margin-left: 0;
+  }
+
+  /* Top nav: show only brand + hamburger */
+  .top-nav__tabs {
+    display: none;
+  }
+
+  .top-nav__right .top-nav__avatars {
+    display: none;
+  }
+
+  .top-nav__right .top-nav__live {
+    display: none;
+  }
+
+  /* Hamburger button (visible on mobile only) */
+  .top-nav__hamburger {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: auto;
+    color: var(--text-primary);
+  }
+
+  .top-nav__hamburger span {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+  }
+
+  /* KPI grid: single column */
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Widgets: single column stacked */
+  .widgets-row,
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Subnav adjustments */
+  .subnav__date {
+    display: none;
+  }
+
+  .subnav__btn span {
+    display: none;
+  }
+
+  .subnav__btn {
+    padding: 7px 10px;
+  }
+
+  /* Heatmap: scrollable on small screens */
+  .heatmap-grid-wrapper {
+    overflow-x: auto;
+  }
+
+  .heatmap-grid {
+    min-width: 480px;
+  }
+
+  /* Floating CTA: full width at bottom */
+  .cta-floating {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    justify-content: center;
+    border-radius: 12px;
+  }
+
+  /* Page padding */
+  .page-content { padding: 0 12px 80px; }
+  .page-header  { padding: 16px 12px 0; }
+  .subnav       { padding: 12px 12px; }
+  .top-nav      { padding: 0 12px; }
+}
+
+/* ============================================================
+   2. TABLET (768px – 1023px)
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Sidebar remains hidden on tablet */
+  .sidebar {
+    display: none;
+  }
+
+  .main-area {
+    margin-left: 0;
+  }
+
+  /* KPI: 2 columns */
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Widgets stacked */
+  .widgets-row,
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Show nav tabs, hide excess */
+  .top-nav__tabs {
+    display: flex;
+  }
+
+  .top-nav__tabs .top-nav__tab:nth-child(n+5) {
+    display: none;
+  }
+
+  .top-nav__hamburger {
+    display: none;
+  }
+
+  .top-nav__right .top-nav__live {
+    display: flex;
+  }
+
+  .subnav__date {
+    display: flex;
+  }
+
+  .subnav__btn span {
+    display: inline;
+  }
+
+  .page-content { padding: 0 20px 40px; }
+  .page-header  { padding: 20px 20px 0; }
+  .subnav       { padding: 14px 20px; }
+  .top-nav      { padding: 0 20px; }
+}
+
+/* ============================================================
+   3. LAPTOP (1024px – 1279px)
+   ============================================================ */
+@media (min-width: 1024px) {
+  .sidebar {
+    display: flex;
+  }
+
+  .main-area {
+    margin-left: var(--sidebar-width);
+  }
+
+  .top-nav__hamburger {
+    display: none;
+  }
+
+  .top-nav__tabs {
+    display: flex;
+  }
+
+  .top-nav__tabs .top-nav__tab {
+    display: flex;
+  }
+
+  .top-nav__right .top-nav__avatars {
+    display: flex;
+  }
+
+  .top-nav__right .top-nav__live {
+    display: flex;
+  }
+
+  .subnav__date {
+    display: flex;
+  }
+
+  .subnav__btn span {
+    display: inline;
+  }
+
+  /* Side by side widgets */
+  .widgets-row {
+    grid-template-columns: 38% 1fr;
+  }
+
+  .charts-row {
+    grid-template-columns: 55% 1fr;
+  }
+
+  .page-content { padding: 0 var(--padding-page) var(--padding-page); }
+  .page-header  { padding: 24px var(--padding-page) 0; }
+  .subnav       { padding: 16px var(--padding-page); }
+  .top-nav      { padding: 0 var(--padding-page); }
+}
+
+/* ============================================================
+   4. DESKTOP (≥ 1280px) — Full 4-Column Layout
+   ============================================================ */
+@media (min-width: 1280px) {
+  .kpi-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .top-nav__tabs .top-nav__tab {
+    display: flex;
+  }
+}

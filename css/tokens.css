@@ -1,0 +1,217 @@
+/* ============================================================
+   tokens.css — Design System Tokens (Light + Dark Mode)
+   Reverse-engineered from demo.codeandchill.store/corbel/
+   ============================================================ */
+
+:root {
+  /* ── Page Background ───────────────────────────────────── */
+  --bg-page:              #F4F2EF;
+  --bg-sidebar:           #F4F2EF;
+
+  /* ── Card Surfaces ──────────────────────────────────────── */
+  --card-dark-bg:         #1A1A1A;
+  --card-dark-text:       #FFFFFF;
+  --card-dark-muted:      rgba(255, 255, 255, 0.55);
+  --card-light-bg:        #EBEBEB;
+  --card-light-text:      #1A1A1A;
+  --card-light-muted:     #6B6B6B;
+
+  /* ── Navigation ─────────────────────────────────────────── */
+  --nav-bg:               #F4F2EF;
+  --nav-border:           rgba(0, 0, 0, 0.07);
+  --nav-tab-active-bg:    #1A1A1A;
+  --nav-tab-active-text:  #FFFFFF;
+  --nav-tab-text:         #6B6B6B;
+  --nav-tab-hover-bg:     rgba(0, 0, 0, 0.05);
+
+  /* ── Sub-Navigation (Overview/Online/In store) ──────────── */
+  --subnav-track-bg:      rgba(0, 0, 0, 0.05);
+  --subnav-active-bg:     #1A1A1A;
+  --subnav-active-text:   #FFFFFF;
+  --subnav-inactive-text: #6B6B6B;
+
+  /* ── Sidebar ────────────────────────────────────────────── */
+  --sidebar-width:        60px;
+  --sidebar-icon:         #9B9B9B;
+  --sidebar-icon-hover:   #1A1A1A;
+  --sidebar-border:       rgba(0, 0, 0, 0.07);
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --text-primary:         #1A1A1A;
+  --text-secondary:       #6B6B6B;
+  --text-muted:           #9B9B9B;
+  --text-link:            #1A1A1A;
+
+  /* ── Borders & Shape ────────────────────────────────────── */
+  --border-color:         rgba(0, 0, 0, 0.08);
+  --border-radius-card:   20px;
+  --border-radius-pill:   999px;
+  --border-radius-sm:     6px;
+  --border-radius-btn:    999px;
+  --border-radius-badge:  4px;
+
+  /* ── Data / Status Colors ───────────────────────────────── */
+  --color-positive:       #22C55E;
+  --color-positive-bg:    rgba(34, 197, 94, 0.12);
+  --color-negative:       #EF4444;
+  --color-negative-bg:    rgba(239, 68, 68, 0.12);
+  --color-live-dot:       #22C55E;
+  --color-badge-orders:   #FF5722;
+
+  /* ── Floating CTA ───────────────────────────────────────── */
+  --cta-bg:               #FF5722;
+  --cta-bg-hover:         #E64A19;
+  --cta-text:             #FFFFFF;
+  --cta-shadow:           0 4px 20px rgba(255, 87, 34, 0.4);
+
+  /* ── Chart Colors ───────────────────────────────────────── */
+  --chart-bar-current:    #1A1A1A;
+  --chart-bar-hatch-fg:   rgba(0, 0, 0, 0.35);
+  --chart-bar-hatch-bg:   transparent;
+  --chart-bar-forecast:   rgba(0, 0, 0, 0.08);
+  --chart-grid-line:      rgba(0, 0, 0, 0.06);
+  --chart-axis-text:      #9B9B9B;
+  --chart-tooltip-bg:     #1A1A1A;
+  --chart-tooltip-text:   #FFFFFF;
+  --chart-avg-line:       rgba(0, 0, 0, 0.2);
+
+  /* ── Donut Chart ────────────────────────────────────────── */
+  --donut-website:        #1A1A1A;
+  --donut-instore:        #9B9B9B;
+  --donut-clickcollect:   #CBCBCB;
+  --donut-gap:            #F4F2EF;
+
+  /* ── Heatmap Intensity Shades ───────────────────────────── */
+  --heatmap-0:            #DEDAD4;
+  --heatmap-1:            #C5C0B9;
+  --heatmap-2:            #9E9890;
+  --heatmap-3:            #706B62;
+  --heatmap-4:            #3D3A34;
+  --heatmap-5:            #1A1A1A;
+
+  /* ── Gauge ──────────────────────────────────────────────── */
+  --gauge-track:          rgba(255, 255, 255, 0.12);
+  --gauge-fill:           rgba(255, 255, 255, 0.88);
+  --gauge-dot:            #FFFFFF;
+  --gauge-center-text:    #FFFFFF;
+
+  /* ── Sparkline (KPI mini-chart) ─────────────────────────── */
+  --sparkline-stroke:     rgba(0, 0, 0, 0.3);
+  --sparkline-stroke-dark:rgba(255, 255, 255, 0.4);
+  --mini-circle-track:    rgba(0, 0, 0, 0.1);
+  --mini-bar-bg:          rgba(0, 0, 0, 0.18);
+  --mini-bar-bg-active:   rgba(0, 0, 0, 0.5);
+
+  /* ── Shadows ─────────────────────────────────────────────── */
+  /* Corbel uses NO card shadows — pure flat design */
+  --shadow-card:          none;
+  --shadow-tooltip:       0 4px 16px rgba(0, 0, 0, 0.15);
+
+  /* ── Transitions ─────────────────────────────────────────── */
+  --transition-fast:      150ms ease;
+  --transition-base:      200ms ease;
+  --transition-slow:      400ms ease;
+
+  /* ── Spacing (used in layout) ───────────────────────────── */
+  --gap-cards:            16px;
+  --padding-page:         24px;
+  --nav-height:           60px;
+}
+
+/* ============================================================
+   DARK MODE — toggled via data-theme="dark" on <html>
+   ============================================================ */
+[data-theme="dark"] {
+  /* ── Page Background ───────────────────────────────────── */
+  --bg-page:              #121212;
+  --bg-sidebar:           #121212;
+
+  /* ── Card Surfaces ──────────────────────────────────────── */
+  --card-dark-bg:         #2A2A2A;
+  --card-dark-text:       #FFFFFF;
+  --card-dark-muted:      rgba(255, 255, 255, 0.5);
+  --card-light-bg:        #1E1E1E;
+  --card-light-text:      #FFFFFF;
+  --card-light-muted:     #8B8B8B;
+
+  /* ── Navigation ─────────────────────────────────────────── */
+  --nav-bg:               #121212;
+  --nav-border:           rgba(255, 255, 255, 0.07);
+  --nav-tab-active-bg:    #FFFFFF;
+  --nav-tab-active-text:  #1A1A1A;
+  --nav-tab-text:         #6B6B6B;
+  --nav-tab-hover-bg:     rgba(255, 255, 255, 0.06);
+
+  /* ── Sub-Navigation ─────────────────────────────────────── */
+  --subnav-track-bg:      rgba(255, 255, 255, 0.06);
+  --subnav-active-bg:     #FFFFFF;
+  --subnav-active-text:   #1A1A1A;
+  --subnav-inactive-text: #6B6B6B;
+
+  /* ── Sidebar ────────────────────────────────────────────── */
+  --sidebar-icon:         #5B5B5B;
+  --sidebar-icon-hover:   #FFFFFF;
+  --sidebar-border:       rgba(255, 255, 255, 0.07);
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --text-primary:         #FFFFFF;
+  --text-secondary:       #9B9B9B;
+  --text-muted:           #5B5B5B;
+  --text-link:            #FFFFFF;
+
+  /* ── Borders ────────────────────────────────────────────── */
+  --border-color:         rgba(255, 255, 255, 0.08);
+
+  /* ── Chart Colors ───────────────────────────────────────── */
+  --chart-bar-current:    #FFFFFF;
+  --chart-bar-hatch-fg:   rgba(255, 255, 255, 0.3);
+  --chart-bar-forecast:   rgba(255, 255, 255, 0.06);
+  --chart-grid-line:      rgba(255, 255, 255, 0.06);
+  --chart-axis-text:      #5B5B5B;
+  --chart-tooltip-bg:     #2A2A2A;
+  --chart-tooltip-text:   #FFFFFF;
+  --chart-avg-line:       rgba(255, 255, 255, 0.2);
+
+  /* ── Donut Chart ────────────────────────────────────────── */
+  --donut-website:        #FFFFFF;
+  --donut-instore:        #6B6B6B;
+  --donut-clickcollect:   #3A3A3A;
+  --donut-gap:            #121212;
+
+  /* ── Heatmap ────────────────────────────────────────────── */
+  --heatmap-0:            #1E1E1E;
+  --heatmap-1:            #2E2E2E;
+  --heatmap-2:            #454545;
+  --heatmap-3:            #6A6A6A;
+  --heatmap-4:            #A0A0A0;
+  --heatmap-5:            #FFFFFF;
+
+  /* ── Gauge ──────────────────────────────────────────────── */
+  --gauge-track:          rgba(255, 255, 255, 0.1);
+  --gauge-fill:           rgba(255, 255, 255, 0.85);
+
+  /* ── Sparkline & Mini charts ────────────────────────────── */
+  --sparkline-stroke:     rgba(255, 255, 255, 0.4);
+  --mini-circle-track:    rgba(255, 255, 255, 0.15);
+  --mini-bar-bg:          rgba(255, 255, 255, 0.2);
+  --mini-bar-bg-active:   rgba(255, 255, 255, 0.7);
+
+  /* ── CTA shadow in dark mode ────────────────────────────── */
+  --cta-shadow:           0 4px 24px rgba(255, 87, 34, 0.5);
+}
+
+/* ── Custom Scrollbars ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}

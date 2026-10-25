@@ -1,0 +1,247 @@
+/* ============================================================
+   views-tables.css — Orders, Products, and Customers Data Tables
+   ============================================================ */
+
+/* ── Common View Container ─────────────────────────────────── */
+.view-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-cards);
+}
+
+/* ── View Header Bar ───────────────────────────────────────── */
+.view-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 4px 0 8px;
+}
+
+.view-toolbar__filters {
+  display: inline-flex;
+  align-items: center;
+  background: var(--subnav-track-bg);
+  border-radius: var(--border-radius-pill);
+  padding: 3px;
+  gap: 2px;
+}
+
+.view-filter-btn {
+  padding: 5px 14px;
+  border-radius: var(--border-radius-pill);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--subnav-inactive-text);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.view-filter-btn:hover {
+  color: var(--text-primary);
+}
+
+.view-filter-btn.is-active {
+  background: var(--subnav-active-bg);
+  color: var(--subnav-active-text);
+}
+
+.view-toolbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.view-search svg {
+  position: absolute;
+  left: 12px;
+  width: 14px;
+  height: 14px;
+  stroke: var(--text-muted);
+  fill: none;
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+.view-search input {
+  padding: 7px 14px 7px 34px;
+  border-radius: var(--border-radius-pill);
+  border: 1px solid var(--border-color);
+  background: var(--card-light-bg);
+  color: var(--text-primary);
+  font-size: 12px;
+  font-family: inherit;
+  outline: none;
+  width: 200px;
+  transition: width var(--transition-fast), border-color var(--transition-fast);
+}
+
+.view-search input:focus {
+  width: 240px;
+  border-color: var(--text-primary);
+}
+
+/* ── Table Card ────────────────────────────────────────────── */
+.table-card {
+  background: var(--card-light-bg);
+  color: var(--card-light-text);
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.data-table th {
+  padding: 14px 18px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--card-light-muted);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+.data-table tbody tr {
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.data-table tbody tr:hover {
+  background: var(--nav-tab-hover-bg);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Status Badges ─────────────────────────────────────────── */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--border-radius-badge);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.status-badge--paid,
+.status-badge--fulfilled,
+.status-badge--active {
+  background: var(--color-positive-bg);
+  color: var(--color-positive);
+}
+
+.status-badge--unfulfilled,
+.status-badge--low_stock {
+  background: rgba(234, 179, 8, 0.14);
+  color: #EAB308;
+}
+
+.status-badge--refunded,
+.status-badge--out_of_stock {
+  background: var(--color-negative-bg);
+  color: var(--color-negative);
+}
+
+.status-badge--vip {
+  background: rgba(168, 85, 247, 0.14);
+  color: #A855F7;
+}
+
+.status-badge--wholesale {
+  background: rgba(59, 130, 246, 0.14);
+  color: #3B82F6;
+}
+
+/* ── Stock Meters ──────────────────────────────────────────── */
+.stock-meter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stock-meter__bar {
+  flex: 1;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+  min-width: 60px;
+}
+
+[data-theme="dark"] .stock-meter__bar {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stock-meter__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--text-primary);
+}
+
+.stock-meter__fill--low { background: #EAB308; }
+.stock-meter__fill--out { background: var(--color-negative); }
+
+.stock-meter__text {
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ── Customer / User Cells ─────────────────────────────────── */
+.cell-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cell-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--card-dark-bg);
+  color: var(--card-dark-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.cell-user__name {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.cell-user__sub {
+  font-size: 11px;
+  color: var(--card-light-muted);
+}

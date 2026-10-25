@@ -1,0 +1,262 @@
+/* ============================================================
+   kpi-cards.css — KPI Card Row (4-column)
+   Exact Corbel replication: dark card + 3 light cards
+   ============================================================ */
+
+/* ── KPI Grid ──────────────────────────────────────────────── */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-cards);
+}
+
+/* ── Base Card ─────────────────────────────────────────────── */
+.kpi-card {
+  border-radius: var(--border-radius-card);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 162px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Dark Card (Active Sales) ──────────────────────────────── */
+.kpi-card--dark {
+  background: var(--card-dark-bg);
+  color: var(--card-dark-text);
+}
+
+/* ── Light Cards (Revenue, Units, Conversion) ───────────────── */
+.kpi-card--light {
+  background: var(--card-light-bg);
+  color: var(--card-light-text);
+}
+
+/* ── Card Header row ────────────────────────────────────────── */
+.kpi-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.kpi-card__label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.kpi-card--dark .kpi-card__label  { color: var(--card-dark-muted); }
+.kpi-card--light .kpi-card__label { color: var(--card-light-muted); }
+
+.kpi-card__info-btn {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  cursor: help;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.kpi-card__info-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.7;
+}
+
+/* ── Mini chart (top-right corner) ─────────────────────────── */
+.kpi-card__mini-chart {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+
+/* ── Value ──────────────────────────────────────────────────── */
+.kpi-card__value {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+/* ── Badge + comparison row ─────────────────────────────────── */
+.kpi-card__trend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: auto;
+}
+
+.kpi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 6px;
+  border-radius: var(--border-radius-badge);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.kpi-badge svg {
+  width: 10px;
+  height: 10px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+}
+
+.kpi-badge--positive {
+  background: var(--color-positive-bg);
+  color: var(--color-positive);
+}
+
+.kpi-badge--negative {
+  background: var(--color-negative-bg);
+  color: var(--color-negative);
+}
+
+.kpi-card__trend-label {
+  font-size: 12px;
+}
+
+.kpi-card--dark .kpi-card__trend-label  { color: var(--card-dark-muted); }
+.kpi-card--light .kpi-card__trend-label { color: var(--card-light-muted); }
+
+/* ── Divider line ───────────────────────────────────────────── */
+.kpi-card__divider {
+  border: none;
+  border-top: 1px solid;
+  margin: 14px 0 12px;
+}
+
+.kpi-card--dark  .kpi-card__divider { border-color: rgba(255,255,255,0.1); }
+.kpi-card--light .kpi-card__divider { border-color: rgba(0,0,0,0.08); }
+
+/* ── See link ───────────────────────────────────────────────── */
+.kpi-card__link {
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+  display: inline-block;
+}
+
+.kpi-card--dark  .kpi-card__link { color: var(--card-dark-text); }
+.kpi-card--light .kpi-card__link { color: var(--text-link); }
+
+.kpi-card__link:hover { opacity: 0.65; }
+
+/* ============================================================
+   MINI CHART: 3 Vertical Bars (Active Sales sparkbar)
+   ============================================================ */
+.mini-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 32px;
+}
+
+.mini-bars__bar {
+  width: 8px;
+  border-radius: 2px 2px 0 0;
+  background: rgba(255,255,255,0.35);
+  transition: background var(--transition-base);
+}
+
+.mini-bars__bar:last-child {
+  background: rgba(255,255,255,0.75);
+}
+
+/* ============================================================
+   MINI CHART: Sparkline SVG (Revenue)
+   ============================================================ */
+.mini-sparkline {
+  width: 80px;
+  height: 36px;
+  overflow: visible;
+}
+
+.mini-sparkline__path {
+  fill: none;
+  stroke: var(--sparkline-stroke);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ============================================================
+   MINI CHART: Circular Progress (Units Sold)
+   ============================================================ */
+.mini-circle {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-circle svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.mini-circle__track {
+  fill: none;
+  stroke: var(--mini-circle-track, rgba(0, 0, 0, 0.1));
+  stroke-width: 3;
+}
+
+.mini-circle__fill {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transition: stroke var(--transition-base);
+}
+
+.mini-circle__label {
+  position: relative;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--card-light-text);
+  z-index: 1;
+}
+
+/* ============================================================
+   MINI CHART: Mini Bar Chart (Conversion Rate)
+   ============================================================ */
+.mini-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 36px;
+  width: 64px;
+}
+
+.mini-bar-chart__bar {
+  flex: 1;
+  border-radius: 1px 1px 0 0;
+  background: var(--mini-bar-bg, rgba(0, 0, 0, 0.18));
+  min-width: 5px;
+  transition: background var(--transition-base);
+}
+
+.mini-bar-chart__bar--active {
+  background: var(--mini-bar-bg-active, rgba(0, 0, 0, 0.5));
+}
