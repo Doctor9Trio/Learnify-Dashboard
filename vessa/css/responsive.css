@@ -1,0 +1,52 @@
+/* ============================================================
+   responsive.css — Mobile & Tablet Viewport Layouts
+   Rasayan Lab (रसायन)
+   ============================================================ */
+
+@media (max-width: 960px) {
+  :root {
+    --rail-w: 60px;
+    --gutter: 12px;
+  }
+
+  .top {
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "brand tools"
+      "tabs tabs";
+  }
+}
+
+@media (max-width: 680px) {
+  .app {
+    grid-template-columns: 1fr;
+    padding: 10px var(--gutter) 80px;
+  }
+
+  .rail {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 0;
+    z-index: 50;
+    padding: 0 8px;
+    background: color-mix(in srgb, var(--surface) 95%, transparent);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  .rail__item {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .main {
+    grid-column: 1;
+  }
+}

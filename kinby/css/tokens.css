@@ -1,0 +1,115 @@
+/* ============================================================
+   tokens.css — Kutumb Money (कुटुम्ब) Design System Tokens
+   Reverse-Engineered via REA
+   Light + Dark Mode CSS Custom Properties
+   ============================================================ */
+
+:root {
+  /* ── Typography & Scaling ───────────────────────────────── */
+  --font:        "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:        "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --fs-2xs:      0.78125rem;
+  --fs-xs:       0.8125rem;
+  --fs-sm:       0.875rem;
+  --fs-md:       0.9375rem;
+  --fs-base:     1rem;
+  --fs-lg:       1.0625rem;
+  --fs-xl:       1.1875rem;
+
+  /* ── Light Mode Palette ─────────────────────────────────── */
+  --bg:          #eef2f6;
+  --glow-a:      #dce7f7;
+  --glow-b:      #fbe7dc;
+  --surface:     #fcfdfe;
+  --surface-2:   #f5f8fb;
+  --raised:      #fefeff;
+  --well:        rgba(18, 38, 66, 0.055);
+  --line:        rgba(18, 38, 66, 0.102);
+  --line-2:      rgba(18, 38, 66, 0.180);
+  --shadow:      0 1px 2px rgba(18, 38, 66, 0.051), 0 14px 30px -20px rgba(18, 38, 66, 0.278);
+  --shadow-pop:  0 26px 60px -18px rgba(18, 38, 66, 0.341), 0 2px 6px rgba(18, 38, 66, 0.078);
+
+  /* ── Text Hierarchy ─────────────────────────────────────── */
+  --text:        #13202f;
+  --muted:       #4c5a6a;
+  --faint:       #66727f;
+
+  /* ── Primary & Accent Colors ────────────────────────────── */
+  --primary:     #2160e0;
+  --on-primary:  #f8fbff;
+  --accent-text: #1a4fbf;
+  --focus:       #2160e0;
+  --blue:        #2f6fe6;
+  --peach:       #f28a5c;
+  --mint:        #2fa37a;
+  --sky:         #5ba3e6;
+  --gold:        #d9a21b;
+  --rose:        #e0516b;
+  --moss:        #7c9a2e;
+  --teal:        #13a39a;
+  --slate:       #84909c;
+  --ink:         #1d2a3a;
+
+  /* ── Semantic Status Colors ─────────────────────────────── */
+  --good:        #16694a;
+  --warn:        #855400;
+  --bad:         #a8213a;
+  --info:        #1f5a9e;
+  --in:          #16694a;
+  --soft:        14%;
+
+  /* ── Dimensions & Radii ─────────────────────────────────── */
+  --r-card:      22px;
+  --r-tile:      14px;
+  --gap:         16px;
+  --side-w:      252px;
+  --side-rail-w: 68px;
+  --edge:        12px;
+  --gutter:      clamp(16px, 1.7vw, 28px);
+  --ease:        cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* ── Dark Mode ────────────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --bg:          #0b1017;
+  --glow-a:      rgba(80, 140, 255, 0.09);
+  --glow-b:      rgba(242, 138, 92, 0.051);
+  --surface:     #121a24;
+  --surface-2:   #16202c;
+  --raised:      #1b2633;
+  --well:        rgba(255, 255, 255, 0.055);
+  --line:        rgba(255, 255, 255, 0.078);
+  --line-2:      rgba(255, 255, 255, 0.161);
+  --shadow:      0 1px 0 rgba(255, 255, 255, 0.039) inset, 0 18px 40px -26px rgba(0, 0, 0, 0.85);
+  --shadow-pop:  0 26px 60px -18px rgba(0, 0, 0, 0.78), 0 0 0 1px rgba(255, 255, 255, 0.078);
+
+  --text:        #e8eef5;
+  --muted:       #a3b0bf;
+  --faint:       #8794a5;
+
+  --primary:     #6aa0ff;
+  --on-primary:  #06172f;
+  --accent-text: #8fb8ff;
+  --focus:       #8fb8ff;
+  --blue:        #5b8ff5;
+  --peach:       #f2a07a;
+  --mint:        #45c491;
+  --sky:         #7cb9f0;
+  --gold:        #e8b93f;
+  --rose:        #f07489;
+  --moss:        #a3c25a;
+  --teal:        #3cc4b8;
+  --slate:       #8d99a6;
+  --ink:         #d9e2ee;
+
+  --good:        #8ee0b8;
+  --warn:        #f3c86e;
+  --bad:         #ffa3b1;
+  --info:        #a7cbf7;
+  --in:          #8ee0b8;
+  --soft:        18%;
+
+  color-scheme: dark;
+}

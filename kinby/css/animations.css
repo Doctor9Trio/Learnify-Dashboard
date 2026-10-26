@@ -1,0 +1,80 @@
+/* ============================================================
+   animations.css — Keyframes, Transitions & Physics Easing
+   Kutumb Money (कुटुम्ब)
+   ============================================================ */
+
+@keyframes breathe {
+  0%, 100% {
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--mint) 20%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--mint) 4%, transparent);
+  }
+}
+
+@keyframes flash {
+  0% {
+    color: var(--accent-text);
+    transform: scale(1.04);
+  }
+  100% {
+    color: inherit;
+    transform: scale(1);
+  }
+}
+
+@keyframes coinFly {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  70% {
+    opacity: 0.9;
+    transform: translate(var(--tx, 100px), var(--ty, -150px)) scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx, 100px), calc(var(--ty, -150px) + 50px)) scale(0.4);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ── Animation Classes ────────────────────────────────────── */
+.is-flash {
+  animation: flash 0.9s var(--ease);
+}
+
+.anim-fade-up {
+  animation: slideUpFade 0.4s var(--ease) forwards;
+}
+
+/* ── Reduced Motion Respect ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

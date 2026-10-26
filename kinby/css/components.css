@@ -1,0 +1,440 @@
+/* ============================================================
+   components.css — Reusable UI Components
+   Kutumb Money (कुटुम्ब)
+   Buttons, Badges, Pills, Cards, Tabs, Segmented Controls, Inputs
+   ============================================================ */
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn {
+  height: 42px;
+  font-weight: 700;
+  font-size: var(--fs-md);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  display: inline-flex;
+  transition: filter 0.15s, background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.btn .ico {
+  width: 17px;
+  height: 17px;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 12px 24px -14px color-mix(in srgb, var(--primary) 95%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.btn--primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn--dark {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.btn--dark:hover {
+  filter: brightness(1.2);
+}
+
+.btn--good {
+  background: var(--mint);
+  color: #04261a;
+}
+
+.btn--ghost {
+  border-color: var(--line-2);
+  background: var(--surface);
+}
+
+.btn--ghost:hover {
+  background: var(--surface-2);
+}
+
+.btn--soft {
+  background: color-mix(in srgb, var(--blue) var(--soft), transparent);
+  color: var(--accent-text);
+}
+
+.btn--soft:hover {
+  background: color-mix(in srgb, var(--blue) 24%, transparent);
+}
+
+.btn--danger {
+  background: var(--rose);
+  color: #fff;
+}
+
+:root[data-theme="dark"] .btn--danger {
+  color: #2b0610;
+}
+
+.btn--sm {
+  height: 36px;
+  font-size: var(--fs-sm);
+  border-radius: 12px;
+  padding: 0 13px;
+}
+
+.btn--xs {
+  height: 30px;
+  font-size: var(--fs-sm);
+  border-radius: 10px;
+  gap: 6px;
+  padding: 0 10px;
+}
+
+.btn--xs .ico {
+  width: 14px;
+  height: 14px;
+}
+
+.btn--pill {
+  border-radius: 999px;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Icon Buttons ─────────────────────────────────────────── */
+.ibtn {
+  border: 1px solid var(--line-2);
+  width: 40px;
+  height: 40px;
+  color: var(--text);
+  background: transparent;
+  border-radius: 13px;
+  flex: none;
+  place-items: center;
+  display: inline-grid;
+  position: relative;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.ibtn:hover {
+  background: var(--well);
+}
+
+.ibtn--glass {
+  background: var(--surface);
+  border-color: var(--line);
+  width: 46px;
+  height: 46px;
+  box-shadow: var(--shadow);
+  border-radius: 50%;
+}
+
+.ibtn--sm {
+  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+.ibtn--sm .ico {
+  width: 16px;
+  height: 16px;
+}
+
+.ibtn--lg {
+  background: var(--surface);
+  border-color: var(--line);
+  width: 46px;
+  height: 46px;
+}
+
+.ibtn--plain {
+  border-color: transparent;
+}
+
+.ibtn[aria-pressed="true"] {
+  background: var(--primary);
+  color: var(--on-primary);
+  border-color: transparent;
+}
+
+/* ── Badges ───────────────────────────────────────────────── */
+.badge {
+  font-size: var(--fs-xs);
+  letter-spacing: 0;
+  white-space: nowrap;
+  border-radius: 999px;
+  align-self: center;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  font-weight: 750;
+  display: inline-flex;
+}
+
+.badge .ico {
+  width: 13px;
+  height: 13px;
+}
+
+.badge--good {
+  background: color-mix(in srgb, var(--mint) var(--soft), transparent);
+  color: var(--good);
+}
+
+.badge--warn {
+  background: color-mix(in srgb, var(--gold) 18%, transparent);
+  color: var(--warn);
+}
+
+.badge--bad {
+  background: color-mix(in srgb, var(--rose) var(--soft), transparent);
+  color: var(--bad);
+}
+
+.badge--plain {
+  background: var(--well);
+  color: var(--muted);
+}
+
+/* ── Cards & Surfaces ─────────────────────────────────────── */
+.card {
+  border-radius: var(--r-card);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  min-width: 0;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  position: relative;
+}
+
+.card__head {
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 36px;
+  margin-bottom: 14px;
+  display: flex;
+}
+
+.card__lead {
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  display: flex;
+}
+
+.card__ico {
+  border-radius: 12px;
+  flex: none;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  display: grid;
+}
+
+.card__ico .ico {
+  width: 19px;
+  height: 19px;
+}
+
+.card__title {
+  font-size: var(--fs-lg);
+  letter-spacing: -0.02em;
+  font-weight: 750;
+  line-height: 1.25;
+}
+
+.card__sub {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  margin-top: 1px;
+  font-weight: 550;
+}
+
+.card__tools {
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  display: flex;
+}
+
+.card__more {
+  font-size: var(--fs-sm);
+  color: var(--accent-text);
+  white-space: nowrap;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 4px;
+  font-weight: 750;
+  display: inline-flex;
+}
+
+.card__more .ico {
+  width: 15px;
+  height: 15px;
+}
+
+.card__more:hover {
+  text-underline-offset: 3px;
+  text-decoration: underline;
+}
+
+/* ── Horizontal Navigation Tabs ───────────────────────────── */
+.tabs {
+  scrollbar-width: none;
+  margin-bottom: 18px;
+  overflow-x: auto;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs__track {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: 999px;
+  gap: 2px;
+  padding: 4px;
+  display: inline-flex;
+  position: relative;
+}
+
+.tab {
+  z-index: 1;
+  height: 38px;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  white-space: nowrap;
+  border-radius: 999px;
+  align-items: center;
+  gap: 7px;
+  padding: 0 16px;
+  display: inline-flex;
+  position: relative;
+  transition: color 0.15s;
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tab[aria-current="page"] {
+  color: var(--on-primary);
+  background: var(--primary);
+}
+
+.tab__n {
+  min-width: 20px;
+  height: 20px;
+  font-size: var(--fs-2xs);
+  background: var(--well);
+  color: var(--muted);
+  border-radius: 999px;
+  place-items: center;
+  padding: 0 6px;
+  display: grid;
+}
+
+.tab[aria-current="page"] .tab__n {
+  color: var(--on-primary);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ── Segmented Controls ───────────────────────────────────── */
+.seg {
+  background: var(--well);
+  border-radius: 999px;
+  padding: 3px;
+  display: inline-flex;
+  position: relative;
+}
+
+.seg__pill {
+  background: var(--raised);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 2px 8px rgba(18, 38, 66, 0.14);
+}
+
+:root[data-theme="dark"] .seg__pill {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.seg__btn {
+  z-index: 1;
+  font-size: var(--fs-sm);
+  color: var(--muted);
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 6px 13px;
+  font-weight: 700;
+  position: relative;
+  transition: color 0.15s;
+}
+
+.seg__btn[aria-pressed="true"] {
+  color: var(--text);
+}
+
+/* ── Form Inputs ──────────────────────────────────────────── */
+.input,
+.select,
+.search {
+  border: 1px solid var(--line-2);
+  background: var(--surface);
+  border-radius: 14px;
+  outline: none;
+  min-width: 0;
+  height: 42px;
+  padding: 0 14px;
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 17px) 18px,
+    calc(100% - 12px) 18px;
+  background-repeat: no-repeat;
+  background-size: 5px 5px;
+  padding-right: 34px;
+  font-weight: 650;
+}
+
+.input:focus,
+.select:focus,
+.search:focus-within {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 18%, transparent);
+}
+
+.search {
+  color: var(--muted);
+  border-radius: 999px;
+  align-items: center;
+  gap: 8px;
+  display: inline-flex;
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  outline: none;
+}

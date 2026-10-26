@@ -1,0 +1,508 @@
+/* ============================================================
+   layout.css — App Shell, Sidebar, Sticky Topbar & Main Canvas
+   Kutumb Money (कुटुम्ब)
+   ============================================================ */
+
+.app {
+  overflow-x: clip;
+}
+
+/* ── Fixed Sidebar ────────────────────────────────────────── */
+.side {
+  z-index: 30;
+  top: var(--edge);
+  bottom: var(--edge);
+  left: var(--edge);
+  width: var(--side-w);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: 26px;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 12px 12px;
+  display: flex;
+  position: fixed;
+  transition: width var(--ease) 0.25s, transform var(--ease) 0.25s;
+}
+
+.side__top {
+  align-items: center;
+  gap: 6px;
+  padding: 0 2px;
+  display: flex;
+}
+
+.brand {
+  letter-spacing: -0.035em;
+  flex: 1;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+  padding: 2px 4px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+}
+
+.brand__mark {
+  background: linear-gradient(140deg, var(--blue), color-mix(in srgb, var(--blue) 55%, var(--peach)));
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  box-shadow: 0 10px 20px -12px color-mix(in srgb, var(--blue) 90%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  flex: none;
+  place-items: center;
+  display: grid;
+}
+
+.brand__mark svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 24px;
+  height: 24px;
+}
+
+.brand__text {
+  white-space: nowrap;
+  line-height: 1;
+  display: grid;
+}
+
+.brand small {
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  margin-top: 5px;
+  font-weight: 700;
+  display: block;
+}
+
+.side__rail {
+  color: var(--muted);
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.side__rail:hover {
+  background: var(--well);
+  color: var(--text);
+}
+
+.side .side__close {
+  display: none;
+}
+
+/* ── Household Switcher ───────────────────────────────────── */
+.hh {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  text-align: left;
+  border-radius: 16px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  display: flex;
+  transition: border-color 0.15s;
+}
+
+.hh:hover {
+  border-color: var(--line-2);
+}
+
+.hh > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.hh b {
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 750;
+  display: block;
+  overflow: hidden;
+}
+
+.hh small {
+  color: var(--muted);
+  white-space: nowrap;
+  display: block;
+}
+
+/* ── Vertical Nav Links ───────────────────────────────────── */
+.nav {
+  scrollbar-width: none;
+  flex: 1;
+  min-height: 0;
+  margin: 0 -6px;
+  padding: 0 6px;
+  position: relative;
+  overflow: hidden auto;
+}
+
+.nav__track {
+  gap: 2px;
+  padding-bottom: 6px;
+  display: grid;
+  position: relative;
+}
+
+.nav__label {
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--faint);
+  padding: 12px 12px 5px;
+  font-weight: 800;
+}
+
+.nav__item {
+  z-index: 1;
+  height: 44px;
+  color: var(--text);
+  font-weight: 650;
+  font-size: var(--fs-md);
+  white-space: nowrap;
+  text-align: left;
+  border-radius: 14px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 0 10px 0 12px;
+  display: flex;
+  position: relative;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav__item > .ico {
+  width: 20px;
+  height: 20px;
+  color: var(--muted);
+}
+
+.nav__item:hover {
+  background: var(--well);
+}
+
+.nav__item[aria-current="page"],
+.nav__item[aria-current="page"] > .ico {
+  color: var(--on-primary);
+  background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 78%, var(--peach)));
+  box-shadow: 0 10px 20px -12px color-mix(in srgb, var(--primary) 90%, transparent);
+}
+
+.nav__label-t {
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.nav__count {
+  min-width: 22px;
+  height: 22px;
+  font-size: var(--fs-2xs);
+  background: var(--peach);
+  color: #2b1306;
+  border-radius: 999px;
+  place-items: center;
+  padding: 0 7px;
+  font-weight: 800;
+  display: grid;
+}
+
+.nav__item[aria-current="page"] .nav__count {
+  color: var(--on-primary);
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* ── Sidebar Footer ───────────────────────────────────────── */
+.side__foot {
+  border-top: 1px solid var(--line);
+  gap: 8px;
+  padding-top: 10px;
+  display: grid;
+}
+
+.safe {
+  background: color-mix(in srgb, var(--mint) 10%, var(--surface-2));
+  border: 1px solid color-mix(in srgb, var(--mint) 22%, transparent);
+  border-radius: 16px;
+  gap: 7px;
+  padding: 12px 13px;
+  display: grid;
+  transition: border-color 0.15s;
+}
+
+.safe:hover {
+  border-color: color-mix(in srgb, var(--mint) 40%, transparent);
+}
+
+.safe__top {
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  display: flex;
+}
+
+.safe small {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: var(--fs-2xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.safe b {
+  letter-spacing: -0.03em;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.safe p {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+
+.me {
+  text-align: left;
+  border-radius: 14px;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 6px 8px;
+  display: flex;
+}
+
+.me:hover {
+  background: var(--well);
+}
+
+.me > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.me b {
+  font-size: var(--fs-md);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  display: block;
+  overflow: hidden;
+}
+
+.me small {
+  color: var(--muted);
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+
+.me small i {
+  background: var(--mint);
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+
+/* ── Main Content Area ────────────────────────────────────── */
+.main-col {
+  padding: 12px var(--gutter) 96px calc(var(--side-w) + var(--edge) + var(--gutter));
+  min-width: 0;
+}
+
+/* Collapsible Rail State */
+html.is-rail .side {
+  width: var(--side-rail-w);
+  padding: 16px 8px 12px;
+}
+html.is-rail .brand__text,
+html.is-rail .hh > span:nth-child(2),
+html.is-rail .hh > .ico,
+html.is-rail .nav__label,
+html.is-rail .nav__label-t,
+html.is-rail .nav__count,
+html.is-rail .safe,
+html.is-rail .me > span:nth-child(2),
+html.is-rail .me > .ico {
+  display: none;
+}
+html.is-rail .main-col {
+  padding-left: calc(var(--side-rail-w) + var(--edge) + var(--gutter));
+}
+
+/* ── Sticky Top Header ────────────────────────────────────── */
+.top {
+  z-index: 25;
+  margin: -12px calc(var(--gutter) * -1) 18px;
+  padding: 12px var(--gutter);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid transparent;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  transition: border-color 0.2s;
+}
+
+html.is-scrolled .top {
+  border-bottom-color: var(--line);
+}
+
+.top__brand {
+  display: none;
+}
+
+.finder-btn {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  max-width: 460px;
+  height: 46px;
+  color: var(--muted);
+  text-align: left;
+  box-shadow: var(--shadow);
+  border-radius: 999px;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px 0 16px;
+  display: flex;
+  transition: border-color 0.15s;
+}
+
+.finder-btn:hover {
+  border-color: var(--line-2);
+}
+
+.finder-btn span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex: 1;
+  overflow: hidden;
+}
+
+.finder-btn kbd {
+  border-radius: 999px;
+  background: var(--well);
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  font-size: var(--fs-xs);
+  font-family: var(--mono);
+}
+
+.top__spacer {
+  flex: 1;
+}
+
+.top__tools {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.clock {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  white-space: nowrap;
+  height: 46px;
+  color: var(--muted);
+  border-radius: 999px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  font-weight: 650;
+  display: inline-flex;
+}
+
+.clock b {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.clock i {
+  background: var(--mint);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--mint) 20%, transparent);
+  animation: breathe 2.8s var(--ease) infinite;
+  border-radius: 50%;
+}
+
+@keyframes breathe {
+  50% {
+    box-shadow: 0 0 0 7px color-mix(in srgb, var(--mint) 5%, transparent);
+  }
+}
+
+/* ── Page Header & Titles ─────────────────────────────────── */
+.main,
+.view {
+  position: relative;
+}
+
+.head {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 16px 24px;
+  margin-bottom: 20px;
+  display: grid;
+}
+
+.head__lead {
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  display: flex;
+}
+
+.head__text {
+  min-width: 0;
+}
+
+.crumbs {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px 4px;
+  margin-bottom: 5px;
+  font-weight: 650;
+  display: flex;
+}
+
+.crumbs .ico {
+  opacity: 0.6;
+  width: 14px;
+  height: 14px;
+}
+
+.crumbs a:hover,
+.crumbs [aria-current] {
+  color: var(--text);
+}
+
+.head__title {
+  letter-spacing: -0.04em;
+  font-size: clamp(1.875rem, 2.7vw, 2.625rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.head__title em {
+  color: var(--accent-text);
+  font-style: normal;
+}

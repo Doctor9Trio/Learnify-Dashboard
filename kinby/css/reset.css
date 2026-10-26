@@ -1,0 +1,173 @@
+/* ============================================================
+   reset.css — Base Resets & Global Element Styles
+   Kutumb Money (कुटुम्ब)
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100dvh;
+  color: var(--text);
+  background: var(--bg);
+  font: 500 var(--fs-md) / 1.45 var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(60vmax 46vmax at 22% -14%, var(--glow-a), transparent 70%),
+    radial-gradient(48vmax 40vmax at 108% 6%, var(--glow-b), transparent 70%);
+  position: fixed;
+  inset: 0;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, p, dl, dd, ul, ol, figure {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.num,
+b[data-count],
+.tnum,
+table {
+  font-variant-numeric: tabular-nums;
+}
+
+small {
+  font-size: var(--fs-xs);
+}
+
+.ico {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+  width: 19px;
+  height: 19px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible),
+.head__title:focus {
+  outline: none;
+}
+
+.sr {
+  clip-path: inset(50%);
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.skip {
+  z-index: 100;
+  background: var(--primary);
+  color: var(--on-primary);
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 700;
+  position: fixed;
+  top: -60px;
+  left: 12px;
+  transition: top 0.2s;
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--primary) 32%, transparent);
+}
+
+mark {
+  background: color-mix(in srgb, var(--gold) 38%, transparent);
+  color: inherit;
+  border-radius: 3px;
+  padding: 0 1px;
+}
+
+.mono {
+  font-family: var(--mono);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.code {
+  font: 500 var(--fs-sm) var(--mono);
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.link {
+  color: var(--accent-text);
+  font-weight: 700;
+}
+
+.link:hover {
+  text-underline-offset: 3px;
+  text-decoration: underline;
+}

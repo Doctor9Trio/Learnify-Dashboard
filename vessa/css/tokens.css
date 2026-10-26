@@ -1,0 +1,110 @@
+/* ============================================================
+   tokens.css — Rasayan Lab (रसायन) Design System Tokens
+   Reverse-Engineered via REA
+   Light + Dark Mode CSS Custom Properties
+   ============================================================ */
+
+:root {
+  /* ── Typography & Scales ────────────────────────────────── */
+  --font:        "Urbanist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:        var(--font);
+  --fs-2xs:      11px;
+  --fs-xs:       12px;
+  --fs-sm:       12.5px;
+  --fs-md:       13.5px;
+  --fs-base:     14px;
+  --fs-lg:       15px;
+  --fs-xl:       17px;
+  --fs-2xl:      20px;
+  --fs-3xl:      22px;
+  --fs-4xl:      26px;
+  --fs-display:  34px;
+
+  /* ── Light Mode Palette ─────────────────────────────────── */
+  --bg:          #eef0ec;
+  --glow-a:      color-mix(in srgb, var(--pine) 14%, #f8faf7);
+  --glow-b:      #f1ead6;
+  --surface:     #fcfdfc;
+  --surface-2:   #f3f5f2;
+  --raised:      #ffffff;
+  --well:        rgba(20, 36, 28, 0.055);
+  --line:        rgba(20, 36, 28, 0.086);
+  --line-2:      rgba(20, 36, 28, 0.169);
+  --hair:        rgba(20, 36, 28, 0.2);
+  --shadow:      0 1px 2px rgba(20, 36, 28, 0.039), 0 14px 34px -22px rgba(20, 36, 28, 0.278);
+  --shadow-pop:  0 26px 60px -20px rgba(20, 36, 28, 0.341), 0 2px 6px rgba(20, 36, 28, 0.078);
+
+  /* ── Text Hierarchy ─────────────────────────────────────── */
+  --text:        #18201b;
+  --muted:       #56615a;
+  --faint:       #6c7770;
+
+  /* ── Brand Colors (Rasayan Lab) ─────────────────────────── */
+  --primary:     #a8481c;
+  --on-primary:  #fff7f2;
+  --pine:        #b9531f;
+  --ochre:       #c88a12;
+  --teal:        #1d8a7b;
+  --sky:         #3a72c8;
+  --rose:        #cf4a5c;
+  --sage:        #6d9a2c;
+  --slate:       #6b7380;
+  --ocean:       #1f7f99;
+
+  /* ── Status Indicators ──────────────────────────────────── */
+  --good:        #23804d;
+  --warn:        #93600a;
+  --bad:         #bf3a2d;
+  --info:        #2f63b8;
+  --soft:        14%;
+
+  /* ── Metrics & Dimensions ───────────────────────────────── */
+  --r-card:      22px;
+  --r-tile:      14px;
+  --gap:         16px;
+  --rail-w:      76px;
+  --top-h:       80px;
+  --gutter:      clamp(12px, 1.6vw, 24px);
+  --ease:        cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* ── Dark Mode ────────────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --bg:          #0f1412;
+  --glow-a:      color-mix(in srgb, var(--pine) 10%, transparent);
+  --glow-b:      rgba(242, 192, 86, 0.051);
+  --surface:     #171d1a;
+  --surface-2:   #1c231f;
+  --raised:      #242c28;
+  --well:        rgba(255, 255, 255, 0.055);
+  --line:        rgba(255, 255, 255, 0.078);
+  --line-2:      rgba(255, 255, 255, 0.161);
+  --hair:        rgba(255, 255, 255, 0.22);
+  --shadow:      0 1px 0 rgba(255, 255, 255, 0.035) inset, 0 18px 40px -26px rgba(0, 0, 0, 0.85);
+  --shadow-pop:  0 26px 60px -18px rgba(0, 0, 0, 0.78), 0 0 0 1px rgba(255, 255, 255, 0.078);
+
+  --text:        #ecf2ee;
+  --muted:       #a8b4ad;
+  --faint:       #88948d;
+
+  --primary:     #ffa77a;
+  --on-primary:  #2b0f03;
+  --pine:        #ffa77a;
+  --ochre:       #f2c056;
+  --teal:        #4fcab8;
+  --sky:         #7eacf2;
+  --rose:        #f2828f;
+  --sage:        #b4d66a;
+  --slate:       #a3acb8;
+  --ocean:       #5cbcd6;
+
+  --good:        #6fd38e;
+  --warn:        #f2c056;
+  --bad:         #f58c7f;
+  --info:        #8bb3f6;
+  --soft:        18%;
+
+  color-scheme: dark;
+}

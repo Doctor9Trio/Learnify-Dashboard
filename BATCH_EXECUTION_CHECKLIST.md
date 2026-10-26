@@ -9,7 +9,7 @@
 
 | Total Suites | Gold Benchmarks (Done) | Remaining Suites | Total Batches | Batches Done | Current Active Batch |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| **20** | **2** (`corbel`, `murmura`) | **18** | **9 Batches** | 0 / 9 | **Batch 1 (Next Up)** |
+| **20** | **2** (`corbel`, `murmura`) | **18** | **9 Batches** | **1 / 9** | **Batch 2 (Next Up)** |
 
 ---
 
@@ -39,55 +39,55 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 1: Personal Finance & Skincare Science
 > **Suites**: `kinby` (Kutumb Money) & `vessa` (Rasayan Lab)  
-> **Status**: ⏳ **NEXT UP FOR EXECUTION**
+> **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
 
 #### Suite 3: `kinby` — Kutumb Money *(कुटुम्ब)*
 - **Domain**: Family Shared Treasury, Physical/Virtual Cards, Allowances & Pots
 - **Target URL / Path**: `http://localhost:3456/kinby/#/home`
-- [ ] **Phase 1: REA Inspection & Assets**: Audit all SVG icons, card background assets, and fonts (`Manrope`, `Geist Mono`).
-- [ ] **Phase 2: Tokens**: Create `kinby/css/tokens.css` (money palette, card gradients, light/dark values) and `reset.css`.
-- [ ] **Phase 3: Shell & Layout**: Build `kinby/css/layout.css` (collapsible rail sidebar, topbar balance pill, responsive tabbar).
-- [ ] **Phase 4: Modular Pages**:
-  - [ ] `kinby/css/pages/home.css` (balance hero card, quick actions, recent activity feed)
-  - [ ] `kinby/css/pages/cards.css` (3D card flipper, freeze toggle, spend limits slider)
-  - [ ] `kinby/css/pages/budgets.css` (category drag bars, allocation percentage rings)
-  - [ ] `kinby/css/pages/family.css` (member allowance cards, chore approval checklist)
-  - [ ] `kinby/css/pages/transfers.css` (quick recipient tray, currency input pad)
-- [ ] **Phase 5: Interactive JS**:
-  - [ ] `kinby/js/main.js` & `router.js` (hash routing across home, cards, budgets, family, transfers)
-  - [ ] `kinby/js/theme.js` (theme switcher + `kinby:theme` storage)
-  - [ ] `kinby/js/components/card-flipper.js` (interactive 3D flip card state)
-  - [ ] `kinby/js/components/budget-slider.js` (drag-to-adjust allowance limits)
-- [ ] **Phase 6: Visual QA & Subagent Verification**:
-  - [ ] Test Desktop (`1440x900`), Tablet (`1024x768`), and Mobile (`375x812`).
-  - [ ] Verify light/dark toggle and check browser console: 0 errors.
-- [ ] **Phase 7: Git Commit**: Push Batch 1A commit to `main`.
+- [x] **Phase 1: REA Inspection & Assets**: Audit all SVG icons, card background assets, and fonts (`Manrope`, `Geist Mono`). Verified 0 missing assets.
+- [x] **Phase 2: Tokens**: Created `kinby/css/tokens.css` (money palette, card gradients, light/dark values) and `reset.css`.
+- [x] **Phase 3: Shell & Layout**: Built `kinby/css/layout.css` (collapsible rail sidebar, topbar balance pill, responsive tabbar).
+- [x] **Phase 4: Modular Pages**:
+  - [x] `kinby/css/pages/home.css` (balance hero card, quick actions, recent activity feed)
+  - [x] `kinby/css/pages/cards.css` (3D card flipper, freeze toggle, spend limits slider)
+  - [x] `kinby/css/pages/budgets.css` (category drag bars, allocation percentage rings)
+  - [x] `kinby/css/pages/family.css` (member allowance cards, chore approval checklist)
+  - [x] `kinby/css/pages/transfers.css` (quick recipient tray, currency input pad)
+- [x] **Phase 5: Interactive JS**:
+  - [x] `kinby/js/main.js` & `router.js` (hash routing across home, cards, budgets, family, transfers)
+  - [x] `kinby/js/theme.js` (theme switcher + `kinby:theme` storage)
+  - [x] `kinby/js/components/card-flipper.js` (interactive 3D flip card state)
+  - [x] `kinby/js/components/budget-slider.js` (drag-to-adjust allowance limits)
+- [x] **Phase 6: Visual QA & Subagent Verification**:
+  - [x] Tested Desktop (`1440x900`), Tablet (`1024x768`), and Mobile (`375x812`).
+  - [x] Verified light/dark toggle and checked browser console: 0 errors.
+- [x] **Phase 7: Git Commit**: Batch 1A committed and pushed to `main`.
 
 #### Suite 4: `vessa` — Rasayan Lab *(रसायन)*
 - **Domain**: Skincare Lab Formulation, Ingredient Stability, Batch Kanban & Compliance
 - **Target URL / Path**: `http://localhost:3456/vessa/#/dashboard/overview`
-- [ ] **Phase 1: REA Inspection & Assets**: Extract formulation beaker SVGs, chemical property badges, molecular icons.
-- [ ] **Phase 2: Tokens**: Create `vessa/css/tokens.css` (clinical emerald/slate palette, pH indicator colors, radii).
-- [ ] **Phase 3: Shell & Layout**: Build `vessa/css/layout.css` (lab sidebar with status badges, sticky formulation breadcrumb).
-- [ ] **Phase 4: Modular Pages**:
-  - [ ] `vessa/css/pages/overview.css` (batch yield stats, compliance radar, ongoing tests)
-  - [ ] `vessa/css/pages/formulations.css` (ingredient percentage table, active concentration bars)
-  - [ ] `vessa/css/pages/batches.css` (drag-and-drop batch status Kanban board)
-  - [ ] `vessa/css/pages/stability.css` (temperature/UV exposure graph, degradation curve)
-- [ ] **Phase 5: Interactive JS**:
-  - [ ] `vessa/js/main.js` & `router.js` (routing across overview, formulations, batches, stability)
-  - [ ] `vessa/js/theme.js` (isolated `vessa:theme` storage)
-  - [ ] `vessa/js/components/kanban.js` (batch stage dragging)
-  - [ ] `vessa/js/components/ingredient-calc.js` (live formulation percentage recalculation)
-- [ ] **Phase 6: Visual QA & Subagent Verification**:
-  - [ ] Test desktop & mobile viewports; verify 0 console errors.
-- [ ] **Phase 7: Git Commit**: Push Batch 1B commit to `main`.
+- [x] **Phase 1: REA Inspection & Assets**: Extracted formulation beaker SVGs, chemical property badges, molecular icons.
+- [x] **Phase 2: Tokens**: Created `vessa/css/tokens.css` (clinical emerald/slate palette, pH indicator colors, radii).
+- [x] **Phase 3: Shell & Layout**: Built `vessa/css/layout.css` (lab sidebar with status badges, sticky formulation breadcrumb).
+- [x] **Phase 4: Modular Pages**:
+  - [x] `vessa/css/pages/overview.css` (batch yield stats, compliance radar, ongoing tests)
+  - [x] `vessa/css/pages/formulations.css` (ingredient percentage table, active concentration bars)
+  - [x] `vessa/css/pages/batches.css` (drag-and-drop batch status Kanban board)
+  - [x] `vessa/css/pages/stability.css` (temperature/UV exposure graph, degradation curve)
+- [x] **Phase 5: Interactive JS**:
+  - [x] `vessa/js/main.js` & `router.js` (routing across overview, formulations, batches, stability)
+  - [x] `vessa/js/theme.js` (isolated `vessa:theme` storage)
+  - [x] `vessa/js/components/kanban.js` (batch stage dragging)
+  - [x] `vessa/js/components/ingredient-calc.js` (live formulation percentage recalculation)
+- [x] **Phase 6: Visual QA & Subagent Verification**:
+  - [x] Tested desktop & mobile viewports; verified 0 console errors.
+- [x] **Phase 7: Git Commit**: Batch 1B committed and pushed to `main`.
 
 ---
 
 ### 📦 BATCH 2: Dining Hospitality & Dental Healthcare
 > **Suites**: `tavola` (Pangat POS) & `ivora` (Dantika Clinic)  
-> **Status**: ⏳ Pending (Scheduled after Batch 1)
+> **Status**: ⏳ **NEXT UP FOR EXECUTION**
 
 #### Suite 5: `tavola` — Pangat POS *(पंगत)*
 - **Domain**: Table Floor Plan, Real-Time KOT (Kitchen Order Tickets), Waitstaff Mobile POS

@@ -1,0 +1,165 @@
+/* ============================================================
+   responsive.css — Mobile, Tablet & Viewport Breakpoints
+   Kutumb Money (कुटुम्ब)
+   ============================================================ */
+
+/* ── Tablet & Small Laptops (<= 1100px) ─────────────────────── */
+@media (max-width: 1100px) {
+  :root {
+    --side-w: 220px;
+  }
+
+  .main-col {
+    padding-right: var(--gutter);
+  }
+
+  .grid--split {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Mobile & Small Tablets (<= 760px) ──────────────────────── */
+@media (max-width: 760px) {
+  :root {
+    --edge: 0px;
+    --gutter: 14px;
+    --r-card: 18px;
+  }
+
+  /* Hide Desktop Sidebar */
+  .side {
+    transform: translateX(-105%);
+    border-radius: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: min(85vw, 320px);
+    z-index: 100;
+  }
+
+  html.is-nav-open .side {
+    transform: translateX(0);
+  }
+
+  .side-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+
+  html.is-nav-open .side-scrim {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .side .side__close {
+    display: flex;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+  }
+
+  /* Main column reset */
+  .main-col {
+    padding: 8px var(--gutter) 84px var(--gutter);
+  }
+
+  /* Top sticky bar on mobile */
+  .top {
+    margin: -8px calc(var(--gutter) * -1) 14px;
+    padding: 8px var(--gutter);
+  }
+
+  .top__brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .top__brand .brand__mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+  }
+
+  .finder-btn {
+    height: 40px;
+  }
+
+  .finder-btn kbd {
+    display: none;
+  }
+
+  .clock {
+    display: none;
+  }
+
+  /* Bottom Navigation Tabbar */
+  .tabbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 8px;
+    z-index: 80;
+  }
+
+  .tabbar__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    height: 100%;
+    color: var(--muted);
+    font-size: var(--fs-2xs);
+    font-weight: 700;
+  }
+
+  .tabbar__item .ico {
+    width: 22px;
+    height: 22px;
+  }
+
+  .tabbar__item[aria-current="page"] {
+    color: var(--primary);
+  }
+
+  /* Mobile card adjustments */
+  .head {
+    grid-template-columns: 1fr;
+    margin-bottom: 14px;
+  }
+
+  .head__title {
+    font-size: 1.75rem;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+
+/* ── Touch Optimization ─────────────────────────────────────── */
+@media (pointer: coarse) {
+  .btn,
+  .ibtn,
+  .tab,
+  .chip {
+    min-height: 44px;
+  }
+}
