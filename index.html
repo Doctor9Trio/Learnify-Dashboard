@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Sarthak Product Suites — Flagship Dashboards</title>
-  <meta name="description" content="Sarthak Flagship Dashboards: Corbel Retail Sales Dashboard and Murmura Social Media Management Suite." />
+  <title>Sarthak Product Suites — Flagship Experience Dashboards</title>
+  <meta name="description" content="Sarthak Flagship Dashboards: Vanijya Retail, Samvad Social, Kutumb Money, Rasayan Lab, Pangat POS, and Dantika Dental Clinic." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400..800&family=Inter:wght@400..700&display=swap" rel="stylesheet" />
@@ -19,6 +19,8 @@
       --accent-coral: #FF5722;
       --accent-mint: #22C55E;
       --accent-sky: #38bdf8;
+      --accent-amber: #f59e0b;
+      --accent-purple: #a855f7;
       --font: 'Urbanist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
@@ -40,8 +42,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 40px 24px;
+      padding: 60px 24px 100px;
       position: relative;
       overflow-x: hidden;
       transition: background 0.3s, color 0.3s;
@@ -59,21 +60,21 @@
       position: absolute;
       border-radius: 50%;
       filter: blur(80px);
-      opacity: 0.5;
+      opacity: 0.4;
     }
     .mesh__a { width: 50vmax; height: 50vmax; top: -20vmax; left: -10vmax; background: radial-gradient(closest-side, #38bdf840, transparent); }
     .mesh__b { width: 60vmax; height: 60vmax; bottom: -20vmax; right: -15vmax; background: radial-gradient(closest-side, #22c55e30, transparent); }
     .mesh__c { width: 40vmax; height: 40vmax; top: 30%; right: 20%; background: radial-gradient(closest-side, #ff572225, transparent); }
 
     .container {
-      max-width: 1100px;
+      max-width: 1280px;
       width: 100%;
       position: relative;
       z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 36px;
+      gap: 40px;
     }
 
     .header {
@@ -81,7 +82,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
+      max-width: 780px;
     }
 
     .brand-badge {
@@ -100,49 +102,47 @@
     }
 
     .title {
-      font-size: clamp(32px, 4vw, 46px);
+      font-size: clamp(32px, 5vw, 48px);
       font-weight: 800;
       letter-spacing: -0.03em;
-      line-height: 1.1;
+      line-height: 1.15;
     }
 
     .subtitle {
       font-size: 16px;
       color: var(--text-muted);
-      max-width: 600px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
+    /* Grid */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 24px;
       width: 100%;
     }
 
     .suite-card {
       background: var(--card-bg);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      padding: 32px;
+      padding: 32px 28px;
+      text-decoration: none;
+      color: inherit;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 24px;
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s, border-color 0.25s, background 0.25s;
+      backdrop-filter: blur(16px);
+      transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s, border-color 0.25s, background 0.25s;
       position: relative;
       overflow: hidden;
     }
 
     .suite-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
       background: var(--card-hover);
       border-color: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5);
     }
 
     .card-top {
@@ -162,16 +162,12 @@
       font-size: 22px;
     }
 
-    .icon-corbel {
-      background: #14202a;
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .icon-murmura {
-      background: linear-gradient(135deg, #10b981, #059669);
-      color: #fff;
-    }
+    .icon-vanijya { background: #14202a; color: #fff; border: 1px solid rgba(255, 255, 255, 0.15); }
+    .icon-samvad  { background: linear-gradient(135deg, #10b981, #059669); color: #fff; }
+    .icon-kutumb  { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; }
+    .icon-rasayan { background: linear-gradient(135deg, #ec4899, #be185d); color: #fff; }
+    .icon-pangat  { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
+    .icon-dantika { background: linear-gradient(135deg, #06b6d4, #0891b2); color: #fff; }
 
     .suite-tag {
       font-size: 11px;
@@ -188,14 +184,24 @@
       font-size: 24px;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-top: 14px;
+      margin-top: 16px;
       margin-bottom: 6px;
+    }
+
+    .suite-alias {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-coral);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
     }
 
     .suite-desc {
       font-size: 14px;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.55;
+      margin-bottom: 16px;
     }
 
     .feature-list {
@@ -204,6 +210,7 @@
       flex-direction: column;
       gap: 10px;
       margin-top: 10px;
+      margin-bottom: 24px;
     }
 
     .feature-item {
@@ -219,8 +226,10 @@
       border-radius: 50%;
       background: var(--accent-coral);
     }
-
     .feature-dot.mint { background: var(--accent-mint); }
+    .feature-dot.sky  { background: var(--accent-sky); }
+    .feature-dot.amber { background: var(--accent-amber); }
+    .feature-dot.purple { background: var(--accent-purple); }
 
     .btn-launch {
       display: inline-flex;
@@ -234,7 +243,8 @@
       background: var(--text);
       color: var(--bg);
       text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
+      transition: background 0.2s, transform 0.15s, color 0.2s;
+      margin-top: auto;
     }
 
     .suite-card:hover .btn-launch {
@@ -270,20 +280,21 @@
 
   <div class="container">
     <header class="header">
-      <div class="brand-badge">Sarthak Product Suite</div>
+      <div class="brand-badge">Sarthak Experience Ecosystem</div>
       <h1 class="title">Flagship Experience Dashboards</h1>
-      <p class="subtitle">100% pixel-perfect clones reverse-engineered with REA. Explore the Retail Sales Dashboard or the Social Media Management Suite.</p>
+      <p class="subtitle">100% pixel-perfect clones reverse-engineered with REA. Explore the enterprise retail, social publishing, family wealth, lab supply chain, restaurant POS, and dental practice suites.</p>
     </header>
 
     <div class="grid">
-      <!-- Corbel Retail Dashboard -->
+      <!-- 1. Vanijya (Corbel) -->
       <a href="./corbel/#/dashboard" class="suite-card">
         <div>
           <div class="card-top">
-            <div class="suite-icon icon-corbel">S</div>
-            <span class="suite-tag">Retail &amp; eCommerce</span>
+            <div class="suite-icon icon-vanijya">V</div>
+            <span class="suite-tag">Retail &amp; POS</span>
           </div>
-          <h2 class="suite-name">Sarthak Dashboard</h2>
+          <h2 class="suite-name">Vanijya Retail</h2>
+          <div class="suite-alias">Omnichannel Sales &amp; POS (Corbel)</div>
           <p class="suite-desc">Sales performance, health score semicircle gauge, dual-year revenue chart, hourly visits heatmap, products inventory &amp; CRM order side-sheets.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot"></span> 13 full Single Page Application views</li>
@@ -292,29 +303,122 @@
           </ul>
         </div>
         <div class="btn-launch">
-          Launch Corbel Dashboard →
+          Launch Vanijya Retail →
         </div>
       </a>
 
-      <!-- Murmura Social Media Suite -->
+      <!-- 2. Samvad (Murmura) -->
       <a href="./murmura/#/overview" class="suite-card">
         <div>
           <div class="card-top">
-            <div class="suite-icon icon-murmura">
+            <div class="suite-icon icon-samvad">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5c2.2-3.6 4.4-3.6 6.6 0s4.4 3.6 6.6 0"/><path d="M6.5 10c1.6-2.4 3.2-2.4 4.8 0s3.2 2.4 4.8 0"/><circle cx="19.2" cy="8.2" r="1.3" fill="currentColor"/></svg>
             </div>
             <span class="suite-tag">Social &amp; Publishing</span>
           </div>
-          <h2 class="suite-name">Sarthak Murmura</h2>
+          <h2 class="suite-name">Samvad Social</h2>
+          <div class="suite-alias">8-Network Publishing Suite (Murmura)</div>
           <p class="suite-desc">Multi-network publishing workspace: cross-platform scheduler, approval queues, unified comment &amp; DM inbox, and brand listening.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot mint"></span> Interactive week/month publishing calendar</li>
             <li class="feature-item"><span class="feature-dot mint"></span> 8 networks (IG, FB, TikTok, X, LinkedIn, etc.)</li>
-            <li class="feature-item"><span class="feature-dot mint"></span> Team roles, approvals &amp; brand switcher</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> Floating quick-action dock &amp; approvals</li>
           </ul>
         </div>
         <div class="btn-launch">
-          Launch Murmura Suite →
+          Launch Samvad Social →
+        </div>
+      </a>
+
+      <!-- 3. Kutumb Money (Kinby) -->
+      <a href="./kinby/#/home" class="suite-card">
+        <div>
+          <div class="card-top">
+            <div class="suite-icon icon-kutumb">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5v15"/><path d="M7.5 12.5c3.4 0 5.6-2.6 6.4-6.5"/><path d="M10.6 12.2c2.3.4 4.3 2.6 5.4 7.3"/><circle cx="17" cy="5.6" r="1.6" fill="currentColor"/></svg>
+            </div>
+            <span class="suite-tag">Family Wealth</span>
+          </div>
+          <h2 class="suite-name">Kutumb Money</h2>
+          <div class="suite-alias">Shared Finance &amp; Wallet (Kinby)</div>
+          <p class="suite-desc">Household account, family card wallet with freeze &amp; limits, allowance chores, visual calendar bills, draggable budgets, and filling savings goals.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-dot sky"></span> Interactive flipping card wallet</li>
+            <li class="feature-item"><span class="feature-dot sky"></span> Visual budgets &amp; animated savings pots</li>
+            <li class="feature-item"><span class="feature-dot sky"></span> Collapsible sidebar rail &amp; household time</li>
+          </ul>
+        </div>
+        <div class="btn-launch">
+          Launch Kutumb Money →
+        </div>
+      </a>
+
+      <!-- 4. Rasayan Lab (Vessa) -->
+      <a href="./vessa/#/dashboard/overview" class="suite-card">
+        <div>
+          <div class="card-top">
+            <div class="suite-icon icon-rasayan">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.5h8M9 3.5v3.2c0 .7-.3 1.3-.8 1.8A6.6 6.6 0 0 0 6 13.3v4.2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-4.2a6.6 6.6 0 0 0-2.2-4.8c-.5-.5-.8-1.1-.8-1.8V3.5"/><path d="M6.2 13.5c2-1 3.9-1 5.8 0s3.8 1 5.8 0"/></svg>
+            </div>
+            <span class="suite-tag">Lab &amp; Inventory</span>
+          </div>
+          <h2 class="suite-name">Rasayan Lab</h2>
+          <div class="suite-alias">Formulation &amp; Supply Chain (Vessa)</div>
+          <p class="suite-desc">Skincare lab inventory: multi-warehouse stock, formulation production batches with QA release &amp; expiry, pick-pack-ship sales boards, and suppliers.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-dot purple"></span> Production batches &amp; QA release tracker</li>
+            <li class="feature-item"><span class="feature-dot purple"></span> Pick-pack-ship fulfillment kanban board</li>
+            <li class="feature-item"><span class="feature-dot purple"></span> Multi-location warehouse transfers</li>
+          </ul>
+        </div>
+        <div class="btn-launch">
+          Launch Rasayan Lab →
+        </div>
+      </a>
+
+      <!-- 5. Pangat POS (Tavola) -->
+      <a href="./tavola/#/overview" class="suite-card">
+        <div>
+          <div class="card-top">
+            <div class="suite-icon icon-pangat">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8h15"/><path d="M12 8v11.5"/><path d="M7.5 4.5h9"/></svg>
+            </div>
+            <span class="suite-tag">Hospitality &amp; Dining</span>
+          </div>
+          <h2 class="suite-name">Pangat POS</h2>
+          <div class="suite-alias">Restaurant &amp; Kitchen Board (Tavola)</div>
+          <p class="suite-desc">Live dining service overview, drag-and-drop kitchen order board (KOT), interactive floor plan with waitlist, reservations, and food-cost menu engineering.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-dot amber"></span> Drag-and-drop kitchen ticket dispatch</li>
+            <li class="feature-item"><span class="feature-dot amber"></span> Interactive dining floor plan &amp; seating</li>
+            <li class="feature-item"><span class="feature-dot amber"></span> Food cost engineering &amp; staff rota</li>
+          </ul>
+        </div>
+        <div class="btn-launch">
+          Launch Pangat POS →
+        </div>
+      </a>
+
+      <!-- 6. Dantika Clinic (Ivora) -->
+      <a href="./ivora/#/today" class="suite-card">
+        <div>
+          <div class="card-top">
+            <div class="suite-icon icon-dantika">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 4.2c1.9-.9 3.3.2 4.8.2s2.9-1.1 4.8-.2c2.3 1.1 2.6 4.3 1.8 7.1-.6 2.1-1.1 4.3-1.4 6.6-.2 1.4-.8 2.4-1.7 2.4-1.2 0-1.5-1.6-1.8-3.4-.2-1.3-.7-2.3-1.7-2.3s-1.5 1-1.7 2.3c-.3 1.8-.6 3.4-1.8 3.4-.9 0-1.5-1-1.7-2.4-.3-2.3-.8-4.5-1.4-6.6-.8-2.8-.5-6 1.8-7.1Z"/><path d="M9.5 7.6c.8.4 1.6.6 2.5.6"/></svg>
+            </div>
+            <span class="suite-tag">Clinical Practice</span>
+          </div>
+          <h2 class="suite-name">Dantika Clinic</h2>
+          <div class="suite-alias">Dental Practice &amp; Tooth Chart (Ivora)</div>
+          <p class="suite-desc">Live dental chairs overview, drag-and-drop schedule matrix, interactive 32-tooth chart with restorations, treatment plans, clinical imaging, and lab cases.</p>
+          <ul class="feature-list">
+            <li class="feature-item"><span class="feature-dot mint"></span> Interactive 32-tooth dental chart</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> Live chair schedule &amp; clinical assist</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> Lab cases board &amp; insurance billing</li>
+          </ul>
+        </div>
+        <div class="btn-launch">
+          Launch Dantika Clinic →
         </div>
       </a>
     </div>
