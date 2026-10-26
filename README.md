@@ -26,6 +26,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **14** | **Griha Living** *(गृह)* | `kvist` | Scandinavian Bento-Grid Storefront, Ceramics & Furniture, Order Dispatch Till | `http://localhost:3456/kvist/` |
 | **15** | **Daksh Dev** *(दक्ष)* | `portfolio` | Animated Mobile Architect Portfolio, 3D Phone Mockup, Case Study Showcase | `http://localhost:3456/portfolio/` |
 | **16** | **Yantra Auto** *(यंत्र)* | `camber` | High-Performance Auto Parts, 5-Chassis Switcher, Component Hotspots & Tuning Till | `http://localhost:3456/camber/` |
+| **17** | **Yatra Mobility** *(यात्रा)* | `strada` | Luxury Car & Supercar Rental, Pickup Booking Engine, Concierge Fleet Specs | `http://localhost:3456/strada/` |
 
 ---
 
