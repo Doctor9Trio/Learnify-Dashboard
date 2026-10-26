@@ -28,6 +28,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **16** | **Yantra Auto** *(यंत्र)* | `camber` | High-Performance Auto Parts, 5-Chassis Switcher, Component Hotspots & Tuning Till | `http://localhost:3456/camber/` |
 | **17** | **Yatra Mobility** *(यात्रा)* | `strada` | Luxury Car & Supercar Rental, Pickup Booking Engine, Concierge Fleet Specs | `http://localhost:3456/strada/` |
 | **18** | **Kaala Studio** *(काला)* | `vanta` | Audiophile Planar Magnetic Headphones, 360 Video Scrub, Exploded Driver View | `http://localhost:3456/vanta/` |
+| **19** | **Mishri 3D** *(मिश्री)* | `nero` | Artisanal Confectionery Studio, 3D Floating Cacao Parallax, Tasting Flight | `http://localhost:3456/nero/#` |
 
 ---
 
