@@ -22,6 +22,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **10** | **Bahi Khata** *(बही खाता)* | `ledge` | Shop POS Register, Stock Counting, Automated Reorder Alerts & Purchasing | `http://localhost:3456/ledge/#overview` |
 | **11** | **Srijan Studio** *(सृजन)* | `gesso` | Original Art Marketplace, Studio Sessions, Fan Artwork Gallery & Collector Tools | `http://localhost:3456/gesso/` |
 | **12** | **Bhoomi Outdoors** *(भूमि)* | `solum` | Trail Running & Outdoor Apparel, 10-Page Storefront, Scrub Runner Video & Admin Till | `http://localhost:3456/solum/` |
+| **13** | **Gati Fitness** *(गति)* | `stride` | 11-View Athletic Performance OS, Activity Rings, Sleep Architecture & Workouts | `http://localhost:3456/stride/#/` |
 
 ---
 
