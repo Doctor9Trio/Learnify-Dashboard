@@ -18,6 +18,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **6** | **Dantika Clinic** *(दन्तिका)* | `ivora` | Dental Clinic Practice, Interactive 32-Tooth Chart, Chair Matrix & Labs | `http://localhost:3456/ivora/#/today` |
 | **7** | **Karkhana ERP** *(कारख़ाना)* | `cadra` | Workshop & Manufacturing ERP, Gantt Schedule, Multi-Warehouse, Till POS | `http://localhost:3456/cadra/#/dashboard` |
 | **8** | **Parivahan OS** *(परिवहन)* | `noria` | Freight Forwarding & Logistics Flow Automation, Node-Canvas Builder, Copilot | `http://localhost:3456/noria/#/overview` |
+| **9** | **Karigar Service** *(कारीगर)* | `mender` | Support-Desk CRM, Drag-and-Drop Case Pipeline, 4-Stage Journeys & SLA | `http://localhost:3456/mender/#/cases` |
 
 ---
 
