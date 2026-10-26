@@ -1,0 +1,132 @@
+/* ============================================================
+   components.css — Reusable Components for Dantika Clinic
+   Cards, Teeth Badges, Buttons, Tables & Modals
+   ============================================================ */
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn {
+  height: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: var(--r-ctl);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  display: inline-flex;
+  transition: transform 0.1s, filter 0.15s, background 0.15s;
+}
+
+.btn .ico {
+  width: 16px;
+  height: 16px;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: 0 10px 20px -10px rgba(11, 115, 102, 0.5);
+}
+
+.btn--primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  border-color: var(--line-2);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.btn--ghost:hover {
+  background: var(--surface-2);
+}
+
+.btn--sm {
+  height: 32px;
+  font-size: 12.5px;
+  padding: 0 12px;
+}
+
+/* ── Cards & Panels ───────────────────────────────────────── */
+.card {
+  border-radius: var(--r-card);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  position: relative;
+  min-width: 0;
+}
+
+.card__head {
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.card__title {
+  font-size: var(--fs-2xl);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.card__sub {
+  color: var(--muted);
+  font-size: var(--fs-sm);
+  margin-top: 2px;
+}
+
+/* ── Status Pills & Badges ────────────────────────────────── */
+.badge {
+  font-size: 11.5px;
+  font-weight: 750;
+  padding: 3px 9px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge--good {
+  background: rgba(35, 119, 47, 0.12);
+  color: var(--good);
+}
+
+.badge--warn {
+  background: rgba(196, 138, 12, 0.14);
+  color: var(--warn);
+}
+
+.badge--bad {
+  background: rgba(191, 58, 42, 0.12);
+  color: var(--bad);
+}
+
+/* ── Tooth Chart Specific Styles ──────────────────────────── */
+.tooth {
+  cursor: pointer;
+  transition: transform 0.15s, filter 0.15s;
+}
+
+.tooth:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 8px rgba(11, 115, 102, 0.25));
+}
+
+.tooth--decay {
+  fill: var(--bad);
+}
+
+.tooth--crown {
+  fill: var(--gold);
+}
+
+.tooth--filling {
+  fill: var(--sky);
+}

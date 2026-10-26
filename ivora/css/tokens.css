@@ -1,0 +1,163 @@
+/* ============================================================
+   tokens.css — Dantika Clinic (दन्तिका) Design System Tokens
+   Reverse-Engineered via REA
+   Dental Practice Light + Dark Mode Tokens
+   ============================================================ */
+
+:root {
+  /* ── Typography & Scales ────────────────────────────────── */
+  --font:        "Urbanist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-2xs:      11px;
+  --fs-xs:       12px;
+  --fs-sm:       12.5px;
+  --fs-md:       13.5px;
+  --fs-base:     14px;
+  --fs-lg:       15px;
+  --fs-xl:       17px;
+  --fs-2xl:      20px;
+  --fs-3xl:      22px;
+  --fs-4xl:      26px;
+  --fs-display:  34px;
+
+  /* ── Light Mode Palette (Default Clinical Crisp) ────────── */
+  --bg:          #f5f6f6;
+  --glass:       #ffffff;
+  --glass-2:     #ffffff;
+  --glass-3:     #ffffff;
+  --rim:         rgba(15, 42, 45, 0.086);
+  --subpill:     #eef1f1;
+  --float:       #fafcfc;
+  --surface:     var(--glass);
+  --surface-2:   #f9fafa;
+  --raised:      var(--float);
+  --well:        rgba(15, 42, 45, 0.059);
+  --line:        rgba(15, 42, 45, 0.09);
+  --line-2:      rgba(15, 42, 45, 0.169);
+  --shadow:      0 1px 2px rgba(15, 42, 45, 0.039), 0 12px 32px -24px rgba(15, 42, 45, 0.2);
+  --shadow-pop:  0 24px 60px -18px rgba(15, 42, 45, 0.32), 0 2px 6px rgba(15, 42, 45, 0.078);
+
+  /* ── Text Hierarchy ─────────────────────────────────────── */
+  --text:        #0f2629;
+  --muted:       #4b6063;
+  --faint:       #66797c;
+  --ink:         #0f2a2d;
+  --on-ink:      #eefaf7;
+
+  /* ── Navigation Dock ────────────────────────────────────── */
+  --dock:        var(--ink);
+  --on-dock:     var(--on-ink);
+  --dock-dim:    rgba(238, 250, 247, 0.66);
+  --dock-ring:   #0f2a2d;
+  --pill:        var(--ink);
+  --on-pill:     var(--on-ink);
+
+  /* ── Clinical Teal Brand Accents ────────────────────────── */
+  --primary:     #0b7366;
+  --on-primary:  #f2fffb;
+  --accent:      #6fdcc9;
+
+  /* ── Dental Health & Tooth Chart Color Scales ───────────── */
+  --enamel:      #fdfaf3;
+  --enamel-line: #b9ad9c;
+  --dentin:      #eee3d1;
+  --gold:        #ecc66a;
+  --gold-line:   #b88a1c;
+
+  /* ── Tile Accents & Tag Indicators ──────────────────────── */
+  --t-aqua:      #a3ddd2;
+  --t-blush:     #f6c6c0;
+  --t-sky:       #bcd3f6;
+  --t-lemon:     #f3e09c;
+  --t-leaf:      #c4e5b8;
+  --on-tile:     #0f2629;
+
+  --violet:      #0d7c6e;
+  --coral:       #dc5b3f;
+  --amber:       #c48a0c;
+  --mint:        #3f8f3a;
+  --sky:         #2f6fd0;
+  --rose:        #c8456f;
+  --plum:        #127f9a;
+  --slate:       #627478;
+
+  --good:        #23772f;
+  --warn:        #8a5a00;
+  --bad:         #bf3a2a;
+  --soft:        14%;
+
+  /* ── Dimensions & Shape ─────────────────────────────────── */
+  --r-card:      26px;
+  --r-tile:      20px;
+  --r-ctl:       999px;
+  --gap:         16px;
+  --dock-x:      20px;
+  --dock-w:      60px;
+  --gutter:      clamp(16px, 1.6vw, 28px);
+  --app-max:     1840px;
+  --ease:        cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* ── Dark Mode (Clinical OLED Aesthetic) ─────────────────── */
+:root[data-theme="dark"] {
+  --bg:          #0d1315;
+  --glass:       #151d1f;
+  --glass-2:     #1a2325;
+  --glass-3:     #1e282a;
+  --rim:         rgba(220, 240, 238, 0.086);
+  --subpill:     #263234;
+  --float:       #1d2a2c;
+  --surface-2:   #12191b;
+  --well:        rgba(255, 255, 255, 0.059);
+  --line:        rgba(220, 240, 238, 0.086);
+  --line-2:      rgba(220, 240, 238, 0.161);
+  --shadow:      0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 16px 36px -26px rgba(0, 0, 0, 0.7);
+  --shadow-pop:  0 26px 60px -18px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(220, 240, 238, 0.09);
+
+  --text:        #e6f1ef;
+  --muted:       #a0b3b2;
+  --faint:       #849796;
+  --ink:         #e6f1ef;
+  --on-ink:      #0f2629;
+
+  --dock:        rgba(255, 255, 255, 0.078);
+  --on-dock:     #e6f1ef;
+  --dock-dim:    rgba(230, 241, 239, 0.66);
+  --dock-ring:   #1a2628;
+  --pill:        #e6f1ef;
+  --on-pill:     #0f2629;
+
+  --primary:     #5fd0bf;
+  --on-primary:  #04231e;
+  --accent:      #6fdcc9;
+
+  --enamel:      #e9e2d6;
+  --enamel-line: #8d8272;
+  --dentin:      #b9ad99;
+  --gold:        #e4bb57;
+  --gold-line:   #f2d083;
+
+  --t-aqua:      #79c6ba;
+  --t-blush:     #e3a49c;
+  --t-sky:       #93b3e6;
+  --t-lemon:     #dcc574;
+  --t-leaf:      #9ccb8e;
+  --on-tile:     #0b1f21;
+
+  --violet:      #5fd0bf;
+  --coral:       #ff8a6c;
+  --amber:       #efb547;
+  --mint:        #79cf63;
+  --sky:         #7aa9ff;
+  --rose:        #f17fa2;
+  --plum:        #4cc3dd;
+  --slate:       #9fb0b3;
+
+  --good:        #79cf63;
+  --warn:        #efb547;
+  --bad:         #ff8577;
+  --soft:        18%;
+
+  color-scheme: dark;
+}

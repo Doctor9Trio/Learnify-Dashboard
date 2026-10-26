@@ -1,0 +1,56 @@
+/* ============================================================
+   responsive.css — Mobile, Tablet & Viewport Breakpoints
+   Dantika Clinic (दन्तिका)
+   ============================================================ */
+
+@media (max-width: 960px) {
+  :root {
+    --dock-w: 52px;
+    --dock-x: 10px;
+    --gutter: 12px;
+  }
+
+  .top {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ptabs {
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --dock-w: 0px;
+    --dock-x: 0px;
+  }
+
+  .app {
+    padding: 12px var(--gutter) 84px var(--gutter);
+  }
+
+  /* Dock becomes bottom bar */
+  .dock {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    border-radius: 0;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-around;
+    padding: 0 8px;
+    box-shadow: 0 -8px 24px rgba(15, 42, 45, 0.2);
+  }
+
+  .dock__btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .dock__sep {
+    display: none;
+  }
+}

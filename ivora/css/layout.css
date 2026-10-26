@@ -1,0 +1,162 @@
+/* ============================================================
+   layout.css — Clinical Shell, Navigation Dock & Top Header
+   Dantika Clinic (दन्तिका)
+   ============================================================ */
+
+.app {
+  max-width: var(--app-max);
+  padding: 20px var(--gutter) 56px calc(var(--dock-x) + var(--dock-w) + var(--gutter));
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
+/* ── Top Header ───────────────────────────────────────────── */
+.top {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+  display: grid;
+}
+
+.brand {
+  min-width: 0;
+  font-size: var(--fs-3xl);
+  letter-spacing: -0.02em;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-flex;
+}
+
+.brand__mark {
+  background: var(--pill);
+  width: 40px;
+  height: 40px;
+  color: var(--accent);
+  border-radius: 13px;
+  flex: none;
+  place-items: center;
+  display: grid;
+}
+
+.brand__mark svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 22px;
+  height: 22px;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand small {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* ── Horizontal Page Tabs ─────────────────────────────────── */
+.ptabs {
+  scrollbar-width: none;
+  background: var(--subpill);
+  border-radius: 999px;
+  padding: 4px;
+  display: inline-flex;
+  overflow-x: auto;
+  justify-self: center;
+}
+
+.ptabs::-webkit-scrollbar {
+  display: none;
+}
+
+.ptabs__track {
+  display: flex;
+  gap: 2px;
+}
+
+.ptab {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--muted);
+  padding: 8px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.ptab:hover {
+  color: var(--text);
+}
+
+.ptab[aria-current="page"] {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(15, 42, 45, 0.08);
+}
+
+/* ── Left Navigation Dock ─────────────────────────────────── */
+.dock {
+  position: fixed;
+  left: var(--dock-x);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dock);
+  color: var(--on-dock);
+  border-radius: 999px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 40;
+  box-shadow: 0 16px 36px -12px rgba(15, 42, 45, 0.35);
+}
+
+.dock__btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--on-dock);
+  opacity: 0.8;
+  transition: opacity 0.15s, background 0.15s, transform 0.1s;
+}
+
+.dock__btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.06);
+}
+
+.dock__btn .ico {
+  width: 20px;
+  height: 20px;
+}
+
+.dock__tip {
+  display: none;
+}
+
+.dock__sep {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 3px 6px;
+}
+
+/* ── Main View Container ──────────────────────────────────── */
+.main {
+  position: relative;
+  min-width: 0;
+}
