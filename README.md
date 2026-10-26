@@ -24,6 +24,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **12** | **Bhoomi Outdoors** *(भूमि)* | `solum` | Trail Running & Outdoor Apparel, 10-Page Storefront, Scrub Runner Video & Admin Till | `http://localhost:3456/solum/` |
 | **13** | **Gati Fitness** *(गति)* | `stride` | 11-View Athletic Performance OS, Activity Rings, Sleep Architecture & Workouts | `http://localhost:3456/stride/#/` |
 | **14** | **Griha Living** *(गृह)* | `kvist` | Scandinavian Bento-Grid Storefront, Ceramics & Furniture, Order Dispatch Till | `http://localhost:3456/kvist/` |
+| **15** | **Daksh Dev** *(दक्ष)* | `portfolio` | Animated Mobile Architect Portfolio, 3D Phone Mockup, Case Study Showcase | `http://localhost:3456/portfolio/` |
 
 ---
 
