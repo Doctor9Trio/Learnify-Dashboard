@@ -25,6 +25,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **13** | **Gati Fitness** *(गति)* | `stride` | 11-View Athletic Performance OS, Activity Rings, Sleep Architecture & Workouts | `http://localhost:3456/stride/#/` |
 | **14** | **Griha Living** *(गृह)* | `kvist` | Scandinavian Bento-Grid Storefront, Ceramics & Furniture, Order Dispatch Till | `http://localhost:3456/kvist/` |
 | **15** | **Daksh Dev** *(दक्ष)* | `portfolio` | Animated Mobile Architect Portfolio, 3D Phone Mockup, Case Study Showcase | `http://localhost:3456/portfolio/` |
+| **16** | **Yantra Auto** *(यंत्र)* | `camber` | High-Performance Auto Parts, 5-Chassis Switcher, Component Hotspots & Tuning Till | `http://localhost:3456/camber/` |
 
 ---
 
