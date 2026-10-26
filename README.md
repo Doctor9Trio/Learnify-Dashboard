@@ -19,6 +19,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **7** | **Karkhana ERP** *(कारख़ाना)* | `cadra` | Workshop & Manufacturing ERP, Gantt Schedule, Multi-Warehouse, Till POS | `http://localhost:3456/cadra/#/dashboard` |
 | **8** | **Parivahan OS** *(परिवहन)* | `noria` | Freight Forwarding & Logistics Flow Automation, Node-Canvas Builder, Copilot | `http://localhost:3456/noria/#/overview` |
 | **9** | **Karigar Service** *(कारीगर)* | `mender` | Support-Desk CRM, Drag-and-Drop Case Pipeline, 4-Stage Journeys & SLA | `http://localhost:3456/mender/#/cases` |
+| **10** | **Bahi Khata** *(बही खाता)* | `ledge` | Shop POS Register, Stock Counting, Automated Reorder Alerts & Purchasing | `http://localhost:3456/ledge/#overview` |
 
 ---
 
