@@ -1,0 +1,5 @@
+import{L as e}from"./store-DfXjkpw_.js";import{n as t}from"./shell-CLwgxTXp.js";function n(t){let n=e=>t===`cm`?e:e.split(`–`).map(e=>(Number(e)/2.54).toFixed(1)).join(`–`);return`<table class="t t--sizes">
+    <caption class="sr-only">Body measurements in ${t===`cm`?`centimetres`:`inches`}</caption>
+    <thead><tr><th scope="col">Size</th><th scope="col">Chest</th><th scope="col">Waist</th><th scope="col">Hip</th></tr></thead>
+    <tbody>${Object.entries(e).map(([e,[t,r,i]])=>`<tr><th scope="row">${e}</th><td>${n(t)}</td><td>${n(r)}</td><td>${n(i)}</td></tr>`).join(``)}</tbody>
+  </table>`}function r(e){let r=e.querySelector(`[data-size-table]`);if(!r)return;let i=i=>{r.innerHTML=n(i);for(let n of t(`[data-unit]`,e))n.setAttribute(`aria-pressed`,String(n.dataset.unit===i))};for(let n of t(`[data-unit]`,e))n.addEventListener(`click`,()=>i(n.dataset.unit));i(`cm`)}var i=(e,t=!1)=>new Date(e).toLocaleDateString(`en-US`,{month:`short`,day:`numeric`,year:`numeric`,...t?{hour:`numeric`,minute:`2-digit`}:{}});function a(e,t){document.title=e,t&&document.querySelector(`meta[name="description"]`)?.setAttribute(`content`,t)}export{a as n,r,i as t};

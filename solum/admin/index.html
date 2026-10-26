@@ -1,0 +1,120 @@
+<!doctype html>
+<!-- SOLUM — trail & outdoor running apparel — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merchant POS & Operations Till — Bhoomi Outdoors</title>
+  <meta name="description" content="SOLUM back office: orders, products, stock and customers for the trail-apparel store demo." />
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#2E3A2F" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..800&family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    (function (d) {
+      d.classList.add('js');
+      try { if (sessionStorage.getItem('solum:admin-session') === 'true') d.classList.add('signed-in'); } catch (e) {}
+    })(document.documentElement);
+  </script>
+  <script type="module" crossorigin src="../assets/admin-Bvqj5XCD.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/store-DfXjkpw_.js">
+  <link rel="modulepreload" crossorigin href="../assets/Flip-BfMAFAcm.js">
+  <link rel="stylesheet" crossorigin href="../assets/admin-BkH4inUM.css">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+.cc-preview-pill{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:var(--cc-lift,max(16px,env(safe-area-inset-bottom)));z-index:2147483647;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;box-sizing:border-box;background:#FF5722;color:#161616;font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid #fff;box-shadow:4px 4px 0 rgba(0,0,0,.35)}
+.cc-preview-pill:hover{background:#ff7a5f}
+.cc-preview-pill:focus-visible{outline:3px solid #161616;outline-offset:2px;box-shadow:0 0 0 7px #fff}
+.cc-preview-pill__short{display:none}
+@media (max-width:480px){.cc-preview-pill{right:max(10px,env(safe-area-inset-right));bottom:var(--cc-lift,max(10px,env(safe-area-inset-bottom)));padding:0 12px;font-size:11px}.cc-preview-pill__long{display:none}.cc-preview-pill__short{display:inline}}
+</style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ══ SIGN-IN ════════════════════════════════════════════════════════ -->
+  <div class="signin" id="signin" hidden>
+    <div class="signin__brand" aria-hidden="true">
+      <img class="signin__photo" src="../photos/158-solum/trail-main.jpg" alt="" width="1600" height="1067" />
+      <div class="signin__veil"></div>
+      <p class="signin__mark">SOLUM</p>
+      <p class="signin__tag">Back office<br />for the long way out</p>
+    </div>
+    <main class="signin__main" id="signin-main">
+      <div class="signin__card">
+        <p class="signin__mark signin__mark--sm" aria-hidden="true">SOLUM</p>
+        <h1 class="signin__title">Sign in to the admin</h1>
+        <p class="signin__note">
+          <strong>Demo account.</strong> The details are filled in for you. This is a front-end demo, so the sign-in
+          only lives in this tab; a real admin sign-in needs a server.
+        </p>
+        <form class="signin__form" id="signin-form" novalidate>
+          <div class="field">
+            <label class="field__label" for="si-email">Email</label>
+            <input id="si-email" name="email" type="email" autocomplete="username" required />
+            <p class="field__err" id="si-email-err" hidden></p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="si-pw">Password</label>
+            <div class="pw">
+              <input id="si-pw" name="password" type="password" autocomplete="current-password" required />
+              <button type="button" class="pw__toggle" aria-pressed="false" aria-controls="si-pw">Show</button>
+            </div>
+            <p class="field__err" id="si-pw-err" hidden></p>
+          </div>
+          <p class="formmsg" id="si-msg" role="alert" hidden></p>
+          <button type="submit" class="btn btn--dark btn--lg btn--block" id="si-submit"><span>Sign in</span></button>
+        </form>
+        <a class="link signin__back" href="../">Back to the shop</a>
+      </div>
+    </main>
+  </div>
+
+  <!-- ══ SHELL ══════════════════════════════════════════════════════════ -->
+  <div class="shell" id="shell" hidden>
+    <aside class="side" id="side">
+      <a class="side__brand" href="#/overview" aria-label="SOLUM admin, overview">
+        <span class="side__mark">SOLUM</span><span class="side__sub">Admin</span>
+        <span class="side__glyph" aria-hidden="true">S</span>
+      </a>
+      <nav class="side__nav" aria-label="Admin sections">
+        <span class="side__ind" aria-hidden="true"></span>
+        <ul>
+          <li><a class="side__link" href="#/overview" data-nav="overview" title="Overview"><span data-icon="overview"></span><span class="side__label">Overview</span></a></li>
+          <li><a class="side__link" href="#/orders" data-nav="orders" title="Orders"><span data-icon="orders"></span><span class="side__label">Orders</span><span class="side__badge" data-badge hidden></span></a></li>
+          <li><a class="side__link" href="#/products" data-nav="products" title="Products"><span data-icon="products"></span><span class="side__label">Products</span></a></li>
+          <li><a class="side__link" href="#/customers" data-nav="customers" title="Customers"><span data-icon="customers"></span><span class="side__label">Customers</span></a></li>
+        </ul>
+      </nav>
+      <div class="side__foot">
+        <a class="side__link side__link--quiet" href="../" target="_blank" rel="noopener"><span data-icon="store"></span><span class="side__label">View store</span></a>
+        <div class="side__user">
+          <span class="avatar avatar--dark" aria-hidden="true">AD</span>
+          <span class="side__label"><span class="side__who">Store admin</span><span class="side__email">admin@solum.store</span></span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="frame">
+      <header class="top">
+        <a class="top__mark" href="#/overview" aria-label="SOLUM admin, overview">SOLUM</a>
+        <h1 class="top__title" id="page-title" tabindex="-1">Overview</h1>
+        <div class="top__actions">
+          <button type="button" class="top__search" id="open-palette" aria-keyshortcuts="Meta+K Control+K">
+            <span data-icon="search"></span><span class="top__search-label">Search</span><kbd class="top__kbd" id="kbd-hint">⌘K</kbd>
+          </button>
+          <a class="iconbtn top__store" href="../" target="_blank" rel="noopener" aria-label="View store (opens in a new tab)" title="View store"><span data-icon="store"></span></a>
+          <button type="button" class="iconbtn" id="sign-out" aria-label="Sign out" title="Sign out"><span data-icon="signout"></span></button>
+        </div>
+      </header>
+      <main class="main" id="main" tabindex="-1"></main>
+    </div>
+  </div>
+
+<a class="cc-preview-pill" href="../#top" target="_top" rel="noopener" aria-label="Buy the Solum template on Code and Chill"><span class="cc-preview-pill__long">START FREE TRIAL →</span><span class="cc-preview-pill__short">START →</span></a>
+<script>(()=>{const p=document.querySelector('.cc-preview-pill');if(!p)return;const fit=()=>{p.style.removeProperty('--cc-lift');const a=p.getBoundingClientRect(),h=innerHeight;let top=h;for(const el of document.body.querySelectorAll('*')){if(el===p||p.contains(el))continue;const s=getComputedStyle(el);if((s.position!=='fixed'&&s.position!=='sticky')||s.display==='none'||s.visibility==='hidden'||s.opacity==='0')continue;const r=el.getBoundingClientRect();if(r.height&&r.height<200&&r.top>h/2&&r.bottom>=h-40&&r.left<a.right&&r.right>a.left)top=Math.min(top,r.top)}if(top<h)p.style.setProperty('--cc-lift',h-top+10+'px')};addEventListener('load',()=>{fit();setTimeout(fit,1500)});addEventListener('resize',fit)})()</script>
+</body>
+</html>
