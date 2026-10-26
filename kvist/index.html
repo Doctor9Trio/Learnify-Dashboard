@@ -1,0 +1,68 @@
+<!doctype html>
+<!-- KVIST — a bento-grid store with sign-in and a live dashboard (React + Tailwind + Firebase) — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. -->
+<html lang="en">
+  <head>
+<meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Griha Living — Calm Objects for Mindful Homes</title>
+    <meta name="description" content="Solid oak, bouclé and hand-thrown clay. Griha Living makes furniture, lighting and textiles for slow homes, dispatched in 48 hours." />
+    <meta name="theme-color" content="#f2efe9" />
+    <meta property="og:title" content="Griha Living — Calm Objects for Mindful Homes" />
+    <meta property="og:description" content="Furniture, lighting and textiles made to be lived with." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400..600&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="./images/chair.webp" fetchpriority="high" />
+    <script>
+      /* Capture mode, for screen-recording a demo; visitors never open the page this way.
+         ?record&slow=2 runs every clock the page reads (rAF timestamps, performance.now,
+         Date.now, timers) 2× slower, and keeps Motion off WAAPI so all of its animations
+         follow those clocks: a recorder filming at half speed gets a smooth 60fps.
+         Safe to delete with src/lib/record.js. */
+      (function () {
+        var q = new URLSearchParams(location.search)
+        if (!q.has('record')) return
+        var S = Number(q.get('slow')) || 1
+        if (S === 1) return
+        delete Element.prototype.animate
+        var pn = performance.now.bind(performance), r0 = pn()
+        /* __kvistDrive(clock): from now on every clock reads the recorder's frame
+           clock (ms of video time), continuing from where it stands */
+        var drive = null, off = 0
+        var v = function (t) { return drive ? off + drive() : r0 + (t - r0) / S }
+        window.__kvistDrive = function (fn) { var now = v(pn()); off = now - fn(); drive = fn }
+        performance.now = function () { return v(pn()) }
+        var d0 = Date.now()
+        Date.now = function () { return Math.floor(d0 + v(pn()) - r0) }
+        var raf = window.requestAnimationFrame.bind(window)
+        window.requestAnimationFrame = function (cb) { return raf(function (t) { cb(v(t)) }) }
+        var st = window.setTimeout.bind(window), si = window.setInterval.bind(window)
+        window.setTimeout = function (fn, ms) { return st.apply(window, [fn, (ms || 0) * S].concat([].slice.call(arguments, 2))) }
+        window.setInterval = function (fn, ms) { return si.apply(window, [fn, (ms || 0) * S].concat([].slice.call(arguments, 2))) }
+      })()
+    </script>
+    <script type="module" crossorigin src="./assets/index-hekDt3Nm.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/createLucideIcon-B2BGxA2q.js">
+    <link rel="modulepreload" crossorigin href="./assets/catalog-Cw7vRJE1.js">
+    <link rel="modulepreload" crossorigin href="./assets/product-DkbhcmRG.js">
+    <link rel="modulepreload" crossorigin href="./assets/catalogStore-Ckks0jQ2.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-B0FSjbCE.css">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+.cc-preview-pill{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:var(--cc-lift,max(16px,env(safe-area-inset-bottom)));z-index:2147483647;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;box-sizing:border-box;background:#FF5722;color:#161616;font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:2px solid #fff;box-shadow:4px 4px 0 rgba(0,0,0,.35)}
+.cc-preview-pill:hover{background:#ff7a5f}
+.cc-preview-pill:focus-visible{outline:3px solid #161616;outline-offset:2px;box-shadow:0 0 0 7px #fff}
+.cc-preview-pill__short{display:none}
+@media (max-width:480px){.cc-preview-pill{right:max(10px,env(safe-area-inset-right));bottom:var(--cc-lift,max(10px,env(safe-area-inset-bottom)));padding:0 12px;font-size:11px}.cc-preview-pill__long{display:none}.cc-preview-pill__short{display:inline}}
+</style>
+</head>
+  <body>
+    <div id="root"></div>
+  <a class="cc-preview-pill" href="#shop" target="_top" rel="noopener" aria-label="Buy the Kvist template on Code and Chill"><span class="cc-preview-pill__long">START FREE TRIAL →</span><span class="cc-preview-pill__short">START →</span></a>
+<script>(()=>{const p=document.querySelector('.cc-preview-pill');if(!p)return;const fit=()=>{p.style.removeProperty('--cc-lift');const a=p.getBoundingClientRect(),h=innerHeight;let top=h;for(const el of document.body.querySelectorAll('*')){if(el===p||p.contains(el))continue;const s=getComputedStyle(el);if((s.position!=='fixed'&&s.position!=='sticky')||s.display==='none'||s.visibility==='hidden'||s.opacity==='0')continue;const r=el.getBoundingClientRect();if(r.height&&r.height<200&&r.top>h/2&&r.bottom>=h-40&&r.left<a.right&&r.right>a.left)top=Math.min(top,r.top)}if(top<h)p.style.setProperty('--cc-lift',h-top+10+'px')};addEventListener('load',()=>{fit();setTimeout(fit,1500)});addEventListener('resize',fit)})()</script>
+</body>
+</html>
