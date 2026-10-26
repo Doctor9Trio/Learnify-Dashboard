@@ -1,0 +1,59 @@
+/* ============================================================
+   responsive.css — Mobile, Tablet & Viewport Breakpoints
+   Pangat POS (पंगत)
+   ============================================================ */
+
+@media (max-width: 960px) {
+  :root {
+    --dock-w: 60px;
+    --dock-x: 12px;
+    --gutter: 14px;
+  }
+
+  .top {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 14px;
+  }
+
+  .tabs {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --dock-w: 0px;
+    --dock-x: 0px;
+    --gutter: 12px;
+  }
+
+  .app {
+    padding: 14px var(--gutter) 84px var(--gutter);
+  }
+
+  /* Dock becomes bottom bar */
+  .dock {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    height: 64px;
+    border-radius: 0;
+    justify-content: space-around;
+    padding: 0 10px;
+    border-top: 1px solid var(--rim);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .dock__btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .dock__sep {
+    display: none;
+  }
+}

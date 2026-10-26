@@ -1,0 +1,199 @@
+/* ============================================================
+   layout.css — App Canvas, Navigation Tabs & Quick-Action Dock
+   Pangat POS (पंगत)
+   ============================================================ */
+
+.app {
+  padding: 22px var(--gutter) 48px calc(var(--dock-x) + var(--dock-w) + var(--gutter));
+  overflow-x: clip;
+}
+
+/* ── Top Header ───────────────────────────────────────────── */
+.top {
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 26px;
+  display: grid;
+}
+
+.brand {
+  letter-spacing: -0.02em;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  font-weight: 700;
+  display: inline-flex;
+}
+
+.brand__mark {
+  background: var(--ember-grad);
+  width: 38px;
+  height: 38px;
+  color: var(--on-ember);
+  border-radius: 12px;
+  place-items: center;
+  display: grid;
+  box-shadow: 0 8px 20px -8px rgba(255, 60, 60, 0.7);
+}
+
+.brand__mark svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  width: 22px;
+  height: 22px;
+}
+
+/* ── Top Navigation Tabs ──────────────────────────────────── */
+.tabs {
+  scrollbar-width: none;
+  background: var(--glass-flat);
+  min-width: 0;
+  max-width: 100%;
+  box-shadow: inset 0 0 0 1px var(--rim);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  border-radius: 999px;
+  justify-self: center;
+  overflow-x: auto;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs__track {
+  gap: 2px;
+  width: max-content;
+  padding: 4px;
+  display: flex;
+  position: relative;
+}
+
+.tab {
+  z-index: 1;
+  color: var(--text);
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 10px 17px;
+  font-size: 14.5px;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.15s, background 0.15s;
+}
+
+.tab:hover {
+  background: var(--well);
+}
+
+.tab[aria-current="page"] {
+  background: var(--pill-grad);
+  color: var(--on-pill);
+}
+
+.tabs__pill {
+  z-index: 2;
+  background: var(--pill-grad);
+  pointer-events: none;
+  opacity: 0;
+  gap: 2px;
+  padding: 4px;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.top__tools {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.me {
+  background: var(--glass-2);
+  border: 1px solid var(--rim);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 2px;
+}
+
+.me img {
+  object-fit: cover;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.dot-badge {
+  background: var(--ember-grad);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 2px var(--bg), 0 0 10px rgba(255, 70, 70, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  top: 9px;
+  right: 10px;
+}
+
+/* ── Floating Left Action Dock ────────────────────────────── */
+.dock {
+  z-index: 30;
+  left: var(--dock-x);
+  background: var(--dock);
+  height: fit-content;
+  color: var(--on-dock);
+  box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.55), inset 0 0 0 1px var(--rim);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  border-radius: 999px;
+  flex-direction: column;
+  gap: 6px;
+  margin: auto 0;
+  padding: 10px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.dock__btn {
+  opacity: 0.8;
+  border-radius: 50%;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  position: relative;
+  transition: opacity 0.15s, background 0.15s, transform 0.15s;
+}
+
+.dock__btn:hover {
+  opacity: 1;
+  background: var(--well);
+  transform: scale(1.05);
+}
+
+.dock__btn .ico {
+  width: 22px;
+  height: 22px;
+}
+
+.dock__tip {
+  display: none;
+}
+
+.dock__sep {
+  height: 1px;
+  background: var(--line);
+  margin: 4px 6px;
+}
+
+/* ── Main View Area ───────────────────────────────────────── */
+.main {
+  position: relative;
+  min-width: 0;
+}

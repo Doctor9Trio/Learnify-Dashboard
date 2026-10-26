@@ -1,0 +1,170 @@
+/* ============================================================
+   components.css — Reusable Components for Pangat POS
+   Buttons, Glass Cards, Badges, Tables, Modals & Toast
+   ============================================================ */
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn {
+  height: 44px;
+  font-weight: 700;
+  font-size: 15px;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: var(--r-ctl);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px;
+  display: inline-flex;
+  transition: transform 0.1s, filter 0.15s, background 0.15s;
+}
+
+.btn .ico {
+  width: 17px;
+  height: 17px;
+}
+
+.btn--primary {
+  background: var(--ember-grad);
+  color: var(--on-ember);
+  box-shadow: 0 10px 24px -10px rgba(255, 80, 80, 0.6);
+}
+
+.btn--primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  border-color: var(--line-2);
+  background: var(--glass-flat);
+  color: var(--text);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+}
+
+.btn--ghost:hover {
+  background: var(--well);
+}
+
+.btn--sm {
+  height: 34px;
+  font-size: 13px;
+  padding: 0 14px;
+}
+
+.ibtn {
+  border: 1px solid var(--line);
+  width: 44px;
+  height: 44px;
+  color: var(--text);
+  background: transparent;
+  border-radius: 50%;
+  place-items: center;
+  display: inline-grid;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.ibtn--glass {
+  background: var(--glass-2);
+  border-color: var(--rim);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+}
+
+.ibtn:hover {
+  background: var(--well);
+}
+
+/* ── Cards & Surfaces ─────────────────────────────────────── */
+.card {
+  border-radius: var(--r-card);
+  background: var(--glass);
+  border: 1px solid var(--rim);
+  box-shadow: var(--shadow);
+  -webkit-backdrop-filter: var(--blur);
+  backdrop-filter: var(--blur);
+  padding: 24px;
+  position: relative;
+  min-width: 0;
+}
+
+.card__head {
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.card__title {
+  font-size: 19px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.card__sub {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin-top: 2px;
+}
+
+/* ── Status Pills & Badges ────────────────────────────────── */
+.badge {
+  font-size: 12px;
+  font-weight: 750;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge--good {
+  background: rgba(168, 220, 200, 0.18);
+  color: var(--good);
+}
+
+.badge--warn {
+  background: rgba(236, 210, 154, 0.18);
+  color: var(--warn);
+}
+
+.badge--bad {
+  background: rgba(238, 170, 166, 0.18);
+  color: var(--bad);
+}
+
+/* ── Live Service Clock ───────────────────────────────────── */
+.live {
+  background: var(--glass-flat);
+  border: 1px solid var(--rim);
+  border-radius: 999px;
+  height: 44px;
+  padding: 0 16px;
+  font-size: 13.5px;
+  font-weight: 650;
+  color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.live i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mint);
+  box-shadow: 0 0 0 4px rgba(168, 220, 200, 0.25);
+  animation: pulseMint 2.4s infinite;
+}
+
+@keyframes pulseMint {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(168, 220, 200, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(168, 220, 200, 0.05);
+  }
+}

@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **4** (`corbel`, `murmura`, `kinby`, `vessa`) | **16** | **20%** | **Suite 5: `tavola` (Pangat POS) — NEXT UP** |
+| **20** | **5** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`) | **15** | **25%** | **Suite 6: `ivora` (Dantika Clinic) — NEXT UP** |
 
 ---
 
@@ -87,18 +87,23 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 2: Dining Hospitality & Dental Healthcare
 > **Suites**: `tavola` (Pangat POS) & `ivora` (Dantika Clinic)  
-> **Status**: ⏳ **NEXT UP FOR EXECUTION**
+> **Status**: ⏳ In Progress (1 of 2 Complete)
 
 #### Suite 5: `tavola` — Pangat POS *(पंगत)*
 - **Domain**: Table Floor Plan, Real-Time KOT (Kitchen Order Tickets), Waitstaff Mobile POS
-- [ ] **Tokens & Shell**: `tavola/css/tokens.css`, `tavola/css/layout.css`
-- [ ] **Floor Plan View**: Interactive SVG table map with seating status (Vacant, Dining, Billed).
-- [ ] **KOT Ticket Matrix**: Live order timer pills, course breakdown, ticket bump action.
-- [ ] **Interactive JS**: Table selection, order item adder, bill calculator.
-- [ ] **QA & Git**: Visual verification and push.
+- **Target URL / Path**: `http://localhost:3456/tavola/#/overview`
+- [x] **Phase 1: REA Inspection & Assets**: Audit all SVG icons, staff photos, and glass styling tokens. Verified 0 missing assets.
+- [x] **Phase 2: Tokens & Shell**: Created `tavola/css/tokens.css` (dark luxury restaurant palette, ember/mint/amber gradients), `reset.css`, and `layout.css`.
+- [x] **Phase 3: Components**: Created `tavola/css/components.css` (buttons, glass cards, status badges, live pulse clock).
+- [x] **Phase 4: Floor Plan View**: Interactive SVG table map with seating status across Dining room, Terrace, and Bar.
+- [x] **Phase 5: KOT Ticket Matrix**: Live kitchen order tickets board with status columns (`New`, `Cooking`, `Ready`, `Served`) and timers.
+- [x] **Phase 6: Interactive JS & Theme**: Created `tavola/js/theme.js` with isolated `tavola:theme` storage and quick-action dock controller.
+- [x] **Phase 7: QA & Verification**: Tested in browser on Desktop & Mobile. Verified dark/light mode toggle and confirmed **0 console errors**.
 
 #### Suite 6: `ivora` — Dantika Clinic *(दन्तिका)*
 - **Domain**: Dental Practice EHR, Interactive 32-Tooth Chart, Appointment Day Grid
+- **Target URL / Path**: `http://localhost:3456/ivora/#/today`
+- **Status**: ⏳ **NEXT UP FOR EXECUTION**
 - [ ] **Tokens & Shell**: `ivora/css/tokens.css`, `ivora/css/layout.css`
 - [ ] **Interactive 32-Tooth Chart**: Pure SVG interactive tooth diagram with surface condition tags (Crown, Cavity, Filling).
 - [ ] **Doctor Schedule**: Daily timeline appointment blocks with patient cards and treatment notes.

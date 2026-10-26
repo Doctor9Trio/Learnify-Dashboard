@@ -1,0 +1,128 @@
+/* ============================================================
+   tokens.css — Pangat POS (पंगत) Design System Tokens
+   Reverse-Engineered via REA
+   Light + Dark Mode CSS Custom Properties
+   ============================================================ */
+
+:root,
+:root[data-theme="dark"] {
+  /* ── Typography & Scales ────────────────────────────────── */
+  --font:        "Urbanist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:        var(--font);
+
+  /* ── Dark Luxury Hospitality Palette (Default) ───────────── */
+  --bg:          #0a1222;
+  --bg-2:        #0e1830;
+  --glow-a:      radial-gradient(closest-side, rgba(70, 104, 178, 0.55), rgba(70, 104, 178, 0.18) 55%, transparent);
+  --glow-b:      radial-gradient(closest-side, rgba(56, 86, 156, 0.45), rgba(56, 86, 156, 0.14) 55%, transparent);
+
+  /* ── Glassmorphism & Elevation ──────────────────────────── */
+  --glass:       linear-gradient(140deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.03) 55%, rgba(255, 255, 255, 0.07)), rgba(12, 20, 40, 0.52);
+  --glass-flat:  rgba(255, 255, 255, 0.06);
+  --glass-2:     rgba(255, 255, 255, 0.09);
+  --glass-3:     #16213a;
+  --blur:        blur(26px) saturate(165%);
+  --rim-light:   linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.1) 28%, rgba(255, 255, 255, 0.05) 65%, rgba(255, 255, 255, 0.38));
+  --solid:       #111b31;
+  --float:       #16213a;
+  --well:        rgba(255, 255, 255, 0.06);
+  --line:        rgba(255, 255, 255, 0.078);
+  --line-2:      rgba(255, 255, 255, 0.161);
+  --rim:         rgba(255, 255, 255, 0.141);
+  --shadow:      0 1px 0 rgba(255, 255, 255, 0.078) inset, 0 30px 60px -32px rgba(0, 0, 0, 0.75);
+  --shadow-pop:  0 28px 70px -20px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.1);
+
+  /* ── Text Hierarchy ─────────────────────────────────────── */
+  --text:        #eef2fb;
+  --muted:       #9aa6c2;
+  --faint:       #8590ad;
+  --cream:       #f6f7fb;
+
+  /* ── Warm Food & Hospitality Accents ────────────────────── */
+  --amber:       #ecd29a;
+  --on-amber:    #2b2110;
+  --amber-grad:  linear-gradient(135deg, #f4e2b8, #e8cc91);
+
+  --ember:       #eeb2a3;
+  --on-ember:    #2e1813;
+  --ember-grad:  linear-gradient(135deg, #f5c8bc, #eaa999);
+
+  --mint:        #a8dcc8;
+  --on-mint:     #10291f;
+  --mint-grad:   linear-gradient(135deg, #c3e9da, #9fd6c1);
+
+  --ink:         #3a4767;
+  --on-ink:      #eef2fb;
+  --ink-grad:    linear-gradient(135deg, #3d4a6c, #263150);
+  --ink-line:    #9aa6c2;
+
+  --plain:       rgba(255, 255, 255, 0.07);
+  --on-plain:    #eef2fb;
+
+  /* ── Semantic Status Colors ─────────────────────────────── */
+  --good:        #a8dcc8;
+  --bad:         #eeaaa6;
+  --warn:        #ecd29a;
+
+  /* ── Navigation Dock & Controls ─────────────────────────── */
+  --dock:        rgba(255, 255, 255, 0.07);
+  --on-dock:     #eef2fb;
+  --pill:        #eeb2a3;
+  --pill-grad:   var(--ember-grad);
+  --on-pill:     #2e1813;
+  --btn:         var(--ember-grad);
+  --on-btn:      #2e1813;
+
+  /* ── Metrics & Radii ────────────────────────────────────── */
+  --r-card:      26px;
+  --r-tile:      22px;
+  --r-ctl:       999px;
+  --gap:         16px;
+  --dock-x:      20px;
+  --dock-w:      72px;
+  --gutter:      clamp(16px, 1.6vw, 28px);
+  --ease:        cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  color-scheme: dark;
+}
+
+/* ── Light Mode Override ──────────────────────────────────── */
+:root[data-theme="light"] {
+  --bg:          #e8ecf6;
+  --bg-2:        #f1f3fa;
+  --glow-a:      radial-gradient(closest-side, rgba(170, 186, 225, 0.7), rgba(170, 186, 225, 0.22) 55%, transparent);
+  --glow-b:      radial-gradient(closest-side, rgba(190, 202, 232, 0.6), rgba(190, 202, 232, 0.18) 55%, transparent);
+  --glass:       linear-gradient(140deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4) 55%, rgba(255, 255, 255, 0.55)), rgba(240, 243, 250, 0.35);
+  --glass-flat:  rgba(255, 255, 255, 0.5);
+  --glass-2:     rgba(255, 255, 255, 0.6);
+  --glass-3:     #f8f9fd;
+  --rim-light:   linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.45) 30%, rgba(255, 255, 255, 0.3) 65%, rgba(255, 255, 255, 0.9));
+  --solid:       #f6f7fc;
+  --float:       #fbfcff;
+  --well:        rgba(20, 30, 60, 0.059);
+  --line:        rgba(20, 30, 60, 0.09);
+  --line-2:      rgba(20, 30, 60, 0.169);
+  --rim:         rgba(255, 255, 255, 0.8);
+  --shadow:      0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 28px 56px -32px rgba(30, 40, 90, 0.35);
+  --shadow-pop:  0 24px 60px -18px rgba(30, 40, 90, 0.3), 0 2px 6px rgba(30, 40, 90, 0.078);
+  --text:        #121a2e;
+  --muted:       #555e78;
+  --faint:       #646c88;
+  --cream:       #ffffff;
+  --amber:       #d9b26a;
+  --mint:        #7cc2a7;
+  --ember:       #e39a88;
+  --ink:         #2a3552;
+  --on-ink:      #ffffff;
+  --ink-grad:    linear-gradient(135deg, #34406a, #1f2844);
+  --ink-line:    #2a3552;
+  --plain:       rgba(255, 255, 255, 0.6);
+  --on-plain:    #121a2e;
+  --good:        #08745b;
+  --bad:         #c21f37;
+  --warn:        #985800;
+  --dock:        rgba(18, 26, 46, 0.82);
+  --on-dock:     #eef2fb;
+
+  color-scheme: light;
+}
