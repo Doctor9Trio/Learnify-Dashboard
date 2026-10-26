@@ -1,0 +1,193 @@
+/* ============================================================
+   tokens.css — Karkhana ERP (कारख़ाना) Design System Tokens
+   Reverse-Engineered via REA
+   Workshop & Manufacturing Operations Light + Dark Mode Tokens
+   ============================================================ */
+
+:root {
+  /* ── Typography & Scales ────────────────────────────────── */
+  --font:        "Urbanist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-2xs:      11px;
+  --fs-xs:       12px;
+  --fs-sm:       12.5px;
+  --fs-md:       13.5px;
+  --fs-base:     14px;
+  --fs-lg:       15px;
+  --fs-xl:       17px;
+  --fs-2xl:      20px;
+  --fs-3xl:      22px;
+  --fs-4xl:      26px;
+  --fs-display:  34px;
+
+  /* ── Light Mode Palette (Default Industrial Crisp) ───────── */
+  --bg:          #efefec;
+  --mesh-a:      #fbfbf9;
+  --mesh-b:      #dfdfdb;
+  --mesh-c:      #f7f7f4;
+  --glass:       rgba(255, 255, 255, 0.56);
+  --glass-2:     rgba(255, 255, 255, 0.70);
+  --glass-3:     rgba(255, 255, 255, 0.88);
+  --rim:         rgba(255, 255, 255, 0.80);
+  --surface:     #f8f8f6;
+  --surface-2:   rgba(255, 255, 255, 0.58);
+  --raised:      #fcfcfb;
+  --well:        rgba(17, 17, 17, 0.059);
+  --line:        rgba(17, 17, 17, 0.09);
+  --line-2:      rgba(17, 17, 17, 0.161);
+  --shadow:      0 1px 0 rgba(255, 255, 255, 0.70) inset, 0 24px 48px -30px rgba(0, 0, 0, 0.22);
+  --shadow-pop:  0 24px 60px -18px rgba(0, 0, 0, 0.28), 0 2px 6px rgba(0, 0, 0, 0.07);
+
+  /* ── Text Hierarchy ─────────────────────────────────────── */
+  --text:        #111111;
+  --muted:       #5c5c5a;
+  --faint:       #73736f;
+  --ink:         #111111;
+  --on-ink:      #f7f7f5;
+
+  /* ── Interactive & Dock System ──────────────────────────── */
+  --primary:     var(--ink);
+  --on-primary:  var(--on-ink);
+  --primary-ink: #111111;
+  --dock:        #111111;
+  --on-dock:     #f7f7f5;
+  --accent:      #dcdcd8;
+  --on-accent:   #111111;
+  --dot:         #f7f7f5;
+
+  /* ── Workshop Machine Telemetry & Status Codes ─────────── */
+  --iris:        #2b2b2a;
+  --coral:       #c9542b;
+  --amber:       #a87406;
+  --teal:        #2a7f4d;
+  --sky:         #2d6cb0;
+  --rose:        #c43f4c;
+  --lime:        #6f8f1c;
+  --slate:       #637083;
+  --plum:        #8f6243;
+  --good:        #237a48;
+  --warn:        #8f6000;
+  --bad:         #bf3644;
+  --soft:        14%;
+
+  /* ── Dimensions & Shape ─────────────────────────────────── */
+  --r-card:      24px;
+  --r-tile:      16px;
+  --r-ctl:       999px;
+  --gap:         16px;
+  --dock-x:      20px;
+  --dock-w:      60px;
+  --gutter:      clamp(16px, 1.6vw, 28px);
+  --app-max:     1840px;
+  --ease:        cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* ── Dark Mode ────────────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --bg:          #0b0b0b;
+  --mesh-a:      rgba(255, 255, 255, 0.059);
+  --mesh-b:      rgba(255, 255, 255, 0.035);
+  --mesh-c:      rgba(255, 255, 255, 0.039);
+  --glass:       rgba(255, 255, 255, 0.043);
+  --glass-2:     rgba(255, 255, 255, 0.078);
+  --glass-3:     #222222;
+  --rim:         rgba(255, 255, 255, 0.071);
+  --surface:     #151515;
+  --surface-2:   rgba(255, 255, 255, 0.039);
+  --raised:      #1c1c1c;
+  --well:        rgba(255, 255, 255, 0.059);
+  --line:        rgba(255, 255, 255, 0.078);
+  --line-2:      rgba(255, 255, 255, 0.149);
+  --shadow:      0 1px 0 rgba(255, 255, 255, 0.051) inset, 0 24px 48px -30px rgba(0, 0, 0, 0.70);
+  --shadow-pop:  0 24px 60px -18px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.078);
+
+  --text:        #f2f2f0;
+  --muted:       #a8a8a5;
+  --faint:       #8a8a86;
+  --ink:         #f2f2f0;
+  --on-ink:      #111111;
+  --primary-ink: #f2f2f0;
+  --dock:        rgba(255, 255, 255, 0.078);
+  --on-dock:     #f2f2f0;
+  --accent:      #2c2c2b;
+  --on-accent:   #f2f2f0;
+  --dot:         #f2f2f0;
+
+  --iris:        #d6d6d3;
+  --coral:       #f08a5d;
+  --amber:       #e2ad45;
+  --teal:        #5cc58b;
+  --sky:         #6aa6e8;
+  --rose:        #ef7b87;
+  --lime:        #a8c75a;
+  --slate:       #9eabbb;
+  --plum:        #d2a07c;
+  --good:        #5cc58b;
+  --warn:        #e2ad45;
+  --bad:         #ef7b87;
+  --soft:        20%;
+
+  color-scheme: dark;
+}
+
+/* ── Accent Color Swatches ────────────────────────────────── */
+:root[data-accent="ocean"]:not([data-theme="dark"]) {
+  --accent:      #bcd4f2;
+  --on-accent:   #0f1f33;
+  --iris:        #2563a8;
+  --primary-ink: #1d4f87;
+  --dot:         #9cc3f3;
+}
+:root[data-accent="ocean"][data-theme="dark"] {
+  --accent:      #24476e;
+  --on-accent:   #eef5fc;
+  --iris:        #6aa6e8;
+  --primary-ink: #9cc3f3;
+  --dot:         #6aa6e8;
+}
+
+:root[data-accent="sage"]:not([data-theme="dark"]) {
+  --accent:      #b9dfcf;
+  --on-accent:   #0f2a20;
+  --iris:        #23795a;
+  --primary-ink: #1b6048;
+  --dot:         #9fdcc2;
+}
+:root[data-accent="sage"][data-theme="dark"] {
+  --accent:      #24584a;
+  --on-accent:   #eefaf5;
+  --iris:        #5cc5a0;
+  --primary-ink: #8fdcc0;
+  --dot:         #5cc5a0;
+}
+
+:root[data-accent="coral"]:not([data-theme="dark"]) {
+  --accent:      #f4c6bb;
+  --on-accent:   #3a1610;
+  --iris:        #b8482a;
+  --primary-ink: #9c3b20;
+  --dot:         #f4a58f;
+}
+:root[data-accent="coral"][data-theme="dark"] {
+  --accent:      #7a3527;
+  --on-accent:   #fff2ee;
+  --iris:        #f08a6a;
+  --primary-ink: #f6ad96;
+  --dot:         #f08a6a;
+}
+
+:root[data-accent="amber"]:not([data-theme="dark"]) {
+  --accent:      #f1dc9f;
+  --on-accent:   #2e2205;
+  --iris:        #976806;
+  --primary-ink: #7d5600;
+  --dot:         #f0cf6e;
+}
+:root[data-accent="amber"][data-theme="dark"] {
+  --accent:      #6b4f12;
+  --on-accent:   #fff8e6;
+  --iris:        #e2ad45;
+  --primary-ink: #ecc570;
+  --dot:         #e2ad45;
+}

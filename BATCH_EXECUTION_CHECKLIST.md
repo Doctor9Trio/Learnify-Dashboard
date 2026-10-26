@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **6** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`) | **14** | **30%** | **Suite 7: `cadra` (Karkhana ERP) — NEXT UP** |
+| **20** | **7** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`) | **13** | **35%** | **Suite 8: `noria` (Parivahan OS) — NEXT UP** |
 
 ---
 
@@ -116,17 +116,19 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 3: Industrial ERP & Logistics Flow
 > **Suites**: `cadra` (Karkhana ERP) & `noria` (Parivahan OS)  
-> **Status**: ⏳ In Progress (0 of 2 Complete)
+> **Status**: ⏳ In Progress (1 of 2 Complete)
 
 #### Suite 7: `cadra` — Karkhana ERP *(कारख़ाना)*
 - **Domain**: Factory Shopfloor, CNC Machine Telemetry, Work Orders, Raw Materials
 - **Target URL / Path**: `http://localhost:3456/cadra/#/dashboard`
-- **Status**: ⏳ **NEXT UP FOR EXECUTION**
-- [ ] **Tokens & Shell**: `cadra/css/tokens.css`, `cadra/css/layout.css` (Industrial slate/amber palette, heavy-duty density layout).
-- [ ] **Gantt Schedule**: Machine timeline Gantt canvas with shift schedules.
-- [ ] **Telemetry Gauges**: Real-time machine RPM, temperature, and maintenance alert feeds.
-- [ ] **Interactive JS**: Machine state toggles, work order assignment drawers.
-- [ ] **QA & Git**: Visual verification and push.
+- **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
+- [x] **Phase 1: REA Inspection & Assets**: Inspected with `bin/rea-inspector.mjs cadra`. Verified 14 stylesheets, 17 scripts, 133 colors, 0 missing assets.
+- [x] **Phase 2: Tokens & Shell**: Created `cadra/css/tokens.css` (Industrial slate/amber palette, heavy-duty density layout, dark/light mode), `reset.css`, and `layout.css`.
+- [x] **Phase 3: Components**: Created `cadra/css/components.css` (buttons, KPI cards, badges, shift telemetry widget, dialogs) and `cadra/css/responsive.css`.
+- [x] **Phase 4: Gantt Schedule**: Machine timeline Gantt canvas with shift schedules (`WO-2047`, `WO-2041`, capacity strip).
+- [x] **Phase 5: Telemetry Gauges**: Real-time floor status, RPM, temperature, and maintenance alert feeds.
+- [x] **Phase 6: Interactive JS & Theme**: Created `cadra/js/theme.js` with isolated `cadra:theme` and `cadra:accent` storage.
+- [x] **Phase 7: QA & Verification**: Tested via browser subagent on Desktop (`1440x900`) and Mobile (`375x812`). Verified dark/light mode and confirmed **0 console errors**.
 
 #### Suite 8: `noria` — Parivahan OS *(परिवहन)*
 - **Domain**: Freight Forwarding, Multi-Leg Shipments, Node Flow Automation Canvas

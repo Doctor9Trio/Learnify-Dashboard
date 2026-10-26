@@ -1,0 +1,267 @@
+/* ============================================================
+   responsive.css — Responsive Breakpoints & Mobile Adaptations
+   Karkhana ERP (कारख़ाना)
+   ============================================================ */
+
+/* ── Laptop & Tablet Wide (<= 1279px) ─────────────────────── */
+@media (width <= 1279px) {
+  .shift .meter {
+    display: none;
+  }
+}
+
+@media (width >= 1100px) and (width <= 1279px) {
+  .top {
+    gap: 14px;
+  }
+  .ttab,
+  .ttabs__pill .ttab {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .brand__text small {
+    display: none;
+  }
+}
+
+/* ── Medium Tablet & Below (<= 1099px) ────────────────────── */
+@media (width <= 1099px) {
+  :root {
+    --dock-w: 0px;
+    --dock-x: 0px;
+  }
+
+  .app {
+    padding: 16px var(--gutter) calc(100px + env(safe-area-inset-bottom));
+  }
+
+  .top {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .ttabs {
+    grid-area: 2 / 1 / auto / -1;
+    justify-self: stretch;
+  }
+
+  .ttabs__track {
+    margin: 0 auto;
+  }
+
+  .top__tools {
+    grid-area: 1 / 2;
+    justify-self: end;
+  }
+
+  .dock {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    flex-direction: row;
+    width: fit-content;
+    height: auto;
+    margin: 0 auto;
+    padding: 6px;
+  }
+
+  .dock__sep {
+    width: 1px;
+    height: 24px;
+    margin: auto 6px;
+  }
+
+  .dock__tip {
+    display: none;
+  }
+
+  .dock__btn[aria-current="page"]::after {
+    margin: 0 0 0 -2.5px;
+    inset: auto auto 3px 50%;
+  }
+
+  html.kb-open .dock {
+    visibility: hidden;
+  }
+
+  .toast {
+    bottom: calc(84px + env(safe-area-inset-bottom));
+  }
+}
+
+/* ── Tablet Horizontal Scroll Mask (<= 860px) ─────────────── */
+@media (width <= 860px) {
+  .ttabs {
+    margin: 0 calc(-1 * var(--gutter));
+    padding: 0 calc(var(--gutter) - 4px);
+    border-radius: 0;
+    max-width: none;
+  }
+
+  .ttabs__track {
+    margin: 0;
+  }
+
+  .ttabs,
+  .subnav {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 14px calc(100% - 14px), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 14px calc(100% - 14px), transparent);
+  }
+}
+
+/* ── Mobile Viewports (<= 760px) ──────────────────────────── */
+@media (width <= 760px) {
+  :root {
+    --gutter: 14px;
+  }
+
+  .app {
+    padding-top: 12px;
+  }
+
+  .brand__mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand__text b {
+    font-size: 19px;
+  }
+
+  .ttab {
+    padding: 10px 14px;
+  }
+
+  .phead {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .phead__lead {
+    flex: 100%;
+  }
+
+  .top__title {
+    font-size: var(--fs-4xl);
+  }
+
+  .crumbs {
+    font-size: var(--fs-xs);
+    margin-bottom: 4px;
+  }
+
+  .subnav {
+    margin: 0 calc(-1 * var(--gutter));
+    padding: 0 calc(var(--gutter) - 4px);
+    border-radius: 0;
+    flex: 100%;
+    max-width: none;
+  }
+
+  .shift {
+    min-height: 44px;
+    margin-left: 0;
+    padding: 4px 14px 4px 10px;
+  }
+
+  .shift__txt small {
+    display: none;
+  }
+
+  .pbar {
+    margin-bottom: 14px;
+  }
+
+  .pbar__actions {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .pbar__actions > .btn {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .pbar__actions > .btn--primary {
+    order: -1;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .tabs__track {
+    display: flex;
+  }
+
+  .kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .kpis > .stat:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  .stat {
+    border-radius: 18px;
+    gap: 4px;
+    padding: 12px 13px;
+  }
+
+  .stat__label {
+    font-size: var(--fs-xs);
+    min-width: 0;
+    line-height: 1.25;
+  }
+
+  .stat__ico {
+    display: none;
+  }
+
+  .stat__value {
+    gap: 2px 8px;
+    font-size: 18px;
+  }
+
+  .stat__value > .badge {
+    white-space: normal;
+    max-width: 100%;
+    line-height: 1.25;
+  }
+
+  .card {
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .card__head {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}
+
+/* ── Small Mobile (<= 374px) ──────────────────────────────── */
+@media (width <= 374px) {
+  .brand__text small {
+    display: none;
+  }
+  .dock__btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* ── Accessibility: Reduced Motion ────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
