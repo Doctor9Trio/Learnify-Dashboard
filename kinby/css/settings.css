@@ -1,0 +1,345 @@
+/*! Kinby — family money, in one place — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+.set {
+  gap:var(--gap);
+  grid-template-columns:240px minmax(0,1fr);
+  align-items:start;
+  display:grid
+}
+
+.set__nav {
+  padding:8px;
+  position:sticky;
+  top:86px
+}
+
+.set__navtrack {
+  gap:2px;
+  display:grid;
+  position:relative
+}
+
+.set__pill {
+  z-index:0;
+  pointer-events:none;
+  opacity:0;
+  background:var(--primary);
+  position:absolute;
+  inset:0
+}
+
+.set__navtrack a {
+  z-index:1;
+  height:44px;
+  color:var(--text);
+  border-radius:14px;
+  align-items:center;
+  gap:11px;
+  padding:0 12px;
+  font-weight:700;
+  display:flex;
+  position:relative
+}
+
+.set__navtrack a .ico {
+  color:var(--muted)
+}
+
+.set__navtrack a:hover:not([aria-current]) {
+  background:var(--well)
+}
+
+.set__navtrack a[aria-current],.set__navtrack a[aria-current] .ico {
+  color:var(--on-primary)
+}
+
+.set__body {
+  gap:var(--gap);
+  display:grid
+}
+
+.set__form {
+  gap:16px;
+  display:grid
+}
+
+.set__me {
+  align-items:center;
+  gap:16px;
+  display:flex
+}
+
+.set__me b {
+  font-size:var(--fs-xl);
+  font-weight:800;
+  display:block
+}
+
+.set__me small {
+  color:var(--muted);
+  margin-bottom:8px;
+  display:block
+}
+
+.set__foot {
+  justify-content:flex-end;
+  gap:8px;
+  display:flex
+}
+
+.set__rows {
+  display:grid
+}
+
+.set__row {
+  border-bottom:1px solid var(--line);
+  align-items:center;
+  gap:12px;
+  padding:12px 0;
+  display:flex
+}
+
+.set__row:last-child {
+  border-bottom:0
+}
+
+.set__row .grow {
+  flex:1;
+  min-width:0
+}
+
+.set__row b {
+  font-weight:700;
+  display:block
+}
+
+.set__row small {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  display:block
+}
+
+.set__large {
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:16px;
+  gap:6px;
+  margin-top:12px;
+  padding:14px;
+  display:grid
+}
+
+.set__large b {
+  font-weight:750
+}
+
+.set__large small {
+  color:var(--muted);
+  display:block
+}
+
+.set__people {
+  margin-bottom:12px;
+  display:grid
+}
+
+.set__people li {
+  border-bottom:1px solid var(--line);
+  align-items:center;
+  gap:12px;
+  padding:10px 0;
+  display:flex
+}
+
+.set__people li:last-child {
+  border-bottom:0
+}
+
+.set__people .grow {
+  flex:1;
+  min-width:0
+}
+
+.set__people b {
+  font-weight:700;
+  display:block
+}
+
+.set__people small {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  display:block;
+  overflow:hidden
+}
+
+.set__devs {
+  display:grid
+}
+
+.set__devs li {
+  border-bottom:1px solid var(--line);
+  align-items:center;
+  gap:12px;
+  padding:10px 0;
+  display:flex
+}
+
+.set__devs li:last-child {
+  border-bottom:0
+}
+
+.set__devs .grow {
+  flex:1
+}
+
+.set__devs b {
+  font-weight:700;
+  display:block
+}
+
+.set__devs small {
+  color:var(--muted)
+}
+
+.themes {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:14px;
+  display:grid
+}
+
+.theme {
+  border:1px solid var(--line);
+  background:var(--surface-2);
+  border-radius:18px;
+  gap:10px;
+  padding:10px 10px 12px;
+  font-weight:750;
+  display:grid
+}
+
+.theme[aria-checked=true] {
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent)
+}
+
+.theme__pv {
+  aspect-ratio:1.6;
+  background:#eef2f6;
+  border:1px solid #0000000f;
+  border-radius:12px;
+  display:block;
+  position:relative;
+  overflow:hidden
+}
+
+.theme__pv i {
+  border-radius:6px;
+  display:block;
+  position:absolute
+}
+
+.theme__pv i:first-child {
+  background:#fcfdfe;
+  width:22%;
+  top:8%;
+  bottom:8%;
+  left:6%
+}
+
+.theme__pv i:nth-child(2) {
+  background:#fcfdfe;
+  height:38%;
+  top:8%;
+  left:32%;
+  right:6%
+}
+
+.theme__pv i:nth-child(3) {
+  background:#2160e0;
+  width:34%;
+  top:54%;
+  bottom:8%;
+  left:32%
+}
+
+.theme--dark .theme__pv {
+  background:#0b1017
+}
+
+.theme--dark .theme__pv i:first-child,.theme--dark .theme__pv i:nth-child(2) {
+  background:#1b2633
+}
+
+.theme--dark .theme__pv i:nth-child(3) {
+  background:#6aa0ff
+}
+
+.theme--system .theme__pv {
+  background:linear-gradient(90deg,#eef2f6 50%,#0b1017 50%)
+}
+
+.theme--system .theme__pv i:first-child {
+  background:#fcfdfe
+}
+
+.theme--system .theme__pv i:nth-child(2) {
+  background:linear-gradient(90deg,#fcfdfe 50%,#1b2633 50%)
+}
+
+html.hide-money .amt,html.hide-money .bal__big,html.hide-money .bal__trio dd,html.hide-money .safe b,html.hide-money .wallet__limit b {
+  filter:blur(7px);
+  transition:filter .2s
+}
+
+html.hide-money .amt:hover,html.hide-money .bal__big:hover,html.hide-money .bal__trio dd:hover,html.hide-money .tx:hover .amt,html.hide-money .tx:focus-visible .amt {
+  filter:none
+}
+
+@media (width<=999px) {
+  .set {
+  grid-template-columns:minmax(0,1fr)
+}
+
+.set__nav {
+  scrollbar-width:none;
+  position:static;
+  overflow-x:auto
+}
+
+.set__navtrack {
+  width:max-content;
+  display:flex
+}
+
+.set__navtrack a {
+  white-space:nowrap
+}
+
+}
+
+@media (width<=760px) {
+  .themes {
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)
+}
+
+.set__me {
+  align-items:flex-start
+}
+
+.set__me .av--xl {
+  width:64px;
+  height:64px;
+  font-size:1.375rem
+}
+
+.set__people li {
+  flex-wrap:wrap
+}
+
+.set__people .select {
+  margin-left:50px
+}
+
+}

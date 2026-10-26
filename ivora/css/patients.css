@@ -1,0 +1,1021 @@
+/*! Ivora — the practice app for a dental clinic — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+[data-view=patients] .pl-search {
+  width:min(320px,100%)
+}
+
+[data-view=patients] .pl-card .toolbar {
+  margin-bottom:8px
+}
+
+[data-view=patients] .pl-table td {
+  vertical-align:middle
+}
+
+[data-view=patients] .pl-table .cell-person b {
+  align-items:center;
+  gap:6px;
+  display:flex
+}
+
+[data-view=patients] .pl-alert {
+  color:var(--bad);
+  display:inline-grid
+}
+
+[data-view=patients] .pl-alert .ico {
+  width:14px;
+  height:14px
+}
+
+[data-view=patients] .pl-when {
+  white-space:nowrap;
+  font-weight:700;
+  display:block
+}
+
+[data-view=patients] .pl-sub {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  max-width:260px;
+  display:block;
+  overflow:hidden
+}
+
+[data-view=patients] .pl-none {
+  color:var(--faint)
+}
+
+[data-view=patients] .pl-due {
+  color:var(--warn);
+  font-weight:700;
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  align-items:center;
+  gap:6px;
+  display:inline-flex
+}
+
+[data-view=patients] .pl-due .ico {
+  width:15px;
+  height:15px
+}
+
+[data-view=patients] .pl-ins {
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  white-space:nowrap;
+  font-weight:600
+}
+
+[data-view=patients] .pl-owe {
+  color:var(--bad);
+  font-weight:700
+}
+
+[data-view=patients] .pl-table td.a-p {
+  white-space:nowrap
+}
+
+[data-view=patients] .pl-more {
+  color:var(--muted);
+  justify-content:center;
+  padding-top:14px;
+  display:flex
+}
+
+[data-view=patients] .pl-table {
+  --areas:"t r" "s p"
+}
+
+[data-view=patients] .pf-head {
+  grid-template-columns:auto auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+  margin-bottom:16px;
+  display:grid
+}
+
+[data-view=patients] .pf-av {
+  box-shadow:0 0 0 4px var(--surface), 0 14px 30px -16px #0f2a2d80
+}
+
+[data-view=patients] .pf-id {
+  min-width:0
+}
+
+[data-view=patients] .pf-id .head__eyebrow {
+  margin-bottom:2px
+}
+
+[data-view=patients] .pf-meta {
+  color:var(--muted);
+  font-weight:600;
+  font-size:var(--fs-sm);
+  flex-wrap:wrap;
+  gap:4px 16px;
+  margin-top:8px;
+  display:flex
+}
+
+[data-view=patients] .pf-meta span {
+  white-space:nowrap;
+  align-items:center;
+  gap:6px;
+  display:inline-flex
+}
+
+[data-view=patients] .pf-meta .ico {
+  width:15px;
+  height:15px
+}
+
+[data-view=patients] .pf-tags {
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px;
+  margin-top:8px;
+  display:flex
+}
+
+[data-view=patients] .pf-since {
+  color:var(--faint);
+  font-size:var(--fs-xs);
+  font-weight:600
+}
+
+[data-view=patients] .pf-actions {
+  align-self:center
+}
+
+[data-view=patients] .pf-fav[aria-pressed=true] {
+  background:color-mix(in srgb, var(--amber) 18%, var(--surface));
+  color:var(--warn)
+}
+
+[data-view=patients] .pf-fav[aria-pressed=true] .ico {
+  fill:currentColor
+}
+
+[data-view=patients] .pf-alerts {
+  background:color-mix(in srgb, var(--coral) 8%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--coral) 26%, transparent);
+  border-radius:16px;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px 8px;
+  margin-bottom:14px;
+  padding:10px 12px;
+  display:flex
+}
+
+[data-view=patients] .pf-alerts.is-clear {
+  background:var(--surface);
+  border-color:var(--line)
+}
+
+[data-view=patients] .pf-alerts__lab {
+  font-weight:700;
+  font-size:var(--fs-sm);
+  color:var(--bad);
+  align-items:center;
+  gap:6px;
+  margin-right:4px;
+  display:inline-flex
+}
+
+[data-view=patients] .pf-alerts.is-clear .pf-alerts__lab {
+  color:var(--good)
+}
+
+[data-view=patients] .pf-alerts .btn {
+  margin-left:auto
+}
+
+[data-view=patients] .pf-al {
+  height:28px;
+  font-size:var(--fs-sm);
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:9px;
+  align-items:center;
+  padding:0 11px;
+  font-weight:700;
+  display:inline-flex
+}
+
+[data-view=patients] .pf-al--bad {
+  color:var(--bad);
+  border-color:color-mix(in srgb, var(--coral) 40%, transparent);
+  background:color-mix(in srgb, var(--coral) 12%, var(--surface))
+}
+
+[data-view=patients] .pf-al--warn {
+  color:var(--warn);
+  border-color:color-mix(in srgb, var(--amber) 40%, transparent)
+}
+
+[data-view=patients] .pf-al--plain {
+  color:var(--muted);
+  font-weight:600
+}
+
+[data-view=patients] .pf>.tabs {
+  margin-bottom:16px
+}
+
+[data-view=patients] .pf-body {
+  min-width:0
+}
+
+[data-view=patients] .pf-ov {
+  gap:var(--gap);
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-areas:"next next bal recall""mouth mouth perio perio""plans plans notes notes";
+  display:grid
+}
+
+[data-view=patients] .pf-next {
+  grid-area:next
+}
+
+[data-view=patients] .pf-bal {
+  grid-area:bal
+}
+
+[data-view=patients] .pf-recall {
+  grid-area:recall
+}
+
+[data-view=patients] .pf-mouth {
+  grid-area:mouth
+}
+
+[data-view=patients] .pf-perio {
+  grid-area:perio
+}
+
+[data-view=patients] .pf-plans {
+  grid-area:plans
+}
+
+[data-view=patients] .pf-notes {
+  grid-area:notes
+}
+
+[data-view=patients] .pf-appt {
+  text-align:left;
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:16px;
+  align-items:center;
+  gap:14px;
+  width:100%;
+  padding:10px;
+  display:flex
+}
+
+[data-view=patients] .pf-appt:hover {
+  border-color:var(--line-2)
+}
+
+[data-view=patients] .pf-appt>span:nth-child(2) {
+  flex:1;
+  min-width:0
+}
+
+[data-view=patients] .pf-appt b {
+  font-weight:700;
+  display:block
+}
+
+[data-view=patients] .pf-appt small {
+  color:var(--muted);
+  font-weight:600
+}
+
+[data-view=patients] .pf-appt__d {
+  text-align:center;
+  background:var(--primary);
+  width:54px;
+  height:58px;
+  color:var(--on-primary);
+  border-radius:14px;
+  flex:none;
+  place-content:center;
+  line-height:1;
+  display:grid
+}
+
+[data-view=patients] .pf-appt__d b {
+  font:700 var(--fs-4xl) var(--font)
+}
+
+[data-view=patients] .pf-appt__d small {
+  color:inherit;
+  opacity:.8;
+  text-transform:uppercase;
+  font-size:var(--fs-2xs);
+  letter-spacing:.06em
+}
+
+[data-view=patients] .pf-big {
+  font:700 var(--fs-display)/1.1 var(--font);
+  letter-spacing:-.025em
+}
+
+[data-view=patients] .pf-big.is-owe {
+  color:var(--bad)
+}
+
+[data-view=patients] .pf-small {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  margin:3px 0 12px;
+  font-weight:600
+}
+
+[data-view=patients] .pf-small.is-bad {
+  color:var(--bad)
+}
+
+[data-view=patients] .pf-row {
+  align-items:center;
+  gap:10px;
+  display:flex
+}
+
+[data-view=patients] .pf-row .pf-small {
+  margin:0
+}
+
+[data-view=patients] .pf-counts {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  flex-wrap:wrap;
+  gap:6px 14px;
+  margin-top:10px;
+  font-weight:600;
+  display:flex
+}
+
+[data-view=patients] .pf-counts span {
+  align-items:center;
+  gap:6px;
+  display:inline-flex
+}
+
+[data-view=patients] .pf-counts b {
+  color:var(--text);
+  font-weight:700
+}
+
+[data-view=patients] .pf-counts--inline {
+  margin:0
+}
+
+[data-view=patients] .perio {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  display:grid
+}
+
+[data-view=patients] .perio__s {
+  font:700 var(--fs-4xl)/1 var(--font);
+  color:color-mix(in srgb, var(--c) 60%, var(--text));
+  background:color-mix(in srgb, var(--c) 13%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--c) 34%, transparent);
+  border-radius:14px;
+  justify-items:center;
+  gap:2px;
+  padding:12px 6px 10px;
+  display:grid
+}
+
+[data-view=patients] .perio__s small {
+  font:600 var(--fs-xs) var(--font);
+  color:var(--muted)
+}
+
+[data-view=patients] .perio__s:hover {
+  border-color:var(--c)
+}
+
+[data-view=patients] .perio__key {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  flex-wrap:wrap;
+  gap:4px 12px;
+  margin-top:12px;
+  font-weight:600;
+  display:flex
+}
+
+[data-view=patients] .perio__key span {
+  align-items:center;
+  gap:5px;
+  display:inline-flex
+}
+
+[data-view=patients] .pf-list {
+  display:grid
+}
+
+[data-view=patients] .pf-list>li {
+  border-bottom:1px solid var(--line);
+  min-width:0;
+  padding:10px 0
+}
+
+[data-view=patients] .pf-list>li:last-child {
+  border-bottom:0
+}
+
+[data-view=patients] .pf-li {
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:8px;
+  display:flex
+}
+
+[data-view=patients] .pf-li b {
+  font-weight:700;
+  display:block
+}
+
+[data-view=patients] .pf-li small {
+  color:var(--muted);
+  font-weight:600
+}
+
+[data-view=patients] .pf-li:hover b {
+  color:var(--primary)
+}
+
+[data-view=patients] .pf-plans .meter {
+  height:6px
+}
+
+[data-view=patients] .pf-note {
+  align-items:flex-start;
+  gap:12px;
+  display:flex
+}
+
+[data-view=patients] .pf-note>span:last-child {
+  min-width:0
+}
+
+[data-view=patients] .pf-note b {
+  font-weight:700;
+  display:block
+}
+
+[data-view=patients] .pf-note small {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  font-weight:600
+}
+
+[data-view=patients] .pf-note p {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  margin-top:4px;
+  display:-webkit-box;
+  overflow:hidden
+}
+
+[data-view=patients] .pf-note__k {
+  background:color-mix(in srgb, var(--c) 15%, transparent);
+  width:32px;
+  height:32px;
+  color:var(--c);
+  border-radius:11px;
+  flex:none;
+  place-items:center;
+  display:grid
+}
+
+[data-view=patients] .pf-note__k .ico {
+  width:16px;
+  height:16px
+}
+
+[data-view=patients] .pf-unsigned {
+  font-style:normal;
+  font-size:var(--fs-xs);
+  color:var(--warn);
+  font-weight:700
+}
+
+[data-view=patients] .pf-chart {
+  gap:var(--gap);
+  grid-template-columns:minmax(0,1fr) 340px;
+  align-items:start;
+  display:grid
+}
+
+[data-view=patients] .pf-odo__chart {
+  margin:4px 0 16px
+}
+
+[data-view=patients] .pf-tooth {
+  align-content:start;
+  gap:12px;
+  min-height:420px;
+  display:grid;
+  position:sticky;
+  top:16px
+}
+
+[data-view=patients] .pf-tooth__top {
+  align-items:center;
+  gap:12px;
+  display:flex
+}
+
+[data-view=patients] .pf-tooth__top>div {
+  flex:1;
+  min-width:0
+}
+
+[data-view=patients] .pf-tooth__top .pf-small {
+  margin:2px 0 0
+}
+
+[data-view=patients] .pf-tooth__n {
+  background:var(--primary);
+  width:52px;
+  height:52px;
+  color:var(--on-primary);
+  font-size:var(--fs-3xl);
+  border-radius:16px;
+  flex:none;
+  place-items:center;
+  font-weight:600;
+  display:grid
+}
+
+[data-view=patients] .pf-tooth__h {
+  font:700 var(--fs-xl)/1.2 var(--font);
+  letter-spacing:-.02em
+}
+
+[data-view=patients] .pf-tooth__sub {
+  font-size:var(--fs-xs);
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-top:4px;
+  font-weight:700
+}
+
+[data-view=patients] .pf-conds {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:6px;
+  display:grid
+}
+
+[data-view=patients] .pf-cond {
+  border:1px solid var(--line);
+  background:var(--surface-2);
+  height:38px;
+  font-weight:700;
+  font-size:var(--fs-sm);
+  text-align:left;
+  border-radius:11px;
+  align-items:center;
+  gap:8px;
+  padding:0 10px;
+  display:flex
+}
+
+[data-view=patients] .pf-cond:hover {
+  border-color:var(--line-2)
+}
+
+[data-view=patients] .pf-cond[aria-pressed=true] {
+  border-color:var(--primary);
+  background:color-mix(in srgb, var(--violet) 12%, var(--surface));
+  color:var(--text);
+  box-shadow:inset 0 0 0 1px var(--primary)
+}
+
+[data-view=patients] .pf-treat {
+  flex-wrap:wrap;
+  gap:8px;
+  display:flex
+}
+
+[data-view=patients] .pf-hist,[data-view=patients] .pf-marks {
+  display:grid
+}
+
+[data-view=patients] .pf-hist li {
+  border-bottom:1px solid var(--line);
+  align-items:flex-start;
+  gap:10px;
+  padding:8px 0;
+  display:flex
+}
+
+[data-view=patients] .pf-hist li:last-child {
+  border-bottom:0
+}
+
+[data-view=patients] .pf-hist .ico {
+  color:var(--primary);
+  margin-top:2px
+}
+
+[data-view=patients] .pf-hist b {
+  font-weight:700;
+  font-size:var(--fs-sm);
+  display:block
+}
+
+[data-view=patients] .pf-hist small {
+  color:var(--muted)
+}
+
+[data-view=patients] .pf-mk {
+  text-align:left;
+  width:100%;
+  font-size:var(--fs-sm);
+  border-radius:10px;
+  grid-template-columns:40px minmax(0,1fr) auto;
+  align-items:center;
+  gap:10px;
+  padding:8px 6px;
+  display:grid
+}
+
+[data-view=patients] .pf-mk:hover {
+  background:var(--well)
+}
+
+[data-view=patients] .pf-mk b {
+  background:var(--well);
+  border-radius:8px;
+  place-items:center;
+  height:28px;
+  display:grid
+}
+
+[data-view=patients] .pf-mk span {
+  font-weight:700
+}
+
+[data-view=patients] .pf-mk small {
+  color:var(--muted)
+}
+
+[data-view=patients] .pf-plans-grid {
+  gap:var(--gap);
+  grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+  display:grid
+}
+
+[data-view=patients] .pf-plan {
+  gap:12px;
+  display:grid
+}
+
+[data-view=patients] .pf-plan header {
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:10px;
+  display:flex
+}
+
+[data-view=patients] .pf-plan header b {
+  font:700 var(--fs-lg) var(--font);
+  letter-spacing:-.01em;
+  display:block
+}
+
+[data-view=patients] .pf-plan header small {
+  color:var(--muted);
+  font-weight:600
+}
+
+[data-view=patients] .pf-plan ul {
+  display:grid
+}
+
+[data-view=patients] .pf-plan li {
+  border-bottom:1px solid var(--line);
+  font-size:var(--fs-sm);
+  grid-template-columns:auto minmax(0,1fr) auto auto;
+  align-items:center;
+  gap:10px;
+  padding:8px 0;
+  font-weight:600;
+  display:grid
+}
+
+[data-view=patients] .pf-plan li small {
+  color:var(--faint)
+}
+
+[data-view=patients] .pf-plan li.is-done {
+  color:var(--muted)
+}
+
+[data-view=patients] .pf-plan li.is-done>span:nth-child(2) {
+  text-decoration:line-through;
+  -webkit-text-decoration-color:var(--line-2);
+  text-decoration-color:var(--line-2)
+}
+
+[data-view=patients] .pf-plan__ico {
+  background:color-mix(in srgb, var(--tone) 15%, transparent);
+  width:28px;
+  height:28px;
+  color:var(--tone);
+  border-radius:9px;
+  place-items:center;
+  display:grid
+}
+
+[data-view=patients] .pf-plan__ico .ico {
+  width:15px;
+  height:15px
+}
+
+[data-view=patients] .pf-plan footer {
+  color:var(--muted);
+  justify-content:space-between;
+  font-weight:600;
+  display:flex
+}
+
+[data-view=patients] .pf-plan footer b {
+  color:var(--text);
+  font:700 var(--fs-lg) var(--font)
+}
+
+[data-view=patients] .pf-visits {
+  gap:var(--gap);
+  grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);
+  align-items:start;
+  display:grid
+}
+
+[data-view=patients] .vt {
+  gap:6px;
+  padding-left:18px;
+  display:grid;
+  position:relative
+}
+
+[data-view=patients] .vt:before {
+  content:"";
+  background:var(--line);
+  border-radius:2px;
+  width:2px;
+  position:absolute;
+  top:8px;
+  bottom:8px;
+  left:5px
+}
+
+[data-view=patients] .vt__i {
+  position:relative
+}
+
+[data-view=patients] .vt__dot {
+  background:var(--tone);
+  width:12px;
+  height:12px;
+  box-shadow:0 0 0 3px var(--surface);
+  border-radius:50%;
+  position:absolute;
+  top:20px;
+  left:-18px
+}
+
+[data-view=patients] .vt__i--done .vt__dot,[data-view=patients] .vt__i--no-show .vt__dot {
+  background:var(--surface);
+  border:2px solid var(--tone)
+}
+
+[data-view=patients] .vt__card {
+  text-align:left;
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  align-items:center;
+  gap:12px;
+  width:100%;
+  padding:10px 12px;
+  display:flex
+}
+
+[data-view=patients] .vt__card:hover {
+  border-color:var(--line-2)
+}
+
+[data-view=patients] .vt__date {
+  min-width:58px;
+  display:grid
+}
+
+[data-view=patients] .vt__date b {
+  white-space:nowrap;
+  font-weight:700
+}
+
+[data-view=patients] .vt__date small,[data-view=patients] .vt__what small {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  font-weight:600
+}
+
+[data-view=patients] .vt__what {
+  flex:1;
+  min-width:0
+}
+
+[data-view=patients] .vt__what b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:700;
+  display:block;
+  overflow:hidden
+}
+
+[data-view=patients] .vt__card .pill {
+  height:22px;
+  font-size:var(--fs-xs)
+}
+
+[data-view=patients] .pf-billing {
+  gap:var(--gap);
+  grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);
+  align-items:start;
+  display:grid
+}
+
+[data-view=patients] .pf-billing table {
+  --areas:"t r" "s p"
+}
+
+[data-view=patients] .pf-billing tr[data-href] {
+  cursor:pointer
+}
+
+[data-view=patients] .pf-pay,[data-view=patients] .pf-im {
+  align-items:center;
+  gap:12px;
+  display:flex
+}
+
+[data-view=patients] .pf-pay b,[data-view=patients] .pf-im b {
+  font-weight:700;
+  display:block
+}
+
+[data-view=patients] .pf-pay small,[data-view=patients] .pf-im small {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  font-weight:600
+}
+
+[data-view=patients] .pf-pay__ico,[data-view=patients] .pf-im__k {
+  background:var(--well);
+  width:34px;
+  height:34px;
+  color:var(--muted);
+  border-radius:11px;
+  flex:none;
+  place-items:center;
+  display:grid
+}
+
+[data-view=patients] .pf-notesg {
+  gap:var(--gap);
+  grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);
+  align-items:start;
+  display:grid
+}
+
+[data-view=patients] .pf-notesg .pf-note p {
+  -webkit-line-clamp:4
+}
+
+[data-view=patients] .pf-side {
+  gap:var(--gap);
+  display:grid
+}
+
+[data-view=patients] .pf-sum {
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:16px;
+  gap:12px;
+  padding:16px;
+  display:grid
+}
+
+@media (width<=1279px) {
+  [data-view=patients] .pf-ov {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-areas:"next next""bal recall""mouth mouth""perio plans""notes notes"
+}
+
+[data-view=patients] .pf-chart {
+  grid-template-columns:minmax(0,1fr)
+}
+
+[data-view=patients] .pf-tooth {
+  min-height:0;
+  position:static
+}
+
+[data-view=patients] .pf-conds {
+  grid-template-columns:repeat(4,minmax(0,1fr))
+}
+
+[data-view=patients] .pf-head {
+  grid-template-columns:auto auto minmax(0,1fr)
+}
+
+[data-view=patients] .pf-actions {
+  grid-column:1/-1;
+  justify-content:flex-start
+}
+
+}
+
+@media (width<=999px) {
+  [data-view=patients] .pf-visits,[data-view=patients] .pf-billing,[data-view=patients] .pf-notesg {
+  grid-template-columns:minmax(0,1fr)
+}
+
+}
+
+@media (width<=760px) {
+  [data-view=patients] .pl-search,[data-view=patients] .pl-sort,[data-view=patients] .pl-sort select,[data-view=patients] .pl-card .chips {
+  width:100%
+}
+
+[data-view=patients] .pf-head {
+  grid-template-columns:auto minmax(0,1fr);
+  gap:12px 14px
+}
+
+[data-view=patients] .pf-head .head__back {
+  display:none
+}
+
+[data-view=patients] .pf-av {
+  width:64px;
+  height:64px;
+  font-size:var(--fs-3xl)
+}
+
+[data-view=patients] .pf-id .head__title {
+  font-size:var(--fs-4xl)
+}
+
+[data-view=patients] .pf-meta span:nth-child(3) {
+  display:none
+}
+
+[data-view=patients] .pf-actions {
+  grid-template-columns:auto 1fr 1fr;
+  display:grid
+}
+
+[data-view=patients] .pf-actions .btn--primary {
+  order:-1;
+  grid-column:1/-1
+}
+
+[data-view=patients] .pf-alerts .btn {
+  margin-left:0
+}
+
+[data-view=patients] .pf-ov {
+  grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"next""bal""recall""mouth""perio""plans""notes"
+}
+
+[data-view=patients] .pf-conds {
+  grid-template-columns:repeat(2,minmax(0,1fr))
+}
+
+[data-view=patients] .pf-plans-grid {
+  grid-template-columns:minmax(0,1fr)
+}
+
+[data-view=patients] .vt__card .pill {
+  display:none
+}
+
+}

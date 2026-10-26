@@ -1,0 +1,408 @@
+/*! Kinby — family money, in one place — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+.bills__stats {
+  margin-bottom:var(--gap)
+}
+
+.bills {
+  gap:var(--gap);
+  grid-template-columns:minmax(0,1.45fr) minmax(320px,1fr);
+  align-items:start;
+  display:grid
+}
+
+.cal__head {
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+  display:flex
+}
+
+.cal__head h3 {
+  font-size:var(--fs-lg);
+  letter-spacing:-.02em;
+  font-weight:800
+}
+
+.cal__dow {
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  gap:6px;
+  margin-bottom:6px;
+  display:grid
+}
+
+.cal__dow span {
+  text-align:center;
+  font-size:var(--fs-2xs);
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-weight:800
+}
+
+.cal__grid {
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  gap:6px;
+  display:grid
+}
+
+.cal__cell {
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  text-align:left;
+  border-radius:14px;
+  align-content:start;
+  gap:3px;
+  min-width:0;
+  min-height:86px;
+  padding:7px;
+  display:grid;
+  position:relative;
+  overflow:hidden
+}
+
+.cal__cell.is-pad {
+  background:0 0;
+  border-color:#0000
+}
+
+.cal__cell:hover:not(.is-pad) {
+  border-color:var(--line-2)
+}
+
+.cal__cell.is-today {
+  border-color:var(--primary);
+  box-shadow:inset 0 0 0 1px var(--primary)
+}
+
+.cal__cell.is-today .cal__n {
+  background:var(--primary);
+  color:var(--on-primary)
+}
+
+.cal__cell.is-sel {
+  background:color-mix(in srgb, var(--primary) 9%, var(--surface));
+  border-color:color-mix(in srgb, var(--primary) 55%, transparent)
+}
+
+.cal__n {
+  width:24px;
+  height:24px;
+  font-size:var(--fs-sm);
+  border-radius:999px;
+  place-items:center;
+  font-weight:800;
+  display:grid
+}
+
+.cal__pay {
+  color:var(--good);
+  align-items:center;
+  gap:3px;
+  font-size:.6875rem;
+  font-weight:800;
+  display:inline-flex
+}
+
+.cal__pay .ico {
+  width:12px;
+  height:12px
+}
+
+.cal__chips {
+  gap:2px;
+  display:grid
+}
+
+.cal__chip {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  border-radius:6px;
+  padding:1px 6px;
+  font-size:.6875rem;
+  font-weight:750;
+  display:block;
+  overflow:hidden
+}
+
+.cal__chip--paid {
+  background:var(--well);
+  color:var(--muted);
+  align-items:center;
+  gap:3px;
+  display:flex
+}
+
+.cal__chip--paid .ico {
+  width:11px;
+  height:11px;
+  color:var(--good);
+  flex:none
+}
+
+.cal__cell.is-past {
+  opacity:.72
+}
+
+.cal__more {
+  color:var(--muted);
+  padding-left:4px;
+  font-size:.6875rem;
+  font-weight:800
+}
+
+.cal__sum {
+  color:var(--muted);
+  font-size:.6875rem;
+  font-weight:800;
+  position:absolute;
+  top:9px;
+  right:8px
+}
+
+.dayp {
+  border-top:1px solid var(--line);
+  margin-top:16px;
+  padding-top:14px
+}
+
+.dayp__h {
+  font-size:var(--fs-base);
+  margin-bottom:6px;
+  font-weight:800
+}
+
+.dayp__h small {
+  color:var(--muted);
+  margin-left:6px;
+  font-weight:600
+}
+
+.dayp__none {
+  padding:6px 0
+}
+
+.blist,.dayp__list {
+  display:grid
+}
+
+.brow {
+  border-bottom:1px solid var(--line);
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:4px 12px;
+  padding:10px 0;
+  display:grid
+}
+
+.brow:last-child {
+  border-bottom:0
+}
+
+.brow__main {
+  min-width:0
+}
+
+.brow__main b button {
+  text-align:left;
+  font-weight:700
+}
+
+.brow__main b button:hover {
+  color:var(--accent-text)
+}
+
+.brow__main small {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  display:block
+}
+
+.brow__acts {
+  grid-column:2/-1;
+  justify-content:flex-end;
+  gap:6px;
+  display:flex
+}
+
+.subs__top {
+  margin-bottom:var(--gap);
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  align-items:center;
+  gap:20px;
+  display:grid
+}
+
+.subs__lab {
+  color:var(--muted);
+  font-weight:700;
+  font-size:var(--fs-sm)
+}
+
+.subs__big {
+  font-size:var(--fs-lg);
+  color:var(--muted);
+  margin:4px 0;
+  font-weight:650
+}
+
+.subs__big b {
+  color:var(--text);
+  letter-spacing:-.05em;
+  font-size:2.5rem;
+  font-weight:800
+}
+
+.subs {
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:10px;
+  display:grid
+}
+
+.sub {
+  background:var(--surface);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  border-radius:18px;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:10px 12px;
+  padding:14px;
+  display:grid
+}
+
+.sub.is-idle {
+  border-color:color-mix(in srgb, var(--gold) 45%, transparent);
+  background:color-mix(in srgb, var(--gold) 6%, var(--surface))
+}
+
+.sub__logo {
+  color:#13202f;
+  border-radius:13px;
+  place-items:center;
+  width:44px;
+  height:44px;
+  font-size:1.25rem;
+  font-weight:900;
+  display:grid
+}
+
+.sub__main {
+  min-width:0
+}
+
+.sub__main b button {
+  font-weight:750
+}
+
+.sub__main small {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  display:block
+}
+
+.sub__main em {
+  color:var(--warn);
+  font-style:normal;
+  font-weight:700
+}
+
+.sub__amt small {
+  color:var(--muted);
+  font-weight:600
+}
+
+.sub__acts {
+  grid-column:1/-1;
+  justify-content:flex-end;
+  gap:6px;
+  display:flex
+}
+
+.sub__cancel {
+  color:var(--bad)
+}
+
+.sub--paused,.sub--cancelled {
+  box-shadow:none;
+  background:var(--surface-2)
+}
+
+.sub--paused .sub__logo,.sub--cancelled .sub__logo {
+  opacity:.5
+}
+
+.sub--cancelled .sub__main b,.sub--cancelled .amt {
+  color:var(--muted);
+  text-decoration:line-through
+}
+
+.bt tr.is-off td {
+  color:var(--muted)
+}
+
+.bpaid {
+  display:grid
+}
+
+.bpaid li {
+  border-bottom:1px solid var(--line);
+  justify-content:space-between;
+  padding:8px 0;
+  display:flex
+}
+
+.bpaid li:last-child {
+  border-bottom:0
+}
+
+@media (width<=1100px) {
+  .bills {
+  grid-template-columns:minmax(0,1fr)
+}
+
+}
+
+@media (width<=760px) {
+  .cal__grid,.cal__dow {
+  gap:3px
+}
+
+.cal__cell {
+  border-radius:10px;
+  min-height:56px;
+  padding:4px
+}
+
+.cal__chips,.cal__sum,.cal__pay {
+  display:none
+}
+
+.cal__cell:has(.cal__pay) .cal__n {
+  box-shadow:inset 0 0 0 2px var(--mint)
+}
+
+.cal__cell:has(.cal__chip):after {
+  content:"";
+  background:var(--gold);
+  border-radius:50%;
+  width:6px;
+  height:6px;
+  margin:0 auto;
+  position:absolute;
+  bottom:7px;
+  left:0;
+  right:0
+}
+
+.cal__n {
+  width:22px;
+  height:22px;
+  font-size:var(--fs-xs)
+}
+
+.subs__top,.subs {
+  grid-template-columns:minmax(0,1fr)
+}
+
+}

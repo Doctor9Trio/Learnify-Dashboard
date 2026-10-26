@@ -1,0 +1,621 @@
+/*! Ivora — the practice app for a dental clinic — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+[data-view=assist] .as-badge {
+  height:42px;
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  color:color-mix(in srgb, var(--amber) 55%, var(--text));
+  background:color-mix(in srgb, var(--amber) 13%, transparent);
+  border:1px solid color-mix(in srgb, var(--amber) 28%, transparent);
+  border-radius:14px;
+  align-items:center;
+  gap:7px;
+  padding:0 14px;
+  font-weight:700;
+  display:inline-flex
+}
+
+[data-view=assist] .as-badge .ico {
+  width:16px;
+  height:16px
+}
+
+[data-view=assist] .as-grid {
+  gap:var(--gap);
+  grid-template-columns:minmax(300px,350px) minmax(0,1fr);
+  align-items:start;
+  display:grid
+}
+
+[data-view=assist] .as-side,[data-view=assist] .as-main {
+  gap:var(--gap);
+  align-content:start;
+  min-width:0;
+  display:grid
+}
+
+[data-view=assist] .as-search {
+  width:100%;
+  margin-bottom:10px
+}
+
+[data-view=assist] .as-chips {
+  flex-wrap:wrap;
+  margin-bottom:8px;
+  overflow:visible;
+  -webkit-mask-image:none;
+  mask-image:none
+}
+
+[data-view=assist] .aq-list {
+  gap:2px;
+  margin:0 -8px;
+  display:grid
+}
+
+[data-view=assist] .aq-group {
+  font-size:var(--fs-xs);
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--muted);
+  padding:14px 10px 4px;
+  font-weight:700
+}
+
+[data-view=assist] .aq {
+  border-radius:15px;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:11px;
+  padding:9px 10px;
+  display:grid;
+  position:relative
+}
+
+[data-view=assist] .aq:hover {
+  background:var(--surface-2)
+}
+
+[data-view=assist] .aq.is-active {
+  background:color-mix(in srgb, var(--violet) 11%, var(--surface))
+}
+
+[data-view=assist] .aq.is-active:before {
+  content:"";
+  background:var(--primary);
+  border-radius:2px;
+  width:3px;
+  position:absolute;
+  top:12px;
+  bottom:12px;
+  left:0
+}
+
+[data-view=assist] .aq__body {
+  min-width:0
+}
+
+[data-view=assist] .aq__body b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:700;
+  display:block;
+  overflow:hidden
+}
+
+[data-view=assist] .aq__body small {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  align-items:center;
+  gap:5px;
+  display:flex;
+  overflow:hidden
+}
+
+[data-view=assist] .aq__body small .ico {
+  flex:none;
+  width:15px;
+  height:15px
+}
+
+[data-view=assist] .aq__meta {
+  justify-items:end;
+  gap:3px;
+  display:grid
+}
+
+[data-view=assist] .aq__n {
+  font-size:var(--fs-xs);
+  background:color-mix(in srgb, var(--coral) 16%, transparent);
+  color:color-mix(in srgb, var(--coral) 60%, var(--text));
+  white-space:nowrap;
+  border-radius:999px;
+  padding:2px 8px;
+  font-weight:700
+}
+
+[data-view=assist] .aq__conf {
+  font-size:var(--fs-sm);
+  font-variant-numeric:tabular-nums;
+  color:var(--muted);
+  align-items:center;
+  gap:5px;
+  font-weight:700;
+  display:inline-flex
+}
+
+[data-view=assist] .aq__conf:before {
+  content:"";
+  background:var(--c);
+  border-radius:50%;
+  width:7px;
+  height:7px
+}
+
+[data-view=assist] .aq__done {
+  font-size:var(--fs-sm);
+  color:var(--good);
+  white-space:nowrap;
+  align-items:center;
+  gap:5px;
+  font-weight:700;
+  display:inline-flex
+}
+
+[data-view=assist] .aq__done .ico {
+  width:15px;
+  height:15px
+}
+
+[data-view=assist] .aq-empty .empty {
+  padding:22px 10px
+}
+
+[data-view=assist] .conf--violet {
+  --c:var(--violet)
+}
+
+[data-view=assist] .conf--sky {
+  --c:var(--sky)
+}
+
+[data-view=assist] .conf--slate {
+  --c:var(--slate)
+}
+
+[data-view=assist] .as-about__list {
+  gap:12px;
+  display:grid
+}
+
+[data-view=assist] .as-about__list li {
+  font-size:var(--fs-md);
+  color:var(--muted);
+  align-items:flex-start;
+  gap:11px;
+  display:flex
+}
+
+[data-view=assist] .as-about__list li b {
+  color:var(--text)
+}
+
+[data-view=assist] .as-about__list .ico {
+  background:var(--well);
+  width:34px;
+  height:34px;
+  color:var(--primary);
+  border-radius:12px;
+  flex:none;
+  padding:8px
+}
+
+[data-view=assist] .as-about__sw {
+  border-top:1px solid var(--line);
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  margin-top:16px;
+  padding-top:14px;
+  display:flex
+}
+
+[data-view=assist] .as-about__sw b {
+  font-weight:700;
+  display:block
+}
+
+[data-view=assist] .as-about__sw small {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  display:block
+}
+
+[data-view=assist] .as-pt__head {
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:14px;
+  margin-bottom:14px;
+  display:grid
+}
+
+[data-view=assist] .as-back {
+  display:none
+}
+
+[data-view=assist] .as-pt__who {
+  min-width:0
+}
+
+[data-view=assist] .as-pt__who h2 {
+  font:700 var(--fs-4xl)/1.1 var(--font);
+  letter-spacing:-.025em
+}
+
+[data-view=assist] .as-pt__who p {
+  color:var(--muted);
+  font-weight:600;
+  font-size:var(--fs-md);
+  margin-top:3px
+}
+
+[data-view=assist] .as-pt__tools {
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:8px;
+  display:flex
+}
+
+[data-view=assist] .as-disclaim {
+  margin-bottom:8px
+}
+
+[data-view=assist] .as-chart {
+  padding:6px 0 2px
+}
+
+[data-view=assist] .as-legend {
+  border-top:1px solid var(--line);
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px 14px;
+  margin-top:8px;
+  padding-top:12px;
+  display:flex
+}
+
+[data-view=assist] .as-legend__flag {
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  align-items:center;
+  gap:6px;
+  font-weight:600;
+  display:inline-flex
+}
+
+[data-view=assist] .as-legend__flag i {
+  border:2.4px solid var(--coral);
+  border-radius:50%;
+  width:13px;
+  height:13px
+}
+
+[data-view=assist] .as-conf-key {
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  white-space:nowrap;
+  align-items:center;
+  gap:6px;
+  font-weight:600;
+  display:inline-flex
+}
+
+[data-view=assist] .as-conf-key i {
+  background:var(--c);
+  border-radius:50%;
+  width:8px;
+  height:8px;
+  margin-left:6px
+}
+
+[data-view=assist] .as-conf-key i:first-child {
+  margin-left:0
+}
+
+[data-view=assist] .as-find {
+  container:afind/inline-size
+}
+
+[data-view=assist] .af-list {
+  gap:6px;
+  display:grid
+}
+
+[data-view=assist] .af {
+  border:1px solid var(--line);
+  background:var(--surface);
+  border-radius:16px;
+  grid-template-columns:auto minmax(0,1fr) minmax(110px,150px) auto;
+  align-items:center;
+  gap:14px;
+  padding:10px 12px;
+  transition:background-color .2s,border-color .2s;
+  display:grid
+}
+
+[data-view=assist] .af--new {
+  border-color:color-mix(in srgb, var(--coral) 26%, var(--line))
+}
+
+[data-view=assist] .af.is-hi {
+  background:color-mix(in srgb, var(--violet) 9%, var(--surface));
+  border-color:color-mix(in srgb, var(--violet) 45%, transparent)
+}
+
+[data-view=assist] .af--dismissed {
+  opacity:.62
+}
+
+[data-view=assist] .af__tooth {
+  text-align:center;
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:16px;
+  place-content:center;
+  width:54px;
+  height:54px;
+  line-height:1.05;
+  display:grid
+}
+
+[data-view=assist] .af--new .af__tooth {
+  background:color-mix(in srgb, var(--coral) 10%, var(--surface));
+  border-color:color-mix(in srgb, var(--coral) 32%, transparent)
+}
+
+[data-view=assist] .af__tooth small {
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  font-weight:700
+}
+
+[data-view=assist] .af__tooth b {
+  font:700 var(--fs-3xl)/1 var(--font);
+  letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums
+}
+
+[data-view=assist] .af__what {
+  min-width:0
+}
+
+[data-view=assist] .af__what b {
+  align-items:center;
+  gap:7px;
+  font-weight:700;
+  display:flex
+}
+
+[data-view=assist] .af__what b .ico {
+  width:16px;
+  height:16px;
+  color:var(--primary);
+  flex:none
+}
+
+[data-view=assist] .af__what small {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  margin-top:2px;
+  display:block;
+  overflow:hidden
+}
+
+[data-view=assist] .af__conf {
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:8px;
+  display:grid
+}
+
+[data-view=assist] .af__conf b {
+  font-size:var(--fs-sm);
+  text-align:right;
+  min-width:34px;
+  font-weight:700
+}
+
+[data-view=assist] .af__conf .meter__fill {
+  transform:scaleX(0)
+}
+
+[data-view=assist] .af__act {
+  justify-content:flex-end;
+  align-items:center;
+  gap:6px;
+  display:flex
+}
+
+[data-view=assist] .af__act>* {
+  flex:none
+}
+
+[data-view=assist] .af__plan {
+  font-size:var(--fs-sm);
+  color:var(--primary);
+  white-space:nowrap;
+  align-items:center;
+  gap:5px;
+  font-weight:700;
+  display:inline-flex
+}
+
+[data-view=assist] .af__plan .ico {
+  width:15px;
+  height:15px
+}
+
+[data-view=assist] .af__plan:hover {
+  text-underline-offset:3px;
+  text-decoration:underline
+}
+
+[data-view=assist] .af__dis {
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  font-weight:700
+}
+
+@container afind (width<=620px) {
+  [data-view=assist] .af {
+  grid-template-columns:auto minmax(0,1fr);
+  gap:8px 12px
+}
+
+[data-view=assist] .af__tooth {
+  grid-row:span 2
+}
+
+[data-view=assist] .af__conf {
+  grid-column:2
+}
+
+[data-view=assist] .af__act {
+  flex-wrap:wrap;
+  grid-column:1/-1;
+  justify-content:flex-start;
+  padding-top:4px
+}
+
+[data-view=assist] .af__act .btn {
+  flex:auto
+}
+
+}
+
+[data-view=assist] .as-sum__text {
+  resize:vertical;
+  border:1px solid var(--line-2);
+  background:var(--surface-2);
+  width:100%;
+  min-height:180px;
+  color:var(--text);
+  font:500 var(--fs-md)/1.65 var(--font);
+  border-radius:16px;
+  outline:none;
+  padding:16px 18px;
+  display:block
+}
+
+[data-view=assist] .as-sum__text:focus {
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--primary) 16%, transparent)
+}
+
+[data-view=assist] .as-sum__text[readonly] {
+  cursor:progress
+}
+
+[data-view=assist] .as-sum__actions {
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+  display:flex
+}
+
+[data-view=assist] .as-sum__sent {
+  font-size:var(--fs-sm);
+  color:var(--good);
+  align-items:center;
+  gap:6px;
+  font-weight:600;
+  display:inline-flex
+}
+
+[data-view=assist] .as-sum__sent:empty {
+  display:none
+}
+
+[data-view=assist] .as-sum__sent .ico {
+  width:15px;
+  height:15px
+}
+
+[data-view=assist] .as-sum__sent a {
+  color:var(--primary);
+  text-underline-offset:3px;
+  text-decoration:underline
+}
+
+[data-view=assist] .as-none .empty {
+  padding:60px 16px
+}
+
+@media (width<=1099px) {
+  [data-view=assist] .as-grid {
+  grid-template-columns:minmax(0,1fr)
+}
+
+[data-view=assist]:not(.is-detail) .as-main,[data-view=assist].is-detail .as-side {
+  display:none
+}
+
+[data-view=assist] .as-back {
+  display:inline-grid
+}
+
+[data-view=assist] .as-pt__head {
+  grid-template-columns:auto auto minmax(0,1fr)
+}
+
+[data-view=assist] .as-pt__tools {
+  grid-column:1/-1;
+  justify-content:flex-start
+}
+
+[data-view=assist] .as-side {
+  grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)
+}
+
+}
+
+@media (width<=760px) {
+  [data-view=assist] .head__actions .as-badge {
+  display:none
+}
+
+[data-view=assist] .as-side {
+  grid-template-columns:minmax(0,1fr)
+}
+
+[data-view=assist] .as-pt__head {
+  gap:10px
+}
+
+[data-view=assist] .odo__q {
+  display:none
+}
+
+[data-view=assist] .as-pt__head .av--lg {
+  width:44px;
+  height:44px;
+  font-size:var(--fs-md)
+}
+
+[data-view=assist] .as-pt__who h2 {
+  font-size:var(--fs-2xl)
+}
+
+[data-view=assist] .as-pt__tools .btn {
+  flex:auto
+}
+
+[data-view=assist] .as-card-tools-hide,[data-view=assist] .as-find .card__tools {
+  display:none
+}
+
+}

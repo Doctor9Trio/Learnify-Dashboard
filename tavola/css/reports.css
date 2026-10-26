@@ -1,0 +1,664 @@
+/*! Tavola — restaurant operations dashboard — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+[data-view=reports] .rp-grid {
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-template-areas:"rev rev rev rev rev rev rev rev mix mix mix mix""heat heat heat heat heat heat heat prime prime prime prime prime""top top top top top top bot bot bot bot bot bot"
+}
+
+[data-view=reports] .rp-rev {
+  grid-area:rev
+}
+
+[data-view=reports] .rp-mix {
+  grid-area:mix
+}
+
+[data-view=reports] .rp-heat {
+  grid-area:heat
+}
+
+[data-view=reports] .rp-prime {
+  grid-area:prime
+}
+
+[data-view=reports] .rp-top {
+  grid-area:top
+}
+
+[data-view=reports] .rp-bottom {
+  grid-area:bot
+}
+
+[data-view=reports] .rp-grid>.card {
+  flex-direction:column;
+  display:flex
+}
+
+[data-view=reports] .rp-rev__sum {
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:14px 28px;
+  display:flex
+}
+
+[data-view=reports] .rp-rev__total {
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:4px 14px;
+  display:flex
+}
+
+[data-view=reports] .rp-rev__total b {
+  letter-spacing:-.035em;
+  font-size:clamp(32px,3vw,44px);
+  font-weight:700;
+  line-height:1
+}
+
+[data-view=reports] .rp-delta {
+  font-size:14px;
+  font-weight:700
+}
+
+[data-view=reports] .rp-delta--mint {
+  color:var(--good)
+}
+
+[data-view=reports] .rp-delta--ember {
+  color:var(--bad)
+}
+
+[data-view=reports] .rp-delta--plain {
+  color:var(--muted)
+}
+
+[data-view=reports] .rp-facts {
+  gap:10px;
+  display:flex
+}
+
+[data-view=reports] .rp-facts>div {
+  background:var(--well);
+  border-radius:16px;
+  min-width:112px;
+  padding:10px 14px
+}
+
+[data-view=reports] .rp-facts dt {
+  color:var(--muted);
+  font-size:13px
+}
+
+[data-view=reports] .rp-facts dd b {
+  letter-spacing:-.015em;
+  font-size:18px;
+  font-weight:700;
+  line-height:1.25;
+  display:block
+}
+
+[data-view=reports] .rp-facts dd small {
+  color:var(--muted);
+  white-space:nowrap;
+  font-size:13px;
+  display:block
+}
+
+[data-view=reports] .rp-legend {
+  margin:14px 0 6px
+}
+
+[data-view=reports] .rp-dash {
+  border-top:2px dashed var(--ink-line);
+  border-radius:0!important;
+  width:16px!important;
+  height:0!important
+}
+
+[data-view=reports] .rp-rev__chart {
+  flex:1;
+  min-height:268px
+}
+
+[data-view=reports] .rp-mix__body {
+  flex:1;
+  align-content:center;
+  justify-items:center;
+  gap:20px;
+  display:grid
+}
+
+[data-view=reports] .rp-mix__donut {
+  width:min(100%,176px)
+}
+
+[data-view=reports] .rp-mix__donut svg {
+  filter:drop-shadow(0 8px 20px #eaa9994d)
+}
+
+[data-view=reports] .rp-mix__donut .donut__arc {
+  stroke-linecap:round
+}
+
+[data-view=reports] .rp-mix__list {
+  gap:4px;
+  width:100%;
+  display:grid
+}
+
+[data-view=reports] .rp-mix__row {
+  grid-template-columns:38px minmax(0,1fr);
+  align-items:center;
+  gap:12px;
+  padding:7px 4px;
+  display:grid
+}
+
+[data-view=reports] .rp-mix__ico {
+  width:38px;
+  height:38px;
+  box-shadow:inset 0 1px 0 #ffffff73, 0 10px 18px -10px var(--glow,#00000080);
+  border-radius:12px;
+  place-items:center;
+  display:grid;
+  position:relative
+}
+
+[data-view=reports] .rp-mix__ico .ico {
+  width:18px;
+  height:18px
+}
+
+[data-view=reports] .rp-mix__ico--ember {
+  background:var(--ember-grad);
+  color:var(--on-ember);
+  --glow:#eaa9994d
+}
+
+[data-view=reports] .rp-mix__ico--amber {
+  background:var(--amber-grad);
+  color:var(--on-amber);
+  --glow:#e8cc914d
+}
+
+[data-view=reports] .rp-mix__ico--mint {
+  background:var(--mint-grad);
+  color:var(--on-mint);
+  --glow:#9fd6c14d
+}
+
+[data-view=reports] .rp-mix__body2 {
+  gap:5px;
+  min-width:0;
+  display:grid
+}
+
+[data-view=reports] .rp-mix__line {
+  justify-content:space-between;
+  gap:10px;
+  display:flex
+}
+
+[data-view=reports] .rp-mix__line b,[data-view=reports] .rp-mix__line span {
+  font-weight:700
+}
+
+[data-view=reports] .rp-mix__row small {
+  color:var(--muted);
+  font-size:13px
+}
+
+[data-view=reports] .rp-mix .meter {
+  height:7px
+}
+
+[data-view=reports] .rp-heat__wrap {
+  flex-direction:column;
+  flex:1;
+  justify-content:center;
+  display:flex;
+  position:relative
+}
+
+[data-view=reports] .rp-heatmap {
+  border-radius:14px;
+  outline:none;
+  gap:6px;
+  display:grid
+}
+
+[data-view=reports] .rp-heatmap:focus-visible {
+  outline:2px solid var(--text);
+  outline-offset:6px
+}
+
+[data-view=reports] .rp-heat__row {
+  grid-template-columns:40px repeat(12,minmax(0,1fr)) 64px;
+  align-items:center;
+  gap:6px;
+  display:grid
+}
+
+[data-view=reports] .rp-heat__day {
+  color:var(--muted);
+  font-size:13px;
+  font-weight:700
+}
+
+[data-view=reports] .rp-heat__h {
+  color:var(--muted);
+  text-align:center;
+  font-size:12px
+}
+
+[data-view=reports] .rp-heat__tot {
+  text-align:right;
+  font-size:13.5px;
+  font-weight:700
+}
+
+[data-view=reports] .rp-heat__row--head .rp-heat__tot {
+  color:var(--muted);
+  font-size:12px;
+  font-weight:500
+}
+
+[data-view=reports] .rp-heat__cell {
+  background:var(--well);
+  border-radius:9px;
+  height:34px;
+  position:relative
+}
+
+[data-view=reports] .rp-heat__cell i {
+  border-radius:inherit;
+  opacity:0;
+  position:absolute;
+  inset:0;
+  box-shadow:inset 0 1px #fff6
+}
+
+[data-view=reports] .rp-heat__l1 {
+  background:var(--ink-grad);
+  box-shadow:inset 0 1px #ffffff38!important
+}
+
+[data-view=reports] .rp-heat__l2 {
+  background:var(--amber-grad)
+}
+
+:root[data-theme=light] [data-view=reports] .rp-heat__l1 {
+  background:color-mix(in srgb, var(--ink) 30%, #fff);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--ink) 12%, transparent)!important
+}
+
+[data-view=reports] .rp-heat__l3 {
+  background:var(--ember-grad);
+  box-shadow:inset 0 1px #ffffff73,0 8px 18px -8px #eaa9994d!important
+}
+
+[data-view=reports] .rp-heat__cell.is-on {
+  outline:2px solid var(--text);
+  outline-offset:1px;
+  z-index:1
+}
+
+[data-view=reports] .rp-heat__tip {
+  z-index:3
+}
+
+[data-view=reports] .rp-heat__foot {
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px 18px;
+  margin-top:16px;
+  display:flex
+}
+
+[data-view=reports] .rp-heat__peak {
+  color:var(--muted);
+  font-size:13.5px
+}
+
+[data-view=reports] .rp-heat__peak b {
+  color:var(--text)
+}
+
+[data-view=reports] .rp-nw {
+  white-space:nowrap
+}
+
+[data-view=reports] .rp-heat__scale {
+  color:var(--muted);
+  flex-wrap:wrap;
+  align-items:center;
+  gap:6px 14px;
+  font-size:13px;
+  display:flex
+}
+
+[data-view=reports] .rp-heat__scale span {
+  align-items:center;
+  gap:6px;
+  display:inline-flex
+}
+
+[data-view=reports] .rp-heat__scale i {
+  border-radius:4px;
+  width:14px;
+  height:14px
+}
+
+[data-view=reports] .rp-heat__scale i:not([class]) {
+  background:var(--well);
+  box-shadow:inset 0 0 0 1px var(--line)
+}
+
+[data-view=reports] .rp-prime__sum {
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:4px 14px;
+  display:flex
+}
+
+[data-view=reports] .rp-prime__sum>b {
+  letter-spacing:-.035em;
+  font-size:clamp(30px,2.6vw,40px);
+  font-weight:700;
+  line-height:1
+}
+
+[data-view=reports] .rp-prime__sub {
+  color:var(--muted);
+  font-size:14px
+}
+
+[data-view=reports] .rp-prime__sub b {
+  color:var(--text)
+}
+
+[data-view=reports] .rp-band-key {
+  background:color-mix(in srgb, var(--mint) 22%, transparent);
+  box-shadow:inset 0 1.5px 0 var(--mint);
+  border-radius:3px!important;
+  width:16px!important;
+  height:10px!important
+}
+
+[data-view=reports] .rp-prime__chart {
+  flex:1;
+  min-height:232px
+}
+
+[data-view=reports] .rp-band {
+  fill:var(--mint);
+  opacity:.14
+}
+
+[data-view=reports] .rp-band__edge {
+  stroke:var(--mint);
+  stroke-width:1.5px;
+  stroke-dasharray:4 4;
+  opacity:.8
+}
+
+[data-view=reports] .rp-band__lab {
+  fill:var(--good);
+  font-size:12px;
+  font-weight:700
+}
+
+[data-view=reports] .rp-prime__main {
+  stroke-width:3px
+}
+
+[data-view=reports] .rp-prime .chart__line--amber,[data-view=reports] .rp-prime .chart__line--mint {
+  stroke-width:2px
+}
+
+[data-view=reports] .rp-dish__list {
+  grid-template-columns:minmax(0,1fr);
+  gap:4px;
+  display:grid
+}
+
+[data-view=reports] .rp-dish {
+  border-radius:18px;
+  grid-template-columns:20px 48px minmax(0,1fr);
+  align-items:center;
+  gap:12px;
+  padding:8px;
+  display:grid
+}
+
+[data-view=reports] .rp-dish:hover {
+  background:var(--well)
+}
+
+[data-view=reports] .rp-top li:first-child .rp-dish {
+  background:var(--glass-2)
+}
+
+[data-view=reports] .rp-dish__n {
+  color:var(--muted);
+  text-align:center;
+  font-size:14px;
+  font-weight:800
+}
+
+[data-view=reports] .rp-dish__img {
+  border-radius:14px;
+  width:48px;
+  height:48px
+}
+
+[data-view=reports] .rp-dish__body {
+  grid-template-columns:minmax(0,1fr);
+  gap:5px;
+  min-width:0;
+  display:grid
+}
+
+[data-view=reports] .rp-dish__line {
+  justify-content:space-between;
+  gap:10px;
+  display:flex
+}
+
+[data-view=reports] .rp-dish__line b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  min-width:0;
+  font-weight:700;
+  overflow:hidden
+}
+
+[data-view=reports] .rp-dish__line span {
+  white-space:nowrap;
+  font-weight:700
+}
+
+[data-view=reports] .rp-dish small {
+  color:var(--muted);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:13px;
+  overflow:hidden
+}
+
+[data-view=reports] .rp-dish .meter {
+  height:7px
+}
+
+[data-view=reports] .rp-86 {
+  color:var(--bad);
+  font-weight:700
+}
+
+@media (width<=1180px) {
+  [data-view=reports] .head__actions {
+  width:100%;
+  margin-left:0
+}
+
+[data-view=reports] .rp-grid {
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  grid-template-areas:"rev rev rev rev rev rev""mix mix prime prime prime prime""heat heat heat heat heat heat""top top top bot bot bot"
+}
+
+}
+
+@media (width<=900px) {
+  [data-view=reports] .rp-grid {
+  grid-template-areas:"rev rev rev rev rev rev""mix mix mix mix mix mix""prime prime prime prime prime prime""heat heat heat heat heat heat""top top top top top top""bot bot bot bot bot bot"
+}
+
+[data-view=reports] .rp-mix__body {
+  grid-template-columns:176px minmax(0,1fr);
+  align-items:center;
+  gap:24px
+}
+
+}
+
+@media (width<=760px) {
+  [data-view=reports] .head__actions {
+  justify-content:space-between;
+  width:100%;
+  margin-left:0
+}
+
+[data-view=reports] .rp-grid {
+  grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"rev""mix""prime""heat""top""bot"
+}
+
+[data-view=reports] .rp-rev .card__sub,[data-view=reports] .rp-heat .card__sub {
+  display:none
+}
+
+[data-view=reports] .rp-facts {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  width:100%;
+  display:grid
+}
+
+[data-view=reports] .rp-facts>div {
+  min-width:0;
+  padding:9px 10px
+}
+
+[data-view=reports] .rp-facts dd b {
+  font-size:16px
+}
+
+[data-view=reports] .rp-rev__chart {
+  min-height:210px
+}
+
+[data-view=reports] .rp-prime__chart {
+  min-height:200px
+}
+
+[data-view=reports] .rp-mix__body {
+  grid-template-columns:minmax(0,1fr);
+  justify-items:center
+}
+
+[data-view=reports] .rp-prime .card__head {
+  flex-wrap:wrap
+}
+
+[data-view=reports] .rp-heatmap {
+  grid-template-rows:repeat(14,auto);
+  grid-template-columns:34px repeat(7,minmax(0,1fr));
+  grid-auto-flow:column;
+  gap:5px
+}
+
+[data-view=reports] .rp-heat__row {
+  display:contents
+}
+
+[data-view=reports] .rp-heat__day {
+  text-align:center;
+  padding-bottom:2px
+}
+
+[data-view=reports] .rp-heat__h {
+  text-align:left;
+  align-self:center
+}
+
+[data-view=reports] .rp-heat__cell {
+  border-radius:7px;
+  height:26px
+}
+
+[data-view=reports] .rp-heat__tot {
+  text-align:center;
+  padding-top:4px;
+  font-size:13px
+}
+
+[data-view=reports] .rp-heat__row--head .rp-heat__tot {
+  text-align:left;
+  padding-top:4px
+}
+
+[data-view=reports] .rp-heat__per {
+  display:none
+}
+
+[data-view=reports] .rp-heat__foot {
+  flex-direction:column;
+  align-items:flex-start
+}
+
+[data-view=reports] .rp-dish__line b,[data-view=reports] .rp-dish small {
+  white-space:normal
+}
+
+}
+
+:root[data-theme=light] [data-view=reports] .rp-delta--mint {
+  color:color-mix(in srgb, var(--good) 65%, var(--text))
+}
+
+@media (width>=1181px) and (orientation:portrait) and (height>=1100px) {
+  .app:has(>.main>[data-view=reports]:not([hidden])) {
+  flex-direction:column;
+  min-height:100dvh;
+  display:flex
+}
+
+.app:has(>.main>[data-view=reports]:not([hidden]))>.main {
+  flex-direction:column;
+  flex:1;
+  display:flex
+}
+
+[data-view=reports]:not([hidden]) {
+  flex-direction:column;
+  flex:1;
+  display:flex
+}
+
+[data-view=reports] .rp-grid {
+  flex:1;
+  grid-template-rows:minmax(0,1fr) auto auto
+}
+
+[data-view=reports] .rp-rev__chart {
+  min-height:268px
+}
+
+[data-view=reports] .rp-rev__chart>.chart__svg {
+  position:absolute;
+  top:0;
+  left:0
+}
+
+}

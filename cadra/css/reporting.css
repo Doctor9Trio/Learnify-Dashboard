@@ -1,0 +1,716 @@
+/*! Cadra — the ERP for a small bicycle maker — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+.rep .pbar__actions .btn--sm {
+  height:40px
+}
+
+.rep-pane {
+  min-width:0
+}
+
+.rp-sw {
+  border-radius:4px;
+  flex:none;
+  width:12px;
+  height:12px
+}
+
+.tone-bg--iris {
+  --c:var(--iris)
+}
+
+.tone-bg--teal {
+  --c:var(--teal)
+}
+
+.tone-bg--lime {
+  --c:var(--lime)
+}
+
+.tone-bg--sky {
+  --c:var(--sky)
+}
+
+.tone-bg--coral {
+  --c:var(--coral)
+}
+
+.tone-bg--amber {
+  --c:var(--amber)
+}
+
+.tone-bg--plum {
+  --c:var(--plum)
+}
+
+.tone-bg--rose {
+  --c:var(--rose)
+}
+
+.tone-bg--slate {
+  --c:var(--slate)
+}
+
+.rp-ov {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch
+}
+
+.rp-rev,.rp-cust {
+  grid-column:span 2
+}
+
+.rp-prod {
+  grid-column:1/-1
+}
+
+.rp-rev__chart {
+  height:250px
+}
+
+.rp-rev .card__tools .legend {
+  gap:6px 14px
+}
+
+.rp-ot {
+  flex-direction:column;
+  display:flex
+}
+
+.rp-ot .gauge {
+  max-width:240px;
+  margin-top:4px
+}
+
+.rp-ot__sub {
+  text-align:center;
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  margin-top:8px;
+  font-weight:600
+}
+
+.ot {
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  gap:5px;
+  margin-top:auto;
+  padding-top:16px;
+  display:grid
+}
+
+.ot li {
+  justify-items:center;
+  gap:4px;
+  display:grid
+}
+
+.ot__bar {
+  background:color-mix(in srgb, var(--lime) 55%, transparent);
+  width:100%;
+  height:34px;
+  clip-path:inset(calc((1 - var(--h)) * 100%) 0 0 0 round 4px);
+  border-radius:4px;
+  display:block
+}
+
+.ot__bar.is-warn {
+  background:color-mix(in srgb, var(--amber) 70%, transparent)
+}
+
+.ot__bar.is-bad {
+  background:color-mix(in srgb, var(--rose) 70%, transparent)
+}
+
+.ot small {
+  font-size:var(--fs-xs);
+  color:var(--faint);
+  font-weight:700
+}
+
+.ot li:last-child small {
+  color:var(--text)
+}
+
+.rp-units {
+  flex-direction:column;
+  display:flex
+}
+
+.rp-units__chart {
+  flex:auto;
+  min-height:210px
+}
+
+.rp-units .bars {
+  flex:1;
+  gap:6px;
+  height:auto;
+  min-height:210px
+}
+
+.rp-mini {
+  border-top:1px solid var(--line);
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-top:16px;
+  padding-top:14px;
+  display:grid
+}
+
+.rp-mini dt {
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  font-weight:700
+}
+
+.rp-mini dd {
+  font-size:var(--fs-2xl);
+  letter-spacing:-.02em;
+  font-weight:600
+}
+
+.rp-units .bars__track,.rp-units .bars__bar {
+  border-radius:6px
+}
+
+.rk {
+  grid-template-columns:minmax(0,1fr);
+  gap:2px;
+  display:grid
+}
+
+.rk__row {
+  grid-template-columns:20px 32px minmax(140px,220px) minmax(0,1fr) 96px;
+  align-items:center;
+  gap:12px;
+  padding:7px 0;
+  display:grid
+}
+
+.rk__n {
+  color:var(--faint);
+  font-weight:600;
+  font-size:var(--fs-sm);
+  text-align:center
+}
+
+.rk__name {
+  min-width:0
+}
+
+.rk__name b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:700;
+  display:block;
+  overflow:hidden
+}
+
+.rk__name small {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  display:block;
+  overflow:hidden
+}
+
+.rk__track {
+  background:var(--well);
+  border-radius:5px;
+  height:14px;
+  overflow:hidden
+}
+
+.rk__fill {
+  height:100%;
+  width:calc(var(--w) * 100%);
+  gap:2px;
+  display:flex
+}
+
+.rk__b {
+  background:var(--iris);
+  border-radius:5px;
+  min-width:3px;
+  height:100%;
+  display:block
+}
+
+.rk__q {
+  background:repeating-linear-gradient(135deg, color-mix(in srgb, var(--iris) 45%, transparent) 0 5px, color-mix(in srgb, var(--iris) 22%, transparent) 5px 9px);
+  border-radius:5px;
+  min-width:3px;
+  height:100%;
+  display:block
+}
+
+.rk__row:first-child .rk__b {
+  background:var(--coral)
+}
+
+.rk__row:first-child .rk__q {
+  background:repeating-linear-gradient(135deg, color-mix(in srgb, var(--coral) 45%, transparent) 0 5px, color-mix(in srgb, var(--coral) 22%, transparent) 5px 9px)
+}
+
+.rk__v {
+  text-align:right;
+  font-weight:600
+}
+
+.rp-kinds {
+  margin-bottom:12px
+}
+
+.rp-ptable td .cell-person b {
+  white-space:nowrap
+}
+
+.rp-share {
+  align-items:center;
+  gap:10px;
+  min-width:150px;
+  display:flex
+}
+
+.rp-share .meter {
+  flex:1;
+  height:6px
+}
+
+.rp-share small {
+  color:var(--muted);
+  font-weight:700;
+  font-size:var(--fs-xs);
+  text-align:right;
+  min-width:40px
+}
+
+.rb {
+  grid-template-columns:minmax(300px,340px) minmax(0,1fr);
+  align-items:start
+}
+
+.rb-side {
+  gap:var(--gap);
+  min-width:0;
+  display:grid
+}
+
+.rb-ctl .card__head {
+  margin-bottom:8px
+}
+
+.rb-ctl .d-sec {
+  margin:14px 0 8px
+}
+
+.rb-ctl .d-sec:first-of-type {
+  margin-top:0
+}
+
+.rb-metrics {
+  gap:4px;
+  display:grid
+}
+
+.rb-m {
+  text-align:left;
+  border:1px solid #0000;
+  border-radius:12px;
+  align-items:center;
+  gap:11px;
+  padding:8px 10px;
+  display:flex
+}
+
+.rb-m:hover {
+  background:var(--well)
+}
+
+.rb-m[aria-checked=true] {
+  background:color-mix(in srgb, var(--iris) 9%, var(--surface));
+  border-color:color-mix(in srgb, var(--iris) 35%, transparent)
+}
+
+.rb-m b {
+  font-weight:700;
+  font-size:var(--fs-md);
+  display:block
+}
+
+.rb-m small {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  line-height:1.35;
+  display:block
+}
+
+.rb-m__ico,.rb-sv__ico {
+  background:color-mix(in srgb, var(--c,var(--iris)) var(--soft), transparent);
+  width:34px;
+  height:34px;
+  color:color-mix(in srgb, var(--c,var(--iris)) 66%, var(--text));
+  border-radius:10px;
+  flex:none;
+  place-items:center;
+  display:grid
+}
+
+.rb-m__ico .ico,.rb-sv__ico .ico {
+  width:17px;
+  height:17px
+}
+
+.rb-ctl .seg {
+  width:100%
+}
+
+.rb-ctl .seg__btn {
+  flex:1
+}
+
+.rb-ctl .seg__btn:disabled {
+  opacity:.38;
+  cursor:not-allowed
+}
+
+.rb-acts {
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:18px;
+  display:grid
+}
+
+.rb-acts .btn {
+  padding:0 10px
+}
+
+.rb-search {
+  width:100%;
+  height:38px;
+  margin-bottom:8px
+}
+
+.rb-saved {
+  grid-template-columns:minmax(0,1fr);
+  gap:2px;
+  display:grid
+}
+
+.rb-sv {
+  border:1px solid #0000;
+  border-radius:12px;
+  align-items:center;
+  gap:4px;
+  display:flex
+}
+
+.rb-sv.is-on {
+  background:color-mix(in srgb, var(--iris) 8%, transparent);
+  border-color:color-mix(in srgb, var(--iris) 25%, transparent)
+}
+
+.rb-sv__open {
+  text-align:left;
+  border-radius:12px;
+  flex:1;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  padding:8px;
+  display:flex
+}
+
+.rb-sv__open:hover {
+  background:var(--well)
+}
+
+.rb-sv__t {
+  min-width:0
+}
+
+.rb-sv__t b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:700;
+  display:block;
+  overflow:hidden
+}
+
+.rb-sv__t small {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  display:block;
+  overflow:hidden
+}
+
+.rb-sv .ibtn {
+  color:var(--muted);
+  margin-right:4px
+}
+
+.rb-out {
+  min-width:0
+}
+
+.rb-sum {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-bottom:16px;
+  display:grid
+}
+
+.rb-sum>div {
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  min-width:0;
+  padding:12px 14px
+}
+
+.rb-sum dt {
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  font-weight:700
+}
+
+.rb-sum dd {
+  font-size:var(--fs-3xl);
+  letter-spacing:-.03em;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:2px 8px;
+  font-weight:600;
+  line-height:1.2;
+  display:flex
+}
+
+.rb-sum dd small {
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  letter-spacing:0;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  max-width:100%;
+  font-weight:700;
+  overflow:hidden
+}
+
+.rb-sum dd b {
+  font-weight:600
+}
+
+.rb-chart {
+  height:270px;
+  margin-bottom:14px;
+  position:relative
+}
+
+.rb-area {
+  height:260px
+}
+
+.rb-bars.bars {
+  gap:8px;
+  height:240px;
+  padding-top:10px
+}
+
+.rb-bars .bars__lab {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden
+}
+
+.rb-bars.is-many .bars__lab {
+  font-size:var(--fs-xs)
+}
+
+.rb-table .rb-n {
+  width:36px;
+  color:var(--faint);
+  font-weight:600
+}
+
+.rb-table .cell-person b {
+  white-space:nowrap
+}
+
+.rb-table tr.is-peak {
+  background:color-mix(in srgb, var(--amber) 9%, transparent)
+}
+
+.rb-mo {
+  width:32px;
+  height:24px;
+  font-size:var(--fs-2xs);
+  background:var(--well);
+  color:var(--muted);
+  border-radius:7px;
+  flex:none;
+  place-items:center;
+  font-weight:600;
+  display:grid
+}
+
+.rb-share {
+  min-width:120px;
+  display:block
+}
+
+.rb-share .meter {
+  height:6px
+}
+
+.rb-extra {
+  font-weight:700;
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  white-space:nowrap
+}
+
+.rb-extra.is-up {
+  color:var(--good)
+}
+
+.rb-extra.is-down {
+  color:var(--bad)
+}
+
+@media (width<=1279px) {
+  .rp-ov {
+  grid-template-columns:repeat(2,minmax(0,1fr))
+}
+
+.rp-rev,.rp-cust {
+  grid-column:1/-1
+}
+
+.rb {
+  grid-template-columns:minmax(270px,300px) minmax(0,1fr)
+}
+
+}
+
+@media (width<=1000px) {
+  .rb {
+  grid-template-columns:minmax(0,1fr)
+}
+
+.rb-side {
+  display:contents
+}
+
+.rb-ctl {
+  order:1
+}
+
+.rb-out {
+  order:2
+}
+
+.rb-svcard {
+  order:3
+}
+
+.rb-metrics {
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr))
+}
+
+}
+
+@media (width<=760px) {
+  .rp-ov {
+  grid-template-columns:minmax(0,1fr)
+}
+
+.rp-rev .card__head {
+  flex-wrap:wrap
+}
+
+.rk__row {
+  grid-template-columns:16px 32px minmax(0,1fr) auto;
+  grid-template-areas:"n a name v""n a bar bar";
+  gap:6px 10px
+}
+
+.rk__n {
+  grid-area:n
+}
+
+.rk__row>.av {
+  grid-area:a
+}
+
+.rk__name {
+  grid-area:name
+}
+
+.rk__v {
+  grid-area:v
+}
+
+.rk__track {
+  grid-area:bar;
+  height:10px
+}
+
+.rp-units .bars {
+  gap:4px;
+  min-height:170px
+}
+
+.rb-sum {
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)
+}
+
+.rb-sum>div:first-child {
+  grid-column:1/-1
+}
+
+.rb-sum dd {
+  font-size:var(--fs-2xl)
+}
+
+.rb-chart {
+  height:230px
+}
+
+.rb-area {
+  height:220px
+}
+
+.rb-bars.bars {
+  gap:4px;
+  height:210px
+}
+
+.rb-bars.is-many .bars__lab {
+  font-size:var(--fs-2xs)
+}
+
+.rb-share {
+  min-width:90px
+}
+
+.rp-share {
+  min-width:110px
+}
+
+}
+
+@media (pointer:coarse) {
+  .rb-m,.rb-sv__open {
+  min-height:48px
+}
+
+}
+
+@media (width>=761px) and (width<=1100px) {
+  .rep .kpis {
+  grid-template-columns:repeat(2,minmax(0,1fr))
+}
+
+}

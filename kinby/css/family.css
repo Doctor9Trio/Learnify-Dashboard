@@ -1,0 +1,427 @@
+/*! Kinby — family money, in one place — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+.mems {
+  gap:var(--gap);
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  display:grid
+}
+
+.mem {
+  border-radius:var(--r-card);
+  background:var(--surface);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  align-content:start;
+  gap:14px;
+  padding:18px;
+  display:grid
+}
+
+.mem__head {
+  align-items:center;
+  gap:12px;
+  display:flex
+}
+
+.mem__head b button {
+  font-weight:800;
+  font-size:var(--fs-lg);
+  letter-spacing:-.02em;
+  text-align:left
+}
+
+.mem__head b button:hover {
+  color:var(--accent-text)
+}
+
+.mem__head small {
+  color:var(--muted);
+  display:block
+}
+
+.mem__card {
+  aspect-ratio:1.586;
+  width:100%;
+  max-width:260px;
+  margin:0 auto;
+  position:relative
+}
+
+.mem__card .wcard {
+  cursor:default;
+  position:absolute;
+  inset:0
+}
+
+.mem__card--drawer {
+  max-width:300px
+}
+
+.wcard--still .wcard__back {
+  display:none
+}
+
+.mem__figs {
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:10px;
+  display:grid
+}
+
+.mem__figs>div {
+  min-width:0
+}
+
+.mem__figs dt {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  font-weight:700
+}
+
+.mem__figs dd {
+  font-weight:800;
+  font-size:var(--fs-lg);
+  letter-spacing:-.02em
+}
+
+.mem__figs dd small {
+  color:var(--muted);
+  font-weight:600;
+  font-size:var(--fs-xs)
+}
+
+.mem__ring {
+  align-items:center;
+  gap:10px;
+  display:flex
+}
+
+.mem__goals {
+  gap:6px;
+  display:grid
+}
+
+.mem__goals li {
+  font-size:var(--fs-sm);
+  grid-template-columns:minmax(0,1fr) 70px auto;
+  align-items:center;
+  gap:10px;
+  font-weight:650;
+  display:grid
+}
+
+.mem__goals li span {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  align-items:center;
+  gap:6px;
+  min-width:0;
+  display:flex;
+  overflow:hidden
+}
+
+.mem__goals .ico {
+  width:15px;
+  height:15px;
+  color:var(--muted)
+}
+
+.mem__acts {
+  flex-wrap:wrap;
+  gap:6px;
+  display:flex
+}
+
+.mem--new {
+  text-align:center;
+  box-shadow:none;
+  color:var(--muted);
+  background:0 0;
+  border-style:dashed;
+  align-content:center;
+  justify-items:center;
+  gap:6px;
+  min-height:260px
+}
+
+.mem--new .ico {
+  width:28px;
+  height:28px
+}
+
+.mem--new b {
+  color:var(--text)
+}
+
+.mem--new:hover {
+  border-color:var(--primary);
+  color:var(--accent-text)
+}
+
+.asks {
+  gap:var(--gap);
+  margin-bottom:var(--gap);
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  display:grid
+}
+
+.ask {
+  border-radius:var(--r-card);
+  background:linear-gradient(160deg, color-mix(in srgb, var(--gold) 12%, var(--surface)), var(--surface) 60%);
+  border:1px solid color-mix(in srgb, var(--gold) 30%, var(--line));
+  box-shadow:var(--shadow);
+  gap:14px;
+  padding:20px;
+  display:grid
+}
+
+.ask__who {
+  align-items:center;
+  gap:14px;
+  display:flex
+}
+
+.ask__who b {
+  color:var(--muted);
+  font-weight:700;
+  font-size:var(--fs-sm)
+}
+
+.ask__amt {
+  letter-spacing:-.045em;
+  font-size:2rem;
+  font-weight:800;
+  line-height:1.05
+}
+
+.ask__who small {
+  color:var(--muted)
+}
+
+.ask__note {
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin:0;
+  padding:12px 14px;
+  font-weight:650
+}
+
+.ask__acts {
+  justify-content:flex-end;
+  gap:8px;
+  display:flex
+}
+
+.asks__past ul {
+  margin-top:10px;
+  display:grid
+}
+
+.asks__past li {
+  border-bottom:1px solid var(--line);
+  align-items:center;
+  gap:12px;
+  padding:10px 0;
+  display:flex
+}
+
+.asks__past li:last-child {
+  border-bottom:0
+}
+
+.asks__past .grow {
+  flex:1;
+  min-width:0
+}
+
+.asks__past b {
+  font-weight:700
+}
+
+.asks__past small {
+  color:var(--muted);
+  display:block
+}
+
+.allows {
+  gap:var(--gap);
+  grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+  display:grid
+}
+
+.allow {
+  border-radius:var(--r-card);
+  background:var(--surface);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  gap:16px;
+  padding:20px;
+  display:grid
+}
+
+.allow__head {
+  align-items:center;
+  gap:12px;
+  display:flex
+}
+
+.allow__head b {
+  font-weight:800;
+  font-size:var(--fs-lg);
+  display:block
+}
+
+.allow__head small {
+  color:var(--muted)
+}
+
+.allow__amt {
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:18px;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  padding:14px;
+  display:flex
+}
+
+.allow__amt p {
+  justify-items:center;
+  min-width:130px;
+  display:grid
+}
+
+.allow__amt b {
+  letter-spacing:-.05em;
+  font-size:2.25rem;
+  font-weight:800;
+  line-height:1
+}
+
+.allow__amt small {
+  color:var(--muted);
+  font-weight:650
+}
+
+.allow__amt .ibtn {
+  background:var(--surface);
+  border-radius:50%;
+  width:46px;
+  height:46px
+}
+
+.allow__split {
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  align-items:center;
+  gap:8px;
+  display:flex
+}
+
+.allow__split .ico {
+  width:17px;
+  height:17px;
+  color:var(--accent-text)
+}
+
+.allow__split b {
+  color:var(--text)
+}
+
+.allow__chores h3 {
+  font-size:var(--fs-sm);
+  margin-bottom:6px;
+  font-weight:800
+}
+
+.allow__chores h3 small {
+  color:var(--muted);
+  margin-left:4px;
+  font-weight:600
+}
+
+.allow__chores ul {
+  gap:2px;
+  display:grid
+}
+
+.chore {
+  cursor:pointer;
+  border-radius:12px;
+  align-items:center;
+  gap:10px;
+  padding:8px 10px;
+  display:flex
+}
+
+.chore:hover {
+  background:var(--surface-2)
+}
+
+.chore span {
+  flex:1;
+  font-weight:650
+}
+
+.chore b {
+  color:var(--good);
+  font-weight:800;
+  font-size:var(--fs-sm)
+}
+
+.chore.is-done span {
+  color:var(--muted);
+  text-decoration:line-through;
+  -webkit-text-decoration-color:var(--line-2);
+  text-decoration-color:var(--line-2)
+}
+
+.allow__foot {
+  border-top:1px dashed var(--line-2);
+  color:var(--muted);
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  padding-top:12px;
+  font-weight:650;
+  display:flex
+}
+
+.allow__foot b {
+  color:var(--text);
+  font-size:var(--fs-lg);
+  font-weight:800
+}
+
+.mcat {
+  gap:8px;
+  display:grid
+}
+
+.mcat li {
+  grid-template-columns:130px minmax(0,1fr) auto;
+  align-items:center;
+  gap:10px;
+  display:grid
+}
+
+@media (width<=760px) {
+  .mems,.asks,.allows {
+  grid-template-columns:minmax(0,1fr)
+}
+
+.ask__acts .btn {
+  flex:1
+}
+
+.mcat li {
+  grid-template-columns:minmax(0,1fr) auto
+}
+
+.mcat li .meter {
+  grid-area:2/1/auto/-1
+}
+
+}

@@ -1,0 +1,719 @@
+/*! Ivora — the practice app for a dental clinic — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+[data-view=messages] .ms {
+  height:clamp(520px, calc(100dvh - var(--ms-top,320px) - 28px), 940px);
+  border-radius:var(--r-card);
+  background:var(--surface);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  grid-template-columns:minmax(290px,360px) minmax(0,1fr);
+  display:grid;
+  overflow:hidden
+}
+
+[data-view=messages] .ms__list {
+  border-right:1px solid var(--line);
+  background:color-mix(in srgb, var(--surface-2) 55%, var(--surface));
+  flex-direction:column;
+  min-width:0;
+  min-height:0;
+  display:flex
+}
+
+[data-view=messages] .ms__tools {
+  border-bottom:1px solid var(--line);
+  gap:10px;
+  padding:14px 14px 10px;
+  display:grid
+}
+
+[data-view=messages] .ms__tools .seg {
+  display:flex
+}
+
+[data-view=messages] .ms__tools .seg__btn {
+  flex:1;
+  padding-left:6px;
+  padding-right:6px
+}
+
+[data-view=messages] .ms__search {
+  width:100%
+}
+
+[data-view=messages] .ms__threads {
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:var(--line-2) transparent;
+  flex:1;
+  align-content:start;
+  gap:2px;
+  min-height:0;
+  padding:6px;
+  display:grid;
+  overflow-y:auto
+}
+
+[data-view=messages] .ms__more {
+  justify-content:center;
+  padding:10px;
+  display:flex
+}
+
+[data-view=messages] .ms__none .empty {
+  padding:34px 12px
+}
+
+[data-view=messages] .mt {
+  border-radius:15px;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:11px;
+  padding:10px 10px 10px 11px;
+  display:grid;
+  position:relative
+}
+
+[data-view=messages] .mt:hover {
+  background:var(--well)
+}
+
+[data-view=messages] .mt.is-open {
+  background:color-mix(in srgb, var(--violet) 12%, var(--surface))
+}
+
+[data-view=messages] .mt.is-open:before {
+  content:"";
+  background:var(--primary);
+  border-radius:2px;
+  width:3px;
+  position:absolute;
+  top:14px;
+  bottom:14px;
+  left:0
+}
+
+[data-view=messages] .mt__av {
+  display:block;
+  position:relative
+}
+
+[data-view=messages] .mt__ch {
+  background:var(--raised);
+  width:20px;
+  height:20px;
+  box-shadow:0 0 0 2px var(--surface);
+  color:var(--muted);
+  border-radius:50%;
+  place-items:center;
+  display:grid;
+  position:absolute;
+  bottom:-3px;
+  right:-4px
+}
+
+[data-view=messages] .mt__ch .ico {
+  stroke-width:2px;
+  width:12px;
+  height:12px
+}
+
+[data-view=messages] .mt__ch--sms {
+  color:var(--primary)
+}
+
+[data-view=messages] .mt__ch--email {
+  color:var(--sky)
+}
+
+[data-view=messages] .mt__ch--call {
+  color:var(--good)
+}
+
+[data-view=messages] .mt__ch--team {
+  color:color-mix(in srgb, var(--amber) 70%, var(--text))
+}
+
+[data-view=messages] .mt__body {
+  gap:1px;
+  min-width:0;
+  display:grid
+}
+
+[data-view=messages] .mt__top {
+  align-items:baseline;
+  gap:6px;
+  min-width:0;
+  display:flex
+}
+
+[data-view=messages] .mt__top b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:700;
+  overflow:hidden
+}
+
+[data-view=messages] .mt__pin {
+  color:var(--muted);
+  align-self:center
+}
+
+[data-view=messages] .mt__pin .ico {
+  width:13px;
+  height:13px
+}
+
+[data-view=messages] .mt__top time {
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  white-space:nowrap;
+  flex:none;
+  margin-left:auto;
+  font-weight:600
+}
+
+[data-view=messages] .mt__subj {
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:600;
+  overflow:hidden
+}
+
+[data-view=messages] .mt__prev {
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden
+}
+
+[data-view=messages] .mt.is-unread .mt__top b {
+  font-weight:700
+}
+
+[data-view=messages] .mt.is-unread .mt__prev {
+  color:var(--text);
+  font-weight:600
+}
+
+[data-view=messages] .mt.is-unread .mt__top time {
+  color:var(--primary)
+}
+
+[data-view=messages] .mt__n {
+  min-width:22px;
+  height:22px;
+  font-size:var(--fs-xs);
+  background:var(--coral);
+  color:var(--on-coral);
+  font-variant-numeric:tabular-nums;
+  border-radius:999px;
+  place-items:center;
+  padding:0 7px;
+  font-weight:700;
+  display:grid
+}
+
+:root:not([data-theme=dark]) [data-view=messages] .mt__n {
+  color:var(--on-coral);
+  background:var(--bad)
+}
+
+[data-view=messages] .ms__conv {
+  flex-direction:column;
+  min-width:0;
+  min-height:0;
+  display:flex;
+  container:conv/inline-size
+}
+
+[data-view=messages] .mc__none {
+  flex:1;
+  place-items:center;
+  display:grid
+}
+
+[data-view=messages] .mc__head {
+  border-bottom:1px solid var(--line);
+  align-items:center;
+  gap:12px;
+  padding:14px 18px;
+  display:flex
+}
+
+[data-view=messages] .mc__back {
+  display:none
+}
+
+[data-view=messages] .mc__who {
+  flex:1;
+  min-width:0
+}
+
+[data-view=messages] .mc__who h2 {
+  font:700 var(--fs-2xl)/1.2 var(--font);
+  letter-spacing:-.02em;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden
+}
+
+[data-view=messages] .mc__who p {
+  color:var(--muted);
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  align-items:center;
+  gap:6px;
+  font-weight:600;
+  display:flex;
+  overflow:hidden
+}
+
+[data-view=messages] .mc__who p .ico {
+  flex:none;
+  width:15px;
+  height:15px
+}
+
+[data-view=messages] .mc__tools {
+  flex:none;
+  align-items:center;
+  gap:6px;
+  display:flex
+}
+
+[data-view=messages] .mc__ctx {
+  border-bottom:1px solid var(--line);
+  background:var(--surface-2);
+  scrollbar-width:none;
+  gap:8px;
+  padding:10px 18px;
+  display:flex;
+  overflow-x:auto
+}
+
+[data-view=messages] .mc__ctx::-webkit-scrollbar {
+  display:none
+}
+
+[data-view=messages] .mc__ctx--team {
+  font-size:var(--fs-sm);
+  color:var(--muted);
+  align-items:center;
+  gap:8px
+}
+
+[data-view=messages] .mc__ctx--team .ico {
+  width:16px;
+  height:16px;
+  color:var(--primary);
+  flex:none
+}
+
+[data-view=messages] .mc__ctx--team b {
+  color:var(--text)
+}
+
+[data-view=messages] .mc__chip {
+  background:var(--surface);
+  border:1px solid var(--line);
+  text-align:left;
+  border-radius:14px;
+  flex:1 0 168px;
+  align-items:flex-start;
+  gap:9px;
+  min-width:0;
+  padding:8px 11px;
+  display:flex
+}
+
+[data-view=messages] a.mc__chip:hover,[data-view=messages] button.mc__chip:hover {
+  border-color:var(--line-2)
+}
+
+[data-view=messages] .mc__chip>.ico {
+  background:color-mix(in srgb, var(--violet) 12%, transparent);
+  width:30px;
+  height:30px;
+  color:var(--primary);
+  border-radius:10px;
+  flex:none;
+  padding:7px
+}
+
+[data-view=messages] .mc__chip>span {
+  min-width:0;
+  line-height:1.25;
+  display:grid
+}
+
+[data-view=messages] .mc__chip small {
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  font-weight:700
+}
+
+[data-view=messages] .mc__chip b {
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:700;
+  overflow:hidden
+}
+
+[data-view=messages] .mc__chip em {
+  font-style:normal;
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden
+}
+
+[data-view=messages] .mc__chip.is-owed>.ico {
+  background:color-mix(in srgb, var(--amber) 18%, transparent);
+  color:var(--warn)
+}
+
+[data-view=messages] .mc__chip.is-alert {
+  border-color:color-mix(in srgb, var(--coral) 34%, transparent);
+  background:color-mix(in srgb, var(--coral) 7%, var(--surface))
+}
+
+[data-view=messages] .mc__chip.is-alert>.ico {
+  background:color-mix(in srgb, var(--coral) 16%, transparent);
+  color:var(--bad)
+}
+
+[data-view=messages] .mc__scroll {
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:var(--line-2) transparent;
+  background:radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--text) 6%, transparent) 1px, transparent 0) 0 0 / 18px 18px;
+  flex:1;
+  min-height:0;
+  padding:18px 20px 12px;
+  overflow-y:auto
+}
+
+[data-view=messages] .mc__msgs {
+  flex-direction:column;
+  gap:8px;
+  display:flex
+}
+
+[data-view=messages] .mm-day {
+  align-self:center;
+  margin:8px 0 4px
+}
+
+[data-view=messages] .mm-day span {
+  background:var(--surface);
+  border:1px solid var(--line);
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  border-radius:999px;
+  padding:4px 12px;
+  font-weight:700;
+  display:inline-block
+}
+
+[data-view=messages] .mm {
+  flex-direction:column;
+  max-width:min(78%,560px);
+  display:flex
+}
+
+[data-view=messages] .mm--us {
+  align-self:flex-end;
+  align-items:flex-end
+}
+
+[data-view=messages] .mm--them {
+  align-self:flex-start;
+  align-items:flex-start
+}
+
+[data-view=messages] .mm__bubble {
+  font-size:var(--fs-md);
+  overflow-wrap:anywhere;
+  border-radius:20px;
+  padding:10px 14px;
+  line-height:1.5
+}
+
+[data-view=messages] .mm--us .mm__bubble {
+  background:color-mix(in srgb, var(--violet) 15%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--violet) 22%, transparent);
+  border-bottom-right-radius:7px
+}
+
+[data-view=messages] .mm--them .mm__bubble {
+  background:var(--raised);
+  border:1px solid var(--line);
+  border-bottom-left-radius:7px;
+  box-shadow:0 1px 2px #0f2a2d0a
+}
+
+[data-view=messages] .mm__meta {
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  align-items:center;
+  gap:4px;
+  margin:4px 6px 0;
+  font-weight:600;
+  display:inline-flex
+}
+
+[data-view=messages] .mm__tick {
+  color:var(--faint);
+  display:inline-grid
+}
+
+[data-view=messages] .mm__tick.is-read {
+  color:var(--primary)
+}
+
+[data-view=messages] .mm__tick .tick {
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2px;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  width:17px;
+  height:17px
+}
+
+[data-view=messages] .mm--log {
+  border:1.5px dashed var(--line-2);
+  background:var(--surface);
+  border-radius:16px;
+  flex-direction:row;
+  align-self:center;
+  gap:10px;
+  max-width:min(92%,560px);
+  padding:10px 14px
+}
+
+[data-view=messages] .mm--log.is-us {
+  border-style:solid;
+  border-color:var(--line)
+}
+
+[data-view=messages] .mm__logico {
+  background:color-mix(in srgb, var(--mint) 15%, transparent);
+  width:32px;
+  height:32px;
+  color:var(--good);
+  border-radius:11px;
+  flex:none;
+  place-items:center;
+  display:grid
+}
+
+[data-view=messages] .mm--log.is-us .mm__logico {
+  background:color-mix(in srgb, var(--violet) 12%, transparent);
+  color:var(--primary)
+}
+
+[data-view=messages] .mm--log .ico {
+  width:16px;
+  height:16px
+}
+
+[data-view=messages] .mm--log p {
+  font-size:var(--fs-md)
+}
+
+[data-view=messages] .mm--log small {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  margin-top:2px;
+  font-weight:600;
+  display:block
+}
+
+[data-view=messages] .mc__typing {
+  align-items:center;
+  gap:8px;
+  margin-top:8px;
+  display:inline-flex
+}
+
+[data-view=messages] .mc__typing[hidden] {
+  display:none
+}
+
+[data-view=messages] .mc__dots {
+  background:var(--raised);
+  border:1px solid var(--line);
+  border-radius:20px 20px 20px 7px;
+  gap:4px;
+  padding:13px 14px;
+  display:inline-flex
+}
+
+[data-view=messages] .mc__dots i {
+  background:var(--faint);
+  border-radius:50%;
+  width:7px;
+  height:7px
+}
+
+[data-view=messages] .mc__typing small {
+  color:var(--muted);
+  font-weight:600
+}
+
+[data-view=messages] .mc__compose {
+  border-top:1px solid var(--line);
+  background:var(--surface);
+  align-items:flex-end;
+  gap:8px;
+  padding:12px 14px;
+  display:flex
+}
+
+[data-view=messages] .mc__tpl {
+  border-radius:14px;
+  width:44px;
+  height:44px
+}
+
+[data-view=messages] .mc__field {
+  flex:1;
+  min-width:0
+}
+
+[data-view=messages] .mc__field textarea {
+  resize:none;
+  field-sizing:content;
+  border:1px solid var(--line-2);
+  background:var(--surface-2);
+  border-radius:15px;
+  outline:none;
+  width:100%;
+  min-height:44px;
+  max-height:168px;
+  padding:10px 14px;
+  line-height:1.45;
+  display:block
+}
+
+[data-view=messages] .mc__field textarea:focus {
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--primary) 16%, transparent);
+  background:var(--surface)
+}
+
+[data-view=messages] .mc__send {
+  height:44px
+}
+
+@container conv (width<=560px) {
+  [data-view=messages] .mc__file span,[data-view=messages] .mc__send span {
+  display:none
+}
+
+[data-view=messages] .mc__file,[data-view=messages] .mc__send {
+  width:44px;
+  padding:0
+}
+
+[data-view=messages] .mm {
+  max-width:88%
+}
+
+[data-view=messages] .mc__scroll {
+  padding:14px 12px 10px
+}
+
+[data-view=messages] .mc__ctx,[data-view=messages] .mc__head {
+  padding-left:12px;
+  padding-right:12px
+}
+
+}
+
+@media (width<=1099px) {
+  [data-view=messages] .ms {
+  grid-template-columns:minmax(250px,300px) minmax(0,1fr)
+}
+
+}
+
+@media (width<=760px) {
+  [data-view=messages] .ms {
+  border-radius:20px;
+  grid-template-columns:minmax(0,1fr);
+  height:auto
+}
+
+[data-view=messages] .ms__list {
+  border-right:0
+}
+
+[data-view=messages] .ms__threads {
+  overflow:visible
+}
+
+[data-view=messages]:not(.is-thread) .ms__conv,[data-view=messages].is-thread .ms__list,[data-view=messages].is-thread .head {
+  display:none
+}
+
+[data-view=messages].is-thread .ms {
+  height:calc(100dvh - 82px - env(safe-area-inset-bottom))
+}
+
+[data-view=messages] .mc__back {
+  display:inline-grid
+}
+
+[data-view=messages] .mc__head {
+  gap:10px
+}
+
+[data-view=messages] .mc__head .av {
+  display:none
+}
+
+[data-view=messages] .mc__chip {
+  flex-basis:200px
+}
+
+[data-view=messages] .mc__compose {
+  padding-bottom:calc(12px + env(safe-area-inset-bottom))
+}
+
+}
+
+@media (pointer:coarse) {
+  [data-view=messages] .mt {
+  min-height:64px
+}
+
+}
+
+@media (width<=760px) {
+  [data-view=messages] .mc__ctx:not(.mc__ctx--team) {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  display:grid;
+  overflow:visible
+}
+
+[data-view=messages] .mc__ctx:not(.mc__ctx--team)>* {
+  min-width:0
+}
+
+[data-view=messages] .mc__ctx:not(.mc__ctx--team) :is(small,b,span) {
+  white-space:normal;
+  overflow-wrap:anywhere
+}
+
+[data-view=messages] .mc__ctx:not(.mc__ctx--team)>:nth-child(3):last-child {
+  grid-column:1/-1
+}
+
+}

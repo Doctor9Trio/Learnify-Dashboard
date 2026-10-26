@@ -1,0 +1,167 @@
+/*! Kinby — family money, in one place — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+.act {
+  gap:var(--gap);
+  grid-template-columns:minmax(0,1fr) 340px;
+  align-items:start;
+  display:grid
+}
+
+.act__list {
+  padding-top:16px
+}
+
+.act__who {
+  margin-bottom:8px;
+  padding-bottom:2px
+}
+
+.act__who .chip .av {
+  margin-left:-7px
+}
+
+.act__days,.act__days .day {
+  display:grid
+}
+
+.act__days .day-head {
+  padding-top:16px;
+  top:70px
+}
+
+.act__more {
+  width:100%;
+  margin-top:12px
+}
+
+.act__sum {
+  position:sticky;
+  top:86px
+}
+
+.sum__figs {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  display:grid
+}
+
+.sum__figs>div {
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  border-radius:14px;
+  min-width:0;
+  padding:10px 11px
+}
+
+.sum__figs dt {
+  color:var(--muted);
+  font-size:var(--fs-xs);
+  align-items:center;
+  gap:5px;
+  font-weight:700;
+  display:flex
+}
+
+.sum__figs dt .ico {
+  width:14px;
+  height:14px
+}
+
+.sum__figs dd b {
+  font-size:var(--fs-lg);
+  letter-spacing:-.03em;
+  font-weight:800
+}
+
+.sum__sec {
+  gap:10px;
+  margin-top:18px;
+  display:grid
+}
+
+.sum__sec h3 {
+  font-size:var(--fs-xs);
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  font-weight:800
+}
+
+.sum__cats {
+  gap:6px;
+  display:grid
+}
+
+.sum__cats li {
+  font-size:var(--fs-sm);
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:8px;
+  font-weight:650;
+  display:grid
+}
+
+.sum__shops {
+  gap:4px;
+  display:grid
+}
+
+.sum__shops li {
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:10px;
+  padding:4px 0;
+  display:grid
+}
+
+.sum__shops span b {
+  font-weight:700;
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  display:block;
+  overflow:hidden
+}
+
+.sum__shops small {
+  color:var(--muted);
+  display:block
+}
+
+@media (width<=1100px) {
+  .act {
+  grid-template-columns:minmax(0,1fr)
+}
+
+.act__sum {
+  order:-1;
+  position:static
+}
+
+.act__sum .sum__sec {
+  display:none
+}
+
+}
+
+@media (width<=760px) {
+  .act__list {
+  padding:12px 12px 8px
+}
+
+.act .toolbar .seg {
+  width:100%
+}
+
+.act .toolbar .seg__btn,.act .toolbar .select {
+  flex:1
+}
+
+.act .toolbar__spacer {
+  display:none
+}
+
+.act__days .day-head {
+  top:64px
+}
+
+}

@@ -190,6 +190,49 @@ export async function replicateSuite({
   updatedHtml = updatedHtml.replace(/#ff5c3d/g, '#FF5722');
 
   fs.writeFileSync(path.join(targetDir, 'index.html'), updatedHtml, 'utf8');
+
+  // 6. Generate Clean, Formatted CSS and JS Source Folders
+  console.log(`[6/6] Generating clean, formatted css/ and js/ source folders for developer editing...`);
+  const cssDir = path.join(targetDir, 'css');
+  const jsDir = path.join(targetDir, 'js');
+  if (!fs.existsSync(cssDir)) fs.mkdirSync(cssDir, { recursive: true });
+  if (!fs.existsSync(jsDir)) fs.mkdirSync(jsDir, { recursive: true });
+
+  const formatCSS = (css) => css
+    .replace(/\s*\{\s*/g, ' {\n  ')
+    .replace(/\s*;\s*/g, ';\n  ')
+    .replace(/\s*\}\s*/g, '\n}\n\n')
+    .replace(/  \n/g, '\n')
+    .replace(/\n\s*\n\s*\n/g, '\n\n')
+    .trim() + '\n';
+
+  const cleanName = (filename) => {
+    const ext = path.extname(filename);
+    const m = filename.match(/^([a-zA-Z0-9_\-]+?)(?:-[a-zA-Z0-9_\-]{4,12})?\.(css|js)$/);
+    if (m) {
+      let base = m[1];
+      if (base.includes('-') && base.length > 15) base = base.split('-')[0];
+      return base + '.' + m[2];
+    }
+    return filename;
+  };
+
+  const assetFiles = fs.readdirSync(assetsDir);
+  for (const f of assetFiles) {
+    const ext = path.extname(f);
+    const src = path.join(assetsDir, f);
+    const semName = cleanName(f);
+
+    if (ext === '.css') {
+      const content = fs.readFileSync(src, 'utf8');
+      fs.writeFileSync(path.join(cssDir, semName), formatCSS(content), 'utf8');
+      console.log(`  ✓ Created clean css/${semName}`);
+    } else if (ext === '.js') {
+      fs.copyFileSync(src, path.join(jsDir, semName));
+      console.log(`  ✓ Created clean js/${semName}`);
+    }
+  }
+
   console.log(`✨ Suite ${name} successfully configured and ready at ${targetDir}/index.html!\n`);
 }
 

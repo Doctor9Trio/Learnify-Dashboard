@@ -1,0 +1,857 @@
+/*! Tavola — restaurant operations dashboard — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+[data-view=overview] {
+  --good-ink:var(--good);
+  --warn-ink:var(--warn);
+  --bad-ink:var(--bad);
+  --mint-ink:var(--mint);
+  --amber-ink:var(--amber)
+}
+
+:root[data-theme=light] [data-view=overview] {
+  --good-ink:color-mix(in srgb, var(--good) 60%, var(--text));
+  --mint-ink:color-mix(in srgb, var(--mint) 60%, var(--text));
+  --warn-ink:color-mix(in srgb, var(--warn) 52%, var(--text));
+  --amber-ink:color-mix(in srgb, var(--amber) 52%, var(--text));
+  --bad-ink:color-mix(in srgb, var(--bad) 75%, var(--text))
+}
+
+[data-view=overview] .ov-grid {
+  gap:var(--gap);
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-template-areas:"svc svc svc svc svc svc svc pass pass pass pass pass""room room room book book book book pass pass pass pass pass""best best best best stock stock stock stock act act act act";
+  display:grid
+}
+
+[data-view=overview] .ov-svc {
+  grid-area:svc
+}
+
+[data-view=overview] .ov-pass {
+  grid-area:pass
+}
+
+[data-view=overview] .ov-room {
+  grid-area:room
+}
+
+[data-view=overview] .ov-book {
+  grid-area:book
+}
+
+[data-view=overview] .ov-best {
+  grid-area:best
+}
+
+[data-view=overview] .ov-stock {
+  grid-area:stock
+}
+
+[data-view=overview] .ov-act {
+  grid-area:act
+}
+
+[data-view=overview] .ov-grid>.card {
+  flex-direction:column;
+  display:flex
+}
+
+[data-view=overview] .is-up {
+  color:var(--good-ink)
+}
+
+[data-view=overview] .is-down {
+  color:var(--bad-ink)
+}
+
+[data-view=overview] .ov-svc__sum {
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:4px 14px;
+  display:flex
+}
+
+[data-view=overview] .ov-svc__total {
+  letter-spacing:-.035em;
+  font-size:clamp(32px,3vw,44px);
+  font-weight:700;
+  line-height:1
+}
+
+[data-view=overview] .ov-svc__sub {
+  color:var(--muted);
+  font-size:14px
+}
+
+[data-view=overview] .ov-svc__legend {
+  margin:12px 0 6px
+}
+
+[data-view=overview] .ov-dash {
+  border-top:2px dashed var(--ink);
+  border-radius:0!important;
+  width:16px!important;
+  height:0!important
+}
+
+[data-view=overview] .ov-svc__chart {
+  flex:1;
+  min-height:236px
+}
+
+[data-view=overview] .ov-pass__sub {
+  margin-right:4px
+}
+
+[data-view=overview] .ov-pass__grid {
+  flex:1;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-rows:minmax(184px,1fr);
+  gap:12px;
+  display:grid
+}
+
+[data-view=overview] .ov-pass__grid>.empty {
+  grid-column:1/-1
+}
+
+[data-view=overview] .ov-tile {
+  --tile:var(--plain);
+  --on-tile:var(--on-plain);
+  border-radius:var(--r-tile);
+  background:var(--tile);
+  min-width:0;
+  color:var(--on-tile);
+  box-shadow:0 22px 36px -24px var(--glow,#00000080);
+  flex-direction:column;
+  padding:14px 14px 14px 16px;
+  display:flex;
+  position:relative
+}
+
+[data-view=overview] .ov-tile--amber {
+  --tile:var(--amber-grad);
+  --on-tile:var(--on-amber);
+  --glow:#e8cc914d;
+  --well-on:#ffffff57
+}
+
+[data-view=overview] .ov-tile--mint {
+  --tile:var(--mint-grad);
+  --on-tile:var(--on-mint);
+  --glow:#9fd6c14d;
+  --well-on:#ffffff4d
+}
+
+[data-view=overview] .ov-tile--ember {
+  --tile:var(--ember-grad);
+  --on-tile:var(--on-ember);
+  --glow:#eaa9994d;
+  --well-on:#ffffff4d
+}
+
+[data-view=overview] .ov-tile--ink {
+  --tile:var(--ink-grad);
+  --on-tile:var(--on-ink);
+  --glow:#00000080;
+  --well-on:#0a12224d
+}
+
+[data-view=overview] .ov-tile:before {
+  content:"";
+  border-radius:inherit;
+  pointer-events:none;
+  position:absolute;
+  inset:0;
+  box-shadow:inset 0 1px #ffffff73,inset 0 0 0 1px #ffffff1f
+}
+
+[data-view=overview] .ov-tile__top {
+  align-items:center;
+  gap:8px;
+  margin:-2px -4px 10px 0;
+  display:flex
+}
+
+[data-view=overview] .ov-tile__no {
+  letter-spacing:.02em;
+  font-size:13px;
+  font-weight:800
+}
+
+[data-view=overview] .ov-tile__age {
+  white-space:nowrap;
+  background:color-mix(in srgb, currentColor 12%, transparent);
+  font-variant-numeric:tabular-nums;
+  border-radius:999px;
+  align-items:center;
+  gap:4px;
+  margin-right:auto;
+  padding:3px 8px 3px 6px;
+  font-size:13px;
+  font-weight:700;
+  display:inline-flex
+}
+
+[data-view=overview] .ov-tile__age .ico {
+  width:14px;
+  height:14px
+}
+
+[data-view=overview] .ov-tile__age.is-late {
+  color:#b5523f;
+  background:#fff
+}
+
+[data-view=overview] .ov-tile .ibtn {
+  z-index:2;
+  color:inherit;
+  border-color:color-mix(in srgb, currentColor 28%, transparent)
+}
+
+[data-view=overview] .ov-tile .ibtn:hover {
+  background:color-mix(in srgb, currentColor 14%, transparent)
+}
+
+[data-view=overview] .ov-tile :focus-visible {
+  outline-color:currentColor
+}
+
+[data-view=overview] .ov-tile__title {
+  letter-spacing:-.02em;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:21px;
+  font-weight:700;
+  line-height:1.12;
+  overflow:hidden
+}
+
+[data-view=overview] .ov-tile__link {
+  outline:none
+}
+
+[data-view=overview] .ov-tile__link:after {
+  content:"";
+  z-index:1;
+  border-radius:inherit;
+  position:absolute;
+  inset:0
+}
+
+[data-view=overview] .ov-tile__link:focus-visible:after {
+  outline:2px solid var(--text);
+  outline-offset:3px
+}
+
+[data-view=overview] .ov-tile__items {
+  background:var(--well-on);
+  border-radius:12px;
+  min-width:0;
+  margin-top:8px;
+  padding:6px 9px;
+  font-size:13.5px;
+  font-weight:600;
+  line-height:1.4;
+  display:grid
+}
+
+[data-view=overview] .ov-tile__line {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden
+}
+
+[data-view=overview] .ov-tile__more {
+  font-weight:700
+}
+
+[data-view=overview] .ov-tile__more.is-narrow {
+  display:none
+}
+
+[data-view=overview] .ov-tile__foot {
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:8px;
+  margin-top:auto;
+  padding-top:12px;
+  display:flex
+}
+
+[data-view=overview] .ov-tile__foot>div {
+  min-width:0
+}
+
+[data-view=overview] .ov-tile__amt {
+  letter-spacing:-.02em;
+  font-size:22px;
+  font-weight:700;
+  line-height:1.1;
+  display:block
+}
+
+[data-view=overview] .ov-tile__foot small {
+  background:var(--well-on);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  border-radius:999px;
+  width:fit-content;
+  max-width:100%;
+  margin-top:4px;
+  padding:1px 8px;
+  font-size:13px;
+  font-weight:600;
+  display:block;
+  overflow:hidden
+}
+
+[data-view=overview] .ov-tile__go {
+  z-index:2;
+  color:#121a2e;
+  background:#fff;
+  border-radius:50%;
+  flex:none;
+  place-items:center;
+  width:42px;
+  height:42px;
+  display:grid;
+  position:relative;
+  box-shadow:0 6px 14px -6px #00000059
+}
+
+[data-view=overview] .ov-tile__go:hover {
+  transform:scale(1.06)
+}
+
+[data-view=overview] .ov-tile--amber .ov-tile__go {
+  color:#fff;
+  background:#2b2110
+}
+
+[data-view=overview] .ov-room {
+  --arc:url(#ov-ring-g)
+}
+
+[data-view=overview] .ov-room__body {
+  flex:1;
+  align-content:center;
+  justify-items:center;
+  gap:16px;
+  display:grid
+}
+
+[data-view=overview] .ov-ring {
+  aspect-ratio:1;
+  width:min(100%,168px);
+  position:relative
+}
+
+[data-view=overview] .ov-ring svg {
+  width:100%;
+  height:100%;
+  transform:rotate(-90deg)
+}
+
+[data-view=overview] .ov-ring__track {
+  fill:none;
+  stroke:var(--well);
+  stroke-width:15px
+}
+
+[data-view=overview] .ov-ring svg {
+  filter:drop-shadow(0 6px 18px #eaa9994d)
+}
+
+[data-view=overview] .ov-ring__arc {
+  fill:none;
+  stroke:var(--arc);
+  stroke-width:15px;
+  stroke-linecap:round
+}
+
+[data-view=overview] .ov-ring__mid {
+  text-align:center;
+  place-content:center;
+  display:grid;
+  position:absolute;
+  inset:0
+}
+
+[data-view=overview] .ov-ring__mid b {
+  letter-spacing:-.035em;
+  font-size:38px;
+  font-weight:700;
+  line-height:1
+}
+
+[data-view=overview] .ov-ring__mid span {
+  opacity:.75;
+  margin-top:4px;
+  font-size:13px
+}
+
+[data-view=overview] .ov-room__facts {
+  text-align:center;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:6px;
+  width:100%;
+  display:grid
+}
+
+[data-view=overview] .ov-room__facts dt {
+  color:var(--muted);
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  font-size:13px;
+  display:inline-flex
+}
+
+[data-view=overview] .ov-room__facts dd {
+  font-size:18px;
+  font-weight:700
+}
+
+[data-view=overview] .ov-dot {
+  border-radius:50%;
+  flex:none;
+  width:8px;
+  height:8px
+}
+
+[data-view=overview] .ov-dot--seated {
+  background:var(--amber)
+}
+
+[data-view=overview] .ov-dot--eating {
+  background:var(--ember)
+}
+
+[data-view=overview] .ov-dot--bill {
+  background:var(--mint)
+}
+
+[data-view=overview] .ov-dot--free {
+  background:0 0;
+  box-shadow:inset 0 0 0 1.5px
+}
+
+[data-view=overview] .ov-room__note {
+  text-align:center;
+  background:var(--well);
+  color:var(--muted);
+  border-radius:14px;
+  margin-top:14px;
+  padding:10px 12px;
+  font-size:13.5px
+}
+
+[data-view=overview] .ov-room__note b {
+  color:var(--text)
+}
+
+[data-view=overview] .ov-book__list {
+  gap:2px;
+  display:grid
+}
+
+[data-view=overview] .ov-book__row {
+  border-bottom:1px solid var(--line);
+  grid-template-columns:74px minmax(0,1fr) auto;
+  align-items:center;
+  gap:12px;
+  padding:10px 4px;
+  display:grid
+}
+
+[data-view=overview] .ov-book__row:last-child {
+  border-bottom:0
+}
+
+[data-view=overview] .ov-book__time {
+  letter-spacing:-.01em;
+  font-size:15px;
+  font-weight:800
+}
+
+[data-view=overview] .ov-book__who {
+  min-width:0
+}
+
+[data-view=overview] .ov-book__who b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:700;
+  display:block;
+  overflow:hidden
+}
+
+[data-view=overview] .ov-book__who small {
+  color:var(--muted);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:13px;
+  display:block;
+  overflow:hidden
+}
+
+[data-view=overview] .ov-book__flags {
+  gap:6px;
+  margin-top:5px;
+  display:flex
+}
+
+[data-view=overview] .ov-flag {
+  background:color-mix(in srgb, var(--bad) 12%, transparent);
+  color:var(--bad-ink);
+  border-radius:999px;
+  align-items:center;
+  gap:4px;
+  padding:2px 8px;
+  font-size:12px;
+  font-weight:700;
+  display:inline-flex
+}
+
+[data-view=overview] .ov-flag .ico {
+  width:13px;
+  height:13px
+}
+
+[data-view=overview] .ov-flag--vip {
+  background:var(--amber-grad);
+  color:#1d1305
+}
+
+[data-view=overview] .ov-best__list {
+  grid-template-columns:minmax(0,1fr);
+  gap:4px;
+  display:grid
+}
+
+[data-view=overview] .ov-best__row {
+  border-radius:16px;
+  grid-template-columns:18px 44px minmax(0,1fr);
+  align-items:center;
+  gap:12px;
+  padding:7px 6px;
+  display:grid
+}
+
+[data-view=overview] .ov-best__row:first-child {
+  background:var(--glass-2)
+}
+
+[data-view=overview] .ov-best__n {
+  color:var(--muted);
+  text-align:center;
+  font-size:14px;
+  font-weight:800
+}
+
+[data-view=overview] .ov-best__img {
+  border-radius:13px;
+  width:44px;
+  height:44px
+}
+
+[data-view=overview] .ov-best__body {
+  grid-template-columns:minmax(0,1fr);
+  gap:5px;
+  min-width:0;
+  display:grid
+}
+
+[data-view=overview] .ov-best__line {
+  justify-content:space-between;
+  gap:10px;
+  display:flex
+}
+
+[data-view=overview] .ov-best__line b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  min-width:0;
+  font-weight:700;
+  overflow:hidden
+}
+
+[data-view=overview] .ov-best__line span {
+  white-space:nowrap;
+  font-weight:700
+}
+
+[data-view=overview] .ov-best__body small {
+  color:var(--muted);
+  font-size:13px
+}
+
+[data-view=overview] .ov-best .meter {
+  height:7px
+}
+
+[data-view=overview] .ov-stock__list {
+  gap:2px;
+  display:grid
+}
+
+[data-view=overview] .ov-stock__row {
+  border-bottom:1px solid var(--line);
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:14px;
+  padding:10px 2px;
+  display:grid
+}
+
+[data-view=overview] .ov-stock__row:last-child {
+  border-bottom:0
+}
+
+[data-view=overview] .ov-stock__body {
+  grid-template-columns:minmax(0,1fr);
+  gap:6px;
+  min-width:0;
+  display:grid
+}
+
+[data-view=overview] .ov-stock__line {
+  justify-content:space-between;
+  gap:10px;
+  display:flex
+}
+
+[data-view=overview] .ov-stock__line b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:700;
+  overflow:hidden
+}
+
+[data-view=overview] .ov-stock__line span {
+  color:var(--muted);
+  white-space:nowrap;
+  font-size:13.5px
+}
+
+[data-view=overview] .ov-stock__body small {
+  color:var(--muted);
+  font-size:13px
+}
+
+[data-view=overview] .ov-stock .meter {
+  height:7px
+}
+
+[data-view=overview] .ov-stock__po {
+  color:var(--good-ink);
+  align-items:center;
+  gap:6px;
+  font-size:13px;
+  font-weight:700;
+  display:inline-flex
+}
+
+[data-view=overview] .ov-stock__po .ico {
+  width:16px;
+  height:16px
+}
+
+[data-view=overview] .ov-feed {
+  display:grid
+}
+
+[data-view=overview] .ov-feed__item {
+  border-bottom:1px solid var(--line);
+  grid-template-columns:28px minmax(0,1fr) auto;
+  align-items:start;
+  gap:10px;
+  padding:9px 0;
+  display:grid
+}
+
+[data-view=overview] .ov-feed__item:last-child {
+  border-bottom:0
+}
+
+[data-view=overview] .ov-feed__item p {
+  overflow-wrap:anywhere;
+  font-size:14px;
+  line-height:1.4
+}
+
+[data-view=overview] .ov-feed__item small {
+  color:var(--muted);
+  margin-top:2px;
+  font-size:13px;
+  display:block
+}
+
+[data-view=overview] .ov-feed__ico {
+  color:var(--faint);
+  padding-top:4px
+}
+
+[data-view=overview] .ov-feed__ico .ico {
+  width:15px;
+  height:15px
+}
+
+@media (width<=1180px) {
+  [data-view=overview] .ov-grid {
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  grid-template-areas:"svc svc svc svc svc svc""pass pass pass pass pass pass""room room book book book book""best best best stock stock stock""act act act act act act"
+}
+
+[data-view=overview] .ov-pass__grid {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-auto-rows:minmax(176px,auto)
+}
+
+[data-view=overview] .ov-feed {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  column-gap:24px
+}
+
+[data-view=overview] .ov-feed__item:nth-last-child(2):nth-child(odd) {
+  border-bottom:0
+}
+
+}
+
+@media (width<=760px) {
+  [data-view=overview] .ov-pass__sub {
+  display:none
+}
+
+[data-view=overview] .ov-grid {
+  grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"svc""pass""room""book""best""stock""act"
+}
+
+[data-view=overview] .ov-pass__grid {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-rows:minmax(176px,auto);
+  gap:10px
+}
+
+[data-view=overview] .ov-tile {
+  padding:12px
+}
+
+[data-view=overview] .ov-tile__title {
+  font-size:17px
+}
+
+[data-view=overview] .ov-tile__amt {
+  font-size:18px
+}
+
+[data-view=overview] .ov-tile__top .ibtn,[data-view=overview] .ov-tile__items .is-wide {
+  display:none
+}
+
+[data-view=overview] .ov-tile__more.is-narrow {
+  display:block
+}
+
+[data-view=overview] .ov-tile__st {
+  display:none
+}
+
+[data-view=overview] .ov-svc .card__head {
+  flex-wrap:wrap
+}
+
+[data-view=overview] .ov-svc__chart {
+  min-height:200px
+}
+
+[data-view=overview] .ov-feed {
+  grid-template-columns:minmax(0,1fr)
+}
+
+[data-view=overview] .ov-book__row {
+  grid-template-columns:62px minmax(0,1fr) auto;
+  gap:10px
+}
+
+}
+
+@media (width<=400px) {
+  [data-view=overview] .ov-pass__grid {
+  grid-auto-rows:minmax(164px,auto);
+  gap:8px
+}
+
+[data-view=overview] .ov-tile {
+  padding:11px 11px 11px 12px
+}
+
+[data-view=overview] .ov-tile__items {
+  font-size:13px
+}
+
+[data-view=overview] .ov-tile__go {
+  width:38px;
+  height:38px
+}
+
+[data-view=overview] .ov-tile__top {
+  gap:6px
+}
+
+[data-view=overview] .ov-tile__age {
+  padding:3px 8px
+}
+
+[data-view=overview] .ov-tile__age .ico {
+  display:none
+}
+
+[data-view=overview] .ov-tile__foot small {
+  font-size:13px
+}
+
+}
+
+@media (width>=1181px) and (orientation:portrait) and (height>=1100px) {
+  .app:has(>.main>[data-view=overview]:not([hidden])) {
+  flex-direction:column;
+  min-height:100dvh;
+  display:flex
+}
+
+.app:has(>.main>[data-view=overview]:not([hidden]))>.main {
+  flex-direction:column;
+  flex:1;
+  display:flex
+}
+
+[data-view=overview]:not([hidden]) {
+  flex-direction:column;
+  flex:1;
+  display:flex
+}
+
+[data-view=overview] .ov-grid {
+  flex:1;
+  grid-template-rows:minmax(0,1fr) auto auto;
+  row-gap:12px
+}
+
+[data-view=overview] .ov-svc__chart {
+  min-height:236px
+}
+
+[data-view=overview] .ov-svc__chart>.chart__svg {
+  position:absolute;
+  top:0;
+  left:0
+}
+
+[data-view=overview] .ov-pass__grid {
+  grid-auto-rows:minmax(172px,1fr)
+}
+
+}

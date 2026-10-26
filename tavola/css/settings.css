@@ -1,0 +1,875 @@
+/*! Tavola — restaurant operations dashboard — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+[data-view=settings] .head {
+  margin-bottom:18px
+}
+
+[data-view=settings] .set-navwrap {
+  z-index:20;
+  margin-bottom:18px;
+  display:flex;
+  position:sticky;
+  top:12px
+}
+
+[data-view=settings] .set-nav {
+  scrollbar-width:none;
+  background:color-mix(in srgb, var(--float) 90%, transparent);
+  max-width:100%;
+  -webkit-backdrop-filter:var(--blur);
+  backdrop-filter:var(--blur);
+  border-radius:999px;
+  position:relative;
+  overflow-x:auto;
+  box-shadow:0 18px 36px -20px #0000008c
+}
+
+[data-view=settings] .set-nav::-webkit-scrollbar {
+  display:none
+}
+
+[data-view=settings] .set-nav__track {
+  gap:2px;
+  width:max-content;
+  padding:4px;
+  display:flex;
+  position:relative
+}
+
+[data-view=settings] .set-chip {
+  z-index:1;
+  white-space:nowrap;
+  height:40px;
+  color:var(--text);
+  border-radius:999px;
+  align-items:center;
+  gap:8px;
+  padding:0 16px 0 13px;
+  font-size:14px;
+  font-weight:600;
+  display:inline-flex;
+  position:relative
+}
+
+[data-view=settings] a.set-chip:hover {
+  background:var(--well)
+}
+
+[data-view=settings] a.set-chip[aria-current=true]:hover {
+  background:0 0
+}
+
+[data-view=settings] .set-chip .ico {
+  width:17px;
+  height:17px
+}
+
+[data-view=settings] .set-nav__pill {
+  z-index:2;
+  pointer-events:none;
+  opacity:0;
+  background:var(--pill-grad);
+  gap:2px;
+  padding:4px;
+  display:flex;
+  position:absolute;
+  inset:0
+}
+
+[data-view=settings] .set-nav__pill .set-chip {
+  color:var(--on-pill)
+}
+
+[data-view=settings] .set-grid {
+  grid-template-columns:minmax(0,1fr)
+}
+
+[data-view=settings] .set-col {
+  display:contents
+}
+
+[data-view=settings] #set-restaurant {
+  order:1
+}
+
+[data-view=settings] #set-service {
+  order:2
+}
+
+[data-view=settings] #set-hours {
+  order:3
+}
+
+[data-view=settings] #set-notifications {
+  order:4
+}
+
+[data-view=settings] #set-appearance {
+  order:5
+}
+
+[data-view=settings] #set-data {
+  order:6
+}
+
+@media (width>=1360px) {
+  [data-view=settings] .set-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-items:start
+}
+
+[data-view=settings] .set-col {
+  gap:var(--gap);
+  min-width:0;
+  display:grid
+}
+
+}
+
+[data-view=settings] .set-card {
+  padding:20px 20px 8px;
+  scroll-margin-top:90px
+}
+
+[data-view=settings] .set-card__head {
+  align-items:center;
+  gap:14px;
+  margin-bottom:8px;
+  display:flex
+}
+
+[data-view=settings] .set-card__head .card__tools {
+  margin-left:auto
+}
+
+[data-view=settings] .set-card__titles {
+  flex:1 1 0;
+  min-width:0
+}
+
+[data-view=settings] .set-card__titles .card__title {
+  font-size:17px
+}
+
+[data-view=settings] .set-card__sub {
+  color:var(--muted);
+  align-items:center;
+  gap:7px;
+  margin-top:1px;
+  font-size:13.5px;
+  display:flex
+}
+
+[data-view=settings] .set-badge {
+  background:var(--ember-grad);
+  width:42px;
+  height:42px;
+  color:var(--on-ember);
+  border-radius:13px;
+  flex:none;
+  place-items:center;
+  display:grid;
+  box-shadow:inset 0 1px #ffffff73,0 10px 20px -10px #eaa9994d
+}
+
+[data-view=settings] .set-badge .ico {
+  stroke-width:1.9px;
+  width:20px;
+  height:20px
+}
+
+[data-view=settings] .set-open {
+  background:var(--faint);
+  border-radius:50%;
+  flex:none;
+  width:8px;
+  height:8px
+}
+
+[data-view=settings] .set-open.is-open {
+  background:var(--good);
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--good) 22%, transparent)
+}
+
+[data-view=settings] .set-rows {
+  display:grid
+}
+
+[data-view=settings] .set-row {
+  grid-template-columns:36px minmax(0,1fr) auto;
+  align-items:center;
+  gap:4px 14px;
+  min-height:64px;
+  padding:10px 0;
+  display:grid;
+  position:relative
+}
+
+[data-view=settings] .set-row+.set-row {
+  border-top:1px solid var(--line)
+}
+
+[data-view=settings] .set-row__ico {
+  background:var(--well);
+  width:36px;
+  height:36px;
+  color:var(--muted);
+  border-radius:12px;
+  place-items:center;
+  display:grid
+}
+
+[data-view=settings] .set-row__ico .ico {
+  width:18px;
+  height:18px
+}
+
+[data-view=settings] .set-row__text {
+  gap:1px;
+  min-width:0;
+  display:grid
+}
+
+[data-view=settings] label.set-row__text {
+  cursor:pointer
+}
+
+[data-view=settings] .set-row__text b {
+  font-size:15px;
+  font-weight:600
+}
+
+[data-view=settings] .set-row__text small {
+  color:var(--muted);
+  font-size:13px
+}
+
+[data-view=settings] .set-row__text small b {
+  font-size:inherit;
+  color:var(--text);
+  font-weight:700
+}
+
+[data-view=settings] .is-good {
+  color:var(--good);
+  font-weight:700
+}
+
+[data-view=settings] .is-bad {
+  color:var(--bad);
+  font-weight:700
+}
+
+[data-view=settings] .set-row__ctl {
+  justify-content:flex-end;
+  align-items:center;
+  min-width:0;
+  display:flex
+}
+
+[data-view=settings] .set-row--danger .set-row__ico {
+  color:var(--bad);
+  background:color-mix(in srgb, var(--bad) 12%, transparent)
+}
+
+[data-view=settings] .is-dirty .set-row__ico,[data-view=settings] .set-day.is-dirty .set-day__name b {
+  color:var(--amber)
+}
+
+[data-view=settings] .is-dirty .set-row__ico {
+  background:color-mix(in srgb, var(--amber) 16%, transparent)
+}
+
+[data-view=settings] .set-input {
+  border:1px solid var(--line-2);
+  background:var(--glass-2);
+  text-overflow:ellipsis;
+  border-radius:14px;
+  outline:none;
+  width:300px;
+  max-width:100%;
+  height:42px;
+  padding:0 14px
+}
+
+[data-view=settings] .set-input:focus {
+  border-color:var(--text)
+}
+
+[data-view=settings] [aria-invalid=true] {
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--bad) 22%, transparent);
+  border-color:var(--bad)!important
+}
+
+[data-view=settings] .set-brand {
+  background:var(--well);
+  border-radius:18px;
+  align-items:center;
+  gap:14px;
+  margin:8px 0 6px;
+  padding:12px 14px;
+  display:flex
+}
+
+[data-view=settings] .set-brand__mark {
+  background:var(--ember-grad);
+  width:46px;
+  height:46px;
+  color:var(--on-ember);
+  border-radius:14px;
+  flex:none;
+  place-items:center;
+  display:grid;
+  box-shadow:inset 0 1px #ffffff73,0 10px 20px -10px #eaa9994d
+}
+
+[data-view=settings] .set-brand__mark .ico {
+  stroke-width:2.2px;
+  width:24px;
+  height:24px
+}
+
+[data-view=settings] .set-brand__text {
+  min-width:0;
+  display:grid
+}
+
+[data-view=settings] .set-brand__text b {
+  letter-spacing:-.02em;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:19px;
+  font-weight:700;
+  overflow:hidden
+}
+
+[data-view=settings] .set-brand__text small {
+  color:var(--muted);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:13.5px;
+  overflow:hidden
+}
+
+[data-view=settings] .set-step {
+  background:var(--well);
+  border-radius:999px;
+  align-items:center;
+  gap:4px;
+  padding:3px;
+  display:flex
+}
+
+[data-view=settings] .set-step__btn {
+  width:36px;
+  height:36px;
+  color:var(--text);
+  border-radius:50%;
+  flex:none;
+  place-items:center;
+  display:grid
+}
+
+[data-view=settings] .set-step__btn:hover:not(:disabled) {
+  background:var(--glass-2)
+}
+
+[data-view=settings] .set-step__btn:disabled {
+  opacity:.35;
+  cursor:default
+}
+
+[data-view=settings] .set-step__btn .ico {
+  stroke-width:2.3px;
+  width:16px;
+  height:16px
+}
+
+[data-view=settings] .set-step__val {
+  justify-content:center;
+  align-items:baseline;
+  gap:4px;
+  width:112px;
+  display:flex;
+  overflow:hidden
+}
+
+[data-view=settings] .set-step__val input {
+  text-align:right;
+  letter-spacing:-.01em;
+  font-variant-numeric:tabular-nums;
+  appearance:textfield;
+  background:0 0;
+  border:0;
+  border-radius:6px;
+  outline:none;
+  width:3.6ch;
+  padding:0;
+  font-size:18px;
+  font-weight:700
+}
+
+[data-view=settings] .set-step__val input::-webkit-inner-spin-button {
+  -webkit-appearance:none;
+  margin:0
+}
+
+[data-view=settings] .set-step__val input::-webkit-outer-spin-button {
+  -webkit-appearance:none;
+  margin:0
+}
+
+[data-view=settings] .set-step__val input:focus-visible {
+  outline:2px solid var(--text);
+  outline-offset:2px
+}
+
+[data-view=settings] .set-step__val small {
+  color:var(--muted);
+  font-size:13px;
+  font-weight:600
+}
+
+[data-view=settings] .set-days {
+  display:grid
+}
+
+[data-view=settings] .set-days__head,[data-view=settings] .set-day {
+  grid-template-columns:50px 44px minmax(0,1fr) minmax(0,1fr);
+  align-items:center;
+  column-gap:14px;
+  display:grid
+}
+
+[data-view=settings] .set-days__head {
+  letter-spacing:.04em;
+  text-transform:uppercase;
+  color:var(--muted);
+  padding:4px 0 6px;
+  font-size:13px;
+  font-weight:700
+}
+
+[data-view=settings] .set-day {
+  border-top:1px solid var(--line);
+  min-height:58px;
+  padding:8px 0;
+  position:relative
+}
+
+[data-view=settings] .set-day.is-today:before {
+  content:"";
+  background:var(--well);
+  z-index:-1;
+  border-radius:16px;
+  position:absolute;
+  inset:3px -10px
+}
+
+[data-view=settings] .set-day.is-today,[data-view=settings] .set-day.is-today+.set-day {
+  border-top-color:#0000
+}
+
+[data-view=settings] .set-day__name {
+  line-height:1.15;
+  display:grid
+}
+
+[data-view=settings] .set-day__name b {
+  font-size:15px;
+  font-weight:700
+}
+
+[data-view=settings] .set-day__name small {
+  color:var(--amber);
+  font-size:13px;
+  font-weight:700
+}
+
+[data-view=settings] .set-day__times {
+  display:contents
+}
+
+[data-view=settings] .set-slot {
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  align-items:center;
+  gap:5px;
+  min-width:0;
+  display:grid
+}
+
+[data-view=settings] .set-slot i {
+  color:var(--faint);
+  font-style:normal
+}
+
+[data-view=settings] .set-slot__lab {
+  color:var(--muted);
+  font-size:13px;
+  font-weight:600;
+  display:none
+}
+
+[data-view=settings] .set-time {
+  border:1px solid var(--line-2);
+  background:var(--glass-2);
+  font-variant-numeric:tabular-nums;
+  text-align:center;
+  border-radius:11px;
+  outline:none;
+  width:100%;
+  min-width:0;
+  height:36px;
+  padding:0 8px;
+  font-size:14px;
+  font-weight:600
+}
+
+[data-view=settings] .set-time:focus {
+  border-color:var(--text)
+}
+
+[data-view=settings] .set-time::-webkit-calendar-picker-indicator {
+  display:none
+}
+
+[data-view=settings] .set-time::-webkit-datetime-edit {
+  padding:0
+}
+
+[data-view=settings] .set-day__closed {
+  color:var(--muted);
+  grid-column:3/-1;
+  font-size:14px;
+  font-weight:600;
+  display:none
+}
+
+[data-view=settings] .set-day.is-closed .set-slot {
+  display:none
+}
+
+[data-view=settings] .set-day.is-closed .set-day__closed {
+  display:block
+}
+
+[data-view=settings] .set-day.is-closed .set-day__name b {
+  color:var(--muted)
+}
+
+[data-view=settings] .set-card .btn .ico {
+  width:16px;
+  height:16px
+}
+
+[data-view=settings] .switch:focus-visible {
+  outline:2px solid var(--text);
+  outline-offset:3px
+}
+
+[data-view=settings] .set-themes {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  padding:4px 0 14px;
+  display:grid
+}
+
+[data-view=settings] .set-theme {
+  height:92px;
+  box-shadow:inset 0 0 0 1px var(--line-2);
+  outline-offset:3px;
+  transition:outline-color .25s var(--ease);
+  border-radius:16px;
+  outline:2px solid #0000;
+  display:block;
+  position:relative;
+  overflow:hidden
+}
+
+[data-view=settings] .set-theme.is-on {
+  outline-color:var(--ember)
+}
+
+[data-view=settings] .set-theme--dark {
+  background:radial-gradient(120% 100% at 30% 0,#16223e,#0a1222 70%)
+}
+
+[data-view=settings] .set-theme--light {
+  background:radial-gradient(120% 100% at 30% 0,#f6f8fd,#e3e8f3 70%)
+}
+
+[data-view=settings] .set-theme i {
+  border-radius:8px;
+  position:absolute
+}
+
+[data-view=settings] .set-theme--dark i {
+  background:#ffffff14;
+  box-shadow:inset 0 0 0 1px #ffffff24
+}
+
+[data-view=settings] .set-theme--light i {
+  background:#ffffffbf;
+  box-shadow:inset 0 0 0 1px #141e3c1a,0 4px 10px -6px #1e285a40
+}
+
+[data-view=settings] .set-theme i:first-child {
+  border-radius:99px;
+  width:10px;
+  top:12px;
+  bottom:12px;
+  left:10px
+}
+
+[data-view=settings] .set-theme i:nth-child(2) {
+  height:34px;
+  top:12px;
+  left:30px;
+  right:12px
+}
+
+[data-view=settings] .set-theme i:nth-child(3) {
+  background:var(--ember-grad);
+  width:46%;
+  height:12px;
+  box-shadow:none;
+  border-radius:99px;
+  top:52px;
+  left:30px
+}
+
+[data-view=settings] .set-theme b {
+  font-size:13px;
+  font-weight:700;
+  position:absolute;
+  bottom:9px;
+  right:12px
+}
+
+[data-view=settings] .set-theme--dark b {
+  color:#eef2fb
+}
+
+[data-view=settings] .set-theme--light b {
+  color:#121a2e
+}
+
+[data-view=settings] .set-bar {
+  z-index:40;
+  background:var(--float);
+  width:fit-content;
+  max-width:calc(100vw - 24px);
+  color:var(--text);
+  box-shadow:var(--shadow-pop);
+  border-radius:999px;
+  align-items:center;
+  gap:10px;
+  margin:0 auto;
+  padding:8px 8px 8px 16px;
+  display:flex;
+  position:fixed;
+  bottom:84px;
+  left:0;
+  right:0
+}
+
+[data-view=settings] .set-bar__dot {
+  background:var(--amber);
+  width:9px;
+  height:9px;
+  box-shadow:0 0 0 4px color-mix(in srgb, var(--amber) 22%, transparent);
+  border-radius:50%;
+  flex:none
+}
+
+[data-view=settings] .set-bar__msg {
+  white-space:nowrap;
+  margin-right:6px;
+  font-size:14.5px;
+  font-weight:600
+}
+
+[data-view=settings] .set-bar .btn .ico {
+  width:16px;
+  height:16px
+}
+
+[data-view=settings].has-bar .set-grid {
+  padding-bottom:104px
+}
+
+[data-view=settings] input {
+  scroll-margin-bottom:120px
+}
+
+@media (width<=1180px) and (width>=761px) {
+  [data-view=settings] .set-nav {
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 28px),#0000);
+  mask-image:linear-gradient(90deg,#000 calc(100% - 28px),#0000)
+}
+
+}
+
+@media (width<=760px) {
+  [data-view=settings] .set-navwrap {
+  margin:0 -14px 14px;
+  padding:0 14px;
+  top:6px
+}
+
+[data-view=settings] .set-card {
+  padding:16px 16px 6px
+}
+
+[data-view=settings] .set-row {
+  grid-template-columns:36px minmax(0,1fr)
+}
+
+[data-view=settings] .set-row--field .set-row__ctl,[data-view=settings] .set-row--theme .set-row__ctl {
+  grid-column:1/-1;
+  justify-content:stretch
+}
+
+[data-view=settings] .set-row--field .set-input,[data-view=settings] .set-row--theme .seg {
+  width:100%
+}
+
+[data-view=settings] .set-row--theme .seg__btn {
+  flex:1
+}
+
+[data-view=settings] .set-row--step .set-row__ctl {
+  grid-column:2;
+  justify-content:flex-start
+}
+
+:is([data-view=settings] .set-row--switch,[data-view=settings] .set-row:has(.btn)) {
+  grid-template-columns:36px minmax(0,1fr) auto
+}
+
+[data-view=settings] .set-days__head {
+  display:none
+}
+
+[data-view=settings] .set-day {
+  grid-template-columns:minmax(0,1fr) auto;
+  row-gap:8px
+}
+
+[data-view=settings] .set-day__name {
+  align-items:baseline;
+  gap:8px;
+  display:flex
+}
+
+[data-view=settings] .set-slot {
+  grid-column:1/-1;
+  grid-template-columns:54px minmax(0,1fr) auto minmax(0,1fr)
+}
+
+[data-view=settings] .set-slot__lab {
+  display:block
+}
+
+[data-view=settings] .set-day__closed {
+  grid-column:1/-1
+}
+
+[data-view=settings] .set-time {
+  height:42px;
+  font-size:16px
+}
+
+[data-view=settings] .set-day.is-today:before {
+  inset:3px -8px
+}
+
+[data-view=settings] .set-card__head {
+  flex-wrap:wrap
+}
+
+[data-view=settings] .set-card__head .card__tools {
+  flex-basis:100%;
+  margin-left:56px
+}
+
+[data-view=settings] .set-bar {
+  bottom:calc(140px + env(safe-area-inset-bottom));
+  padding-left:14px
+}
+
+[data-view=settings].has-bar .set-grid {
+  padding-bottom:120px
+}
+
+[data-view=settings].is-kb .set-bar {
+  bottom:calc(var(--set-kb,0px) + 10px)
+}
+
+[data-view=settings] .set-bar__msg {
+  font-size:13.5px
+}
+
+[data-view=settings] .set-step__val input {
+  font-size:18px
+}
+
+}
+
+@media (width<=760px) and (orientation:landscape) and (height<=500px) {
+  [data-view=settings] .set-bar {
+  bottom:calc(70px + env(safe-area-inset-bottom))
+}
+
+}
+
+@media (width<=400px) {
+  [data-view=settings] .set-bar__dot,[data-view=settings] .set-bar .btn--ink .ico {
+  display:none
+}
+
+}
+
+@media (pointer:coarse) {
+  [data-view=settings] .set-step__btn {
+  width:44px;
+  height:44px
+}
+
+[data-view=settings] .set-chip {
+  height:44px
+}
+
+[data-view=settings] .set-time,[data-view=settings] .set-input {
+  min-height:44px
+}
+
+[data-view=settings] .switch {
+  margin:9px 0
+}
+
+[data-view=settings] .switch:before {
+  content:"";
+  position:absolute;
+  inset:-9px -4px
+}
+
+[data-view=settings] .set-step__val input {
+  height:44px
+}
+
+}
+
+@media (hover:none) {
+  [data-view=settings] a.set-chip:hover,[data-view=settings] .set-step__btn:hover:not(:disabled) {
+  background:0 0
+}
+
+}
+
+:root[data-theme=light] [data-view=settings] .is-good {
+  color:color-mix(in srgb, var(--good) 65%, var(--text))
+}
+
+:root[data-theme=light] [data-view=settings] .set-day__name small {
+  color:color-mix(in srgb, var(--amber) 65%, var(--text))
+}
