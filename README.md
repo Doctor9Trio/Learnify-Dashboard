@@ -17,6 +17,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **5** | **Pangat POS** *(पंगत)* | `tavola` | Restaurant Operations, Kitchen Ticket Board (KOT), Dining Floor Plan | `http://localhost:3456/tavola/#/overview` |
 | **6** | **Dantika Clinic** *(दन्तिका)* | `ivora` | Dental Clinic Practice, Interactive 32-Tooth Chart, Chair Matrix & Labs | `http://localhost:3456/ivora/#/today` |
 | **7** | **Karkhana ERP** *(कारख़ाना)* | `cadra` | Workshop & Manufacturing ERP, Gantt Schedule, Multi-Warehouse, Till POS | `http://localhost:3456/cadra/#/dashboard` |
+| **8** | **Parivahan OS** *(परिवहन)* | `noria` | Freight Forwarding & Logistics Flow Automation, Node-Canvas Builder, Copilot | `http://localhost:3456/noria/#/overview` |
 
 ---
 
