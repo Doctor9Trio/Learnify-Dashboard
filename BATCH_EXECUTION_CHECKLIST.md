@@ -1,15 +1,15 @@
-# Sarthak Dashboard — 2-at-a-Time Batch Execution Checklist
+# Sarthak Dashboard — One-by-One Artisanal REA Checklist
 
 > **Tracking Matrix for Artisanal 1:1 Pixel-Perfect Reverse-Engineering**  
-> **Rule**: Strict **2 suites per session window** to ensure 100% focused fidelity and zero LLM context window exhaustion.
+> **Rule**: Strict **1 suite at a time** to guarantee 100% focused fidelity, exact text accuracy, and complete GSAP animation timing.
 
 ---
 
 ## 📊 Overall Progress Summary
 
-| Total Suites | Gold Benchmarks (Done) | Remaining Suites | Total Batches | Batches Done | Current Active Batch |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **20** | **2** (`corbel`, `murmura`) | **18** | **9 Batches** | **1 / 9** | **Batch 2 (Next Up)** |
+| Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
+|:---:|:---:|:---:|:---:|:---:|
+| **20** | **4** (`corbel`, `murmura`, `kinby`, `vessa`) | **16** | **20%** | **Suite 5: `tavola` (Pangat POS) — NEXT UP** |
 
 ---
 
