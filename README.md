@@ -33,6 +33,19 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 
 ---
 
+## 🔬 Reverse-Engineering Assistant (REA) Architecture & Batch Protocol
+
+To maintain the **gold standard 1:1 pixel-to-pixel (px to px) craftsmanship** established in `corbel` (**Vanijya Retail**) and `murmura` (**Samvad Social**), all suites follow the **REA Methodology** ([rea.tools](http://rea.tools/) & [github.com/morluto/rea](https://github.com/morluto/rea)):
+- **Zero Frameworks / Pure Web Standards**: Pure HTML5, Modular Vanilla CSS, and Vanilla ES6 modules.
+- **Strict 2-at-a-Time Execution**: Work is performed in batches of 2 suites per session to prevent LLM context saturation and ensure meticulous inspection of every button, modal, and animation.
+- **Master Documentation & Tracking**:
+  - 📖 [Pixel-Perfect REA Workflow Guide](PIXEL_PERFECT_REA_WORKFLOW.md)
+  - 📋 [Interactive 9-Batch Checklist](BATCH_EXECUTION_CHECKLIST.md)
+  - 🤖 [Agent Handoff & Session Prompt Playbook](AGENT_HANDOFF_PROMPT.md)
+  - 🛠️ Automated REA Token Harvester: `node bin/rea-inspector.mjs <suite_name>`
+
+---
+
 ## 🛠️ Quick Start
 
 Zero build step or compilation required! Runs directly in any modern browser via static HTTP server:
