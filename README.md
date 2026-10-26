@@ -16,6 +16,7 @@ Featuring a master launcher portal, full Single Page Application (SPA) routing, 
 | **4** | **Rasayan Lab** *(रसायन)* | `vessa` | Skincare Lab Inventory, Batch Formulation, QA Release, Pick-Pack-Ship Board | `http://localhost:3456/vessa/#/dashboard/overview` |
 | **5** | **Pangat POS** *(पंगत)* | `tavola` | Restaurant Operations, Kitchen Ticket Board (KOT), Dining Floor Plan | `http://localhost:3456/tavola/#/overview` |
 | **6** | **Dantika Clinic** *(दन्तिका)* | `ivora` | Dental Clinic Practice, Interactive 32-Tooth Chart, Chair Matrix & Labs | `http://localhost:3456/ivora/#/today` |
+| **7** | **Karkhana ERP** *(कारख़ाना)* | `cadra` | Workshop & Manufacturing ERP, Gantt Schedule, Multi-Warehouse, Till POS | `http://localhost:3456/cadra/#/dashboard` |
 
 ---
 
