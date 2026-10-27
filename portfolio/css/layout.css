@@ -1,0 +1,25 @@
+/*! PORTFOLIO — Daksh Dev — Structural Layout & Canvas (Artisanal REA Architecture)
+ * © 2026 Daksh Dev. Container Constraints, Nav Rail & Project Grid.
+ */
+
+#root {
+  min-height: 100vh;
+  background-color: var(--bg-primary, #050505);
+  color: var(--text-main, #ffffff);
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
+  gap: 2rem;
+}

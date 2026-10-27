@@ -1,0 +1,182 @@
+/*! PORTFOLIO — Daksh Dev — Design Tokens (Artisanal REA Architecture)
+ * © 2026 Daksh Dev. Full-Stack & Mobile Systems Architect Tokens.
+ */
+
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+/*! PORTFOLIO — an animated developer portfolio (React + Tailwind) — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+@layer properties {
+  @supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
+  *,:before,:after,::backdrop {
+  --tw-translate-x:0;
+  --tw-translate-y:0;
+  --tw-translate-z:0;
+  --tw-scale-x:1;
+  --tw-scale-y:1;
+  --tw-scale-z:1;
+  --tw-rotate-x:initial;
+  --tw-rotate-y:initial;
+  --tw-rotate-z:initial;
+  --tw-skew-x:initial;
+  --tw-skew-y:initial;
+  --tw-scroll-snap-strictness:proximity;
+  --tw-space-y-reverse:0;
+  --tw-divide-y-reverse:0;
+  --tw-border-style:solid;
+  --tw-gradient-position:initial;
+  --tw-gradient-from:#0000;
+  --tw-gradient-via:#0000;
+  --tw-gradient-to:#0000;
+  --tw-gradient-stops:initial;
+  --tw-gradient-via-stops:initial;
+  --tw-gradient-from-position:0%;
+  --tw-gradient-via-position:50%;
+  --tw-gradient-to-position:100%;
+  --tw-leading:initial;
+  --tw-font-weight:initial;
+  --tw-tracking:initial;
+  --tw-ordinal:initial;
+  --tw-slashed-zero:initial;
+  --tw-numeric-figure:initial;
+  --tw-numeric-spacing:initial;
+  --tw-numeric-fraction:initial;
+  --tw-shadow:0 0 #0000;
+  --tw-shadow-color:initial;
+  --tw-shadow-alpha:100%;
+  --tw-inset-shadow:0 0 #0000;
+  --tw-inset-shadow-color:initial;
+  --tw-inset-shadow-alpha:100%;
+  --tw-ring-color:initial;
+  --tw-ring-shadow:0 0 #0000;
+  --tw-inset-ring-color:initial;
+  --tw-inset-ring-shadow:0 0 #0000;
+  --tw-ring-inset:initial;
+  --tw-ring-offset-width:0px;
+  --tw-ring-offset-color:#fff;
+  --tw-ring-offset-shadow:0 0 #0000;
+  --tw-outline-style:solid;
+  --tw-blur:initial;
+  --tw-brightness:initial;
+  --tw-contrast:initial;
+  --tw-grayscale:initial;
+  --tw-hue-rotate:initial;
+  --tw-invert:initial;
+  --tw-opacity:initial;
+  --tw-saturate:initial;
+  --tw-sepia:initial;
+  --tw-drop-shadow:initial;
+  --tw-drop-shadow-color:initial;
+  --tw-drop-shadow-alpha:100%;
+  --tw-drop-shadow-size:initial;
+  --tw-backdrop-blur:initial;
+  --tw-backdrop-brightness:initial;
+  --tw-backdrop-contrast:initial;
+  --tw-backdrop-grayscale:initial;
+  --tw-backdrop-hue-rotate:initial;
+  --tw-backdrop-invert:initial;
+  --tw-backdrop-opacity:initial;
+  --tw-backdrop-saturate:initial;
+  --tw-backdrop-sepia:initial;
+  --tw-duration:initial;
+  --tw-ease:initial;
+  --rule-scale:1
+}
+
+}
+
+}
+
+
+@layer theme {
+  :root,:host {
+  --font-sans:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --color-emerald-400:oklch(76.5% .177 163.223);
+  --color-gray-200:oklch(92.8% .006 264.531);
+  --color-gray-300:oklch(87.2% .01 258.338);
+  --color-gray-400:oklch(70.7% .022 261.325);
+  --color-gray-500:oklch(55.1% .027 264.364);
+  --color-gray-600:oklch(44.6% .03 256.802);
+  --color-gray-800:oklch(27.8% .033 256.848);
+  --color-black:#000;
+  --color-white:#fff;
+  --spacing:.25rem;
+  --container-md:28rem;
+  --container-lg:32rem;
+  --container-5xl:64rem;
+  --container-7xl:80rem;
+  --text-xs:.75rem;
+  --text-xs--line-height:calc(1 / .75);
+  --text-sm:.875rem;
+  --text-sm--line-height:calc(1.25 / .875);
+  --text-base:1rem;
+  --text-base--line-height:calc(1.5 / 1);
+  --text-lg:1.125rem;
+  --text-lg--line-height:calc(1.75 / 1.125);
+  --text-xl:1.25rem;
+  --text-xl--line-height:calc(1.75 / 1.25);
+  --text-2xl:1.5rem;
+  --text-2xl--line-height:calc(2 / 1.5);
+  --text-3xl:1.875rem;
+  --text-3xl--line-height:calc(2.25 / 1.875);
+  --text-4xl:2.25rem;
+  --text-4xl--line-height:calc(2.5 / 2.25);
+  --text-5xl:3rem;
+  --text-5xl--line-height:1;
+  --text-6xl:3.75rem;
+  --text-6xl--line-height:1;
+  --text-7xl:4.5rem;
+  --text-7xl--line-height:1;
+  --text-8xl:6rem;
+  --text-8xl--line-height:1;
+  --font-weight-light:300;
+  --font-weight-medium:500;
+  --font-weight-bold:700;
+  --font-weight-black:900;
+  --tracking-tighter:-.05em;
+  --tracking-tight:-.025em;
+  --tracking-wide:.025em;
+  --tracking-wider:.05em;
+  --tracking-widest:.1em;
+  --leading-snug:1.375;
+  --leading-relaxed:1.625;
+  --radius-sm:.25rem;
+  --radius-3xl:1.5rem;
+  --drop-shadow-md:0 3px 3px #0000001f;
+  --drop-shadow-2xl:0 25px 25px #00000026;
+  --ease-out:cubic-bezier(0, 0, .2, 1);
+  --ease-in-out:cubic-bezier(.4, 0, .2, 1);
+  --blur-md:12px;
+  --blur-xl:24px;
+  --default-transition-duration:.15s;
+  --default-transition-timing-function:cubic-bezier(.4, 0, .2, 1);
+  --default-font-family:var(--font-sans);
+  --default-mono-font-family:var(--font-mono)
+}
+
+}
+
+
+/* ── Nocturnal Deep Space & Matrix Emerald Tokens ──────────────────── */
+:root {
+  --bg-primary: #050505;
+  --bg-card: #0c0d0e;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --text-main: #ffffff;
+  --text-muted: #99a1af;
+  --accent-emerald: oklch(76.5% 0.177 163.223);
+}
+
+:root[data-theme="light"],
+html[data-theme="light"],
+body[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --color-black: #fff;
+  --color-white: #0f172a;
+}
