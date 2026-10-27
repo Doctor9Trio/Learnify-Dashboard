@@ -330,6 +330,76 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ---
 
+## 🎨 Phase 10: Complete Asset Integrity & Media Restoration Matrix
+
+> **Goal**: Ensure 100% zero-404 media asset completeness across all 20 suites. No broken image boxes, missing product packaging, or missing avatars.  
+> **Rule**: Strict batch execution (2 suites per session checkpoint) with visual verification in the browser.
+
+---
+
+### 📦 ASSET BATCH 1: Skincare Formulation & Global Icons (COMPLETED)
+> **Target**: `vessa` (Rasayan Lab) & Global Favicon/Touch-Icons  
+> **Status**: ✅ **COMPLETE**
+
+#### Suite 4: `vessa` — Rasayan Lab *(रसायन)*
+- **Issue**: Broken image icons on all 12 product cards at `http://localhost:3456/vessa/#/products/catalog`.
+- **Target Folder**: `vessa/photos/vessa/`
+- [x] **Generate Core Skincare Product Photos**:
+  - [x] `balm.jpg`: Amber glass jar with minimalist label for Calendula Rescue Balm (15ml, 50ml).
+  - [x] `oil.jpg`: Botanical dropper bottle with pump dispenser for Camellia Cleansing Oil (30ml, 100ml, 200ml).
+  - [x] `serum.jpg`: Minimalist amber pipette serum bottle for Niacinamide 10% Serum (15ml, 30ml).
+  - [x] `fluid.jpg`: Pure matte white airless pump dispenser for Barrier Fluid SPF 30 (50ml).
+  - [x] `gel.jpg`: Frosted sleek tube container for Hydra Gel Cream (50ml, 75ml).
+  - [x] `duo.jpg`: Brushed aluminum pump bottles with clean typography for Hand & Body Duo / Neroli Wash (250ml).
+- [x] **Visual Verification**:
+  - [x] Verify `http://localhost:3456/vessa/#/products/catalog` in browser: 0 broken images, all 12 cards show crisp, aesthetic product imagery.
+  - [x] Verify light/dark theme contrast.
+  - [x] Verified product detail hero view (`#/products/item/bfs50`).
+
+#### Global Root Assets
+- **Issue**: Missing `/favicon.svg` and `/apple-touch-icon.png` causing 404s across all suites.
+- [x] Create `favicon.svg`: Minimalist, geometric dark SVG icon for Learnify Dashboard.
+- [x] Create `apple-touch-icon.png`: High-res iOS home screen icon.
+- [x] Copy or serve cleanly for all suites.
+
+---
+
+### 📦 ASSET BATCH 2: Furniture Living & Hospitality Staff
+> **Target**: `kvist` (Griha Living) & `tavola` (Pangat POS)  
+> **Status**: ⏳ **PENDING CHECKPOINT**
+
+#### Suite 14: `kvist` — Griha Living *(गृह)*
+- **Target Folder**: `kvist/images/`
+- [ ] Populate missing customer review avatars:
+  - [ ] `avatar-1.jpg` (Ines Duarte)
+  - [ ] `avatar-2.jpg` (Jonas Holm)
+  - [ ] `avatar-3.jpg` (Aiko Nakamura)
+- [ ] Verify zero 404s on home page (`/`) and product catalog (`/shop`).
+
+#### Suite 5: `tavola` — Pangat POS *(पंगत)*
+- **Target Folder**: `tavola/photos/tavola/`
+- [ ] Populate staff avatar photos in `staff/` (`enzo-marchetti-sm.jpg`, `kofi-mensah-sm.jpg`, `arjun-rao-sm.jpg`, etc.).
+- [ ] Populate signature dish presentation photos in `dishes/`.
+- [ ] Verify floor and order views have zero broken images.
+
+---
+
+### 📦 ASSET BATCH 3: Social Publishing & Portfolio Showcase
+> **Target**: `murmura` (Samvad Social) & `portfolio` (Shilp Portfolio)  
+> **Status**: ⏳ **PENDING CHECKPOINT**
+
+#### Suite 2: `murmura` — Samvad Social *(संवाद)*
+- **Target Folder**: `murmura/photos/murmura/`
+- [ ] Populate channel & post preview assets (`posts/*.jpg`, `team/*.jpg`).
+- [ ] Verify feed, inbox, and approvals view with zero 404s.
+
+#### Suite 15: `portfolio` — Shilp Portfolio *(शिल्प)*
+- **Target Folder**: `portfolio/photos/154-portfolio/`
+- [ ] Populate reel posters and video fallback cards in `reels/`.
+- [ ] Verify interactive portfolio showcase.
+
+---
+
 ## 🛠️ Batch Completion Protocol (Checklist for every session)
 
 When finishing a batch of 2 suites, verify:
