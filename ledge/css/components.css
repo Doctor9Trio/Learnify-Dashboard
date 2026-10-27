@@ -1,0 +1,299 @@
+/* ============================================================
+   components.css — Reusable Components, POS Till & Stock Cards
+   Bahi Khata (बही खाता)
+   Reverse-Engineered via REA
+   ============================================================ */
+
+/* ── Interactive Buttons & Pills ──────────────────────────── */
+.btn {
+  height: 44px;
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 99px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  display: inline-flex;
+  transition: background-color 0.15s, transform 0.1s, filter 0.15s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn--primary {
+  background: var(--a-block);
+  color: var(--on-block);
+  box-shadow: 0 8px 20px -8px var(--a-glow);
+}
+
+.btn--primary:hover {
+  background: var(--a-block-hover);
+}
+
+.btn--night {
+  background: var(--night);
+  color: var(--on-night);
+}
+
+.btn--night:hover {
+  background: var(--night-2);
+}
+
+.btn--ghost {
+  background: var(--card);
+  border-color: var(--hair);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  background: var(--panel);
+}
+
+.btn--sm {
+  height: 36px;
+  padding: 0 14px;
+  font-size: var(--fs-xs);
+}
+
+.btn--pill {
+  border-radius: 99px;
+}
+
+/* ── Elevated Merchant Cards ──────────────────────────────── */
+.card {
+  border-radius: var(--r-xl);
+  background: var(--card);
+  border: 1px solid var(--hair);
+  box-shadow: var(--shadow-card), inset 0 1px 0 var(--edge);
+  padding: var(--pad);
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card--night {
+  background: var(--night);
+  color: var(--on-night);
+  border-color: transparent;
+}
+
+.card__head {
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.card__title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.card__sub {
+  color: var(--faint);
+  font-size: var(--fs-xs);
+  margin-top: 2px;
+}
+
+/* ── KPI Metrics Grid ─────────────────────────────────────── */
+.kpis {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--gap);
+  display: grid;
+}
+
+.stat {
+  padding: 16px 18px;
+}
+
+.stat__val {
+  font-size: clamp(26px, 2.2vw, 36px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 6px 0;
+  display: block;
+}
+
+.stat__diff {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ── POS Till Register Grid & Catalog ─────────────────────── */
+.till {
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: var(--gap);
+  display: grid;
+}
+
+.catalog-grid {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  display: grid;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid var(--hair);
+  border-radius: var(--r-md);
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.15s var(--ease), border-color 0.15s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--a-mark);
+}
+
+.product-card__thumb {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--r-sm);
+  background: var(--panel);
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.product-card__name {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.product-card__price {
+  font-size: var(--fs-md);
+  font-weight: 800;
+  margin-top: auto;
+  padding-top: 6px;
+  color: var(--ink);
+}
+
+/* ── POS Cart Summary Drawer ──────────────────────────────── */
+.cart-drawer {
+  background: var(--card);
+  border: 1px solid var(--hair);
+  border-radius: var(--r-xl);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 14px 0;
+}
+
+.cart-item {
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--hair);
+  display: flex;
+}
+
+.cart-totals {
+  border-top: 2px dashed var(--hair);
+  padding-top: 14px;
+  gap: 8px;
+  display: grid;
+}
+
+.cart-totals__row {
+  justify-content: space-between;
+  font-size: var(--fs-sm);
+  display: flex;
+}
+
+.cart-totals__row--grand {
+  font-size: var(--fs-lg);
+  font-weight: 800;
+}
+
+/* ── Stock Inventory & Reorder Table ──────────────────────── */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+
+.table th {
+  text-align: left;
+  color: var(--faint);
+  font-weight: 700;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--hair);
+}
+
+.table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--hair);
+}
+
+.table tr:hover td {
+  background: var(--panel);
+}
+
+.status-pill {
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  display: inline-flex;
+}
+
+.status-pill--good {
+  background: var(--good-bg);
+  color: var(--good);
+}
+
+.status-pill--warn {
+  background: var(--warn-bg);
+  color: var(--warn);
+}
+
+.status-pill--bad {
+  background: var(--bad-bg);
+  color: var(--bad);
+}
+
+/* ── Dialog Sheets & Modals ───────────────────────────────── */
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: var(--scrim);
+  backdrop-filter: blur(8px);
+  z-index: 50;
+}
+
+.sheet {
+  background: var(--card);
+  border: 1px solid var(--hair-strong);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-pop);
+  max-width: 540px;
+  margin: auto;
+  padding: 28px;
+  position: relative;
+  z-index: 51;
+}

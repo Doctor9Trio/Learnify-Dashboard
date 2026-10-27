@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **9** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`) | **11** | **45%** | **Suite 10: `ledge` (Bahi Khata) — NEXT UP** |
+| **20** | **10** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`) | **10** | **50%** | **Suite 11: `gesso` (Srijan Studio) — NEXT UP** |
 
 ---
 
@@ -146,7 +146,7 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 4: Customer Service & Merchant POS
 > **Suites**: `mender` (Karigar Service) & `ledge` (Bahi Khata)  
-> **Status**: ⏳ In Progress (1 of 2 Complete)
+> **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
 
 #### Suite 9: `mender` — Karigar Service *(कारीगर)*
 - **Domain**: Support Ticket CRM, Technician Dispatch, Multi-Stage SLA Journey
@@ -162,11 +162,15 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 #### Suite 10: `ledge` — Bahi Khata *(बही खाता)*
 - **Domain**: Merchant POS Register, Barcode Stock Counting, Supplier Reorders
-- [ ] **Tokens & Shell**: Retail register interface, numpad layout, till drawer.
-- [ ] **POS Till View**: Quick-tap product catalog grid, live subtotal/tax cart drawer.
-- [ ] **Stock Counting Sheet**: Barcode scanner simulator, physical vs book count diffing.
-- [ ] **Interactive JS**: Cart adder, till tender calculations, receipt modal.
-- [ ] **QA & Git**: Visual verification and push.
+- **Target URL / Path**: `http://localhost:3456/ledge/#overview`
+- **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
+- [x] **Phase 1: REA Inspection & Assets**: Inspected with `bin/rea-inspector.mjs ledge`. Verified 1 stylesheet, 1 script, 106 colors, 0 missing assets.
+- [x] **Phase 2: Tokens & Shell**: Created `ledge/css/tokens.css` (Lime merchant palette, night surfaces, dark/light mode), `reset.css`, and `layout.css`.
+- [x] **Phase 3: Components**: Created `ledge/css/components.css` (buttons, POS till catalog, cart summary, stock count tables, dialog sheets) and `ledge/css/responsive.css`.
+- [x] **Phase 4: POS Till View**: Quick-tap product catalog grid, live subtotal/tax cart drawer, tender calculations, and receipt modal.
+- [x] **Phase 5: Stock Counting Sheet**: Barcode scanner simulator, physical vs book count diffing, and automated reorder alerts.
+- [x] **Phase 6: Interactive JS & Theme**: Created `ledge/js/theme.js` with isolated `ledge:theme` and `ledge:accent` storage.
+- [x] **Phase 7: QA & Verification**: Tested via browser subagent on Desktop (`1440x900`) and Mobile (`375x812`). Verified dark/light mode, mobile bottom navigation rail, and confirmed **0 console errors**.
 
 ---
 

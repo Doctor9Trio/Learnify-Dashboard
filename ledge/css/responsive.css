@@ -1,0 +1,143 @@
+/* ============================================================
+   responsive.css — Responsive Breakpoints & Mobile Bottom Dock
+   Bahi Khata (बही खाता)
+   Reverse-Engineered via REA
+   ============================================================ */
+
+/* ── Laptop & Compact Desktop (<= 1279px) ─────────────────── */
+@media (width <= 1279px) {
+  .till {
+    grid-template-columns: minmax(0, 1fr) 320px;
+  }
+}
+
+/* ── Medium Tablet (<= 1100px) ────────────────────────────── */
+@media (width <= 1100px) {
+  .kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ── Tablet Portrait (<= 960px) ───────────────────────────── */
+@media (width <= 960px) {
+  .till {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-drawer {
+    margin-top: 16px;
+  }
+}
+
+/* ── Mobile Morph to Bottom Navigation Bar (<= 820px) ─────── */
+@media (width <= 820px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+
+  .rail {
+    position: fixed;
+    inset: auto 0 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    margin: 0;
+    border-radius: 0;
+    padding: 6px 12px calc(6px + env(safe-area-inset-bottom));
+    z-index: 40;
+    justify-content: space-around;
+    box-shadow: 0 -2px 10px rgba(22, 24, 27, 0.08);
+  }
+
+  .rail__brand {
+    display: none;
+  }
+
+  .rail__nav {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .rail__link {
+    width: auto;
+    height: 52px;
+    font-size: 11px;
+    padding: 0 10px;
+    border-radius: 12px;
+  }
+
+  .rail__link svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .rail__blob {
+    display: none;
+  }
+
+  .rail__link--foot {
+    margin-top: 0;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .topbar {
+    padding: 10px 16px;
+    min-height: 60px;
+  }
+
+  .brand__mark {
+    display: block;
+  }
+
+  .shop__where {
+    display: none;
+  }
+
+  .board {
+    padding: 8px 16px calc(76px + env(safe-area-inset-bottom));
+  }
+}
+
+/* ── Compact Mobile Adjustments (<= 560px) ────────────────── */
+@media (width <= 560px) {
+  .find {
+    display: none;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 16px;
+  }
+}
+
+@media (width <= 380px) {
+  .rail__link span {
+    display: none;
+  }
+
+  .rail__link {
+    height: 44px;
+    padding: 0 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
