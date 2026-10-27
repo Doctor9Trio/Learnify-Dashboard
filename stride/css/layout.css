@@ -1,0 +1,242 @@
+/*! STRIDE — Gati Fitness — Structural Shell & Layout (Artisanal REA Architecture)
+ * © 2026 Gati Fitness. Navigation Rail, Grid Canvas & Responsive Views.
+ */
+
+/* ── 1. Master Application Grid Shell ────────────────────────────── */
+html.gated .shell {
+  opacity: 0;
+}
+
+.shell {
+  transition: opacity 0.45s var(--ease);
+  grid-template-columns: 232px minmax(0, 1fr);
+  min-height: 100vh;
+  display: grid;
+}
+
+/* ── 2. Fixed Sidebar Navigation Rail ────────────────────────────── */
+.side {
+  border-right: 1px solid var(--rim);
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  padding: 24px 16px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: var(--page);
+}
+
+.brand {
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px;
+  text-decoration: none;
+  display: flex;
+}
+
+.brand__mark {
+  background: conic-gradient(var(--move) 0 62%, var(--surface-2) 0);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  -webkit-mask: radial-gradient(circle, transparent 6px, #000 6.5px);
+  mask: radial-gradient(circle, transparent 6px, #000 6.5px);
+}
+
+.brand__name {
+  letter-spacing: 0.14em;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.nav {
+  scrollbar-width: thin;
+  min-height: 0;
+  margin: 0 -4px;
+  padding: 2px 4px;
+  overflow-y: auto;
+}
+
+.nav ul {
+  gap: 2px;
+  display: grid;
+}
+
+.nav__group {
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 16px 12px 6px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.nav__group:first-child {
+  padding-top: 0;
+}
+
+.nav a {
+  border-radius: var(--r-ctl);
+  color: var(--ink-2);
+  align-items: center;
+  gap: 12px;
+  padding: 9px 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  display: flex;
+}
+
+.nav a:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.nav a[aria-current] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow), 0 0 0 1px var(--rim);
+}
+
+.nav a[aria-current] .ic {
+  color: var(--brand);
+}
+
+.nav__end {
+  border-top: 1px solid var(--rim);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.side__user {
+  border-radius: var(--r-ctl);
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+  transition: background-color 0.2s;
+}
+
+.side__user:hover {
+  background: var(--surface-2);
+}
+
+.side__user strong {
+  font-size: 14px;
+  display: block;
+  color: var(--ink);
+}
+
+.side__user small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.avatar {
+  background: var(--surface-2);
+  width: 36px;
+  height: 36px;
+  color: var(--ink-2);
+  box-shadow: 0 0 0 1px var(--rim);
+  border-radius: 50%;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  display: grid;
+}
+
+/* ── 3. Main Athletic Canvas ─────────────────────────────────────── */
+.main {
+  gap: var(--gap);
+  outline: none;
+  align-content: start;
+  min-width: 0;
+  padding: 28px clamp(16px, 3vw, 40px) 64px;
+  display: grid;
+}
+
+#page-title:focus {
+  outline: none;
+}
+
+.view {
+  gap: var(--gap);
+  min-width: 0;
+  display: grid;
+}
+
+.view[hidden] {
+  display: none !important;
+}
+
+html.motion .view {
+  animation: view-in 0.35s var(--ease);
+}
+
+@keyframes view-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* ── 4. View Header Topbar ───────────────────────────────────────── */
+.top {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 16px;
+  padding-bottom: 6px;
+  display: flex;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.top h1 {
+  letter-spacing: -0.02em;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.top__tools {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+/* ── 5. Responsive Multi-Column Grids ────────────────────────────── */
+.grid {
+  gap: var(--gap);
+  display: grid;
+}
+
+.grid--top {
+  grid-template-columns: minmax(300px, 5fr) 7fr;
+}
+
+.grid--wide {
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+}
+
+.grid--three {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.grid--even {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+  align-items: start;
+}
+
+.grid--start > :first-child {
+  grid-row: span 2;
+}

@@ -1,0 +1,133 @@
+/*! STRIDE — Gati Fitness — Design Tokens (Artisanal REA Architecture)
+ * © 2026 Gati Fitness. OLED Biometrics, Activity Rings & Sleep Analysis Tokens.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Surfaces & Canvas */
+  --page: #f4f3ef;
+  --surface: #fcfcfb;
+  --surface-2: #f0efea;
+
+  /* Typography & Text */
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #73716b;
+
+  /* Structure, Borders & Shadows */
+  --grid: #e6e5df;
+  --axis: #c3c2b7;
+  --rim: rgba(11, 11, 11, 0.09);
+  --shadow: 0 1px 2px rgba(20, 18, 10, 0.05), 0 8px 24px -12px rgba(20, 18, 10, 0.12);
+
+  /* Concentric Biometric Activity Rings */
+  --move: #eb6834;
+  --exercise: #1baf7a;
+  --stand: #2a78d6;
+  --steps: #2a78d6;
+  --heart: #eb6834;
+
+  /* Sleep Architecture Stages */
+  --deep: #184f95;
+  --core: #2a78d6;
+  --rem: #6da7ec;
+  --awake: #c3c2b7;
+
+  /* Effort & Zone Gradients */
+  --ef-1: #86b6ef;
+  --ef-2: #3987e5;
+  --ef-3: #184f95;
+
+  /* Status Indicators */
+  --good: #006300;
+  --bad: #b3261e;
+
+  /* Brand Accents */
+  --brand: #b8461a;
+  --brand-ink: #ffffff;
+  --focus: #2a78d6;
+
+  /* Typography & Geometry */
+  --font: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-card: 18px;
+  --r-ctl: 10px;
+  --gap: clamp(12px, 1.6vw, 20px);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* OLED Ultra-Dark Nocturnal Mode */
+:root[data-theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Pure OLED Black Surfaces */
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-2: #232321;
+
+  /* High-Contrast Typography */
+  --ink: #ffffff;
+  --ink-2: #c3c2b7;
+  --muted: #9a988f;
+
+  /* Borders & Shadows */
+  --grid: #2c2c2a;
+  --axis: #44443f;
+  --rim: rgba(255, 255, 255, 0.08);
+  --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+
+  /* Luminous Neon Activity Colors */
+  --move: #d95926;
+  --exercise: #199e70;
+  --stand: #3987e5;
+  --steps: #3987e5;
+  --heart: #d95926;
+
+  /* Nocturnal Sleep Stages */
+  --deep: #b7d3f6;
+  --core: #6da7ec;
+  --rem: #2a78d6;
+  --awake: #55544f;
+
+  /* Luminous Zones */
+  --ef-1: #1c5cab;
+  --ef-2: #3987e5;
+  --ef-3: #9ec5f4;
+
+  --good: #3fbf3f;
+  --bad: #f2706b;
+  --focus: #86b6ef;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --surface-2: #232321;
+    --ink: #ffffff;
+    --ink-2: #c3c2b7;
+    --muted: #9a988f;
+    --grid: #2c2c2a;
+    --axis: #44443f;
+    --rim: rgba(255, 255, 255, 0.08);
+    --shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+    --move: #d95926;
+    --exercise: #199e70;
+    --stand: #3987e5;
+    --steps: #3987e5;
+    --heart: #d95926;
+    --deep: #b7d3f6;
+    --core: #6da7ec;
+    --rem: #2a78d6;
+    --awake: #55544f;
+    --ef-1: #1c5cab;
+    --ef-2: #3987e5;
+    --ef-3: #9ec5f4;
+    --good: #3fbf3f;
+    --bad: #f2706b;
+    --focus: #86b6ef;
+  }
+}
