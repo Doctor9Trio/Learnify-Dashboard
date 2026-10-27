@@ -20,8 +20,13 @@
     document.documentElement.classList.add('js');
     if (matchMedia('(pointer: coarse)').matches) document.documentElement.classList.add('coarse');
   </script>
-  <script type="module" crossorigin src="./assets/index-CCPDaXHJ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DxhggGhw.css">
+  <link rel="stylesheet" href="./css/tokens.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <script type="module" src="./js/theme.js"></script>
+  <script type="module" src="./js/index.js"></script>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -68,6 +73,9 @@
     </form>
 
     <div class="nav__icons">
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle dark mode" data-theme-toggle>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
       <button class="icon-btn" type="button" aria-label="Wishlist"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7.5-4.6-7.5-10A4 4 0 0 1 12 7.6 4 4 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10Z"/></svg></button>
       <button class="icon-btn nav__bag" type="button" aria-label="Bag, 0 items" data-bag>
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
