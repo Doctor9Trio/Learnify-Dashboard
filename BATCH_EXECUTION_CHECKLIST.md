@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **13** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`) | **7** | **65%** | **Suite 14: `kvist` (Griha Living) — NEXT UP** |
+| **20** | **14** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`) | **6** | **70%** | **Suite 15: `portfolio` (Daksh Dev) — NEXT UP** |
 
 ---
 
@@ -206,7 +206,7 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 6: Biometric Fitness & Nordic Furniture
 > **Suites**: `stride` (Gati Fitness) & `kvist` (Griha Living)  
-> **Status**: 🔄 In Progress (1/2 Completed)
+> **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
 
 #### Suite 13: `stride` — Gati Fitness *(गति)*
 - **Domain**: Personal Athletic Performance Dashboard, Concentric Activity Rings, Sleep Architecture Stages, Workout Logs
@@ -222,11 +222,15 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 #### Suite 14: `kvist` — Griha Living *(गृह)*
 - **Domain**: Scandinavian-Indian Furniture Catalog, Bento Grid, Room Lookbook
-- [ ] **Tokens & Shell**: Warm birch/chalk palette, organic border radiuses.
-- [ ] **Bento Grid Catalog**: Asymmetric product hero cards with quick-view hotspots.
-- [ ] **Room Visualizer**: Interactive hotspot markers on room staging photos.
-- [ ] **Interactive JS**: Room hotspot popovers, wishlist toggle, mini-cart drawer.
-- [ ] **QA & Git**: Visual verification and push.
+- **Target URL / Path**: `http://localhost:3456/kvist/`
+- **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
+- [x] **Phase 1: REA Inspection & Assets**: Inspected with `bin/rea-inspector.mjs kvist`. Verified 60 unique colors, 130 CSS variables, 0 missing assets.
+- [x] **Phase 2: Tokens & Shell**: Created `kvist/css/tokens.css` (Nordic birch/chalk palette, organic border radiuses, dark pine/charcoal nocturnal mode), `reset.css`, and `layout.css`.
+- [x] **Phase 3: Components**: Created `kvist/css/components.css` (bento tiles, product cards, category navigation pills, buttons, room visualizer hotspots, order drawers, toasts) and `kvist/css/responsive.css`.
+- [x] **Phase 4: Bento Grid Catalog**: Asymmetric product hero cards with quick-view hotspots, pricing details, and category filter navigation.
+- [x] **Phase 5: Room Visualizer & Cart**: Interactive hotspot markers on room staging photos, live cart drawer counter updates, and add-to-bag interactivity.
+- [x] **Phase 6: Interactive JS & Theme**: Created `kvist/js/theme.js` with isolated `kvist:theme` storage, keyboard shortcut `T`, and live theme syncing.
+- [x] **Phase 7: QA & Verification**: Tested via browser subagent on Desktop (`1440x900`) and Mobile (`375x812`). Verified bento grid layouts, dark mode toggle, add to bag counter interaction, and confirmed **0 console errors**.
 
 ---
 

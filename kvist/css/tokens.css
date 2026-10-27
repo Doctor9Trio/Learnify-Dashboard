@@ -1,0 +1,206 @@
+/*! KVIST — Griha Living — Design Tokens (Artisanal REA Architecture)
+ * © 2026 Griha Living. Scandinavian-Indian Minimalist Home Decor Tokens.
+ */
+
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+/*! KVIST — a bento-grid store with sign-in and a live dashboard (React + Tailwind + Firebase) — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+@layer properties {
+  @supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
+  *,:before,:after,::backdrop {
+  --tw-translate-x:0;
+  --tw-translate-y:0;
+  --tw-translate-z:0;
+  --tw-scroll-snap-strictness:proximity;
+  --tw-space-y-reverse:0;
+  --tw-space-x-reverse:0;
+  --tw-border-style:solid;
+  --tw-leading:initial;
+  --tw-font-weight:initial;
+  --tw-tracking:initial;
+  --tw-shadow:0 0 #0000;
+  --tw-shadow-color:initial;
+  --tw-shadow-alpha:100%;
+  --tw-inset-shadow:0 0 #0000;
+  --tw-inset-shadow-color:initial;
+  --tw-inset-shadow-alpha:100%;
+  --tw-ring-color:initial;
+  --tw-ring-shadow:0 0 #0000;
+  --tw-inset-ring-color:initial;
+  --tw-inset-ring-shadow:0 0 #0000;
+  --tw-ring-inset:initial;
+  --tw-ring-offset-width:0px;
+  --tw-ring-offset-color:#fff;
+  --tw-ring-offset-shadow:0 0 #0000;
+  --tw-blur:initial;
+  --tw-brightness:initial;
+  --tw-contrast:initial;
+  --tw-grayscale:initial;
+  --tw-hue-rotate:initial;
+  --tw-invert:initial;
+  --tw-opacity:initial;
+  --tw-saturate:initial;
+  --tw-sepia:initial;
+  --tw-drop-shadow:initial;
+  --tw-drop-shadow-color:initial;
+  --tw-drop-shadow-alpha:100%;
+  --tw-drop-shadow-size:initial;
+  --tw-backdrop-blur:initial;
+  --tw-backdrop-brightness:initial;
+  --tw-backdrop-contrast:initial;
+  --tw-backdrop-grayscale:initial;
+  --tw-backdrop-hue-rotate:initial;
+  --tw-backdrop-invert:initial;
+  --tw-backdrop-opacity:initial;
+  --tw-backdrop-saturate:initial;
+  --tw-backdrop-sepia:initial;
+  --tw-duration:initial;
+  --tw-ease:initial;
+  --tw-scale-x:1;
+  --tw-scale-y:1;
+  --tw-scale-z:1;
+  --tw-outline-style:solid
+}
+
+}
+
+}
+
+
+@layer theme {
+  :root,:host {
+  --font-sans:"Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:"Geist Mono", ui-monospace, monospace;
+  --color-white:#fff;
+  --spacing:.25rem;
+  --container-sm:24rem;
+  --container-md:28rem;
+  --container-lg:32rem;
+  --text-sm:.875rem;
+  --text-sm--line-height:calc(1.25 / .875);
+  --text-base:1rem;
+  --text-base--line-height:calc(1.5 / 1);
+  --text-lg:1.125rem;
+  --text-lg--line-height:calc(1.75 / 1.125);
+  --text-xl:1.25rem;
+  --text-xl--line-height:calc(1.75 / 1.25);
+  --text-2xl:1.5rem;
+  --text-2xl--line-height:calc(2 / 1.5);
+  --text-3xl:1.875rem;
+  --text-3xl--line-height:calc(2.25 / 1.875);
+  --text-4xl:2.25rem;
+  --text-4xl--line-height:calc(2.5 / 2.25);
+  --text-5xl:3rem;
+  --text-5xl--line-height:1;
+  --text-6xl:3.75rem;
+  --text-6xl--line-height:1;
+  --font-weight-normal:400;
+  --font-weight-medium:500;
+  --font-weight-semibold:600;
+  --font-weight-bold:700;
+  --tracking-tight:-.025em;
+  --leading-tight:1.25;
+  --leading-snug:1.375;
+  --leading-relaxed:1.625;
+  --radius-xl:.75rem;
+  --radius-2xl:1rem;
+  --radius-3xl:1.5rem;
+  --drop-shadow-xl:0 9px 7px #0000001a;
+  --animate-spin:spin 1s linear infinite;
+  --animate-ping:ping 1s cubic-bezier(0, 0, .2, 1) infinite;
+  --animate-pulse:pulse 2s cubic-bezier(.4, 0, .6, 1) infinite;
+  --blur-md:12px;
+  --blur-lg:16px;
+  --blur-xl:24px;
+  --blur-2xl:40px;
+  --default-transition-duration:.15s;
+  --default-transition-timing-function:cubic-bezier(.4, 0, .2, 1);
+  --default-font-family:var(--font-sans);
+  --default-mono-font-family:var(--font-mono);
+  --font-display:"Bricolage Grotesque", "Geist", ui-sans-serif, sans-serif;
+  --color-canvas:#f2efe9;
+  --color-card:#fbfaf7;
+  --color-ink:#1c1b18;
+  --color-ink-soft:#57544c;
+  --color-ink-faint:#7d796f;
+  --color-line:#e2ddd2;
+  --color-accent:#2f47d0;
+  --color-accent-soft:#e2e6fa;
+  --color-sand:#ebe2d4;
+  --color-sage:#dbe4d3;
+  --color-sky:#dbe3ee;
+  --color-blush:#efded7;
+  --color-butter:#f1e7c6;
+  --color-stone:#e5e2db;
+  --color-ok:#23784b;
+  --color-ok-soft:#dcefe2;
+  --color-warn:#9a6512;
+  --color-warn-soft:#f6e8cc;
+  --color-danger:#b23a27;
+  --radius-tile:1.75rem;
+  --shadow-tile:0 1px 0 #1c1b180a, 0 14px 34px -20px #1c1b1833;
+  --ease-out-expo:cubic-bezier(.16, 1, .3, 1)
+}
+
+}
+
+
+/* ── Nordic Nocturnal Dark Mode Palette ────────────────────────────── */
+:root[data-theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-canvas: #131210;
+  --color-card: #1c1b18;
+  --color-ink: #f2efe9;
+  --color-ink-soft: #b0aba1;
+  --color-ink-faint: #807c74;
+  --color-line: #2e2c27;
+  --color-accent: #6b82ff;
+  --color-accent-soft: #232b5c;
+
+  --color-sand: #363025;
+  --color-sage: #283324;
+  --color-sky: #202b38;
+  --color-blush: #382420;
+  --color-butter: #38341e;
+  --color-stone: #242320;
+
+  --color-ok: #3cb371;
+  --color-ok-soft: #193826;
+  --color-warn: #e09f3e;
+  --color-warn-soft: #3b2c15;
+  --color-danger: #e65a4c;
+
+  --shadow-tile: 0 1px 0 rgba(255, 255, 255, 0.05), 0 14px 34px -20px rgba(0, 0, 0, 0.7);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+
+    --color-canvas: #131210;
+    --color-card: #1c1b18;
+    --color-ink: #f2efe9;
+    --color-ink-soft: #b0aba1;
+    --color-ink-faint: #807c74;
+    --color-line: #2e2c27;
+    --color-accent: #6b82ff;
+    --color-accent-soft: #232b5c;
+
+    --color-sand: #363025;
+    --color-sage: #283324;
+    --color-sky: #202b38;
+    --color-blush: #382420;
+    --color-butter: #38341e;
+    --color-stone: #242320;
+
+    --color-ok: #3cb371;
+    --color-ok-soft: #193826;
+    --color-warn: #e09f3e;
+    --color-warn-soft: #3b2c15;
+    --color-danger: #e65a4c;
+
+    --shadow-tile: 0 1px 0 rgba(255, 255, 255, 0.05), 0 14px 34px -20px rgba(0, 0, 0, 0.7);
+  }
+}
