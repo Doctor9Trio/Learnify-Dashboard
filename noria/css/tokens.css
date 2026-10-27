@@ -1,0 +1,137 @@
+/* ============================================================
+   tokens.css — Parivahan OS (परिवहन) Design System Tokens
+   Reverse-Engineered via REA
+   Freight Forwarding & Logistics Flow Automation Light + Dark Tokens
+   ============================================================ */
+
+:root {
+  /* ── Typography & Scales ────────────────────────────────── */
+  --font:        "Urbanist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:        var(--font);
+  --fs-2xs:      11px;
+  --fs-xs:       12px;
+  --fs-sm:       12.5px;
+  --fs-md:       13.5px;
+  --fs-base:     14px;
+  --fs-lg:       15px;
+  --fs-xl:       17px;
+  --fs-2xl:      20px;
+  --fs-3xl:      22px;
+  --fs-4xl:      26px;
+  --fs-display:  34px;
+
+  /* ── Dimensions & Shape ─────────────────────────────────── */
+  --r-card:      22px;
+  --r-tile:      14px;
+  --gap:         16px;
+  --side-w:      256px;
+  --gutter:      clamp(16px, 1.8vw, 28px);
+  --ease:        cubic-bezier(0.2, 0.8, 0.2, 1);
+  --soft:        14%;
+
+  /* ── Light Mode Palette (Default Logistics Clean) ───────── */
+  --bg:          #eceee9;
+  --glow-a:      #d9ebe5;
+  --glow-b:      #efe6d2;
+  --surface:     #fbfcfa;
+  --surface-2:   #f3f5f1;
+  --raised:      #ffffff;
+  --well:        rgba(20, 34, 30, 0.055);
+  --line:        rgba(20, 34, 30, 0.10);
+  --line-2:      rgba(20, 34, 30, 0.18);
+  --shadow:      0 1px 2px rgba(20, 34, 30, 0.05), 0 14px 32px -22px rgba(20, 34, 30, 0.28);
+  --shadow-pop:  0 26px 60px -18px rgba(14, 26, 23, 0.34), 0 2px 6px rgba(14, 26, 23, 0.08);
+
+  /* ── Text Hierarchy ─────────────────────────────────────── */
+  --text:        #121a17;
+  --muted:       #56615c;
+  --faint:       #67716c;
+
+  /* ── Brand & Action (Forest Emerald) ────────────────────── */
+  --primary:      #0b6b5f;
+  --on-primary:   #effcf8;
+  --primary-soft: rgba(11, 107, 95, 0.12);
+
+  /* ── Sidebar & Navigation Rail ──────────────────────────── */
+  --side:         #10201c;
+  --on-side:      #e3eeea;
+  --side-dim:     rgba(227, 238, 234, 0.60);
+  --side-hover:   rgba(255, 255, 255, 0.06);
+  --side-pill:    #e8b54d;
+  --on-side-pill: #241803;
+
+  /* ── Logistics Checkpoint & Status Indicators ───────────── */
+  --good:        #1a6e3c;
+  --good-c:      #2f9a5a;
+  --bad:         #ab311f;
+  --bad-c:       #dd5a43;
+  --info:        #2a5fc4;
+  --info-c:      #3d78e0;
+  --warn:        #9a5f00;
+  --warn-c:      #d99a1e;
+  --idle:        #6b7671;
+
+  /* ── Multi-Leg Transport Modal Accents ──────────────────── */
+  --teal:        #12917f;
+  --brass:       #c3922e;
+  --sky:         #3a83cf;
+  --ocean:       #1f7f99;
+  --rose:        #cf4f68;
+  --lime:        #5a9a2e;
+  --slate:       #66747a;
+  --coral:       #e0703f;
+
+  color-scheme: light;
+}
+
+/* ── Dark Mode Overrides (Tactical Logistics Night Operations) ─ */
+:root[data-theme="dark"] {
+  --bg:          #0b100f;
+  --glow-a:      rgba(18, 145, 127, 0.11);
+  --glow-b:      rgba(232, 181, 77, 0.05);
+  --surface:     #121917;
+  --surface-2:   #17201d;
+  --raised:      #1c2622;
+  --well:        rgba(255, 255, 255, 0.055);
+  --line:        rgba(255, 255, 255, 0.08);
+  --line-2:      rgba(255, 255, 255, 0.15);
+  --shadow:      0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 18px 40px -26px rgba(0, 0, 0, 0.80);
+  --shadow-pop:  0 26px 60px -18px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  --text:        #e7eeeb;
+  --muted:       #a1ada8;
+  --faint:       #84908b;
+
+  --primary:      #4fd1bb;
+  --on-primary:   #03211b;
+  --primary-soft: rgba(79, 209, 187, 0.14);
+
+  --side:         #08110f;
+  --on-side:      #e0ebe7;
+  --side-dim:     rgba(224, 235, 231, 0.56);
+  --side-hover:   rgba(255, 255, 255, 0.05);
+  --side-pill:    #e8b54d;
+  --on-side-pill: #241803;
+
+  --good:        #63d48e;
+  --good-c:      #4cc27a;
+  --bad:         #f2866f;
+  --bad-c:       #e8664d;
+  --info:        #84aef7;
+  --info-c:      #5e92ee;
+  --warn:        #f0b552;
+  --warn-c:      #e3a530;
+  --idle:        #8f9a95;
+
+  --teal:        #3cc4ae;
+  --brass:       #e2b45a;
+  --sky:         #6eaaf0;
+  --ocean:       #5cbcd6;
+  --rose:        #f07f95;
+  --lime:        #93cc63;
+  --slate:       #9aa8ad;
+  --coral:       #f2946a;
+  --soft:        18%;
+
+  color-scheme: dark;
+}

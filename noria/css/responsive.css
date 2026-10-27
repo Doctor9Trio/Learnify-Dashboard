@@ -1,0 +1,327 @@
+/* ============================================================
+   responsive.css — Responsive Breakpoints & Mobile Dock Morph
+   Parivahan OS (परिवहन)
+   Reverse-Engineered via REA
+   ============================================================ */
+
+/* ── Desktop Rail Expansion Mode (>= 1280px) ──────────────── */
+@media (width >= 1280px) {
+  html.is-rail {
+    --side-w: 88px;
+  }
+
+  html.is-rail .side {
+    padding: 14px 10px 12px;
+  }
+
+  html.is-rail .side__top {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 10px;
+  }
+
+  html.is-rail .brand__text,
+  html.is-rail .nav__item span,
+  html.is-rail .today,
+  html.is-rail .me > :not(.av) {
+    display: none;
+  }
+
+  html.is-rail .nav__label {
+    height: 10px;
+    padding: 0;
+    font-size: 0;
+    display: block;
+  }
+
+  html.is-rail .nav__item {
+    justify-content: center;
+    height: 46px;
+    padding: 0;
+  }
+
+  html.is-rail .nav__count {
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    position: absolute;
+    top: 3px;
+    right: 6px;
+  }
+
+  html.is-rail .me {
+    justify-content: center;
+  }
+}
+
+/* ── Laptop & Tablet Wide (761px - 1279px) ────────────────── */
+@media (width <= 1279px) and (width >= 761px) {
+  :root {
+    --side-w: 88px;
+  }
+
+  .side {
+    padding: 14px 10px 12px;
+  }
+
+  .side__top {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 10px;
+  }
+
+  .side__fold,
+  .brand__text,
+  .nav__item span,
+  .today,
+  .me > :not(.av) {
+    display: none;
+  }
+
+  .nav__label {
+    height: 10px;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .nav__item {
+    justify-content: center;
+    height: 46px;
+    padding: 0;
+  }
+
+  .nav__count {
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    position: absolute;
+    top: 3px;
+    right: 6px;
+  }
+
+  .me {
+    justify-content: center;
+  }
+}
+
+/* ── Medium Tablet & Compact Layouts (<= 1000px) ──────────── */
+@media (width <= 1000px) {
+  .head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .head__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (width <= 999px) and (width >= 761px) {
+  .finder-btn span,
+  .finder-btn kbd {
+    display: none;
+  }
+
+  .finder-btn {
+    flex: none;
+    justify-content: center;
+    width: 44px;
+    padding: 0;
+  }
+}
+
+/* ── Mobile Morph to Bottom Navigation Dock (<= 760px) ────── */
+@media (width <= 760px) {
+  .main-col {
+    padding: max(12px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) calc(104px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+  }
+
+  .nav__count[data-count="flows"],
+  .nav__pill [data-pill-count="flows"] {
+    display: none;
+  }
+
+  .side {
+    top: auto;
+    left: 10px;
+    right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    border-radius: 22px;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    width: auto;
+    padding: 6px;
+    overflow: visible;
+  }
+
+  .side__top,
+  .side__foot,
+  .nav__label {
+    display: none;
+  }
+
+  .nav {
+    flex: 1;
+  }
+
+  .nav__track {
+    gap: 0;
+    display: flex;
+  }
+
+  .nav__track > .nav__item {
+    flex: 1;
+  }
+
+  .nav__item {
+    height: 56px;
+    font-size: var(--fs-2xs);
+    border-radius: 16px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    padding: 0;
+    font-weight: 700;
+  }
+
+  .nav__item[data-route="recipes"],
+  .nav__item[data-route="connections"],
+  .nav__item[data-route="settings"],
+  .nav__item[data-route="help"] {
+    display: none;
+  }
+
+  .nav__more {
+    display: flex;
+  }
+
+  .nav__pill {
+    gap: 0;
+    display: flex;
+  }
+
+  .nav__pill > .nav__item {
+    flex: 1;
+  }
+
+  .nav__pill > .nav__label {
+    display: none;
+  }
+
+  .nav__count {
+    min-width: 17px;
+    height: 17px;
+    font-size: var(--fs-2xs);
+    box-shadow: 0 0 0 2px var(--side);
+    padding: 0 4px;
+    position: absolute;
+    top: 4px;
+    left: calc(50% + 4px);
+    right: auto;
+  }
+
+  .top {
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .top__brand {
+    letter-spacing: -0.02em;
+    align-items: center;
+    gap: 9px;
+    margin-right: auto;
+    font-size: 19px;
+    font-weight: 700;
+    display: flex;
+  }
+
+  .top__brand .brand__mark {
+    background: var(--side);
+    width: 34px;
+    height: 34px;
+    color: var(--side-pill);
+    border-radius: 11px;
+  }
+
+  .top__brand .brand__mark svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .finder-btn {
+    flex: none;
+    order: 2;
+    justify-content: center;
+    width: 44px;
+    padding: 0;
+  }
+
+  .finder-btn span,
+  .finder-btn kbd {
+    display: none;
+  }
+
+  .live {
+    padding: 0 11px;
+  }
+
+  .live small,
+  .top__new span {
+    display: none;
+  }
+
+  .top__new {
+    width: 44px;
+    padding: 0;
+  }
+
+  #btn-theme {
+    display: none;
+  }
+
+  .head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .head__actions {
+    justify-content: flex-start;
+  }
+
+  .head__actions > .btn {
+    flex: auto;
+  }
+
+  .card__head {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .card__htext {
+    flex: 200px;
+  }
+
+  .head__title {
+    font-size: 28px;
+  }
+
+  .card {
+    border-radius: 20px;
+    padding: 16px;
+  }
+
+  .toast {
+    bottom: calc(90px + env(safe-area-inset-bottom));
+  }
+
+  .modal,
+  .drawer {
+    border-bottom: 0;
+    border-radius: 24px 24px 0 0;
+    width: 100%;
+    max-width: none;
+    max-height: 92dvh;
+    margin: auto 0 0;
+  }
+}
