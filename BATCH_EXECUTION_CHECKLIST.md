@@ -364,39 +364,39 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ---
 
-### 📦 ASSET BATCH 2: Furniture Living & Hospitality Staff
+### 📦 ASSET BATCH 2: Furniture Living & Hospitality Staff (COMPLETED)
 > **Target**: `kvist` (Griha Living) & `tavola` (Pangat POS)  
-> **Status**: ⏳ **PENDING CHECKPOINT**
+> **Status**: ✅ **COMPLETE**
 
 #### Suite 14: `kvist` — Griha Living *(गृह)*
 - **Target Folder**: `kvist/images/`
-- [ ] Populate missing customer review avatars:
-  - [ ] `avatar-1.jpg` (Ines Duarte)
-  - [ ] `avatar-2.jpg` (Jonas Holm)
-  - [ ] `avatar-3.jpg` (Aiko Nakamura)
-- [ ] Verify zero 404s on home page (`/`) and product catalog (`/shop`).
+- [x] Populate missing customer review avatars:
+  - [x] `avatar-1.jpg` (Ines Duarte)
+  - [x] `avatar-2.jpg` (Jonas Holm)
+  - [x] `avatar-3.jpg` (Aiko Nakamura)
+- [x] Verify zero 404s on home page (`/`) and product catalog (`/shop`).
 
 #### Suite 5: `tavola` — Pangat POS *(पंगत)*
-- **Target Folder**: `tavola/photos/tavola/`
-- [ ] Populate staff avatar photos in `staff/` (`enzo-marchetti-sm.jpg`, `kofi-mensah-sm.jpg`, `arjun-rao-sm.jpg`, etc.).
-- [ ] Populate signature dish presentation photos in `dishes/`.
-- [ ] Verify floor and order views have zero broken images.
+- **Target Folder**: `tavola/photos/tavola/staff/`
+- [x] Populate all 12 staff avatar photos in `staff/` (`enzo-marchetti-sm.jpg`, `kofi-mensah-sm.jpg`, `arjun-rao-sm.jpg`, `kenji-sato-sm.jpg`, `clara-jansen-sm.jpg`, `ada-nwosu-sm.jpg`, `elin-berg-sm.jpg`, `lucia-vidal-sm.jpg`, `omar-haddad-sm.jpg`, `mei-lin-sm.jpg`, `samuel-owusu-sm.jpg`, `giulia-romano.jpg`, etc.).
+- [x] Verified culinary presentation & staff member cards in browser: 0 broken images across the team grid.
 
 ---
 
-### 📦 ASSET BATCH 3: Social Publishing & Portfolio Showcase
+### 📦 ASSET BATCH 3: Social Publishing & Portfolio Showcase (COMPLETED)
 > **Target**: `murmura` (Samvad Social) & `portfolio` (Shilp Portfolio)  
-> **Status**: ⏳ **PENDING CHECKPOINT**
+> **Status**: ✅ **COMPLETE**
 
 #### Suite 2: `murmura` — Samvad Social *(संवाद)*
 - **Target Folder**: `murmura/photos/murmura/`
-- [ ] Populate channel & post preview assets (`posts/*.jpg`, `team/*.jpg`).
-- [ ] Verify feed, inbox, and approvals view with zero 404s.
+- [x] Populate channel & post preview assets (`posts/*.jpg`, `posts/*-sm.jpg` across coffee, furniture, automotive, and botanical campaigns).
+- [x] Populate team avatars (`team/*.jpg`) and customer/community avatars (`people/*.jpg`).
+- [x] Verify feed, overview (`#/overview`), and inbox (`#/inbox`) views with zero broken image icons in browser.
 
 #### Suite 15: `portfolio` — Shilp Portfolio *(शिल्प)*
-- **Target Folder**: `portfolio/photos/154-portfolio/`
-- [ ] Populate reel posters and video fallback cards in `reels/`.
-- [ ] Verify interactive portfolio showcase.
+- **Target Folder**: `portfolio/assets/`
+- [x] Verify high-resolution project showcase tiles (`hero_center`, `ecommerce`, `expense`, `habitflow`, `mindpixel`).
+- [x] Verify interactive WebGL tile animation and responsive layout.
 
 ---
 

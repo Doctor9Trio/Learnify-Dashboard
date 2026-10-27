@@ -6774,7 +6774,7 @@ var Mo = (e) =>
   },
   Fo = 0,
   Io = (e) => `${e}${Date.now().toString(36)}${(Fo++).toString(36)}`,
-  Lo = `./photos./`,
+  Lo = `./photos/murmura/`,
   Ro = [
     {
       id: `ember`,
