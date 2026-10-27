@@ -1,0 +1,65 @@
+/* ============================================================
+   tokens.css — Srijan Studio (सृजन) Design System Tokens
+   Reverse-Engineered via REA
+   Original Art Marketplace & Creative Gallery Tokens
+   ============================================================ */
+
+:root {
+  /* ── Core Editorial Surfaces ────────────────────────────── */
+  --paper:         #f4f1ea;
+  --card:          #fbfaf6;
+  --cream:         #fbfaf6;
+  --ink:           #17140f;
+  --muted:         #6f685e;
+  --line:          #e2dccf;
+  --line-strong:   #c9c1b0;
+
+  /* ── Accent Pigments & Mediums ──────────────────────────── */
+  --cobalt:        #2c44f2;
+  --lilac:         #cdbdff;
+  --ember:         #e5532f;
+  --moss:          #2f7d5b;
+
+  /* ── Typography & Scales ────────────────────────────────── */
+  --font-body:     "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-mono:     "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --fs-micro:      clamp(0.75rem, 0.72rem + 0.1vw, 0.8125rem);
+  --fs-xs:         clamp(0.8125rem, 0.78rem + 0.15vw, 0.9375rem);
+  --fs-sm:         clamp(0.9375rem, 0.88rem + 0.25vw, 1.125rem);
+  --fs-body:       clamp(1rem, 0.94rem + 0.3vw, 1.25rem);
+  --fs-h3:         clamp(1.25rem, 1.05rem + 0.8vw, 1.85rem);
+  --fs-h2:         clamp(2.25rem, 1.2rem + 3.9vw, 5rem);
+  --fs-h1:         clamp(2.3rem, 1.1rem + 5.6vw, 8rem);
+  --fs-statement:  clamp(1.5rem, 0.85rem + 2.4vw, 3.25rem);
+
+  /* ── Geometry & Layout Tokens ───────────────────────────── */
+  --r-sm:          12px;
+  --r-md:          18px;
+  --r-lg:          26px;
+  --gutter:        clamp(16px, 4vw, 72px);
+  --max:           1840px;
+  --nav-h:         clamp(60px, 4.2vw, 76px);
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-card:   0 1px 2px rgba(23, 20, 15, 0.06), 0 12px 28px -12px rgba(23, 20, 15, 0.28);
+
+  color-scheme: light;
+}
+
+/* ── Dark Mode Overrides (Nocturne Art Gallery) ───────────── */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper:         #12100d;
+  --card:          #1c1915;
+  --cream:         #24201c;
+  --ink:           #f4f1ea;
+  --muted:         #a89f92;
+  --line:          #2a2520;
+  --line-strong:   #3d362f;
+
+  --cobalt:        #5b72ff;
+  --lilac:         #bca9ff;
+  --ember:         #f26c4b;
+  --moss:          #459c75;
+
+  --shadow-card:   0 1px 2px rgba(0, 0, 0, 0.25), 0 16px 36px -12px rgba(0, 0, 0, 0.65);
+}

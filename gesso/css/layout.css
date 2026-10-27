@@ -1,0 +1,168 @@
+/* ============================================================
+   layout.css — Srijan Studio (सृजन) Shell, Header & Grid Sections
+   Reverse-Engineered via REA
+   ============================================================ */
+
+/* ── Fixed Editorial Navigation Header ────────────────────── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  background: color-mix(in srgb, var(--paper) 86%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--gutter);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.brand__mark {
+  width: 24px;
+  height: 24px;
+  color: var(--ink);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.brand:hover .brand__mark {
+  transform: rotate(45deg);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.8vw, 32px);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+}
+
+.nav__links a {
+  color: var(--muted);
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav__links a:hover {
+  color: var(--ink);
+}
+
+.nav__dot::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: var(--cobalt);
+  border-radius: 50%;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.nav__icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Layout Sections & Rhythm ─────────────────────────────── */
+:root {
+  --section-y: clamp(48px, 7vw, 120px);
+}
+
+.hero {
+  padding-top: calc(var(--nav-h) + clamp(20px, 3vw, 48px));
+  padding-bottom: var(--section-y);
+  min-height: 85svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.market,
+.studio,
+.trust,
+.journey,
+.people,
+.stories,
+.collection,
+.gallery,
+.membership,
+.band {
+  padding-block: var(--section-y);
+}
+
+.market,
+.vision,
+.membership,
+.collection,
+.closing {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(24px, 4vw, 80px);
+  align-items: center;
+}
+
+/* ── Footer ───────────────────────────────────────────────── */
+.footer {
+  border-top: 1px solid var(--line);
+  padding-block: clamp(40px, 5vw, 80px) 40px;
+  margin-top: var(--section-y);
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: clamp(24px, 3vw, 48px);
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.footer__col h4 {
+  font: 500 var(--fs-micro) / 1 var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.footer__col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+
+.footer__col a:hover {
+  color: var(--ink);
+}
+
+.footer__legal {
+  grid-column: 1 / -1;
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  font-size: var(--fs-micro);
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}

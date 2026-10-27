@@ -1,0 +1,280 @@
+/* ============================================================
+   components.css — Reusable Components, 3D Fan Cards & Pricing
+   Srijan Studio (सृजन)
+   Reverse-Engineered via REA
+   ============================================================ */
+
+/* ── Interactive Buttons & CTA Rows ───────────────────────── */
+.cta-row {
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+  display: flex;
+}
+
+.btn {
+  min-height: clamp(44px, 2.6vw + 22px, 54px);
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  transition: transform 0.4s var(--ease-out), background-color 0.3s;
+  border-radius: 999px;
+  align-items: center;
+  padding: 0 clamp(18px, 1.4vw, 26px);
+  font-weight: 500;
+  display: inline-flex;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn--ink {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.btn--ghost {
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  background: rgba(23, 20, 15, 0.06);
+}
+
+.btn--cobalt {
+  background: var(--cobalt);
+  color: var(--cream);
+}
+
+.btn--light {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.pill {
+  background: var(--ink);
+  min-height: 36px;
+  color: var(--cream);
+  font-size: var(--fs-xs);
+  border-radius: 999px;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px 0 12px;
+  font-weight: 500;
+  display: inline-flex;
+}
+
+.pill svg {
+  width: 14px;
+  height: 14px;
+}
+
+.pill--light {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.icon-btn {
+  border-radius: 50%;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s;
+  display: grid;
+}
+
+.icon-btn:hover {
+  background: rgba(23, 20, 15, 0.07);
+}
+
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.link {
+  font-size: var(--fs-sm);
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-weight: 500;
+  display: inline-flex;
+}
+
+.link svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.link:hover svg {
+  transform: translateX(4px);
+}
+
+/* ── Interactive 3D Fan-Card Spread in Hero ───────────────── */
+.fan {
+  --cw: clamp(140px, 16vw, 220px);
+  --step: calc(var(--cw) * 0.46);
+  position: relative;
+  width: 100%;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  margin-block: 40px;
+}
+
+.fan__origin {
+  position: relative;
+  width: var(--cw);
+  height: calc(var(--cw) * 1.35);
+}
+
+.fan__tilt {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+  cursor: pointer;
+}
+
+.fan__tilt:hover {
+  transform: translateY(-16px) scale(1.04) !important;
+  z-index: 30 !important;
+  box-shadow: 0 24px 50px -12px rgba(23, 20, 15, 0.45);
+}
+
+.fan__card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Studio Video Player & Floating Dock ──────────────────── */
+.studio__screen {
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--ink);
+  aspect-ratio: 16 / 10;
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+
+.studio__screen > .studio__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dock {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  border-radius: 999px;
+  padding: 8px 12px;
+  gap: 8px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dock span {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  place-items: center;
+  display: grid;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dock span:hover {
+  background: rgba(23, 20, 15, 0.08);
+}
+
+.dock span.dock__mark {
+  background: var(--ink);
+  color: var(--cream);
+  width: 44px;
+  height: 44px;
+}
+
+/* ── Artist Bento Grid & Gallery Wall ─────────────────────── */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(14px, 2vw, 24px);
+  margin-top: 40px;
+}
+
+.bento__col--a {
+  grid-column: span 7;
+}
+
+.bento__col--b {
+  grid-column: span 5;
+}
+
+.wall__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.wall__tile {
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--card);
+}
+
+/* ── Membership & Collector Pricing Plans ─────────────────── */
+.plans {
+  display: flex;
+  gap: clamp(16px, 2vw, 32px);
+  padding-block: 48px 24px;
+  justify-content: center;
+}
+
+.plan {
+  --pw: clamp(260px, 24vw, 360px);
+  width: var(--pw);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(24px, 2.5vw, 40px);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.4s var(--ease-out), border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan:hover {
+  transform: translateY(-6px);
+  border-color: var(--cobalt);
+}
+
+.plan__name {
+  font-size: var(--fs-h3);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.plan__price {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  line-height: 1;
+  margin-block: 16px;
+}
+
+.token {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--paper);
+  place-items: center;
+  display: grid;
+  margin-bottom: 16px;
+}

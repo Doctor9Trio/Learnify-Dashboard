@@ -1,0 +1,116 @@
+/* ============================================================
+   responsive.css — Responsive Breakpoints & Mobile Adaptations
+   Srijan Studio (सृजन)
+   Reverse-Engineered via REA
+   ============================================================ */
+
+/* ── Tablet & Mobile (<= 820px) ───────────────────────────── */
+@media (width <= 820px) {
+  :root {
+    --section-y: clamp(32px, 5vw + 16px, 60px);
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  .nav__icons {
+    margin-left: auto;
+  }
+
+  .market,
+  .studio,
+  .trust,
+  .journey,
+  .people,
+  .stories,
+  .collection,
+  .gallery,
+  .membership,
+  .band {
+    padding-block: var(--section-y);
+  }
+
+  .hero {
+    padding-bottom: var(--section-y);
+  }
+
+  .fan {
+    --cw: 25vw;
+    --step: calc(var(--cw) * 0.42);
+  }
+
+  .market,
+  .vision,
+  .membership,
+  .collection,
+  .closing,
+  .footer {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bento {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .bento__col--a,
+  .bento__col--b {
+    grid-column: span 1;
+  }
+
+  .wall__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .dock {
+    gap: 4px;
+    padding: 6px 8px;
+    margin-bottom: 24px;
+  }
+
+  .dock span {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dock span.dock__mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer__cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ── Compact Mobile (<= 560px) ────────────────────────────── */
+@media (width <= 560px) {
+  .plans {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding-block: 12px 4px;
+  }
+
+  .plan {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .wall__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer__cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fan__tilt,
+  .plan,
+  .btn,
+  .link svg {
+    transition: none !important;
+  }
+}
