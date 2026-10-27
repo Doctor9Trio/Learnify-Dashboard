@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **8** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`) | **12** | **40%** | **Suite 9: `mender` (Karigar Service) — NEXT UP** |
+| **20** | **9** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`) | **11** | **45%** | **Suite 10: `ledge` (Bahi Khata) — NEXT UP** |
 
 ---
 
@@ -146,15 +146,19 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 4: Customer Service & Merchant POS
 > **Suites**: `mender` (Karigar Service) & `ledge` (Bahi Khata)  
-> **Status**: ⏳ Pending
+> **Status**: ⏳ In Progress (1 of 2 Complete)
 
 #### Suite 9: `mender` — Karigar Service *(कारीगर)*
 - **Domain**: Support Ticket CRM, Technician Dispatch, Multi-Stage SLA Journey
-- [ ] **Tokens & Shell**: Clean customer service palette, split-pane conversation view.
-- [ ] **Support Pipeline**: Drag-and-drop ticket priority pipeline.
-- [ ] **Customer Journey**: 4-stage resolution timeline and parts warranty lookup.
-- [ ] **Interactive JS**: Ticket status mover, quick reply macro insertion.
-- [ ] **QA & Git**: Visual verification and push.
+- **Target URL / Path**: `http://localhost:3456/mender/#/cases`
+- **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
+- [x] **Phase 1: REA Inspection & Assets**: Inspected with `bin/rea-inspector.mjs mender`. Verified 1 stylesheet, 1 script, 70 colors, 0 missing assets.
+- [x] **Phase 2: Tokens & Shell**: Created `mender/css/tokens.css` (Craft service slate palette, SLA codes, dark/light mode), `reset.css`, and `layout.css`.
+- [x] **Phase 3: Components**: Created `mender/css/components.css` (buttons, KPI cards, badges, Kanban lane board, donut chart, dialog sheets) and `mender/css/responsive.css`.
+- [x] **Phase 4: Support Pipeline**: Drag-and-drop ticket priority pipeline across New, Working, Waiting on client, Resolved.
+- [x] **Phase 5: Customer Journey**: 4-stage interactive resolution timeline, crew assignment, and suggested knowledge base table.
+- [x] **Phase 6: Interactive JS & Theme**: Created `mender/js/theme.js` with isolated `mender:theme` storage and keyboard shortcuts (`T`).
+- [x] **Phase 7: QA & Verification**: Tested via browser subagent on Desktop (`1440x900`) and Mobile (`375x812`). Verified dark/light mode, bottom action rail, and confirmed **0 console errors**.
 
 #### Suite 10: `ledge` — Bahi Khata *(बही खाता)*
 - **Domain**: Merchant POS Register, Barcode Stock Counting, Supplier Reorders

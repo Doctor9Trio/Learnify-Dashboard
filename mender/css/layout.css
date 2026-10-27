@@ -1,0 +1,327 @@
+/* ============================================================
+   layout.css — Karigar Service (कारीगर) Shell, Rail & Topbar
+   Reverse-Engineered via REA
+   ============================================================ */
+
+/* ── Application Grid Shell ───────────────────────────────── */
+.app {
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 92px minmax(0, 1fr);
+  min-height: 100dvh;
+  display: grid;
+}
+
+/* ── Sticky Navigation Header ─────────────────────────────── */
+.top {
+  z-index: 20;
+  background: linear-gradient(180deg, var(--bg) 0 82%, color-mix(in srgb, var(--bg) 0%, transparent));
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  height: 80px;
+  padding: 0 28px 0 24px;
+  display: grid;
+  position: sticky;
+  top: 0;
+}
+
+.brand {
+  color: var(--ink);
+  justify-self: start;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.brand__mark {
+  width: 44px;
+  height: 44px;
+  color: var(--ink);
+  place-items: center;
+  display: grid;
+  transition: transform 0.25s var(--ease);
+}
+
+.brand:hover .brand__mark {
+  transform: scale(1.05);
+}
+
+.brand__mark svg {
+  width: 34px;
+  height: 34px;
+}
+
+.brand__name {
+  letter-spacing: -0.03em;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* ── Main Navigation Track with Sliding Pill ──────────────── */
+.nav {
+  background: var(--panel);
+  border: 1px solid var(--panel-rim);
+  border-radius: 999px;
+  grid-auto-columns: 118px;
+  grid-auto-flow: column;
+  padding: 5px;
+  display: grid;
+  position: relative;
+}
+
+.nav__pill {
+  background: var(--ink);
+  border-radius: 999px;
+  width: 118px;
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  transition: transform 0.28s var(--ease);
+}
+
+.nav__link {
+  height: 40px;
+  color: var(--ink-2);
+  border-radius: 999px;
+  place-items: center;
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s;
+  display: grid;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: var(--ink);
+}
+
+.nav__link[aria-current="page"] {
+  color: var(--on-ink);
+}
+
+/* ── Top Actions, Search, Notifications & User Avatar ─────── */
+.top__actions {
+  justify-self: end;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.search {
+  position: relative;
+}
+
+.search__box {
+  width: 270px;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: calc(100% + 8px);
+}
+
+.search.is-open .search__box {
+  display: block;
+}
+
+.search__box input {
+  border: 1px solid var(--line);
+  background: var(--card-solid);
+  width: 100%;
+  height: 44px;
+  color: var(--ink);
+  border-radius: 999px;
+  outline: none;
+  padding: 0 18px;
+  font-weight: 500;
+}
+
+.search__box input:focus-visible {
+  border-color: var(--emerald);
+  box-shadow: 0 0 0 3px var(--emerald-soft);
+}
+
+.bell {
+  position: relative;
+}
+
+.bell__dot {
+  background: var(--coral);
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 2px var(--card-solid);
+  opacity: 0;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+  position: absolute;
+  top: 10px;
+  right: 11px;
+}
+
+.bell.has-new .bell__dot {
+  opacity: 1;
+}
+
+.me {
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.me .av {
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 2px var(--panel-rim);
+}
+
+/* ── Floating Side Action Rail ────────────────────────────── */
+.rail {
+  background: var(--panel);
+  border: 1px solid var(--panel-rim);
+  border-radius: 999px;
+  flex-direction: column;
+  grid-area: 2 / 1;
+  place-self: start center;
+  align-items: center;
+  gap: 8px;
+  width: 62px;
+  min-height: calc(100dvh - 120px);
+  margin-bottom: 24px;
+  padding: 9px 0;
+  display: flex;
+  position: sticky;
+  top: 96px;
+}
+
+.rail__btn {
+  width: 44px;
+  height: 44px;
+  color: var(--ink-2);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  place-items: center;
+  padding: 0;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, transform 0.15s;
+  display: grid;
+}
+
+.rail__btn:hover {
+  background: var(--card);
+  color: var(--ink);
+}
+
+.rail__btn--ink,
+.rail__btn--ink:hover {
+  background: var(--ink);
+  color: var(--on-ink);
+}
+
+.rail__sep {
+  background: var(--line-2);
+  width: 22px;
+  height: 1px;
+  margin: 2px 0;
+}
+
+/* ── Zero-Flash Light / Dark Switcher Knob ─────────────────── */
+.theme {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  gap: 0;
+  margin-top: auto;
+  padding: 4px;
+  display: grid;
+  position: relative;
+}
+
+.theme__knob {
+  background: var(--ink);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: transform 0.25s var(--ease);
+}
+
+:root[data-theme="light"] .theme__knob {
+  transform: translateY(36px);
+}
+
+:root[data-theme="dark"] .theme__knob {
+  transform: translateY(0);
+}
+
+.theme__opt {
+  width: 36px;
+  height: 36px;
+  color: var(--ink-3);
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  place-items: center;
+  padding: 0;
+  transition: color 0.25s;
+  display: grid;
+  position: relative;
+}
+
+.theme__opt svg.i {
+  width: 18px;
+  height: 18px;
+}
+
+.theme__opt[aria-pressed="true"] {
+  color: var(--on-ink);
+}
+
+/* ── Main Viewport & Layout Rhythm ────────────────────────── */
+.main {
+  outline: none;
+  grid-area: 2 / 2;
+  min-width: 0;
+  padding: 4px 28px 56px 14px;
+}
+
+.title {
+  letter-spacing: -0.028em;
+  margin: 6px 0 18px 4px;
+  font-size: clamp(28px, 2.3vw, 40px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.title:focus {
+  outline: none;
+}
+
+.title .w {
+  vertical-align: top;
+  padding-bottom: 0.08em;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.title .ch {
+  display: inline-block;
+}
+
+.row {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  margin-top: 18px;
+  scroll-margin-top: 96px;
+  display: grid;
+}
+
+.row--journey {
+  grid-template-columns: 2fr 1fr;
+}

@@ -1,0 +1,346 @@
+/* ============================================================
+   responsive.css — Responsive Breakpoints & Mobile Bottom Rail
+   Karigar Service (कारीगर)
+   Reverse-Engineered via REA
+   ============================================================ */
+
+/* ── Laptop & Compact Desktop (<= 1280px) ─────────────────── */
+@media (width <= 1280px) {
+  .cols {
+    gap: 38px;
+  }
+
+  .drivers {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .donut {
+    width: 160px;
+  }
+
+  .legend__row {
+    grid-template-columns: 10px minmax(0, 1fr) 42px;
+  }
+
+  .legend__bar {
+    display: none;
+  }
+}
+
+/* ── Medium Screen & Tablet Landscape (<= 1100px) ─────────── */
+@media (width <= 1100px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .panel--volume .panel__head--sm {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .vol__tools {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .panel__head {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .panel__head > .seg--4 {
+    grid-area: 2 / 1 / auto / -1;
+    justify-self: stretch;
+  }
+
+  .seg--4 button {
+    min-width: 0;
+    padding: 0 8px;
+  }
+
+  .board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+
+  .panel__head--flow {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .panel__head--flow .crew {
+    grid-area: 2 / 1 / auto / -1;
+    justify-content: flex-start;
+  }
+
+  .wires {
+    display: none;
+  }
+
+  .cols {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 18px;
+  }
+}
+
+/* ── Mobile Viewport & Floating Bottom Rail (<= 820px) ────── */
+@media (width <= 820px) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .top {
+    background: transparent;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "brand actions" "nav nav";
+    gap: 12px;
+    height: auto;
+    padding: 12px 16px 6px;
+    position: relative;
+  }
+
+  .brand {
+    grid-area: brand;
+  }
+
+  .top__actions {
+    grid-area: actions;
+    gap: 8px;
+  }
+
+  .nav {
+    grid-area: nav;
+    grid-auto-columns: 1fr;
+  }
+
+  .nav__pill {
+    width: calc(33.3333% - 3.33333px);
+  }
+
+  .search {
+    position: static;
+  }
+
+  .search__box {
+    z-index: 5;
+    width: auto;
+    inset: auto 16px 6px;
+  }
+
+  .search__box input {
+    height: 50px;
+    box-shadow: var(--shadow-pop);
+    font-size: 16px;
+  }
+
+  .rail {
+    z-index: 30;
+    width: fit-content;
+    min-height: 0;
+    box-shadow: var(--shadow-pop);
+    background: var(--card-solid);
+    flex-direction: row;
+    gap: 4px;
+    margin: auto;
+    padding: 6px;
+    position: fixed;
+    inset: auto 0 12px;
+  }
+
+  .rail [data-act="back"],
+  .rail__sep,
+  .theme {
+    display: none;
+  }
+
+  .main {
+    grid-column: 1;
+    padding: 4px 16px 104px;
+  }
+
+  .panel {
+    border-radius: 26px;
+    padding: 16px 14px 18px;
+  }
+
+  .board {
+    gap: 14px;
+  }
+
+  .panel__tools .btn span {
+    display: none;
+  }
+
+  .panel__tools .btn {
+    width: 42px;
+    padding: 0;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .drivers {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .legend {
+    width: 100%;
+  }
+
+  .metrics {
+    gap: 4px;
+  }
+
+  .gauge__v {
+    font-size: 19px;
+  }
+
+  .cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .jprog__bar {
+    width: 96px;
+  }
+
+  .bubble {
+    width: 132px;
+    margin: 0 -12px;
+  }
+
+  .bubbles {
+    height: 170px;
+  }
+
+  .toasts {
+    bottom: 86px;
+  }
+
+  .kpis {
+    gap: 12px;
+  }
+
+  .kpi {
+    padding: 16px;
+  }
+
+  .vol__chart {
+    height: 220px;
+  }
+
+  .vol__legend {
+    gap: 10px;
+  }
+
+  .jbrief {
+    padding: 12px 14px;
+  }
+}
+
+/* ── Mobile Horizontal Scroll Snap Board (<= 600px) ───────── */
+@media (width <= 600px) {
+  .board {
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    grid-template-columns: none;
+    grid-auto-columns: 84%;
+    grid-auto-flow: column;
+    gap: 14px;
+    padding-bottom: 8px;
+    overflow-x: auto;
+  }
+
+  .lane {
+    scroll-snap-align: start;
+  }
+}
+
+/* ── Compact Mobile Adjustments (<= 480px) ────────────────── */
+@media (width <= 480px) {
+  .seg--4 .lbl-long {
+    display: none;
+  }
+
+  .seg--4 .lbl-short {
+    display: inline;
+  }
+
+  .seg button {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .seg--4 button {
+    padding: 0 4px;
+  }
+
+  .case {
+    grid-template-columns: 34px minmax(0, 1fr) 28px;
+    gap: 10px;
+    padding: 10px 8px 10px 10px;
+  }
+
+  .case .av {
+    width: 34px;
+    height: 34px;
+  }
+
+  .case__act {
+    width: 28px;
+    height: 28px;
+  }
+
+  .kb th:nth-child(5),
+  .kb td:nth-child(5),
+  .kb th:nth-child(6),
+  .kb td:nth-child(6) {
+    display: none;
+  }
+
+  .bubble {
+    width: 104px;
+    margin: 0 -8px;
+  }
+
+  .bubble b {
+    font-size: 26px;
+  }
+
+  .bubbles {
+    height: 140px;
+  }
+}
+
+@media (width <= 420px) {
+  .seg--4 button {
+    font-size: 12.5px;
+  }
+
+  .brand__name {
+    font-size: 20px;
+  }
+}
+
+@media (width <= 360px) {
+  .seg--4 button {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin,
+  .btn__busy i {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

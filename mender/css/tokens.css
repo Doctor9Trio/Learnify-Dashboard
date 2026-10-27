@@ -1,0 +1,107 @@
+/* ============================================================
+   tokens.css — Karigar Service (कारीगर) Design System Tokens
+   Reverse-Engineered via REA
+   Support-Desk & Field Service CRM Light + Dark Mode Tokens
+   ============================================================ */
+
+:root {
+  /* ── Typography & Scales ────────────────────────────────── */
+  --font:          "Urbanist", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --fs-2xs:        11px;
+  --fs-xs:         12px;
+  --fs-sm:         12.5px;
+  --fs-md:         14.5px;
+  --fs-base:       15px;
+  --fs-lg:         17px;
+  --fs-xl:         20px;
+  --fs-2xl:        24px;
+  --fs-display:    clamp(28px, 2.3vw, 40px);
+
+  /* ── Light Mode Palette (Default Craft Service Slate) ────── */
+  --bg:            #e7ece9;
+  --bg-solid:      #edf1ef;
+  --glow-a:        rgba(23, 126, 96, 0.14);
+  --glow-b:        rgba(224, 87, 63, 0.09);
+  --top-bg:        rgba(231, 236, 233, 0.86);
+  --panel:         rgba(255, 255, 255, 0.42);
+  --panel-strong:  rgba(255, 255, 255, 0.55);
+  --panel-rim:     rgba(255, 255, 255, 0.78);
+  --card:          rgba(255, 255, 255, 0.80);
+  --card-solid:    #f8faf9;
+  --card-rim:      rgba(255, 255, 255, 0.96);
+  --card-hover:    rgba(255, 255, 255, 0.96);
+  --field:         #f2f5f3;
+  --field-rim:     rgba(21, 32, 28, 0.08);
+  --sheet:         #ebf0ed;
+  --scrim:         rgba(225, 232, 228, 0.62);
+
+  /* ── Ink & Text Hierarchy ───────────────────────────────── */
+  --ink:           #15201c;
+  --ink-2:         #3c4843;
+  --ink-3:         #56625d;
+  --ink-4:         #a6b0ab;
+  --on-ink:        #f1f5f3;
+  --line:          rgba(21, 32, 28, 0.09);
+  --line-2:        rgba(21, 32, 28, 0.20);
+
+  /* ── Status Accents & SLA Codes ─────────────────────────── */
+  --emerald:       #177e60;
+  --coral:         #e0573f;
+  --amber:         #e2a127;
+  --emerald-ink:   #11624a;
+  --coral-ink:     #a8361f;
+  --amber-ink:     #7d5203;
+  --emerald-soft:  rgba(23, 126, 96, 0.13);
+  --coral-soft:    rgba(224, 87, 63, 0.14);
+  --amber-soft:    rgba(226, 161, 39, 0.20);
+
+  /* ── Shadows & Animation Physics ────────────────────────── */
+  --shadow-card:   0 1px 1px rgba(21, 32, 28, 0.04), 0 8px 22px -14px rgba(21, 32, 28, 0.30);
+  --shadow-pop:    0 2px 6px rgba(21, 32, 28, 0.08), 0 28px 60px -22px rgba(21, 32, 28, 0.38);
+  --ease:          cubic-bezier(0.22, 1, 0.36, 1);
+
+  color-scheme: light;
+}
+
+/* ── Dark Mode Overrides (Night Ops Technician Desk) ───────── */
+:root[data-theme="dark"] {
+  --bg:            #0f1513;
+  --bg-solid:      #121917;
+  --glow-a:        rgba(60, 196, 151, 0.11);
+  --glow-b:        rgba(242, 122, 99, 0.06);
+  --top-bg:        rgba(15, 21, 19, 0.86);
+  --panel:         linear-gradient(180deg, rgba(255, 255, 255, 0.043), rgba(255, 255, 255, 0.02));
+  --panel-strong:  rgba(255, 255, 255, 0.04);
+  --panel-rim:     rgba(255, 255, 255, 0.08);
+  --card:          #1a2320;
+  --card-solid:    #1c2522;
+  --card-rim:      rgba(255, 255, 255, 0.09);
+  --card-hover:    #202a27;
+  --field:         #141c19;
+  --field-rim:     rgba(255, 255, 255, 0.10);
+  --sheet:         #161e1b;
+  --scrim:         rgba(6, 10, 9, 0.62);
+
+  --ink:           #e6ede9;
+  --ink-2:         #bac5c0;
+  --ink-3:         #96a39d;
+  --ink-4:         #4f5b56;
+  --on-ink:        #0f1513;
+  --line:          rgba(255, 255, 255, 0.08);
+  --line-2:        rgba(255, 255, 255, 0.18);
+
+  --emerald:       #3cc497;
+  --coral:         #f27a63;
+  --amber:         #f0b64c;
+  --emerald-ink:   #6fdcb6;
+  --coral-ink:     #ff9d89;
+  --amber-ink:     #f5c873;
+  --emerald-soft:  rgba(60, 196, 151, 0.14);
+  --coral-soft:    rgba(242, 122, 99, 0.15);
+  --amber-soft:    rgba(240, 182, 76, 0.15);
+
+  --shadow-card:   0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 10px 24px -16px rgba(0, 0, 0, 0.70);
+  --shadow-pop:    0 2px 6px rgba(0, 0, 0, 0.30), 0 30px 70px -20px rgba(0, 0, 0, 0.75);
+
+  color-scheme: dark;
+}
