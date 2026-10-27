@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **18** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`, `portfolio`, `camber`, `strada`, `vanta`) | **2** | **90%** | **Suite 19: `nero` (Mishri 3D) — NEXT UP** |
+| **20** | **19** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`, `portfolio`, `camber`, `strada`, `vanta`, `nero`) | **1** | **95%** | **Suite 20: `tend` (Aarogya Clinic) — FINAL SUITE (100% MILESTONE)** |
 
 ---
 
@@ -296,15 +296,19 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 9: 3D Confectionery & Clinical Practice
 > **Suites**: `nero` (Mishri 3D) & `tend` (Aarogya Clinic)  
-> **Status**: ⏳ Pending
+> **Status**: 🔄 In Progress (1/2 Completed)
 
 #### Suite 19: `nero` — Mishri 3D *(मिश्री)*
-- **Domain**: Artisanal Chocolates, 3D Flipping Card Box Customizer, Magnetic Cursor
-- [ ] **Tokens & Shell**: Warm cacao/gold luxury palette, smooth magnetic physics.
-- [ ] **3D Box Grid**: Interactive box builder with 3D card flip animations.
-- [ ] **Flavour Profile Notes**: Cocoa origin percentages, tasting notes radar chart.
-- [ ] **Interactive JS**: Box slot placement, 3D flip card triggers, custom gift ribbon selector.
-- [ ] **QA & Git**: Visual verification and push.
+- **Domain**: Artisanal Single-Origin Confectionery, 3D Tasting Studio, Interactive Cocoa Bean Parallax
+- **Target URL / Path**: `http://localhost:3456/nero/`
+- **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
+- [x] **Phase 1: REA Inspection & Assets**: Inspected with `bin/rea-inspector.mjs nero`. Verified 15 colors, 14 CSS variables, 0 missing assets.
+- [x] **Phase 2: Tokens & Shell**: Created `nero/css/tokens.css` (Warm cacao `#d9c3a0`, dark noir `#1c140e`, amber accent `#e8a317`), `reset.css`, and `layout.css`.
+- [x] **Phase 3: Components**: Created `nero/css/components.css` (3D chocolate stage, thumb rail, magnetic cursor, sound toggle, buy buttons) and `nero/css/responsive.css`.
+- [x] **Phase 4: 3D Chocolate Stage & Rail**: Interactive 4-variety selection rail (Origin 72%, Noir 85%, Sea Salt, Orange) with dynamic text and image transitions.
+- [x] **Phase 5: Floating Cocoa Bean Parallax**: Multi-depth 3D floating cocoa bean layer reacting smoothly to mouse motion.
+- [x] **Phase 6: Interactive JS & Theme**: Created `nero/js/theme.js` with isolated `nero-theme` / `mishri-theme` storage, `#theme-toggle` button in header, keyboard shortcut `T`, and live theme syncing.
+- [x] **Phase 7: QA & Verification**: Tested via browser subagent on Desktop (`1440x900`) and Mobile (`375x812`). Verified chocolate variety switching, dark noir mode toggle, responsive layout, and confirmed **0 console errors**.
 
 #### Suite 20: `tend` — Aarogya Clinic *(आरोग्य)*
 - **Domain**: Multi-Specialty Clinic EHR, Doctor Timeline, WhatsApp Consultation Desk

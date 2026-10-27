@@ -1,0 +1,27 @@
+/*! NÉRO — Mishri 3D — Structural Shell & Layout (Artisanal REA Architecture)
+ * © 2026 Mishri 3D. Top Navigation Bar, Showcase Stage & Floating Bean Canvas.
+ */
+
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--gutter);
+  pointer-events: none;
+}
+
+.top > * {
+  pointer-events: auto;
+}
+
+main.show {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}

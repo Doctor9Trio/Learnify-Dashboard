@@ -1,0 +1,168 @@
+/*! NÉRO — Mishri 3D — Responsive Engine & Breakpoints (Artisanal REA Architecture)
+ * © 2026 Mishri 3D. Media Queries (900px, 600px) & Reduced Motion Overrides.
+ */
+
+@media (width<=900px) {
+  body {
+  overflow:auto
+}
+
+.show {
+  height:auto;
+  min-height:100svh
+}
+
+.show__ghost {
+  font-size:42vw;
+  top:24%
+}
+
+.show__layout {
+  padding:6rem var(--gutter) 2rem;
+  flex-direction:column;
+  gap:2rem;
+  position:relative
+}
+
+.show__stage {
+  width:78vw;
+  height:40vh
+}
+
+.show__text {
+  text-align:center;
+  width:min(90vw,420px)
+}
+
+.show__about {
+  width:100%
+}
+
+.show__beans {
+  display:none
+}
+
+.show__rail {
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.5rem;
+  margin-bottom:2.5rem;
+  padding-bottom:0;
+  position:relative;
+  bottom:auto;
+  left:auto;
+  transform:none
+}
+
+.rail__ind {
+  display:none
+}
+
+.show__rail .thumb {
+  width:clamp(74px,22vw,104px)
+}
+
+.show__rail .thumb__n {
+  display:none
+}
+
+.top {
+  padding:1rem calc(var(--gutter) + 44px + .6rem) 1rem var(--gutter)
+}
+
+.top__nav a {
+  align-items:center;
+  min-height:44px;
+  display:inline-flex
+}
+
+.top__cart {
+  white-space:nowrap;
+  padding:0 1.1em
+}
+
+.snd {
+  top:1rem;
+  bottom:auto;
+  right:var(--gutter);
+  justify-content:center;
+  width:44px;
+  height:44px;
+  padding:0
+}
+
+.snd__txt {
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
+  width:1px;
+  height:1px;
+  position:absolute;
+  overflow:hidden
+}
+
+.show__ghost {
+  justify-content:center;
+  width:100%;
+  display:flex;
+  left:0;
+  overflow:hidden;
+  transform:translateY(-50%)
+}
+
+}
+
+@media (width<=600px) {
+  .top__nav a:not(.top__cart) {
+  display:none
+}
+
+.show__layout {
+  gap:1.1rem;
+  padding-top:5rem
+}
+
+.show__stage {
+  height:34vh
+}
+
+.show__name {
+  font-size:clamp(2.4rem,11vw,3rem)
+}
+
+.show__about {
+  margin-top:1rem;
+  padding:1.1rem 1.2rem
+}
+
+.show__num {
+  font-size:1.7rem
+}
+
+.show__about-h {
+  margin:.4rem 0 .3rem
+}
+
+.show__buy {
+  min-height:44px;
+  margin-top:.9rem
+}
+
+.show__rail {
+  width:100%;
+  padding:0 var(--gutter);
+  flex-wrap:nowrap;
+  align-items:stretch
+}
+
+.show__rail .thumb {
+  flex:1 1 0;
+  width:auto;
+  min-width:0
+}
+
+.show__rail .thumb__img {
+  min-height:0
+}
+
+}
+

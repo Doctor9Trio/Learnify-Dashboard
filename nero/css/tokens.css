@@ -1,0 +1,44 @@
+/*! NÉRO — Mishri 3D — Design Tokens (Artisanal REA Architecture)
+ * © 2026 Mishri 3D. Warm Cacao, Gold & Noir Confectionery Tokens.
+ */
+
+/*! NÉRO — Single-origin dark chocolate — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+:root {
+  --ink:#241810;
+  --bg:#d9c3a0;
+  --accent:#e8a317;
+  --accent-ink:#241810;
+  --font-display:"Archivo Black", "Arial Black", sans-serif;
+  --font-serif:"Fraunces", Georgia, serif;
+  --font-body:"Inter", "Helvetica Neue", sans-serif;
+  --fs-xs:clamp(.72rem, .65rem + .2vw, .85rem);
+  --fs-sm:clamp(.85rem, .78rem + .3vw, 1rem);
+  --fs-base:clamp(1rem, .9rem + .4vw, 1.15rem);
+  --fs-lg:clamp(1.2rem, 1rem + .8vw, 1.7rem);
+  --gutter:clamp(1.25rem, 4vw, 3.5rem);
+  --ease:cubic-bezier(.19, 1, .22, 1)
+}
+
+
+/* ── Dark Noir Cocoa Palette ──────────────────────────────────────── */
+:root[data-theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  color-scheme: dark;
+
+  --ink: #f3e9d8;
+  --bg: #1c140e;
+  --accent: #f0b429;
+  --accent-ink: #1c140e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+
+    --ink: #f3e9d8;
+    --bg: #1c140e;
+    --accent: #f0b429;
+    --accent-ink: #1c140e;
+  }
+}

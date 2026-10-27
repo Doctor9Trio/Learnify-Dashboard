@@ -1,0 +1,485 @@
+/*! NÉRO — Mishri 3D — Component Architecture (Artisanal REA Architecture)
+ * © 2026 Mishri 3D. 3D Card Stage, Loader, Thumb Rail & Magnetic Cursor.
+ */
+
+.loader {
+  z-index:300;
+  background:#241810;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:1.2rem;
+  transition:opacity .6s;
+  display:flex;
+  position:fixed;
+  inset:0
+}
+
+html:not(.js) .loader {
+  display:none
+}
+
+.loader--hide {
+  opacity:0;
+  pointer-events:none
+}
+
+.loader__word {
+  font-family:var(--font-serif);
+  color:#f3e9d8;
+  letter-spacing:.02em;
+  font-size:clamp(3rem,12vw,8rem);
+  font-weight:600
+}
+
+.loader__bar {
+  background:#f3e9d840;
+  width:min(50vw,260px);
+  height:2px;
+  overflow:hidden
+}
+
+.loader__fill {
+  transform-origin:0;
+  background:#f3e9d8;
+  height:100%;
+  display:block;
+  transform:scaleX(0)
+}
+
+.top {
+  z-index:60;
+  width:100%;
+  padding:1.5rem var(--gutter);
+  justify-content:space-between;
+  align-items:center;
+  display:flex;
+  position:fixed;
+  top:0;
+  left:0
+}
+
+.top__brand {
+  font-family:var(--font-display);
+  font-size:var(--fs-lg)
+}
+
+.top__brand sup {
+  font-size:.4em
+}
+
+.top__nav {
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:var(--fs-sm);
+  align-items:center;
+  gap:clamp(1rem,2.5vw,2.2rem);
+  display:flex
+}
+
+.top__nav a {
+  opacity:.7
+}
+
+.top__nav a:hover {
+  opacity:1
+}
+
+.top__cart {
+  border:1.5px solid;
+  border-radius:999px;
+  padding:.5em 1.1em;
+  opacity:1!important
+}
+
+.show {
+  height:100svh;
+  position:relative;
+  overflow:hidden
+}
+
+.show__bg {
+  z-index:0;
+  background:var(--bg);
+  position:absolute;
+  inset:0
+}
+
+.show__ghost {
+  font-family:var(--font-display);
+  color:#2418100d;
+  white-space:nowrap;
+  -webkit-user-select:none;
+  user-select:none;
+  z-index:0;
+  font-size:clamp(8rem,30vw,32rem);
+  line-height:1;
+  position:absolute;
+  top:47%;
+  left:50%;
+  transform:translate(-50%,-50%)
+}
+
+.show__beans {
+  z-index:1;
+  pointer-events:none;
+  position:absolute;
+  inset:0
+}
+
+.bean {
+  width:clamp(44px,4.8vw,88px);
+  position:absolute;
+  top:0;
+  left:0
+}
+
+.bean__par {
+  will-change:transform;
+  display:block
+}
+
+.bean__img {
+  filter:drop-shadow(0 20px 28px #0000006b);
+  will-change:transform;
+  width:100%;
+  height:auto;
+  display:block
+}
+
+.show__layout {
+  z-index:2;
+  padding:4.5rem var(--gutter) 5rem;
+  justify-content:center;
+  align-items:center;
+  gap:clamp(2rem,6vw,7rem);
+  display:flex;
+  position:absolute;
+  inset:0
+}
+
+.show__stage {
+  perspective:1500px;
+  flex:none;
+  width:44vw;
+  height:66vh;
+  position:relative
+}
+
+.show__shot {
+  opacity:0;
+  filter:drop-shadow(0 40px 60px #00000059);
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:100%;
+  margin:auto;
+  position:absolute;
+  inset:0
+}
+
+.show__shot.is-active {
+  opacity:1
+}
+
+.show__text {
+  z-index:3;
+  flex:none;
+  width:min(33vw,440px);
+  position:relative
+}
+
+.show__info {
+  position:relative
+}
+
+.show__price {
+  font-family:var(--font-body);
+  font-weight:700;
+  font-size:var(--fs-lg);
+  color:var(--accent);
+  transition:color .6s var(--ease)
+}
+
+.show__name {
+  font-family:var(--font-serif);
+  letter-spacing:-.015em;
+  margin:.1em 0 .3em;
+  font-size:clamp(2.6rem,6.5vw,6rem);
+  font-weight:600;
+  line-height:.9
+}
+
+.show__tag {
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:var(--fs-sm);
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  opacity:.55
+}
+
+.show__about {
+  -webkit-backdrop-filter:blur(10px);
+  background:#ffffff73;
+  border:1px solid #ffffff80;
+  border-radius:20px;
+  width:100%;
+  margin-top:clamp(1.2rem,2.5vw,2.2rem);
+  padding:1.4rem 1.5rem;
+  position:relative
+}
+
+.show__rate {
+  align-items:baseline;
+  gap:.5rem;
+  display:flex
+}
+
+.show__num {
+  font-family:var(--font-serif);
+  font-size:2rem;
+  font-weight:600
+}
+
+.show__stars {
+  color:var(--accent);
+  letter-spacing:.1em;
+  transition:color .6s var(--ease)
+}
+
+.show__about-h {
+  font-family:var(--font-body);
+  font-weight:700;
+  font-size:var(--fs-sm);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  opacity:.6;
+  margin:.7rem 0 .4rem
+}
+
+.show__desc {
+  font-family:var(--font-body);
+  font-size:var(--fs-sm);
+  opacity:.85;
+  line-height:1.5
+}
+
+.show__buy {
+  font-family:var(--font-body);
+  font-weight:700;
+  font-size:var(--fs-sm);
+  letter-spacing:.04em;
+  background:var(--accent);
+  color:var(--accent-ink);
+  transition:transform .4s var(--ease), background-color .6s var(--ease), color .6s var(--ease);
+  border-radius:999px;
+  margin-top:1.1rem;
+  padding:.85em 1.8em;
+  display:inline-block
+}
+
+.show__buy:hover {
+  transform:scale(1.05)
+}
+
+.show__rail {
+  left:var(--gutter);
+  z-index:40;
+  flex-direction:row;
+  align-items:flex-end;
+  gap:clamp(.45rem,1vw,.9rem);
+  padding-bottom:.7rem;
+  display:flex;
+  position:absolute;
+  bottom:5%
+}
+
+.rail__ind {
+  background:var(--accent);
+  width:80px;
+  height:3px;
+  transition:background-color .6s var(--ease);
+  border-radius:3px;
+  position:absolute;
+  bottom:0;
+  left:0
+}
+
+.thumb {
+  width:clamp(78px,9vw,112px);
+  transition:transform .45s var(--ease), background-color .35s var(--ease), border-color .35s var(--ease);
+  background:#ffffff4d;
+  border:1px solid #0000;
+  border-radius:16px;
+  flex-direction:column;
+  align-items:center;
+  gap:.45rem;
+  padding:.7rem .5rem;
+  display:flex
+}
+
+.thumb:hover {
+  background:#ffffff80;
+  transform:translateY(-7px)
+}
+
+.thumb__n {
+  font-family:var(--font-body);
+  font-weight:700;
+  font-size:var(--fs-xs);
+  letter-spacing:.08em;
+  opacity:.4;
+  transition:color .4s var(--ease), opacity .4s var(--ease)
+}
+
+.thumb__img {
+  aspect-ratio:1;
+  width:100%;
+  transition:transform .45s var(--ease);
+  justify-content:center;
+  align-items:center;
+  display:flex
+}
+
+.thumb__img img {
+  filter:drop-shadow(0 8px 12px #00000047);
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:100%
+}
+
+.thumb__t {
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:var(--fs-xs);
+  letter-spacing:.01em;
+  text-align:center;
+  transition:color .4s var(--ease);
+  line-height:1.05
+}
+
+.thumb.is-active {
+  background:#ffffff9e;
+  border-color:#fff9
+}
+
+.thumb.is-active .thumb__img {
+  transform:scale(1.1)
+}
+
+.thumb.is-active .thumb__t {
+  color:var(--accent);
+  font-weight:700
+}
+
+.thumb.is-active .thumb__n {
+  opacity:1;
+  color:var(--accent)
+}
+
+.snd {
+  right:var(--gutter);
+  z-index:60;
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-weight:600;
+  font-size:var(--fs-xs);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  background:#24181014;
+  border:1px solid #24181040;
+  border-radius:999px;
+  align-items:center;
+  gap:.7em;
+  padding:.55em 1em;
+  display:inline-flex;
+  position:fixed;
+  bottom:1.5rem
+}
+
+.snd__bars {
+  align-items:flex-end;
+  gap:2px;
+  height:13px;
+  display:inline-flex
+}
+
+.snd__bars i {
+  background:currentColor;
+  border-radius:1px;
+  width:2px;
+  height:4px
+}
+
+.snd.is-on .snd__bars i {
+  animation:.9s ease-in-out infinite eq
+}
+
+.snd.is-on .snd__bars i:nth-child(2) {
+  animation-delay:.15s
+}
+
+.snd.is-on .snd__bars i:nth-child(3) {
+  animation-delay:.3s
+}
+
+.snd.is-on .snd__bars i:nth-child(4) {
+  animation-delay:.45s
+}
+
+@keyframes eq {
+  0%,to {
+  height:4px
+}
+
+50% {
+  height:13px
+}
+
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .snd.is-on .snd__bars i {
+  animation:none
+}
+
+}
+
+html.has-cursor,html.has-cursor * {
+  cursor:none!important
+}
+
+.cursor {
+  z-index:9999;
+  pointer-events:none;
+  opacity:0;
+  mix-blend-mode:multiply;
+  position:fixed;
+  top:0;
+  left:0
+}
+
+html.has-cursor .cursor {
+  opacity:1
+}
+
+.cursor__ring {
+  border:2px solid var(--ink);
+  width:34px;
+  height:34px;
+  transition:width .25s var(--ease), height .25s var(--ease), margin .25s var(--ease);
+  border-radius:50%;
+  margin:-17px 0 0 -17px;
+  position:absolute;
+  top:0;
+  left:0
+}
+
+.cursor.is-hover .cursor__ring {
+  width:58px;
+  height:58px;
+  margin:-29px 0 0 -29px
+}
+
