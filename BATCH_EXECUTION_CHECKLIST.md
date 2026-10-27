@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **17** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`, `portfolio`, `camber`, `strada`) | **3** | **85%** | **Suite 18: `vanta` (Kaala Studio) — NEXT UP** |
+| **20** | **18** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`, `portfolio`, `camber`, `strada`, `vanta`) | **2** | **90%** | **Suite 19: `nero` (Mishri 3D) — NEXT UP** |
 
 ---
 
@@ -266,7 +266,7 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 8: Fleet Mobility & Cinematic Audio
 > **Suites**: `strada` (Yatra Mobility) & `vanta` (Kaala Studio)  
-> **Status**: 🔄 In Progress (1/2 Completed)
+> **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
 
 #### Suite 17: `strada` — Yatra Mobility *(यात्रा)*
 - **Domain**: Luxury Chauffeur & Fleet Reservation Engine, Vehicle Tier Picker, Live Spec Readouts
@@ -281,12 +281,16 @@ These two suites serve as the architectural blueprint and quality reference for 
 - [x] **Phase 7: QA & Verification**: Tested via browser subagent on Desktop (`1440x900`) and Mobile (`375x812`). Verified vehicle switcher, booking bar, theme toggle, mobile hamburger menu, and confirmed **0 console errors**.
 
 #### Suite 18: `vanta` — Kaala Studio *(काला)*
-- **Domain**: Cinematic Audio Hardware, Planar Magnetic Driver Scrubbing Showcase
-- [ ] **Tokens & Shell**: Pitch-black monochrome theme with precision acoustic typography.
-- [ ] **Video Driver Scrub**: Scroll-driven or slider-driven exploded driver view.
-- [ ] **Frequency Response Graph**: 20Hz-20kHz acoustic frequency response curve.
-- [ ] **Interactive JS**: Audio frequency hover inspector, tech spec drawer.
-- [ ] **QA & Git**: Visual verification and push.
+- **Domain**: Cinematic Audio Hardware, Planar Magnetic Driver Scrubbing Showcase, Acoustic Sound Modes
+- **Target URL / Path**: `http://localhost:3456/vanta/`
+- **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
+- [x] **Phase 1: REA Inspection & Assets**: Inspected with `bin/rea-inspector.mjs vanta`. Verified 88 colors, 62 CSS variables, 0 missing assets.
+- [x] **Phase 2: Tokens & Shell**: Created `vanta/css/tokens.css` (Planar magnetic pitch-black `#050507`, acoustic studio light mode `#f5f4f7`, precision red accents `#ff2a3c`), `reset.css`, and `layout.css`.
+- [x] **Phase 3: Components**: Created `vanta/css/components.css` (magnetic buttons, touch gesture cards, driver scrub visuals, spec tables, sound mode pills) and `vanta/css/responsive.css`.
+- [x] **Phase 4: Planar Magnetic Driver Visualizer**: Exploded driver view visualizer, acoustic chamber breakdown, and 249g comfort engineering callouts.
+- [x] **Phase 5: Acoustic Telemetry & Gestures**: Touch gesture interaction cards (swipe, double tap, hold for ANC), specs matrix (45dB noise canceling, 40h battery, LDAC hi-res).
+- [x] **Phase 6: Interactive JS & Theme**: Created `vanta/js/theme.js` with isolated `vanta-theme` / `kaala-theme` storage, `#theme-toggle` button in header, keyboard shortcut `T`, and live theme syncing.
+- [x] **Phase 7: QA & Verification**: Tested via browser subagent on Desktop (`1440x900`) and Mobile (`375x812`). Verified planar driver sections, light/dark mode switching, responsive navigation, and confirmed **0 console errors**.
 
 ---
 

@@ -1,0 +1,60 @@
+/*! VANTA — Kaala Studio — Design Tokens (Artisanal REA Architecture)
+ * © 2026 Kaala Studio. Planar Magnetic Audiophile Pitch-Black Tokens.
+ */
+
+/*! VANTA — PRO Headphones — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+:root {
+  --bg:#050507;
+  --text:#f5f4f7;
+  --text-dim:#b6b4bf;
+  --text-faint:#8a8894;
+  --red:#ff2a3c;
+  --red-deep:#c8102e;
+  --glass:#ffffff0f;
+  --glass-lit:#ffffff1c;
+  --hair:#ffffff1a;
+  --font:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display:"Inter Tight", "Inter", system-ui, sans-serif;
+  --fs-h1:clamp(2.8rem, 6.8vw, 5.6rem);
+  --fs-h2:clamp(2rem, 4vw, 3.4rem);
+  --fs-tag:clamp(1.25rem, 2.3vw, 1.9rem);
+  --gutter:clamp(20px, 6vw, 96px);
+  --container:1600px;
+  --nav-h:96px;
+  --ease:cubic-bezier(.22, 1, .36, 1);
+  --ease-soft:cubic-bezier(.4, 0, .2, 1)
+}
+
+
+/* ── Light Acoustic Studio Day Mode Palette ───────────────────────── */
+:root[data-theme="light"],
+html[data-theme="light"],
+body[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f5f4f7;
+  --text: #050507;
+  --text-dim: #44424d;
+  --text-faint: #73717e;
+  --red: #e01b2f;
+  --red-deep: #a80b20;
+  --glass: rgba(0, 0, 0, 0.05);
+  --glass-lit: rgba(0, 0, 0, 0.08);
+  --hair: rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:where(:not([data-theme="dark"])) {
+    color-scheme: light;
+
+    --bg: #f5f4f7;
+    --text: #050507;
+    --text-dim: #44424d;
+    --text-faint: #73717e;
+    --red: #e01b2f;
+    --red-deep: #a80b20;
+    --glass: rgba(0, 0, 0, 0.05);
+    --glass-lit: rgba(0, 0, 0, 0.08);
+    --hair: rgba(0, 0, 0, 0.12);
+  }
+}

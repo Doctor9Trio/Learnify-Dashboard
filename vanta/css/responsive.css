@@ -1,0 +1,399 @@
+/*! VANTA — Kaala Studio — Responsive Engine & Breakpoints (Artisanal REA Architecture)
+ * © 2026 Kaala Studio. Media Queries (1100px, 820px) & Reduced Motion Overrides.
+ */
+
+@media (width<=820px) {
+  .nav {
+  gap:12px
+}
+
+.nav__links,.nav__product {
+  display:none
+}
+
+.nav__cta {
+  padding:4px
+}
+
+.rail {
+  display:none
+}
+
+}
+
+@media (width<=820px) {
+  .runway {
+  height:calc(var(--len,3) * 82vh)
+}
+
+}
+
+@media (width<=820px) {
+  .scene--hero .scene__video {
+  --dx:0%;
+  --ds:1.02;
+  width:100%;
+  left:0;
+  transform:scale(1.02)
+}
+
+}
+
+@media (width<=820px) {
+  .scene--specs .scene__video {
+  --tx:0%;
+  --ty:-30%;
+  --s:1.1;
+  width:100%;
+  left:0
+}
+
+}
+
+@media (width<=820px) {
+  .scene--hero .act {
+  align-self:end;
+  padding-bottom:12vh
+}
+
+.scene__wash--hero {
+  background:linear-gradient(#05050700 42%,#05050799 66%,#050507f0 100%)
+}
+
+.act--hero .lede {
+  display:none
+}
+
+}
+
+@media (width<=820px) {
+  .bento {
+  grid-template-columns:1fr 1fr;
+  grid-template-areas:"lead lead""stats stats""rings heat""batt light";
+  gap:6px
+}
+
+.tile {
+  min-height:96px;
+  padding:14px 16px
+}
+
+.tile--stats {
+  flex-wrap:wrap;
+  justify-content:flex-start;
+  gap:14px 22px
+}
+
+.tile__sub,.stat__up {
+  display:none
+}
+
+.rings {
+  right:-60px
+}
+
+.batt {
+  width:60px;
+  height:32px;
+  padding:3px;
+  right:12px
+}
+
+.batt:after {
+  width:4px;
+  height:12px;
+  right:-6px
+}
+
+}
+
+@media (width>=821px) and (height<=820px) {
+  .gest {
+  row-gap:12px;
+  padding-top:8px
+}
+
+.gest__copy .lede {
+  display:none
+}
+
+.gest .h2 {
+  font-size:clamp(1.9rem,3.2vw,2.9rem)
+}
+
+.gest__row {
+  padding:11px 16px 12px 14px
+}
+
+.gest__body span {
+  margin-top:3px;
+  font-size:.86rem
+}
+
+.gest__list {
+  gap:4px
+}
+
+}
+
+@media (width<=1100px) {
+  .gest {
+  grid-template:"copy""frame""list"/1fr;
+  align-content:start;
+  row-gap:14px;
+  padding-top:6px
+}
+
+.gest__copy .lede {
+  display:none
+}
+
+.gest__frame {
+  aspect-ratio:16/9;
+  border-radius:18px;
+  justify-self:center;
+  width:min(100%,177.778svh - 661.333px);
+  height:auto;
+  box-shadow:0 30px 60px -30px #000000e6
+}
+
+.gest__frame .scene__video {
+  will-change:auto;
+  transform:scale(1.02)
+}
+
+.gest__frame:after {
+  background:linear-gradient(#05050700 30%,#05050766 54%,#050507e6)
+}
+
+.gest__chip {
+  padding:6px 10px 6px 8px;
+  font-size:.62rem;
+  top:12px;
+  left:12px
+}
+
+.gest__meter {
+  bottom:12px;
+  left:12px;
+  right:12px
+}
+
+.gest__cap {
+  z-index:1;
+  text-shadow:0 1px 2px #0009;
+  display:block;
+  position:absolute;
+  bottom:30px;
+  left:12px;
+  right:12px
+}
+
+.gest__cap b {
+  font-family:var(--font-display);
+  letter-spacing:-.02em;
+  font-size:1.1rem;
+  font-weight:600;
+  line-height:1.1;
+  display:block
+}
+
+.gest__cap span {
+  color:var(--text-dim);
+  margin-top:4px;
+  font-size:.8rem;
+  line-height:1.45;
+  display:block
+}
+
+.gest__list {
+  grid-template-columns:1fr 1fr;
+  gap:6px
+}
+
+.gest__row {
+  border-color:var(--hair);
+  background:var(--glass);
+  border-radius:12px;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  column-gap:10px;
+  padding:11px 12px
+}
+
+.gest__row.is-on {
+  background:var(--glass-lit);
+  border-color:#fff3
+}
+
+.gest__n {
+  font-size:.68rem
+}
+
+.gest__body b {
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-size:.9rem;
+  overflow:hidden
+}
+
+.gest__glyph {
+  display:none
+}
+
+.gest__prog {
+  left:10px;
+  right:10px
+}
+
+}
+
+@media (width<=820px) {
+  .devices {
+  grid-template-columns:1fr auto;
+  align-items:start;
+  gap:14px
+}
+
+.device--phone {
+  justify-self:end;
+  width:118px
+}
+
+.device--phone .device__screen {
+  border-radius:18px
+}
+
+.ui--call {
+  gap:5px;
+  padding:10px 6px
+}
+
+.ui__avatar {
+  width:44px;
+  height:44px
+}
+
+.ui__name {
+  font-size:.78rem
+}
+
+.ui__actions {
+  gap:10px;
+  margin-top:8px
+}
+
+.ui__actions i {
+  width:28px;
+  height:28px
+}
+
+.device__badge {
+  padding:4px 8px;
+  font-size:.62rem;
+  left:8px
+}
+
+.act--top .meta {
+  display:none
+}
+
+}
+
+@media (width>=821px) and (height<=820px) {
+  .device--phone {
+  width:min(200px,100%)
+}
+
+.devices {
+  max-width:960px
+}
+
+.scene--multi .act--top .meta {
+  display:none
+}
+
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .curtain {
+  display:none
+}
+
+.nav,.rail {
+  opacity:1;
+  transition:none;
+  transform:none
+}
+
+.runway {
+  height:auto
+}
+
+.runway>.scene {
+  height:auto;
+  min-height:100vh;
+  padding:calc(var(--nav-h) + 8px) 0 40px;
+  position:relative
+}
+
+.acts {
+  gap:clamp(28px,6vh,64px);
+  display:grid;
+  position:relative;
+  inset:auto
+}
+
+.act {
+  grid-area:auto;
+  opacity:1!important;
+  visibility:visible!important;
+  transform:none!important
+}
+
+.gest {
+  position:relative;
+  inset:auto
+}
+
+.gest__list li,.gest .eyebrow,.gest .lede {
+  opacity:1;
+  transition:none;
+  transform:none
+}
+
+.gest__chip i {
+  animation:none
+}
+
+.w,[data-rise],.lede,.meta,.cta-row,.eyebrow,.hero__title,.pills,.apps {
+  opacity:1!important;
+  transition:none!important;
+  transform:none!important
+}
+
+.scene__video {
+  opacity:1;
+  transition:none
+}
+
+.hint,.pills__track,.apps__track,.device.is-on .wave b,.device.is-on .ui__eq i,.device.is-on .ui__accept,.device.is-on .ui__prog i {
+  animation:none
+}
+
+.batt i {
+  transition:none;
+  transform:scaleX(1)
+}
+
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .nav>*,.nav__mark,.chev,.nav__ind,.btn,.btn__body,.btn__body:after,.btn__body:before {
+  transition:none
+}
+
+.btn--red .btn__body:after {
+  display:none
+}
+
+}

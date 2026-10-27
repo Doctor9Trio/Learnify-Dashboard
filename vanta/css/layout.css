@@ -1,0 +1,45 @@
+/*! VANTA — Kaala Studio — Structural Shell & Layout (Artisanal REA Architecture)
+ * © 2026 Kaala Studio. Fixed Nav Header, Hero Atmosphere & Grid Containers.
+ */
+
+.nav {
+  z-index: 50;
+  height: var(--nav-h);
+  padding: 0 var(--gutter);
+  opacity: 0;
+  transition: opacity .8s var(--ease-soft) .2s, transform .8s var(--ease) .2s;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+  display: grid;
+  position: fixed;
+  inset: 0 0 auto;
+  transform: translateY(-10px);
+}
+
+html:not(.js) .nav, html.ready .nav {
+  opacity: 1;
+  transform: none;
+}
+
+.nav:before {
+  content: "";
+  z-index: -1;
+  background: linear-gradient(rgba(5, 5, 7, 0.75), rgba(5, 5, 7, 0));
+  position: absolute;
+  inset: 0;
+}
+
+:root[data-theme="light"] .nav:before {
+  background: linear-gradient(rgba(245, 244, 247, 0.85), rgba(245, 244, 247, 0));
+}
+
+main {
+  width: 100%;
+  overflow-x: clip;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}

@@ -20,8 +20,13 @@
     document.documentElement.classList.add('js');
     if (matchMedia('(pointer: coarse)').matches) document.documentElement.classList.add('coarse');
   </script>
-  <script type="module" crossorigin src="./assets/index-CFaVXTUv.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BwYIWWHp.css">
+  <link rel="stylesheet" href="./css/tokens.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <script type="module" src="./js/theme.js"></script>
+  <script type="module" src="./js/index.js"></script>
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -54,6 +59,9 @@
       <a href="#gestures">Support<i class="chev" aria-hidden="true"></i></a>
     </nav>
     <div class="nav__cta">
+      <button class="btn btn--sm" id="theme-toggle" type="button" aria-label="Toggle dark mode" data-theme-toggle style="display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--hair);background:var(--glass);color:var(--text);margin-right:8px;">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      </button>
       <span class="nav__product">Pro Headphones</span>
       <a class="btn btn--red" href="#buy" data-magnetic><span class="btn__body">BUY NOW</span></a>
     </div>
