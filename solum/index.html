@@ -36,6 +36,14 @@
       setTimeout(function () { d.classList.add('failsafe'); }, 4000);
     })(document.documentElement);
   </script>
+  <!-- REA Modular Architecture -->
+  <link rel="stylesheet" href="./css/tokens.css" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <script type="module" src="./js/theme.js"></script>
+
   <script type="module" crossorigin src="./assets/home-B2ae6dCl.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/store-DfXjkpw_.js">
   <link rel="modulepreload" crossorigin href="./assets/Flip-BfMAFAcm.js">
@@ -77,6 +85,7 @@
   <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6.5 9.5 5.5 5.5 5.5-5.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-repair" viewBox="0 0 24 24"><path d="M14.5 5.5a4 4 0 0 0-5 5l-5 5a1.8 1.8 0 0 0 2.5 2.5l5-5a4 4 0 0 0 5-5l-2.4 2.4-2.3-.3-.3-2.3 2.5-2.3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
   <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M5 19 13 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
 </svg>
 
 
@@ -104,6 +113,9 @@
           <li><a href="#look">Lookbook</a></li>
         </ul>
         <div class="nav__actions">
+          <button class="iconbtn iconbtn--light" type="button" data-theme-toggle aria-label="Toggle dark/light mode">
+            <svg width="20" height="20"><use href="#i-theme"/></svg>
+          </button>
           <a class="pill pill--ink nav__sign" href="account/">Sign in</a>
           <button class="iconbtn iconbtn--ink" type="button" data-open-bag aria-label="Open bag, 0 items">
             <svg width="20" height="20"><use href="#i-bag"/></svg>
@@ -177,6 +189,7 @@
     <nav class="minibar__links" aria-label="Quick">
       <a href="shop/">Shop</a><a href="#look">Lookbook</a><a href="about/">About</a><a href="help/">Help</a>
     </nav>
+    <button class="iconbtn" type="button" data-theme-toggle aria-label="Toggle dark/light mode"><svg width="20" height="20"><use href="#i-theme"/></svg></button>
     <a class="iconbtn" href="account/" aria-label="Your account"><svg width="20" height="20"><use href="#i-user"/></svg></a>
     <button class="iconbtn iconbtn--ink" type="button" data-open-bag aria-label="Open bag, 0 items">
       <svg width="20" height="20"><use href="#i-bag"/></svg>

@@ -1,0 +1,1177 @@
+/*! SOLUM — Bhoomi Outdoors — Structural Layout (Artisanal REA Architecture)
+ * © 2026 Bhoomi Outdoors. 1:1 Pixel-Perfect Shell & View Transitions.
+ */
+
+/* ── 1. Hero Showcase & Dynamic Panel ───────────────────────────── */
+.hero {
+  padding: 10px;
+  position: relative;
+}
+
+.hero__panel {
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--c-apricot) 0%, #ebd8c4 48%, var(--c-bone-2) 100%);
+  flex-direction: column;
+  height: calc(100svh - 20px);
+  min-height: 640px;
+  padding-top: clamp(104px, 13svh, 136px);
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__rays {
+  pointer-events: none;
+  background: repeating-conic-gradient(from 0deg at 50% 74%, rgba(255, 250, 242, 0.55) 0 0.22deg, transparent 0.22deg 13deg);
+  position: absolute;
+  inset: 0;
+  -webkit-mask: radial-gradient(70% 70% at 50% 74%, #000 0 30%, transparent 75%);
+  mask: radial-gradient(70% 70% at 50% 74%, #000 0 30%, transparent 75%);
+}
+
+.hero__copy {
+  z-index: 3;
+  text-align: center;
+  padding: 0 var(--gut);
+  flex: none;
+  position: relative;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 580;
+  font-size: var(--fs-h1);
+  letter-spacing: -0.025em;
+  line-height: 0.92;
+}
+
+.hero__ctas {
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  display: flex;
+}
+
+.hero__model {
+  z-index: 2;
+  flex: 1 1 0;
+  min-height: 0;
+  margin-top: clamp(14px, 2.4svh, 28px);
+  position: relative;
+}
+
+.hero__model > img {
+  object-fit: contain;
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__proof {
+  z-index: 3;
+  width: 310px;
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+  position: absolute;
+  bottom: 56px;
+  left: 34px;
+}
+
+.avatars {
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.avatars img {
+  object-fit: cover;
+  border: 2px solid var(--c-bone-2);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+}
+
+.avatars img + img {
+  margin-left: -12px;
+}
+
+.hero__rating {
+  color: var(--c-moss);
+  font-size: var(--fs-md);
+  margin-bottom: 8px;
+}
+
+.hero__rating strong {
+  font-weight: 600;
+}
+
+.hero__blurb {
+  line-height: 1.45;
+}
+
+.hero__clip {
+  z-index: 5;
+  aspect-ratio: 16 / 10;
+  background: var(--c-card-1);
+  border: 0;
+  border-radius: 18px;
+  width: clamp(220px, 20vw, 300px);
+  padding: 0;
+  position: absolute;
+  bottom: 56px;
+  right: 34px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hero__poster {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__play {
+  width: 58px;
+  height: 58px;
+  color: var(--c-cream);
+  background: rgba(20, 22, 19, 0.55);
+  border: 1px solid rgba(244, 239, 230, 0.35);
+  border-radius: 50%;
+  place-items: center;
+  margin: auto;
+  transition: background-color 0.25s, transform 0.25s;
+  display: grid;
+  position: absolute;
+  inset: 0;
+}
+
+.hero__clip:hover .hero__play {
+  background: var(--c-clay);
+  transform: scale(1.08);
+}
+
+.hero__cliplabel {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-cream);
+  font-weight: 500;
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+}
+
+/* ── 2. Top Header Navigation ────────────────────────────────────── */
+.nav {
+  z-index: 5;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 84px;
+  padding: 0 24px 0 34px;
+  display: grid;
+  position: absolute;
+  inset: 0 0 auto;
+}
+
+.nav__links {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  gap: clamp(18px, 2.2vw, 36px);
+  font-weight: 500;
+  display: flex;
+}
+
+.nav__links a {
+  padding: 8px 0;
+  position: relative;
+}
+
+.nav__links a::after {
+  content: "";
+  transform-origin: 100%;
+  height: 1.5px;
+  transition: transform 0.35s var(--ease-out);
+  background: currentColor;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.nav__links a:hover::after {
+  transform-origin: 0;
+  transform: scaleX(1);
+}
+
+.nav__links--r {
+  grid-area: 1 / 3;
+  justify-self: start;
+  padding-left: clamp(18px, 3vw, 48px);
+}
+
+.nav__logo {
+  align-self: start;
+  place-items: center;
+  width: 340px;
+  height: 66px;
+  display: grid;
+  position: relative;
+}
+
+.nav__notch {
+  width: 100%;
+  height: 100%;
+  fill: var(--c-bone);
+  position: absolute;
+  inset: 0;
+}
+
+.nav__word {
+  font-family: var(--font-display);
+  letter-spacing: 0.16em;
+  margin-right: -0.16em;
+  font-size: 2rem;
+  font-weight: 420;
+  font-stretch: 125%;
+  line-height: 1;
+  position: relative;
+}
+
+.nav__actions {
+  grid-area: 1 / 3;
+  justify-self: end;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.nav__burger {
+  display: none;
+}
+
+/* ── 3. Sticky Minibar ───────────────────────────────────────────── */
+.minibar {
+  z-index: 40;
+  border: 1px solid var(--c-line);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  opacity: 0;
+  visibility: hidden;
+  width: fit-content;
+  transition: opacity 0.4s, transform 0.5s var(--ease-out), visibility 0s 0.5s;
+  background: rgba(244, 240, 233, 0.86);
+  border-radius: 999px;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 34px);
+  margin: 0 auto;
+  padding: 7px 7px 7px 26px;
+  display: flex;
+  position: fixed;
+  top: 14px;
+  left: 0;
+  right: 0;
+  transform: translateY(-140%);
+  box-shadow: 0 10px 30px -18px rgba(30, 36, 30, 0.5);
+}
+
+html[data-theme="dark"] .minibar {
+  background: rgba(33, 44, 34, 0.86);
+  border-color: var(--c-line);
+}
+
+.minibar.is-on {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s, transform 0.5s var(--ease-out);
+  transform: none;
+}
+
+.minibar__logo {
+  font-family: var(--font-display);
+  letter-spacing: 0.16em;
+  font-size: 1.15rem;
+  font-weight: 420;
+  font-stretch: 125%;
+}
+
+.minibar__links {
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  gap: clamp(14px, 2vw, 28px);
+  font-weight: 500;
+  display: flex;
+}
+
+.minibar__links a:hover {
+  color: var(--c-clay-ink);
+}
+
+.minibar .iconbtn {
+  width: 44px;
+  height: 44px;
+}
+
+.minibar__menu {
+  display: none;
+}
+
+/* ── 4. Scroll Film Reel & Story Beats ───────────────────────────── */
+.reel,
+.beats,
+.rail {
+  display: none;
+}
+
+html.js:not(.rm) .hero {
+  height: 380svh;
+}
+
+html.js:not(.rm) .hero__panel {
+  position: sticky;
+  top: 10px;
+}
+
+html.js:not(.rm) .reel {
+  z-index: 4;
+  background: var(--c-card-1);
+  opacity: 0;
+  border-radius: 110px;
+  display: block;
+  position: absolute;
+  inset: -36px;
+  overflow: hidden;
+}
+
+html.js:not(.rm) .reel video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reel__scrim {
+  opacity: 0;
+  background: linear-gradient(rgba(18, 16, 12, 0) 30%, rgba(18, 16, 12, 0.2) 54%, rgba(18, 16, 12, 0.72) 100%),
+              linear-gradient(90deg, rgba(18, 16, 12, 0.35) 0%, rgba(18, 16, 12, 0) 55%);
+  position: absolute;
+  inset: 0;
+}
+
+html.js:not(.rm) .beats {
+  z-index: 6;
+  pointer-events: none;
+  color: var(--c-cream);
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+.beat {
+  left: calc(var(--gut) + 8px);
+  opacity: 0;
+  position: absolute;
+  bottom: 128px;
+}
+
+.beat__eyebrow {
+  font-size: var(--fs-sm);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.beat__line {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 580;
+  font-size: var(--fs-beat);
+  letter-spacing: -0.02em;
+  line-height: 0.9;
+}
+
+html.js:not(.rm) .rail {
+  z-index: 6;
+  left: calc(var(--gut) + 8px);
+  right: calc(var(--gut) + 8px);
+  opacity: 0;
+  color: var(--c-cream);
+  font-size: var(--fs-xs);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+  align-items: center;
+  gap: 16px;
+  display: flex;
+  position: absolute;
+  bottom: 52px;
+}
+
+.rail__track {
+  background: rgba(244, 239, 230, 0.28);
+  flex: 1;
+  height: 2px;
+  position: relative;
+}
+
+.rail__track i {
+  background: var(--c-cream);
+  transform-origin: 0;
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+}
+
+/* ── 5. Promise Marquee Ticker ───────────────────────────────────── */
+.promise {
+  border-block: 1px solid var(--c-line);
+  margin: 34px 0 0;
+  overflow: hidden;
+}
+
+.promise__track {
+  width: max-content;
+  padding: 20px 0;
+  animation: 42s linear infinite promise;
+  display: flex;
+}
+
+.promise:hover .promise__track {
+  animation-play-state: paused;
+}
+
+.promise li {
+  font-size: var(--fs-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  align-items: center;
+  gap: 22px;
+  padding-right: 22px;
+  font-weight: 500;
+  display: flex;
+}
+
+.promise li::after {
+  content: "";
+  background: var(--c-clay);
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+
+@keyframes promise {
+  to {
+    transform: translate(-50%);
+  }
+}
+
+/* ── 6. Trail Cluster Showcase ───────────────────────────────────── */
+.trail {
+  position: relative;
+}
+
+.trail__stage {
+  height: 100svh;
+  min-height: 640px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tcard {
+  background: var(--c-card-1);
+  border-radius: 20px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.tcard img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.tcard--main {
+  z-index: 3;
+  margin: 0 auto;
+  aspect-ratio: 3 / 4;
+  width: min(25vw, 45svh);
+  height: fit-content;
+  margin-block: auto;
+  inset: 0;
+}
+
+.tcard--left {
+  z-index: 1;
+  aspect-ratio: 3 / 4;
+  width: min(17vw, 30svh);
+  top: 13%;
+  left: 8%;
+}
+
+.tcard--right {
+  z-index: 1;
+  aspect-ratio: 3 / 4;
+  width: min(15vw, 27.75svh);
+  top: 46%;
+  right: 7%;
+}
+
+.trail__word {
+  z-index: 2;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  color: var(--c-word);
+  text-transform: uppercase;
+  pointer-events: none;
+  justify-content: center;
+  margin-top: -0.5em;
+  font-size: min(26vw, 44svh);
+  font-weight: 300;
+  font-stretch: 125%;
+  line-height: 1;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.trail__word span {
+  display: inline-block;
+}
+
+.trail__note {
+  z-index: 3;
+  width: 320px;
+  font-size: var(--fs-md);
+  color: var(--c-muted);
+  line-height: 1.5;
+  position: absolute;
+}
+
+.trail__note--r {
+  top: 13%;
+  right: 7%;
+}
+
+.trail__note--l {
+  bottom: 11%;
+  left: 9%;
+}
+
+/* ── 7. Top Picks & Section Headers ──────────────────────────────── */
+.sechead {
+  padding: 0 var(--gut);
+  grid-template-columns: 1fr minmax(0, 360px);
+  align-items: end;
+  gap: 18px 48px;
+  margin-bottom: clamp(32px, 4.4vw, 64px);
+  display: grid;
+}
+
+.sechead .eyebrow {
+  grid-column: 1 / -1;
+}
+
+.sechead__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 580;
+  font-size: var(--fs-h2);
+  letter-spacing: -0.02em;
+  line-height: 0.92;
+}
+
+.sechead__aside {
+  font-size: var(--fs-lg);
+  color: var(--c-muted);
+  line-height: 1.4;
+}
+
+.sechead--center {
+  text-align: center;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.picks {
+  padding: clamp(90px, 11vw, 160px) 0 clamp(70px, 9vw, 120px);
+}
+
+.picks__row {
+  padding: 0 var(--gut);
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  display: grid;
+}
+
+/* ── 8. Pack Stage Pinned Card ───────────────────────────────────── */
+.pack__stage {
+  height: 100svh;
+  min-height: 640px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pack__row,
+.look__row {
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  color: var(--c-word);
+  font-size: min(16vw, 25svh);
+  font-weight: 300;
+  font-stretch: 125%;
+  line-height: 1;
+  position: absolute;
+  left: 0;
+}
+
+.pack__row span,
+.look__row span {
+  display: inline-block;
+}
+
+.pack__row--top {
+  z-index: 1;
+  top: 10%;
+}
+
+.pack__row--bottom {
+  z-index: 3;
+  opacity: 0.92;
+  bottom: 8%;
+}
+
+.pack__card {
+  z-index: 2;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  background: #13171a;
+  width: min(30vw, 55.5svh);
+  height: fit-content;
+  color: var(--c-cream);
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.pack__card figure {
+  position: absolute;
+  inset: 0;
+}
+
+.pack__card img {
+  object-fit: cover;
+  object-position: 50% 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 22%;
+  left: 0;
+  -webkit-mask-image: linear-gradient(transparent 0, #000 12%);
+  mask-image: linear-gradient(transparent 0, #000 12%);
+}
+
+.pack__card::after {
+  content: "";
+  z-index: 1;
+  background: linear-gradient(rgba(20, 22, 19, 0.72) 0%, rgba(20, 22, 19, 0) 46%);
+  position: absolute;
+  inset: 0;
+}
+
+.pack__logo,
+.pack__eyebrow,
+.pack__title {
+  z-index: 3;
+  position: relative;
+}
+
+.pack__logo {
+  font-family: var(--font-display);
+  letter-spacing: 0.16em;
+  font-stretch: 125%;
+  font-size: var(--fs-md);
+  margin-top: 26px;
+}
+
+.pack__eyebrow {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  margin-top: 18px;
+  font-weight: 500;
+}
+
+.pack__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  margin-top: 8px;
+  font-size: clamp(2.2rem, 3.4vw, 3.8rem);
+  font-weight: 560;
+  line-height: 0.92;
+}
+
+/* ── 9. New Arrivals & Catalog Grid ──────────────────────────────── */
+.new {
+  padding: clamp(90px, 10vw, 150px) 0;
+}
+
+.grid {
+  padding: 0 var(--gut);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  display: grid;
+}
+
+.new__all {
+  text-align: center;
+  margin-top: clamp(34px, 4.4vw, 60px);
+}
+
+/* ── 10. Lookbook Stage ──────────────────────────────────────────── */
+.look__stage {
+  height: 100svh;
+  min-height: 660px;
+  position: relative;
+  overflow: hidden;
+}
+
+.look__row--top {
+  z-index: 1;
+  top: 12%;
+}
+
+.look__row--bottom {
+  z-index: 3;
+  opacity: 0.9;
+  bottom: 7%;
+}
+
+.look__card {
+  z-index: 2;
+  border-radius: var(--radius);
+  width: calc(min(78svh, 780px) / 1.33333);
+  max-width: 88vw;
+  height: min(78svh, 780px);
+  color: var(--c-cream);
+  background: linear-gradient(#3a3c37 0%, #8e8a82 62%, #e2dbd0 100%);
+  margin: auto;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.look.is-static .look__stage {
+  height: auto;
+  min-height: 0;
+  padding: 100px 0;
+  overflow: visible;
+}
+
+.look.is-static .look__card {
+  width: auto;
+  max-width: none;
+  height: auto;
+  padding: 0 var(--gut);
+  background: transparent;
+  border-radius: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  display: grid;
+  position: relative;
+  inset: auto;
+  overflow: visible;
+}
+
+/* ── 11. Footer Shell ────────────────────────────────────────────── */
+.footer {
+  border-radius: var(--radius);
+  padding: clamp(80px, 10vw, 150px) var(--gut) 30px;
+  background: var(--c-moss);
+  color: var(--c-cream);
+  margin: 10px;
+}
+
+.footer__big {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  font-size: clamp(3.4rem, 13vw, 14rem);
+  font-weight: 580;
+  line-height: 0.86;
+}
+
+.footer__cols {
+  grid-template-columns: minmax(0, 480px) 1fr;
+  gap: 48px;
+  margin-top: clamp(56px, 7vw, 110px);
+  display: grid;
+}
+
+.footer__links {
+  justify-content: flex-end;
+  gap: clamp(32px, 6vw, 100px);
+  display: flex;
+}
+
+.footer__links h3 {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.7);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.footer__links a {
+  font-size: var(--fs-md);
+  padding: 5px 0;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: var(--c-apricot);
+}
+
+.footer__base {
+  font-size: var(--fs-sm);
+  color: rgba(244, 239, 230, 0.75);
+  border-top: 1px solid rgba(244, 239, 230, 0.18);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: clamp(56px, 6vw, 100px);
+  padding-top: 22px;
+  display: flex;
+}
+
+/* ── 12. Dialog Overlays & Backdrops ─────────────────────────────── */
+dialog {
+  color: inherit;
+  border: 0;
+  padding: 0;
+}
+
+dialog::backdrop {
+  transition: background-color 0.45s ease, overlay 0.45s allow-discrete, display 0.45s allow-discrete;
+  background: rgba(22, 26, 22, 0.5);
+}
+
+@starting-style {
+  dialog[open]::backdrop {
+    background-color: transparent;
+  }
+}
+
+.film {
+  background: #111;
+  border-radius: 18px;
+  width: min(1100px, 92vw);
+  max-width: none;
+  overflow: hidden;
+}
+
+.film video {
+  aspect-ratio: 16 / 9;
+  background: #111;
+  width: 100%;
+}
+
+.film__close {
+  z-index: 2;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.bag {
+  background: transparent;
+  width: min(460px, 100vw);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0 0 0 auto;
+}
+
+.bag__panel {
+  background: var(--c-bone);
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 26px 26px;
+  display: flex;
+}
+
+.bag__head {
+  border-bottom: 1px solid var(--c-line);
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 18px;
+  display: flex;
+}
+
+.bag__head h2 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 580;
+}
+
+.bag__list {
+  overscroll-behavior: contain;
+  flex: 1;
+  padding: 6px 0;
+  overflow-y: auto;
+}
+
+.bag__empty {
+  font-size: var(--fs-lg);
+  color: var(--c-muted);
+  flex: 1;
+  padding: 40px 0;
+}
+
+.bag__empty[hidden],
+.bag__list:empty {
+  display: none;
+}
+
+.bag__foot {
+  border-top: 1px solid var(--c-line);
+  padding-top: 18px;
+}
+
+.bag__total {
+  font-size: var(--fs-lg);
+  justify-content: space-between;
+  display: flex;
+}
+
+.bag__ship {
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+  margin: 6px 0 18px;
+}
+
+.bag__ctas {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+}
+
+/* ── 13. Mobile Fullscreen Menu ──────────────────────────────────── */
+.menu {
+  background: var(--c-bone);
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  overflow: hidden;
+}
+
+.menu__panel {
+  overscroll-behavior: contain;
+  height: 100%;
+  padding-bottom: max(20px, env(safe-area-inset-bottom));
+  grid-template-rows: auto auto auto 1fr;
+  align-content: start;
+  display: grid;
+  overflow-y: auto;
+}
+
+.menu__head {
+  z-index: 2;
+  height: 76px;
+  padding: 0 var(--gut);
+  background: var(--c-bone);
+  border-bottom: 1px solid var(--c-line);
+  align-items: center;
+  gap: 8px;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.menu__brand {
+  font-family: var(--font-display);
+  letter-spacing: 0.16em;
+  margin-right: auto;
+  padding: 10px 0;
+  font-size: 1.25rem;
+  font-weight: 420;
+  font-stretch: 125%;
+}
+
+.menu__close {
+  background: var(--c-bone-2);
+}
+
+.menu__nav {
+  padding: 6px var(--gut) 0;
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__link {
+  border-bottom: 1px solid var(--c-line);
+  grid-template-columns: 2.4em 1fr auto;
+  align-items: center;
+  gap: 4px;
+  min-height: 64px;
+  padding: 14px 0;
+  display: grid;
+}
+
+.menu__no {
+  font-size: var(--fs-xs);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+  color: var(--c-muted);
+  align-self: start;
+  padding-top: 0.55em;
+}
+
+.menu__label {
+  padding-block: 0.06em;
+  display: block;
+  overflow: hidden;
+}
+
+.menu__label > span {
+  white-space: nowrap;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  font-size: clamp(2rem, 9.4vw, 3.4rem);
+  font-weight: 580;
+  line-height: 0.95;
+  display: block;
+}
+
+.menu__link > svg {
+  color: var(--c-muted);
+  transition: transform 0.35s var(--ease-out), color 0.25s;
+}
+
+.menu__link:hover > svg,
+.menu__link:focus-visible > svg {
+  color: var(--c-clay-ink);
+  transform: translate(4px);
+}
+
+.menu__link:hover .menu__label > span,
+.menu__link[aria-current="page"] .menu__label > span,
+.menu__link[aria-current="page"] .menu__no {
+  color: var(--c-clay-ink);
+}
+
+.menu__feature {
+  padding: 22px var(--gut) 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  display: grid;
+}
+
+.menu__card {
+  aspect-ratio: 1;
+  background: var(--c-card-1, #2b2f2a);
+  color: var(--c-cream);
+  border-radius: 18px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu__card img {
+  object-fit: cover;
+  object-position: 50% 22%;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.menu__card::after {
+  content: "";
+  background: linear-gradient(transparent, rgba(20, 24, 20, 0.72));
+  position: absolute;
+  inset: 40% 0 0;
+}
+
+.menu__card:hover img {
+  transform: scale(1.04);
+}
+
+.menu__cardtext {
+  z-index: 1;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 580;
+  line-height: 1;
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  right: 14px;
+}
+
+.menu__cardtext small {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+  margin-bottom: 6px;
+  font-weight: 500;
+  display: block;
+}
+
+.menu__foot {
+  padding: 22px var(--gut) 0;
+  align-self: end;
+  gap: 14px;
+  display: grid;
+}
+
+.menu__sub {
+  flex-wrap: wrap;
+  gap: 8px;
+  display: flex;
+}
+
+.menu__sub a {
+  border: 1px solid var(--c-line);
+  min-height: 44px;
+  font-size: var(--fs-sm);
+  border-radius: 999px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  font-weight: 500;
+  transition: background-color 0.25s, border-color 0.25s;
+  display: inline-flex;
+}
+
+.menu__sub a:hover {
+  background: var(--c-bone-2);
+  border-color: var(--c-moss);
+}
+
+.menu__note {
+  font-size: var(--fs-xs);
+  color: var(--c-muted);
+}

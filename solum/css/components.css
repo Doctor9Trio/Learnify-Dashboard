@@ -1,0 +1,751 @@
+/*! SOLUM — Bhoomi Outdoors — Interactive Components (Artisanal REA Architecture)
+ * © 2026 Bhoomi Outdoors. Buttons, Cards, Filters, Swatches, Quantities & Form Controls.
+ */
+
+/* ── 1. Buttons & Action Pills ───────────────────────────────────── */
+.pill {
+  height: 50px;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 0;
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 26px;
+  font-weight: 500;
+  transition: background-color 0.25s, color 0.25s, transform 0.15s;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.pill:active {
+  transform: scale(0.98);
+}
+
+.pill--ink {
+  background: var(--c-moss);
+  color: var(--c-cream);
+}
+
+.pill--ink:hover {
+  background: var(--c-clay);
+}
+
+.pill--light {
+  background: var(--c-bone-2);
+  color: var(--c-moss);
+}
+
+.pill--light:hover {
+  background: #ffffff;
+}
+
+.pill--clay {
+  background: var(--c-clay);
+  color: #fff8f0;
+}
+
+.pill--clay:hover {
+  background: var(--c-clay-ink);
+}
+
+.iconbtn {
+  background: var(--c-bone-2);
+  width: 50px;
+  height: 50px;
+  color: var(--c-moss);
+  border: 0;
+  border-radius: 50%;
+  place-items: center;
+  transition: background-color 0.25s, color 0.25s, transform 0.15s;
+  display: inline-grid;
+  position: relative;
+  cursor: pointer;
+}
+
+.iconbtn:active {
+  transform: scale(0.95);
+}
+
+.iconbtn--ink {
+  background: var(--c-moss);
+  color: var(--c-cream);
+}
+
+.iconbtn--ink:hover {
+  background: var(--c-clay);
+}
+
+.iconbtn--light {
+  color: var(--c-cream);
+  background: rgba(244, 239, 230, 0.14);
+}
+
+.iconbtn--light:hover {
+  background: rgba(244, 239, 230, 0.28);
+}
+
+/* ── 2. Badges & Chips ───────────────────────────────────────────── */
+.badge {
+  background: var(--c-clay);
+  color: #fff8f0;
+  border-radius: 999px;
+  place-items: center;
+  min-width: 21px;
+  height: 21px;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  display: grid;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+}
+
+.badge[hidden] {
+  display: none;
+}
+
+.eyebrow {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  font-weight: 500;
+}
+
+/* ── 3. Text Kinetic & Transition Layers ─────────────────────────── */
+.scr__vis {
+  display: inline;
+}
+
+.w {
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.ch {
+  display: inline-block;
+  position: relative;
+}
+
+.scr .ch {
+  opacity: 0;
+}
+
+.scr .ch.is-x,
+.scr .ch.is-on {
+  opacity: 1;
+}
+
+.ch.is-x {
+  -webkit-text-fill-color: transparent;
+}
+
+.ch.is-x::after {
+  content: attr(data-g);
+  -webkit-text-fill-color: currentColor;
+  font-weight: 200;
+  font-stretch: 125%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.blinds {
+  z-index: 2;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.blinds__s {
+  background: var(--blind, var(--c-bone));
+  transform-origin: 50% 0;
+  position: absolute;
+  left: -1px;
+  right: -1px;
+}
+
+.bands {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.band {
+  transform-origin: 50% 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.band__in {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.band__in img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.bands--contain .band__in img {
+  object-fit: contain;
+  object-position: 50% 100%;
+}
+
+/* ── 4. Top Picks Cards ──────────────────────────────────────────── */
+.pcard {
+  border-radius: var(--radius);
+  aspect-ratio: 6 / 7;
+  background: var(--c-card-1);
+  color: var(--c-cream);
+  width: 100%;
+  min-height: 420px;
+  max-height: calc(100svh - 120px);
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.pcard figure {
+  position: absolute;
+  inset: 0;
+}
+
+.pcard img {
+  object-fit: cover;
+  object-position: 50% 30%;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.1s var(--ease-out);
+}
+
+.pcard:hover img {
+  transform: scale(1.04);
+}
+
+.pcard::after {
+  content: "";
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(160deg, rgba(20, 22, 19, 0.6) 0%, rgba(20, 22, 19, 0) 48%);
+  position: absolute;
+  inset: 0;
+}
+
+.pcard__title {
+  z-index: 3;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 560;
+  font-size: var(--fs-card);
+  letter-spacing: -0.015em;
+  line-height: 0.92;
+  position: absolute;
+  top: clamp(24px, 3vw, 44px);
+  left: clamp(20px, 2.6vw, 40px);
+}
+
+.pcard__season {
+  z-index: 3;
+  text-align: right;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  font-weight: 500;
+  position: absolute;
+  top: 30px;
+  right: 28px;
+}
+
+.pcard__chip {
+  z-index: 3;
+  height: 42px;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(20, 22, 19, 0.3);
+  border: 1px solid rgba(244, 239, 230, 0.45);
+  border-radius: 999px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px;
+  font-weight: 500;
+  display: inline-flex;
+  position: absolute;
+  bottom: 28px;
+  left: clamp(20px, 2.6vw, 40px);
+}
+
+.pcard__chip i {
+  background: var(--c-clay);
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+}
+
+/* ── 5. Terrain Filters & Category Switches ──────────────────────── */
+.filters {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 26px;
+  display: flex;
+}
+
+.filter {
+  border: 1px solid var(--c-line);
+  height: 44px;
+  font-size: var(--fs-sm);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0 20px;
+  font-weight: 500;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+  cursor: pointer;
+}
+
+.filter:hover {
+  border-color: var(--c-moss);
+}
+
+.filter[aria-pressed="true"] {
+  background: var(--c-moss);
+  border-color: var(--c-moss);
+  color: var(--c-cream);
+}
+
+/* ── 6. Product Catalog Grid Cards ───────────────────────────────── */
+.gcard {
+  aspect-ratio: 3 / 4;
+  background: var(--c-card-1);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gcard.is-out {
+  display: none;
+}
+
+.gcard figure {
+  position: absolute;
+  inset: 0;
+}
+
+.gcard img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.1s var(--ease-out);
+}
+
+.gcard:hover img {
+  transform: scale(1.04);
+}
+
+.gcard__top {
+  z-index: 3;
+  gap: 6px;
+  display: flex;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.gcard__tag {
+  height: 34px;
+  font-size: var(--fs-xs);
+  background: rgba(244, 239, 230, 0.9);
+  border-radius: 999px;
+  align-items: center;
+  padding: 0 14px;
+  font-weight: 500;
+  display: inline-flex;
+  color: var(--c-moss);
+}
+
+.gcard__heart {
+  background: rgba(244, 239, 230, 0.9);
+  border: 0;
+  border-radius: 50%;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  display: grid;
+  cursor: pointer;
+  color: var(--c-moss);
+}
+
+.gcard__heart svg {
+  fill: none;
+  transition: fill 0.2s, color 0.2s;
+}
+
+.gcard__heart[aria-pressed="true"] {
+  color: var(--c-clay);
+}
+
+.gcard__heart[aria-pressed="true"] svg {
+  fill: var(--c-clay);
+}
+
+.gcard__bar {
+  z-index: 3;
+  background: rgba(244, 239, 230, 0.93);
+  border-radius: 16px;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 10px;
+  padding: 13px 10px 13px 18px;
+  display: grid;
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  color: var(--c-moss);
+}
+
+.gcard__name {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.gcard__price {
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+  grid-row: 2;
+}
+
+.gcard__add {
+  background: var(--c-moss);
+  width: 42px;
+  height: 42px;
+  color: var(--c-cream);
+  border: 0;
+  border-radius: 50%;
+  grid-area: 1 / 2 / 3;
+  place-items: center;
+  padding: 0;
+  transition: background-color 0.25s, transform 0.15s;
+  display: grid;
+  cursor: pointer;
+}
+
+.gcard__add:hover {
+  background: var(--c-clay);
+}
+
+.gcard__add:active {
+  transform: scale(0.92);
+}
+
+/* ── 7. Lookbook Meta Callouts ───────────────────────────────────── */
+.lk__img {
+  position: absolute;
+  inset: 6% 0 0;
+}
+
+.lk__img > img {
+  object-fit: contain;
+  object-position: 50% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.lk__meta {
+  z-index: 3;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: pre-line;
+  font-weight: 500;
+  line-height: 1.3;
+  position: absolute;
+}
+
+.lk__tl {
+  top: 24%;
+  left: 26px;
+}
+
+.lk__tr {
+  text-align: right;
+  top: 24%;
+  right: 26px;
+}
+
+.lk__bl {
+  color: var(--c-moss);
+  bottom: 24%;
+  left: 26px;
+}
+
+.lk__br {
+  color: var(--c-moss);
+  padding-left: 16px;
+  bottom: 24%;
+  right: 26px;
+}
+
+.lk__br::before {
+  content: "";
+  background: var(--c-clay);
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 0.45em;
+  left: 0;
+}
+
+.lk__shop {
+  z-index: 4;
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+}
+
+.look__stage > .lk__shop {
+  bottom: max(14px, 50svh - min(78svh, 780px) / 2 - 64px);
+}
+
+.lk__card {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  background: linear-gradient(#3a3c37 0%, #8e8a82 62%, #e2dbd0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── 8. Newsletter Subscribe Form ────────────────────────────────── */
+.join__label {
+  font-size: var(--fs-lg);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.join__row {
+  gap: 10px;
+  display: flex;
+}
+
+.join input {
+  min-width: 0;
+  height: 54px;
+  color: var(--c-cream);
+  font: inherit;
+  background: rgba(244, 239, 230, 0.06);
+  border: 1px solid rgba(244, 239, 230, 0.32);
+  border-radius: 999px;
+  flex: 1;
+  padding: 0 22px;
+  transition: border-color 0.2s;
+}
+
+.join input::placeholder {
+  color: rgba(244, 239, 230, 0.6);
+}
+
+.join input:focus-visible {
+  outline-color: var(--c-apricot);
+}
+
+.join .pill {
+  height: 54px;
+}
+
+.join__msg {
+  min-height: 1.5em;
+  font-size: var(--fs-sm);
+  color: var(--c-apricot);
+  margin-top: 12px;
+}
+
+/* ── 9. Free Shipping Meter & Bag Items ──────────────────────────── */
+.ship {
+  padding: 14px 0 16px;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.ship__text {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-muted);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.ship__track {
+  background: var(--c-line);
+  height: 4px;
+  border-radius: 999px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.ship__track i {
+  background: var(--c-clay);
+  border-radius: 999px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  transition: width 0.4s var(--ease-out);
+}
+
+.bag__item {
+  border-bottom: 1px solid var(--c-line);
+  grid-template-columns: 80px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  display: grid;
+}
+
+.bag__item img {
+  object-fit: cover;
+  background: var(--c-card-1);
+  border-radius: 12px;
+  width: 80px;
+  height: 100px;
+}
+
+.bag__name {
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.bag__price {
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+}
+
+.qty {
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  display: inline-flex;
+}
+
+.qty button {
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: grid;
+  cursor: pointer;
+}
+
+.qty button:hover {
+  background: var(--c-bone-2);
+}
+
+.qty output {
+  text-align: center;
+  min-width: 20px;
+  font-size: var(--fs-sm);
+}
+
+.bag__remove {
+  font-size: var(--fs-sm);
+  color: var(--c-muted);
+  text-underline-offset: 3px;
+  background: transparent;
+  border: 0;
+  align-self: start;
+  padding: 4px 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.bag__remove:hover {
+  color: var(--c-clay-ink);
+}
+
+/* ── 10. Toasts & Floating System Indicators ─────────────────────── */
+.toast {
+  z-index: 60;
+  background: var(--c-moss);
+  width: fit-content;
+  max-width: calc(100vw - 32px);
+  color: var(--c-cream);
+  font-size: var(--fs-sm);
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 999px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  position: fixed;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(12px);
+}
+
+.toast.is-on {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.cc-preview-pill {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: var(--cc-lift, max(16px, env(safe-area-inset-bottom)));
+  z-index: 2147483647;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  background: #ff5722;
+  color: #161616;
+  font: 600 12px / 1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid #fff;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.35);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cc-preview-pill:hover {
+  background: #ff7a5f;
+  transform: translate(-1px, -1px);
+}
+
+.cc-preview-pill:focus-visible {
+  outline: 3px solid #161616;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 7px #fff;
+}
+
+.cc-preview-pill__short {
+  display: none;
+}

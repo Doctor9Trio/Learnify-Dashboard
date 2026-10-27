@@ -1,0 +1,103 @@
+/*! SOLUM — Bhoomi Outdoors — Design Tokens (Artisanal REA Architecture)
+ * © 2026 Bhoomi Outdoors. Pure CSS custom properties for Earth-tone trail aesthetics.
+ */
+
+:root {
+  /* Earth-tone core palette */
+  --c-bone: #ece6dc;
+  --c-bone-2: #f4f0e9;
+  --c-apricot: #e8c7a8;
+  --c-moss: #2e3a2f;
+  --c-moss-deep: #243025;
+  --c-clay: #b5562f;
+  --c-clay-ink: #9a4423;
+  --c-clay-soft: #e9a27d;
+  --c-cream: #f4efe6;
+  --c-cream-2: #cfcbbf;
+  --c-muted: #625d54;
+  --c-word: #ddd4c6;
+  --c-card-1: #2b2e2a;
+  --c-card-2: #9a958c;
+  --c-line: rgba(46, 58, 47, 0.16);
+  --c-line-2: rgba(46, 58, 47, 0.24);
+  --hover: rgba(46, 58, 47, 0.05);
+
+  /* Semantic surface aliases */
+  --surface: #f4f0e9;
+  --card: #fbf9f5;
+  --field: #fffdf9;
+  --good: #2f6b3a;
+
+  /* Order & Fulfillment status badges */
+  --st-pending-bg: #f6e6bf;
+  --st-pending-tx: #5e4300;
+  --st-pending: #c98a12;
+  --st-processing-bg: #dfe6ee;
+  --st-processing-tx: #2c4560;
+  --st-processing: #4f6d8a;
+  --st-shipped-bg: #e2e7da;
+  --st-shipped-tx: #2e3a2f;
+  --st-shipped: #6a7f5f;
+  --st-delivered-bg: #d5ebd2;
+  --st-delivered-tx: #1e5228;
+  --st-delivered: #3e8a4a;
+  --st-cancelled-bg: #e7e3dd;
+  --st-cancelled-tx: #4f4b45;
+  --st-cancelled: #9a958c;
+  --st-refunded-bg: #f5ded3;
+  --st-refunded-tx: #86391b;
+  --st-refunded: #b5562f;
+
+  /* Typography scale */
+  --font-display: "Archivo", "Arial Narrow", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: "Geist", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1.0625rem;
+  --fs-lg: clamp(1.25rem, 1.7vw, 1.625rem);
+  --fs-card: clamp(2rem, 3.8vw, 4.2rem);
+  --fs-h2: clamp(2.5rem, 5.6vw, 6rem);
+  --fs-h1: clamp(2.7rem, min(7vw, 13svh), 8rem);
+  --fs-beat: clamp(2.6rem, 6.6vw, 7.6rem);
+
+  /* Geometry & spatial tokens */
+  --gut: clamp(16px, 3.4vw, 48px);
+  --radius: 22px;
+  --r-lg: 20px;
+  --r: 14px;
+  --r-sm: 10px;
+  --shadow: 0 1px 0 rgba(46, 58, 47, 0.04), 0 10px 28px -18px rgba(46, 58, 47, 0.28);
+  --shadow-lift: 0 2px 0 rgba(46, 58, 47, 0.04), 0 22px 40px -22px rgba(46, 58, 47, 0.38);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --side-w: 248px;
+}
+
+/* Nocturnal Trail Dark Mode Overrides */
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  --c-bone: #182019;
+  --c-bone-2: #212c22;
+  --c-apricot: #c28859;
+  --c-moss: #f4efe6;
+  --c-moss-deep: #0e140f;
+  --c-clay: #d66c42;
+  --c-clay-ink: #f08e67;
+  --c-clay-soft: #853e20;
+  --c-cream: #141b15;
+  --c-cream-2: #2b392d;
+  --c-muted: #9ba69a;
+  --c-word: #243026;
+  --c-card-1: #111712;
+  --c-card-2: #2e3a2f;
+  --c-line: rgba(244, 239, 230, 0.14);
+  --c-line-2: rgba(244, 239, 230, 0.24);
+  --hover: rgba(244, 239, 230, 0.08);
+
+  --surface: #212c22;
+  --card: #182019;
+  --field: #131a14;
+  --good: #4ba65b;
+
+  --shadow: 0 1px 0 rgba(0, 0, 0, 0.3), 0 10px 28px -18px rgba(0, 0, 0, 0.6);
+  --shadow-lift: 0 2px 0 rgba(0, 0, 0, 0.4), 0 22px 40px -22px rgba(0, 0, 0, 0.8);
+}
