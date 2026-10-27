@@ -1,0 +1,226 @@
+/*! STRADA — Yatra Mobility — Responsive Engine & Breakpoints (Artisanal REA Architecture)
+ * © 2026 Yatra Mobility. Media Queries (1100px, 820px, 520px) & Reduced Motion Overrides.
+ */
+
+@media (width<=1100px) {
+  .book__fields {
+  grid-template-columns:repeat(2,minmax(0,1fr))
+}
+
+.book__go {
+  grid-column:1/-1
+}
+
+.footer__card {
+  grid-template-columns:1fr 1fr
+}
+
+}
+
+@media (width<=820px) {
+  .nav {
+  height:56px;
+  top:10px
+}
+
+.nav__cta {
+  display:none
+}
+
+.nav__burger {
+  margin-left:auto;
+  display:block
+}
+
+.nav__links {
+  border:1px solid var(--c-rim);
+  visibility:hidden;
+  opacity:0;
+  transition:opacity .3s, transform .4s var(--ease-out), visibility 0s .4s;
+  background:#131512fa;
+  border-radius:24px;
+  flex-direction:column;
+  padding:10px;
+  position:absolute;
+  top:calc(100% + 8px);
+  left:0;
+  right:0;
+  transform:translateY(-8px)
+}
+
+.nav.is-open .nav__links {
+  visibility:visible;
+  opacity:1;
+  transition:opacity .3s, transform .4s var(--ease-out);
+  transform:none
+}
+
+.nav__links a {
+  font-size:var(--fs-md);
+  padding:14px 16px
+}
+
+.hero {
+  grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"copy""stage""callout""book";
+  height:auto;
+  padding-top:100px
+}
+
+.hero__stage {
+  aspect-ratio:2;
+  margin:0 -8%
+}
+
+.hero__callout {
+  justify-self:start;
+  margin:4px 0 16px
+}
+
+.hero__callout-line {
+  display:none
+}
+
+.specs {
+  gap:20px
+}
+
+.stats {
+  grid-template-columns:1fr
+}
+
+.stat {
+  text-align:left;
+  grid-template-columns:auto 1fr;
+  justify-items:start;
+  column-gap:18px;
+  padding:22px
+}
+
+.stat svg {
+  grid-row:span 2;
+  margin:0
+}
+
+.sec-head {
+  flex-direction:column;
+  align-items:start;
+  gap:12px
+}
+
+.sec-head--row {
+  flex-direction:row;
+  align-items:end
+}
+
+.tabs {
+  scrollbar-width:none;
+  width:auto;
+  max-width:none;
+  margin-inline:calc(-1 * var(--gutter));
+  padding-inline:var(--gutter);
+  overflow-x:auto
+}
+
+.tabs::-webkit-scrollbar {
+  display:none
+}
+
+.tabs button {
+  flex:none
+}
+
+.cars {
+  grid-template-columns:1fr
+}
+
+.deal__body {
+  max-width:80%
+}
+
+.deal__top {
+  width:125%
+}
+
+.road {
+  display:none
+}
+
+.steps,.app__card {
+  grid-template-columns:1fr
+}
+
+.phones {
+  width:100%;
+  max-width:420px;
+  height:440px;
+  margin-inline:auto
+}
+
+.phone {
+  width:200px
+}
+
+.bento {
+  grid-template-rows:none;
+  grid-template-columns:1fr
+}
+
+.tile--big {
+  grid-row:auto;
+  min-height:420px
+}
+
+.tile--comfort .tile__body {
+  max-width:80%
+}
+
+.footer__card {
+  grid-template-columns:1fr 1fr
+}
+
+.footer__brand,.footer__img {
+  grid-column:1/-1
+}
+
+}
+
+@media (width<=520px) {
+  .book__fields {
+  grid-template-columns:1fr
+}
+
+.switch {
+  margin-left:0
+}
+
+.specs dd {
+  font-size:1.15rem
+}
+
+.classes {
+  display:grid
+}
+
+.chip {
+  padding:0 8px
+}
+
+.phone {
+  width:172px
+}
+
+.phones {
+  height:380px
+}
+
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *,:before,:after {
+  transition-duration:.01ms!important;
+  animation-duration:.01ms!important
+}
+
+}
+

@@ -1,0 +1,33 @@
+/*! STRADA — Yatra Mobility — Structural Shell & Layout (Artisanal REA Architecture)
+ * © 2026 Yatra Mobility. Fixed Header, Section Containers, Nav & Footer Shell.
+ */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 11, 9, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--c-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--gutter);
+  height: 72px;
+  transition: background-color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+
+:root[data-theme="light"] .nav {
+  background: rgba(248, 250, 245, 0.88);
+}
+
+main {
+  width: 100%;
+  overflow-x: clip;
+}
+
+section {
+  position: relative;
+  width: 100%;
+}

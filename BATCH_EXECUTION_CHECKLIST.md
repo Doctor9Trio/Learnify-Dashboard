@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **16** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`, `portfolio`, `camber`) | **4** | **80%** | **Suite 17: `strada` (Yatra Mobility) — NEXT UP** |
+| **20** | **17** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`, `portfolio`, `camber`, `strada`) | **3** | **85%** | **Suite 18: `vanta` (Kaala Studio) — NEXT UP** |
 
 ---
 
@@ -266,15 +266,19 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ### 📦 BATCH 8: Fleet Mobility & Cinematic Audio
 > **Suites**: `strada` (Yatra Mobility) & `vanta` (Kaala Studio)  
-> **Status**: ⏳ Pending
+> **Status**: 🔄 In Progress (1/2 Completed)
 
 #### Suite 17: `strada` — Yatra Mobility *(यात्रा)*
-- **Domain**: Luxury Chauffeur & Fleet Reservation Engine, Vehicle Tier Picker
-- [ ] **Tokens & Shell**: Executive midnight/champagne palette, sleek booking card.
-- [ ] **Fleet Tier Selector**: Horizontal scrolling car cards with luggage/passenger badges.
-- [ ] **Route Estimator**: Pickup/dropoff address inputs with estimated fare calculator.
-- [ ] **Interactive JS**: Booking stepper, vehicle selection, add-on option toggles.
-- [ ] **QA & Git**: Visual verification and push.
+- **Domain**: Luxury Chauffeur & Fleet Reservation Engine, Vehicle Tier Picker, Live Spec Readouts
+- **Target URL / Path**: `http://localhost:3456/strada/`
+- **Status**: ✅ **COMPLETED (Pixel-Perfect Verified)**
+- [x] **Phase 1: REA Inspection & Assets**: Inspected with `bin/rea-inspector.mjs strada`. Verified 66 colors, 48 CSS variables, 0 missing assets.
+- [x] **Phase 2: Tokens & Shell**: Created `strada/css/tokens.css` (Luxury midnight `#0a0b09`, neon lime `#d9f56b`, executive light mode `#f8faf5`), `reset.css`, and `layout.css`.
+- [x] **Phase 3: Components**: Created `strada/css/components.css` (vehicle class chips, car stage cards, booking bar, spec telemetry, buttons) and `strada/css/responsive.css`.
+- [x] **Phase 4: Fleet Tier Selector**: Interactive 4-class tab switcher (Sport, SUV, Sedan, Electric) with dynamic stage transitions and live specs (accel, hp, price/day).
+- [x] **Phase 5: Booking Engine**: Filter driver segmented radiogroup, location input, and date picker booking bar.
+- [x] **Phase 6: Interactive JS & Theme**: Created `strada/js/theme.js` with isolated `strada-theme` / `yatra-theme` storage, `#theme-toggle` button in header, keyboard shortcut `T`, and live theme syncing.
+- [x] **Phase 7: QA & Verification**: Tested via browser subagent on Desktop (`1440x900`) and Mobile (`375x812`). Verified vehicle switcher, booking bar, theme toggle, mobile hamburger menu, and confirmed **0 console errors**.
 
 #### Suite 18: `vanta` — Kaala Studio *(काला)*
 - **Domain**: Cinematic Audio Hardware, Planar Magnetic Driver Scrubbing Showcase
