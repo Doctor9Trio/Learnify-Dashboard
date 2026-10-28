@@ -1,10 +1,10 @@
 # Learnify Dashboard & Web Design Platform 🚀
 
-> **The premier collection of 20 production-grade, zero-dependency web dashboard templates, interactive web design showcases, and developer portfolios.**  
+> **An ever-growing collection of 20+ production-grade, zero-dependency web dashboard templates, interactive web design showcases, and developer portfolios.**  
 > Crafted with pixel-perfect precision, modern motion physics, responsive layouts, and zero-build web standards.
 
 [![Platform](https://img.shields.io/badge/Platform-Learnify-FF5722.svg?style=flat-square)](#)
-[![Templates](https://img.shields.io/badge/Templates-20%20Suites-22C55E.svg?style=flat-square)](#-template-ecosystem--directory)
+[![Templates](https://img.shields.io/badge/Templates-20%2B%20%26%20Growing-22C55E.svg?style=flat-square)](#-template-ecosystem--directory)
 [![Architecture](https://img.shields.io/badge/Architecture-Zero--Build%20Vanilla%20Web-38BDF8.svg?style=flat-square)](#-key-features--design-standards)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg?style=flat-square)](#-license--author)
 
@@ -12,13 +12,14 @@
 
 ## 🌟 Welcome to the Learnify Platform
 
-**Learnify** provides web designers, developers, agencies, and entrepreneurs with award-winning, battle-tested web dashboard templates, interactive brand showcases, and creative portfolios.
+**Learnify** provides web designers, developers, agencies, and entrepreneurs with award-winning, battle-tested web dashboard templates, interactive brand showcases, and creative portfolios. Designed from the ground up to be an **expanding, modular library**, new domain-specific dashboards and design systems are continually added.
 
 Instead of heavy framework lock-in, complex build toolchains, or generic component libraries, the **Learnify Dashboard Platform** delivers:
 - **Instant Previews**: 100% zero-build web standards — runs natively in any browser with zero compilation.
 - **State-of-the-Art Aesthetics**: Micro-interactions, GSAP physics animations, WebGL canvas shaders, and glassmorphism.
 - **Enterprise-Grade Depth**: Complete Single Page Applications (SPAs) with full routing, drawer sheets, ⌘K universal command palettes, and real-time interactive charts.
 - **100% Asset Integrity**: Zero broken images or 404s — all curated photography, bespoke product packaging, team portraits, video loops, and multi-resolution icons are bundled and verified.
+- **Modular & Extensible**: Seamlessly add new templates, dashboards, and portfolio components without touching existing suites.
 
 ---
 
@@ -32,9 +33,9 @@ http://localhost:3456/index.html
 
 ---
 
-## 📦 Template Ecosystem & Directory
+## 📦 Template Ecosystem & Directory (20+ & Growing)
 
-The Learnify Platform includes **20 specialized, industry-tailored dashboard and web design templates**:
+The Learnify Platform features an expanding ecosystem of **20+ specialized, industry-tailored dashboard and web design templates**, with new templates continually added:
 
 ### 📊 E-Commerce, Retail & Sales Intelligence
 
@@ -94,7 +95,34 @@ The Learnify Platform includes **20 specialized, industry-tailored dashboard and
 
 ---
 
-## 🚀 Quick Start Guide
+## 🚀 Adding New Templates & Future Roadmap
+
+The Learnify Platform is architected for continuous expansion. New templates can be created and integrated in three steps:
+
+1. **Scaffold the Suite Directory**:
+   Create a new folder (e.g. `learnify-saas/` or `studio-edtech/`) with standard web structure:
+   ```text
+   my-new-template/
+   ├── index.html       # Entry layout & metadata
+   ├── css/             # tokens.css, layout.css, components.css
+   ├── js/              # main.js, router.js, theme.js
+   └── photos/          # Bundled photography & media
+   ```
+2. **Define Design Tokens**:
+   Set CSS variables in `:root` for typography, primary/accent colors, surface cards, and border radii.
+3. **Register in Master Hub**:
+   Add a card entry in root `index.html` with category badge, feature bullet points, and link.
+
+### 🔮 Planned Upcoming Suites
+- 🤖 **GenAI Studio**: LLM prompt workbench, vector embeddings inspector & model fine-tuning canvas.
+- 💳 **SaaS Metric Cloud**: MRR/ARR analytics, churn forecasting, usage billing, and customer tier management.
+- 🎓 **EdTech LMS**: Interactive course builder, student progress tracking, live quiz engine, and certification dashboard.
+- 📡 **IoT Smart Telematics**: Real-time sensor stream, device fleet health, geo-map tracking, and anomaly alerts.
+- 🪙 **Web3 DeFi Terminal**: Liquidity pool matrix, yield analytics, wallet connecting, and token swap interface.
+
+---
+
+## 💻 Quick Start Guide
 
 ### 1. Clone the Repository
 ```bash
@@ -149,20 +177,14 @@ Learnify-Dashboard/
 └── vessa/                       # Rasayan Lab Luxury Formulation OS
 ```
 
-Each suite folder contains:
-- `index.html`: Entry point with semantic HTML structure and meta tags.
-- `css/`: Modular CSS styling (`tokens.css`, `layout.css`, `components.css`).
-- `js/`: Modular JavaScript logic and application state machines.
-- `photos/` or `images/`: High-resolution, zero-404 visual media assets.
-
 ---
 
 ## 🛠️ Customization & Integration
 
 Every template in the Learnify Platform is self-contained and modular:
-1. **Copy the Suite**: Extract any suite folder (e.g., `corbel/` or `tend/`) directly into your own project or repository.
-2. **Customize Design Tokens**: Update the CSS custom properties in `tokens.css` or the `:root` block to match your client's brand palette, fonts, and border radii.
-3. **Connect Your Backend**: Hook up your REST, GraphQL, or Supabase endpoints to the clean, documented data fetchers in the `js/` folder.
+1. **Extract Any Suite**: Copy any suite folder directly into your own project or repository.
+2. **Customize Tokens**: Update the CSS custom properties in `tokens.css` or `:root` to match your client's brand.
+3. **Connect Your Backend**: Hook up your REST, GraphQL, or Supabase endpoints to the clean, documented data fetchers in `js/`.
 
 ---
 
