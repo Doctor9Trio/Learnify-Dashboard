@@ -10,33 +10,54 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400..800&family=Inter:wght@400..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400..800&family=Inter:wght@400..700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0c1216;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --card-border: rgba(255, 255, 255, 0.1);
-      --card-hover: rgba(255, 255, 255, 0.08);
-      --text: #e8eef1;
-      --text-muted: #8d9aa3;
+      --bg: #090d10;
+      --bg-surface: #0f151b;
+      --card-bg: rgba(18, 25, 32, 0.65);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover-border: rgba(255, 87, 34, 0.4);
+      --card-hover-bg: rgba(24, 34, 44, 0.85);
+      --text: #f0f4f8;
+      --text-muted: #8b9baa;
+      --text-dim: #5c6c7b;
       --accent-coral: #FF5722;
+      --accent-coral-glow: rgba(255, 87, 34, 0.25);
       --accent-mint: #22C55E;
       --accent-sky: #38bdf8;
       --accent-amber: #f59e0b;
       --accent-purple: #a855f7;
+      --nav-bg: rgba(9, 13, 16, 0.82);
+      --pill-bg: rgba(255, 255, 255, 0.06);
+      --pill-border: rgba(255, 255, 255, 0.1);
       --font: 'Urbanist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
 
     [data-theme="light"] {
-      --bg: #f4f5f2;
-      --card-bg: rgba(255, 255, 255, 0.85);
+      --bg: #f5f7fa;
+      --bg-surface: #ffffff;
+      --card-bg: rgba(255, 255, 255, 0.88);
       --card-border: rgba(0, 0, 0, 0.08);
-      --card-hover: #ffffff;
-      --text: #14202a;
-      --text-muted: #5f6d78;
+      --card-hover-border: rgba(255, 87, 34, 0.5);
+      --card-hover-bg: #ffffff;
+      --text: #111827;
+      --text-muted: #4b5563;
+      --text-dim: #9ca3af;
+      --accent-coral: #ea580c;
+      --accent-coral-glow: rgba(234, 88, 12, 0.2);
+      --nav-bg: rgba(245, 247, 250, 0.85);
+      --pill-bg: rgba(0, 0, 0, 0.04);
+      --pill-border: rgba(0, 0, 0, 0.08);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: var(--bg);
       color: var(--text);
@@ -45,13 +66,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 60px 24px 100px;
       position: relative;
       overflow-x: hidden;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s;
     }
 
-    /* Ambient Mesh */
+    /* Ambient Background Glow */
     .mesh {
       position: fixed;
       inset: 0;
@@ -62,62 +82,405 @@
     .mesh i {
       position: absolute;
       border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.4;
+      filter: blur(100px);
+      opacity: 0.35;
+      animation: float 20s infinite alternate ease-in-out;
     }
-    .mesh__a { width: 50vmax; height: 50vmax; top: -20vmax; left: -10vmax; background: radial-gradient(closest-side, #38bdf840, transparent); }
-    .mesh__b { width: 60vmax; height: 60vmax; bottom: -20vmax; right: -15vmax; background: radial-gradient(closest-side, #22c55e30, transparent); }
-    .mesh__c { width: 40vmax; height: 40vmax; top: 30%; right: 20%; background: radial-gradient(closest-side, #ff572225, transparent); }
+    .mesh__a { width: 55vmax; height: 55vmax; top: -15vmax; left: -10vmax; background: radial-gradient(circle, #38bdf835, transparent 70%); }
+    .mesh__b { width: 65vmax; height: 65vmax; bottom: -20vmax; right: -15vmax; background: radial-gradient(circle, #22c55e25, transparent 70%); animation-delay: -7s; }
+    .mesh__c { width: 45vmax; height: 45vmax; top: 35%; right: 15%; background: radial-gradient(circle, #ff572225, transparent 70%); animation-delay: -14s; }
 
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(30px, 40px) scale(1.08); }
+    }
+
+    /* Top Sticky Navigation Bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--card-border);
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .nav-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo-tile {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: #121316;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-badge-version {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 6px;
+      background: var(--accent-coral-glow);
+      color: var(--accent-coral);
+      border: 1px solid rgba(255, 87, 34, 0.3);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--text-muted);
+      background: transparent;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover {
+      color: var(--text);
+      background: var(--pill-bg);
+      border-color: var(--pill-border);
+    }
+
+    .nav-btn-highlight {
+      background: var(--pill-bg);
+      border-color: var(--pill-border);
+      color: var(--text);
+    }
+
+    .nav-btn-highlight:hover {
+      border-color: var(--accent-coral);
+      color: var(--accent-coral);
+    }
+
+    /* Main Container */
     .container {
-      max-width: 1280px;
+      max-width: 1320px;
       width: 100%;
       position: relative;
       z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 40px 24px 100px;
       gap: 40px;
     }
 
-    .header {
+    /* Hero Section */
+    .hero {
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
-      max-width: 780px;
+      gap: 18px;
+      max-width: 860px;
+      margin-top: 20px;
     }
 
-    .brand-badge {
+    .announcement-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 14px;
+      padding: 6px 16px;
       border-radius: 999px;
-      background: rgba(255, 87, 34, 0.12);
-      color: var(--accent-coral);
-      font-size: 13px;
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      color: var(--text);
+      font-size: 12.5px;
       font-weight: 700;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      border: 1px solid rgba(255, 87, 34, 0.25);
+      letter-spacing: 0.02em;
+      transition: border-color 0.2s;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-coral);
+      box-shadow: 0 0 10px var(--accent-coral);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
     }
 
     .title {
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
+      font-size: clamp(34px, 5.5vw, 56px);
+      font-weight: 850;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+    }
+
+    .title-gradient {
+      background: linear-gradient(135deg, var(--text) 30%, var(--accent-coral) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .subtitle {
-      font-size: 16px;
+      font-size: clamp(15px, 2vw, 17.5px);
       color: var(--text-muted);
       line-height: 1.6;
+      max-width: 720px;
     }
 
-    /* Grid */
+    /* KPI Stats Ribbon */
+    .stats-ribbon {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 100%;
+      max-width: 980px;
+      margin: 10px 0;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 4px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-number {
+      font-size: 26px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      letter-spacing: -0.03em;
+      color: var(--text);
+    }
+
+    .stat-number.coral { color: var(--accent-coral); }
+    .stat-number.mint  { color: var(--accent-mint); }
+    .stat-number.sky   { color: var(--accent-sky); }
+    .stat-number.amber { color: var(--accent-amber); }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Filter & Search Bar */
+    .control-panel {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+      top: 72px;
+      z-index: 90;
+      padding: 12px 0;
+      background: var(--bg);
+      transition: background 0.3s;
+    }
+
+    .search-wrapper {
+      width: 100%;
+      max-width: 680px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      color: var(--text-dim);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 15px 50px 15px 48px;
+      border-radius: 16px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      font-size: 15px;
+      font-family: var(--font);
+      backdrop-filter: blur(16px);
+      outline: none;
+      transition: all 0.2s;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-coral);
+      box-shadow: 0 0 0 3px var(--accent-coral-glow), 0 12px 32px rgba(0, 0, 0, 0.2);
+      background: var(--bg-surface);
+    }
+
+    .search-shortcut {
+      position: absolute;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .kbd {
+      padding: 3px 7px;
+      border-radius: 6px;
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      color: var(--text-muted);
+      font-size: 11px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    .btn-clear-search {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 8px;
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .btn-clear-search:hover { color: var(--text); }
+
+    /* Category Filter Pills */
+    .filter-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .pill-btn {
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 600;
+      font-family: var(--font);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .pill-btn:hover {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .pill-btn.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+      font-weight: 700;
+    }
+
+    .pill-count {
+      font-size: 11px;
+      opacity: 0.75;
+      font-family: var(--font-mono);
+    }
+
+    /* Results Header Bar */
+    .results-bar {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4px;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .results-count-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .results-count-badge strong {
+      color: var(--text);
+    }
+
+    /* Template Cards Grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -129,29 +492,47 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      padding: 32px 28px;
+      padding: 30px 26px;
       text-decoration: none;
       color: inherit;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s, border-color 0.25s, background 0.25s;
       position: relative;
       overflow: hidden;
     }
 
+    .suite-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent-coral), transparent);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
     .suite-card:hover {
       transform: translateY(-6px);
-      background: var(--card-hover);
-      border-color: rgba(255, 255, 255, 0.25);
-      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.5);
+      background: var(--card-hover-bg);
+      border-color: var(--card-hover-border);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.45);
+    }
+
+    .suite-card:hover::before {
+      opacity: 1;
     }
 
     .card-top {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+      margin-bottom: 16px;
     }
 
     .suite-icon {
@@ -163,28 +544,38 @@
       justify-content: center;
       font-weight: 800;
       font-size: 22px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      flex-shrink: 0;
     }
 
-    .icon-vanijya { background: #14202a; color: #fff; border: 1px solid rgba(255, 255, 255, 0.15); }
-    .icon-samvad  { background: linear-gradient(135deg, #10b981, #059669); color: #fff; }
-    .icon-kutumb  { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; }
-    .icon-rasayan { background: linear-gradient(135deg, #ec4899, #be185d); color: #fff; }
-    .icon-pangat  { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
-    .icon-dantika { background: linear-gradient(135deg, #06b6d4, #0891b2); color: #fff; }
-    .icon-karkhana { background: linear-gradient(135deg, #0284c7, #0369a1); color: #fff; }
+    /* Icon Gradients */
+    .icon-vanijya   { background: #14202a; color: #fff; border: 1px solid rgba(255, 255, 255, 0.15); }
+    .icon-samvad    { background: linear-gradient(135deg, #10b981, #059669); color: #fff; }
+    .icon-kutumb    { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: #fff; }
+    .icon-rasayan   { background: linear-gradient(135deg, #ec4899, #be185d); color: #fff; }
+    .icon-pangat    { background: linear-gradient(135deg, #f59e0b, #d97706); color: #fff; }
+    .icon-dantika   { background: linear-gradient(135deg, #06b6d4, #0891b2); color: #fff; }
+    .icon-karkhana  { background: linear-gradient(135deg, #0284c7, #0369a1); color: #fff; }
     .icon-parivahan { background: linear-gradient(135deg, #14b8a6, #0f766e); color: #fff; }
-    .icon-karigar { background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: #fff; }
+    .icon-karigar   { background: linear-gradient(135deg, #8b5cf6, #6d28d9); color: #fff; }
     .icon-bahikhata { background: linear-gradient(135deg, #e11d48, #be123c); color: #fff; }
-    .icon-srijan { background: linear-gradient(135deg, #f59e0b, #b45309); color: #fff; }
-    .icon-bhoomi { background: linear-gradient(135deg, #15803d, #14532d); color: #fff; }
-    .icon-gati { background: linear-gradient(135deg, #0ea5e9, #2563eb); color: #fff; }
-    .icon-griha { background: linear-gradient(135deg, #d97706, #92400e); color: #fff; }
-    .icon-daksh { background: linear-gradient(135deg, #6366f1, #4f46e5); color: #fff; }
-    .icon-yantra { background: linear-gradient(135deg, #ef4444, #b91c1c); color: #fff; }
-    .icon-yatra { background: linear-gradient(135deg, #38bdf8, #0284c7); color: #fff; }
-    .icon-kaala { background: linear-gradient(135deg, #27272a, #09090b); color: #f4f4f5; }
-    .icon-mishri { background: linear-gradient(135deg, #78350f, #451a03); color: #fde68a; }
-    .icon-aarogya { background: linear-gradient(135deg, #059669, #047857); color: #fff; }
+    .icon-srijan    { background: linear-gradient(135deg, #f59e0b, #b45309); color: #fff; }
+    .icon-bhoomi    { background: linear-gradient(135deg, #15803d, #14532d); color: #fff; }
+    .icon-gati      { background: linear-gradient(135deg, #0ea5e9, #2563eb); color: #fff; }
+    .icon-griha     { background: linear-gradient(135deg, #d97706, #92400e); color: #fff; }
+    .icon-daksh     { background: linear-gradient(135deg, #6366f1, #4f46e5); color: #fff; }
+    .icon-yantra    { background: linear-gradient(135deg, #ef4444, #b91c1c); color: #fff; }
+    .icon-yatra     { background: linear-gradient(135deg, #38bdf8, #0284c7); color: #fff; }
+    .icon-kaala     { background: linear-gradient(135deg, #27272a, #09090b); color: #f4f4f5; }
+    .icon-mishri    { background: linear-gradient(135deg, #78350f, #451a03); color: #fde68a; }
+    .icon-aarogya   { background: linear-gradient(135deg, #059669, #047857); color: #fff; }
+
+    .tag-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
 
     .suite-tag {
       font-size: 11px;
@@ -193,25 +584,34 @@
       letter-spacing: 0.05em;
       padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.1);
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
       color: var(--text-muted);
+    }
+
+    .lang-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-coral);
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--accent-coral-glow);
     }
 
     .suite-name {
       font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-top: 16px;
-      margin-bottom: 6px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 4px;
+      color: var(--text);
     }
 
     .suite-alias {
-      font-size: 12px;
-      font-weight: 600;
+      font-size: 12.5px;
+      font-weight: 700;
       color: var(--accent-coral);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+      margin-bottom: 10px;
     }
 
     .suite-desc {
@@ -226,7 +626,6 @@
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-top: 10px;
       margin-bottom: 24px;
     }
 
@@ -235,6 +634,7 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      color: var(--text);
     }
 
     .feature-dot {
@@ -242,35 +642,212 @@
       height: 6px;
       border-radius: 50%;
       background: var(--accent-coral);
+      flex-shrink: 0;
     }
-    .feature-dot.mint { background: var(--accent-mint); }
-    .feature-dot.sky  { background: var(--accent-sky); }
-    .feature-dot.amber { background: var(--accent-amber); }
+    .feature-dot.mint   { background: var(--accent-mint); }
+    .feature-dot.sky    { background: var(--accent-sky); }
+    .feature-dot.amber  { background: var(--accent-amber); }
     .feature-dot.purple { background: var(--accent-purple); }
 
+    /* Card Action Footer */
+    .card-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+    }
+
     .btn-launch {
+      flex: 1;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 14px 20px;
-      border-radius: 14px;
+      padding: 13px 18px;
+      border-radius: 12px;
       font-size: 14px;
       font-weight: 700;
       background: var(--text);
       color: var(--bg);
       text-decoration: none;
       transition: background 0.2s, transform 0.15s, color 0.2s;
-      margin-top: auto;
     }
 
     .suite-card:hover .btn-launch {
       background: var(--accent-coral);
       color: #ffffff;
-      transform: translateX(4px);
+      transform: translateX(3px);
     }
 
-    .theme-switcher {
+    .btn-copy-url {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+
+    .btn-copy-url:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--text);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Roadmap Expansion Card */
+    .roadmap-card {
+      border: 2px dashed rgba(255, 87, 34, 0.45) !important;
+      background: rgba(255, 87, 34, 0.04) !important;
+    }
+
+    .roadmap-card:hover {
+      border-color: var(--accent-coral) !important;
+      background: rgba(255, 87, 34, 0.08) !important;
+    }
+
+    /* Empty Search State */
+    .empty-state {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+      width: 100%;
+      gap: 16px;
+    }
+
+    .empty-icon {
+      font-size: 48px;
+      opacity: 0.6;
+    }
+
+    .empty-title {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .empty-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 420px;
+    }
+
+    .btn-reset-filter {
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--bg);
+      font-weight: 700;
+      font-size: 13.5px;
+      border: none;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+
+    /* Modern Footer */
+    .footer {
+      width: 100%;
+      border-top: 1px solid var(--card-border);
+      padding: 40px 24px;
+      margin-top: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 1320px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 13.5px;
+    }
+
+    .footer-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-link:hover { color: var(--accent-coral); }
+
+    .btn-back-to-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      border-radius: 10px;
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-back-to-top:hover {
+      border-color: var(--accent-coral);
+      color: var(--accent-coral);
+    }
+
+    /* Floating Toast */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      opacity: 0;
+      background: #121316;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      pointer-events: none;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Floating theme switcher button */
+    .theme-switcher-floating {
       position: fixed;
       bottom: 24px;
       right: 24px;
@@ -282,33 +859,190 @@
       border-radius: 999px;
       cursor: pointer;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       backdrop-filter: blur(12px);
-      transition: background 0.2s;
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s;
+    }
+
+    .theme-switcher-floating:hover {
+      transform: scale(1.05);
+      border-color: var(--accent-coral);
+    }
+
+    /* Responsive Queries */
+    @media (max-width: 768px) {
+      .stats-ribbon {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .control-panel {
+        top: 64px;
+      }
+      .search-shortcut {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Ambient Motion Mesh -->
   <div class="mesh" aria-hidden="true">
     <i class="mesh__a"></i>
     <i class="mesh__b"></i>
     <i class="mesh__c"></i>
   </div>
 
-  <div class="container">
-    <header class="header">
-      <div class="brand-badge">Learnify Dashboard Platform • 20+ Templates &amp; Growing</div>
-      <h1 class="title">Modern Web Dashboards &amp; Design Templates</h1>
-      <p class="subtitle">An ever-growing collection of 20+ production-grade, zero-dependency web dashboard templates, interactive design showcases, and developer portfolios built for modern web design.</p>
-    </header>
+  <!-- Sticky Glassmorphic Navbar -->
+  <header class="navbar" id="top">
+    <div class="nav-inner">
+      <a href="#top" class="brand-link" aria-label="Learnify Platform Home">
+        <div class="brand-logo-tile">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
+            <path d="M9 7h4v14h10v4H9V7z" fill="#3B82F6"/>
+            <circle cx="23" cy="9" r="2.5" fill="#10B981"/>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-name">Learnify <span class="brand-badge-version">v2.5 Pro</span></span>
+        </div>
+      </a>
 
-    <div class="grid">
+      <nav class="nav-links">
+        <button class="nav-btn" onclick="toggleTheme()" id="nav-theme-btn" aria-label="Toggle theme">
+          <span id="nav-theme-icon">🌙</span> Dark Mode
+        </button>
+        <a href="https://github.com/Doctor9Trio/Learnify-Dashboard" target="_blank" rel="noopener noreferrer" class="nav-btn nav-btn-highlight">
+          ⭐ GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="announcement-pill">
+        <span class="pulse-dot"></span>
+        <span>Learnify Platform • 20+ Production Suites &amp; Growing</span>
+      </div>
+      <h1 class="title">
+        The Complete Suite of Modern <br/>
+        <span class="title-gradient">Web Dashboards &amp; Design Systems</span>
+      </h1>
+      <p class="subtitle">
+        An ever-growing, battle-tested collection of 20+ zero-dependency web dashboard templates, interactive design showcases, and developer portfolios. Engineered with zero-build web standards and 100% verified visual media assets.
+      </p>
+    </section>
+
+    <!-- Platform Stats Ribbon -->
+    <div class="stats-ribbon">
+      <div class="stat-card">
+        <span class="stat-number coral">20+</span>
+        <span class="stat-label">Production Templates</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number sky">120+</span>
+        <span class="stat-label">Full SPA Views</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number mint">0</span>
+        <span class="stat-label">Build Dependencies</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number amber">100%</span>
+        <span class="stat-label">Offline Media Verified</span>
+      </div>
+    </div>
+
+    <!-- Live Search & Category Controls -->
+    <div class="control-panel">
+      <div class="search-wrapper">
+        <span class="search-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </span>
+        <input 
+          type="text" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="Search 20+ dashboards, domains, features (e.g. retail, clinic, 3d, pos, crm)..." 
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div class="search-shortcut">
+          <span class="kbd">/</span>
+          <button class="btn-clear-search" id="clear-search-btn" title="Clear search">✕</button>
+        </div>
+      </div>
+
+      <div class="filter-pills" id="filter-pills">
+        <button class="pill-btn active" data-filter="all">
+          <span>All Templates</span>
+          <span class="pill-count">20</span>
+        </button>
+        <button class="pill-btn" data-filter="retail">
+          <span>🛍️ Retail &amp; POS</span>
+          <span class="pill-count">3</span>
+        </button>
+        <button class="pill-btn" data-filter="health">
+          <span>🏥 Clinical &amp; Health</span>
+          <span class="pill-count">3</span>
+        </button>
+        <button class="pill-btn" data-filter="auto">
+          <span>🏎️ Auto &amp; Mobility</span>
+          <span class="pill-count">2</span>
+        </button>
+        <button class="pill-btn" data-filter="social">
+          <span>📱 Social &amp; Fintech</span>
+          <span class="pill-count">2</span>
+        </button>
+        <button class="pill-btn" data-filter="erp">
+          <span>🏭 ERP &amp; Logistics</span>
+          <span class="pill-count">3</span>
+        </button>
+        <button class="pill-btn" data-filter="creative">
+          <span>✨ Creative &amp; 3D</span>
+          <span class="pill-count">7</span>
+        </button>
+      </div>
+
+      <div class="results-bar">
+        <span class="results-count-badge" id="results-count">
+          Showing <strong>20</strong> of 20 templates
+        </span>
+      </div>
+    </div>
+
+    <!-- Empty Search State -->
+    <div class="empty-state" id="empty-state">
+      <div class="empty-icon">🔍</div>
+      <h3 class="empty-title">No templates found</h3>
+      <p class="empty-desc" id="empty-desc">We couldn't find any templates matching your search query. Try searching for "retail", "clinic", "crm", or "auto".</p>
+      <button class="btn-reset-filter" onclick="resetSearch()">Reset Search &amp; Filters</button>
+    </div>
+
+    <!-- Template Cards Grid -->
+    <div class="grid" id="template-grid">
+
       <!-- 1. Vanijya Retail (वाणिज्य) -->
-      <a href="./vanijya/#/dashboard" class="suite-card">
+      <article class="suite-card" data-category="retail" data-keywords="vanijya retail omnichannel pos sales analytics products orders crm inventory health score gauge dual-year revenue chart heatmap corbel">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-vanijya">V</div>
-            <span class="suite-tag">Retail &amp; POS</span>
+            <div class="tag-group">
+              <span class="suite-tag">Retail &amp; POS</span>
+              <span class="lang-badge">वाणिज्य</span>
+            </div>
           </div>
           <h2 class="suite-name">Vanijya Retail</h2>
           <div class="suite-alias">Omnichannel Sales &amp; Retail POS</div>
@@ -319,19 +1053,27 @@
             <li class="feature-item"><span class="feature-dot"></span> 4 themes (Mono, Pastel, Ocean, Sage)</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Vanijya Retail →
+        <div class="card-actions">
+          <a href="./vanijya/#/dashboard" class="btn-launch">
+            Launch Vanijya Retail →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./vanijya/#/dashboard', 'Vanijya Retail')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 2. Samvad Social (संवाद) -->
-      <a href="./samvad/#/overview" class="suite-card">
+      <article class="suite-card" data-category="social" data-keywords="samvad social media publishing 8-network scheduler inbox dms approvals instagram facebook linkedin tiktok murmura">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-samvad">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15.5c2.2-3.6 4.4-3.6 6.6 0s4.4 3.6 6.6 0"/><path d="M6.5 10c1.6-2.4 3.2-2.4 4.8 0s3.2 2.4 4.8 0"/><circle cx="19.2" cy="8.2" r="1.3" fill="currentColor"/></svg>
             </div>
-            <span class="suite-tag">Social &amp; Publishing</span>
+            <div class="tag-group">
+              <span class="suite-tag">Social &amp; Publishing</span>
+              <span class="lang-badge">संवाद</span>
+            </div>
           </div>
           <h2 class="suite-name">Samvad Social</h2>
           <div class="suite-alias">8-Network Social Publishing Suite</div>
@@ -342,19 +1084,27 @@
             <li class="feature-item"><span class="feature-dot mint"></span> Floating quick-action dock &amp; approvals</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Samvad Social →
+        <div class="card-actions">
+          <a href="./samvad/#/overview" class="btn-launch">
+            Launch Samvad Social →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./samvad/#/overview', 'Samvad Social')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 3. Kutumb Money (कुटुम्ब) -->
-      <a href="./kutumb/#/home" class="suite-card">
+      <article class="suite-card" data-category="social" data-keywords="kutumb money family wealth shared finance card wallet budget pots allowance kinby">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-kutumb">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5v15"/><path d="M7.5 12.5c3.4 0 5.6-2.6 6.4-6.5"/><path d="M10.6 12.2c2.3.4 4.3 2.6 5.4 7.3"/><circle cx="17" cy="5.6" r="1.6" fill="currentColor"/></svg>
             </div>
-            <span class="suite-tag">Family Wealth</span>
+            <div class="tag-group">
+              <span class="suite-tag">Family Wealth</span>
+              <span class="lang-badge">कुटुम्ब</span>
+            </div>
           </div>
           <h2 class="suite-name">Kutumb Money</h2>
           <div class="suite-alias">Shared Family Finance &amp; Wallet</div>
@@ -365,19 +1115,27 @@
             <li class="feature-item"><span class="feature-dot sky"></span> Collapsible sidebar rail &amp; household time</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Kutumb Money →
+        <div class="card-actions">
+          <a href="./kutumb/#/home" class="btn-launch">
+            Launch Kutumb Money →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./kutumb/#/home', 'Kutumb Money')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 4. Rasayan Lab (रसायन) -->
-      <a href="./rasayan/#/dashboard/overview" class="suite-card">
+      <article class="suite-card" data-category="health" data-keywords="rasayan lab luxury skincare formulation batch qa warehouse inventory expiry fulfilment vessa">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-rasayan">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3.5h8M9 3.5v3.2c0 .7-.3 1.3-.8 1.8A6.6 6.6 0 0 0 6 13.3v4.2a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-4.2a6.6 6.6 0 0 0-2.2-4.8c-.5-.5-.8-1.1-.8-1.8V3.5"/><path d="M6.2 13.5c2-1 3.9-1 5.8 0s3.8 1 5.8 0"/></svg>
             </div>
-            <span class="suite-tag">Lab &amp; Inventory</span>
+            <div class="tag-group">
+              <span class="suite-tag">Lab &amp; Inventory</span>
+              <span class="lang-badge">रसायन</span>
+            </div>
           </div>
           <h2 class="suite-name">Rasayan Lab</h2>
           <div class="suite-alias">Luxury Formulation &amp; Supply Chain Lab</div>
@@ -388,19 +1146,27 @@
             <li class="feature-item"><span class="feature-dot purple"></span> Multi-location warehouse transfers</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Rasayan Lab →
+        <div class="card-actions">
+          <a href="./rasayan/#/dashboard/overview" class="btn-launch">
+            Launch Rasayan Lab →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./rasayan/#/dashboard/overview', 'Rasayan Lab')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 5. Pangat POS (पंगत) -->
-      <a href="./pangat/#/overview" class="suite-card">
+      <article class="suite-card" data-category="retail" data-keywords="pangat pos restaurant dining floor kitchen order ticket kot tavola menu table matrix waitlist food cost">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-pangat">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 8h15"/><path d="M12 8v11.5"/><path d="M7.5 4.5h9"/></svg>
             </div>
-            <span class="suite-tag">Hospitality &amp; Dining</span>
+            <div class="tag-group">
+              <span class="suite-tag">Hospitality &amp; Dining</span>
+              <span class="lang-badge">पंगत</span>
+            </div>
           </div>
           <h2 class="suite-name">Pangat POS</h2>
           <div class="suite-alias">Restaurant Management &amp; Kitchen Board</div>
@@ -411,19 +1177,27 @@
             <li class="feature-item"><span class="feature-dot amber"></span> Food cost engineering &amp; staff rota</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Pangat POS →
+        <div class="card-actions">
+          <a href="./pangat/#/overview" class="btn-launch">
+            Launch Pangat POS →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./pangat/#/overview', 'Pangat POS')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 6. Dantika Clinic (दन्तिका) -->
-      <a href="./dantika/#/today" class="suite-card">
+      <article class="suite-card" data-category="health" data-keywords="dantika clinic dental practice odontogram 32-tooth chart imaging ivora chair appointments treatment plans">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-dantika">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.2 4.2c1.9-.9 3.3.2 4.8.2s2.9-1.1 4.8-.2c2.3 1.1 2.6 4.3 1.8 7.1-.6 2.1-1.1 4.3-1.4 6.6-.2 1.4-.8 2.4-1.7 2.4-1.2 0-1.5-1.6-1.8-3.4-.2-1.3-.7-2.3-1.7-2.3s-1.5 1-1.7 2.3c-.3 1.8-.6 3.4-1.8 3.4-.9 0-1.5-1-1.7-2.4-.3-2.3-.8-4.5-1.4-6.6-.8-2.8-.5-6 1.8-7.1Z"/><path d="M9.5 7.6c.8.4 1.6.6 2.5.6"/></svg>
             </div>
-            <span class="suite-tag">Clinical Practice</span>
+            <div class="tag-group">
+              <span class="suite-tag">Clinical Practice</span>
+              <span class="lang-badge">दन्तिका</span>
+            </div>
           </div>
           <h2 class="suite-name">Dantika Clinic</h2>
           <div class="suite-alias">Dental Practice OS &amp; Odontogram Chart</div>
@@ -434,295 +1208,399 @@
             <li class="feature-item"><span class="feature-dot mint"></span> Lab cases board &amp; insurance billing</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Dantika Clinic →
+        <div class="card-actions">
+          <a href="./dantika/#/today" class="btn-launch">
+            Launch Dantika Clinic →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./dantika/#/today', 'Dantika Clinic')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 7. Karkhana ERP (कारख़ाना) -->
-      <a href="./karkhana/#/dashboard" class="suite-card">
+      <article class="suite-card" data-category="erp" data-keywords="karkhana erp workshop manufacturing gantt production scheduler cadra stock till work orders capacity">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-karkhana">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="15.5" r="4"/><circle cx="17" cy="15.5" r="4"/><path d="m7 15.5 3.5-7h5l1.5 7M10.5 8.5 13 15.5h-6M9 6.5h3"/></svg>
             </div>
-            <span class="suite-tag">Manufacturing &amp; ERP</span>
+            <div class="tag-group">
+              <span class="suite-tag">Manufacturing &amp; ERP</span>
+              <span class="lang-badge">कारख़ाना</span>
+            </div>
           </div>
           <h2 class="suite-name">Karkhana ERP</h2>
           <div class="suite-alias">Workshop &amp; Production Scheduling ERP</div>
           <p class="suite-desc">Drag-and-drop production schedule, linked operations, work orders, capacity strips, showroom till POS, multi-warehouse stock, and delivery routes.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot sky"></span> Interactive Gantt production scheduler</li>
-            <li class="feature-item"><span class="feature-dot sky"></span> Multi-location warehouses &amp; vendor bids</li>
-            <li class="feature-item"><span class="feature-dot sky"></span> Showroom till POS &amp; general ledger</li>
+            <li class="feature-item"><span class="feature-dot sky"></span> Work order routing &amp; capacity analysis</li>
+            <li class="feature-item"><span class="feature-dot sky"></span> Multi-warehouse stock &amp; dispatch till</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Karkhana ERP →
+        <div class="card-actions">
+          <a href="./karkhana/#/dashboard" class="btn-launch">
+            Launch Karkhana ERP →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./karkhana/#/dashboard', 'Karkhana ERP')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 8. Parivahan OS (परिवहन) -->
-      <a href="./parivahan/#/overview" class="suite-card">
+      <article class="suite-card" data-category="erp" data-keywords="parivahan os freight logistics node automation flow builder noria customs tracking shipment runs">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-parivahan">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7.6"/><circle cx="12" cy="12" r="2.2"/><path d="M12 4.4v5.4M12 14.2v5.4M4.4 12h5.4M14.2 12h5.4M6.6 6.6l3.8 3.8M13.6 13.6l3.8 3.8M17.4 6.6l-3.8 3.8M10.4 13.6l-3.8 3.8"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><circle cx="18" cy="6" r="3"/><path d="M6 9v12M18 9v3a3 3 0 0 1-3 3H6"/></svg>
             </div>
-            <span class="suite-tag">Logistics &amp; Automation</span>
+            <div class="tag-group">
+              <span class="suite-tag">Logistics &amp; Automation</span>
+              <span class="lang-badge">परिवहन</span>
+            </div>
           </div>
           <h2 class="suite-name">Parivahan OS</h2>
           <div class="suite-alias">Freight Forwarding &amp; Flow Automation</div>
           <p class="suite-desc">Automated freight back-office: node-canvas flow builder, AI copilot flow generation, run waterfalls, customs pre-check, and detention audit rules.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot mint"></span> Interactive node-canvas flow builder</li>
-            <li class="feature-item"><span class="feature-dot mint"></span> AI copilot natural language workflows</li>
-            <li class="feature-item"><span class="feature-dot mint"></span> Step run waterfalls &amp; connected apps</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> Live run waterfall telemetry &amp; logs</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> AI copilot natural-language flow editor</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Parivahan OS →
+        <div class="card-actions">
+          <a href="./parivahan/#/overview" class="btn-launch">
+            Launch Parivahan OS →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./parivahan/#/overview', 'Parivahan OS')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 9. Karigar Service (कारीगर) -->
-      <a href="./karigar/#/cases" class="suite-card">
+      <article class="suite-card" data-category="erp" data-keywords="karigar service support desk crm kanban case pipeline mender sla client journey">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-karigar">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
             </div>
-            <span class="suite-tag">Support &amp; Field CRM</span>
+            <div class="tag-group">
+              <span class="suite-tag">Support &amp; Field CRM</span>
+              <span class="lang-badge">कारीगर</span>
+            </div>
           </div>
           <h2 class="suite-name">Karigar Service</h2>
           <div class="suite-alias">Support-Desk CRM &amp; Service Pipeline</div>
           <p class="suite-desc">Drag-and-drop case pipeline, active cases with hours &amp; budgets, 4-stage client journeys, and real-time SLA breach &amp; driver insights.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot purple"></span> Drag-and-drop support case pipeline</li>
-            <li class="feature-item"><span class="feature-dot purple"></span> Visual 4-stage client journey timeline</li>
-            <li class="feature-item"><span class="feature-dot purple"></span> Case driver &amp; SLA breach telemetry</li>
+            <li class="feature-item"><span class="feature-dot purple"></span> Client journey timeline &amp; SLA alerts</li>
+            <li class="feature-item"><span class="feature-dot purple"></span> Work-order billable hours &amp; profitability</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Karigar Service →
+        <div class="card-actions">
+          <a href="./karigar/#/cases" class="btn-launch">
+            Launch Karigar Service →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./karigar/#/cases', 'Karigar Service')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 10. Bahi Khata (बही खाता) -->
-      <a href="./bahikhata/#overview" class="suite-card">
+      <article class="suite-card" data-category="retail" data-keywords="bahi khata retail pos ledger stock reorder barcode ledge purchasing register fast keys">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-bahikhata">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5h16l-1.2 10a2 2 0 0 1-2 1.8H7.2a2 2 0 0 1-2-1.8Z"/><path d="M8.5 8.5V7a3.5 3.5 0 0 1 7 0v1.5"/><path d="M9.5 13.5h5"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10M6 10h10M6 14h6"/></svg>
             </div>
-            <span class="suite-tag">POS &amp; Retail Ledger</span>
+            <div class="tag-group">
+              <span class="suite-tag">POS &amp; Retail Ledger</span>
+              <span class="lang-badge">बही खाता</span>
+            </div>
           </div>
           <h2 class="suite-name">Bahi Khata</h2>
           <div class="suite-alias">Shop POS Register &amp; Reorder Ledger</div>
           <p class="suite-desc">Fast shop POS register, stock levels with automated reorder alerts, purchase orders, vendor lead-times, and daily sales numbers in one unified screen.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot coral"></span> Fast checkout POS register with quick keys</li>
-            <li class="feature-item"><span class="feature-dot coral"></span> Par stock levels &amp; automated reorder alerts</li>
-            <li class="feature-item"><span class="feature-dot coral"></span> Supplier purchase orders &amp; delivery tracker</li>
+            <li class="feature-item"><span class="feature-dot coral"></span> Automated purchase reorder thresholds</li>
+            <li class="feature-item"><span class="feature-dot coral"></span> Supplier lead-time &amp; cost variance stats</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Bahi Khata →
+        <div class="card-actions">
+          <a href="./bahikhata/#overview" class="btn-launch">
+            Launch Bahi Khata →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./bahikhata/#overview', 'Bahi Khata')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
-      <!-- 11. Srijan Studio -->
-      <a href="./srijan/" class="suite-card">
+      <!-- 11. Srijan Studio (सृजन) -->
+      <article class="suite-card" data-category="creative" data-keywords="srijan studio fine art gallery original marketplace collector gesso artists fan card exhibition">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-srijan">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 4.5 5 5-7.5 7.5-5-5zM7 12l-2.5 2.5c-1.2 1.2-1 3.5-2 5 1.5-1 3.8-.8 5-2L10 15"/><circle cx="8" cy="11" r="1.2" fill="currentColor"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z"/></svg>
             </div>
-            <span class="suite-tag">Art &amp; Creator Studio</span>
+            <div class="tag-group">
+              <span class="suite-tag">Art &amp; Creator Studio</span>
+              <span class="lang-badge">सृजन</span>
+            </div>
           </div>
           <h2 class="suite-name">Srijan Studio</h2>
           <div class="suite-alias">Original Art Marketplace &amp; Collector Studio</div>
           <p class="suite-desc">Dynamic fan-card hero, original art marketplace, video studio sessions, collector journey timeline, and transparent membership pricing.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot amber"></span> Fan-spread original artwork exhibition</li>
-            <li class="feature-item"><span class="feature-dot amber"></span> Interactive artist studio video sessions</li>
-            <li class="feature-item"><span class="feature-dot amber"></span> Collector gallery &amp; membership management</li>
+            <li class="feature-item"><span class="feature-dot amber"></span> Studio practice video &amp; collector timeline</li>
+            <li class="feature-item"><span class="feature-dot amber"></span> Transparent collector patron tiers</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Srijan Studio →
+        <div class="card-actions">
+          <a href="./srijan/" class="btn-launch">
+            Launch Srijan Studio →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./srijan/', 'Srijan Studio')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 12. Bhoomi Outdoors (भूमि) -->
-      <a href="./bhoomi/" class="suite-card">
+      <article class="suite-card" data-category="creative" data-keywords="bhoomi outdoors trail technical running apparel storefront 10-page solum e-commerce lookbook">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-bhoomi">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
             </div>
-            <span class="suite-tag">Trail &amp; Technical Apparel</span>
+            <div class="tag-group">
+              <span class="suite-tag">Trail &amp; Technical Apparel</span>
+              <span class="lang-badge">भूमि</span>
+            </div>
           </div>
           <h2 class="suite-name">Bhoomi Outdoors</h2>
           <div class="suite-alias">Trail Running &amp; Outdoor Apparel Storefront</div>
           <p class="suite-desc">All-terrain technical running apparel, scrubbable video hero, spring lookbook, gender &amp; terrain product filters, and full 10-page shopping flow.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot mint"></span> 10-page e-commerce storefront with cart &amp; checkout</li>
-            <li class="feature-item"><span class="feature-dot mint"></span> Interactive scrubbable video trail runner</li>
-            <li class="feature-item"><span class="feature-dot mint"></span> Technical weather-proof gear &amp; merchant admin till</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> Interactive runner video scrub timeline</li>
+            <li class="feature-item"><span class="feature-dot mint"></span> Merchant inventory till &amp; back-office register</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Bhoomi Outdoors →
+        <div class="card-actions">
+          <a href="./bhoomi/" class="btn-launch">
+            Launch Bhoomi Outdoors →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./bhoomi/', 'Bhoomi Outdoors')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
-      <!-- 13. Gati Fitness -->
-      <a href="./gati/#/" class="suite-card">
+      <!-- 13. Gati Fitness (गति) -->
+      <article class="suite-card" data-category="creative" data-keywords="gati fitness athletic performance telemetry activity rings sleep biometric stride workout heart zone">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-gati">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3 5 13.5h6.5L10.5 21 19 10.5h-6.5L13 3Z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
             </div>
-            <span class="suite-tag">Athletic &amp; Biometric OS</span>
+            <div class="tag-group">
+              <span class="suite-tag">Athletic &amp; Biometric OS</span>
+              <span class="lang-badge">गति</span>
+            </div>
           </div>
           <h2 class="suite-name">Gati Fitness</h2>
           <div class="suite-alias">Athletic Performance &amp; Recovery Dashboard</div>
           <p class="suite-desc">11-view athletic telemetry dashboard with concentric activity rings, GPS route curves, 14-night sleep stages, and exercise catalog.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot sky"></span> Triple concentric activity rings &amp; heart zones</li>
-            <li class="feature-item"><span class="feature-dot sky"></span> 14-night sleep architecture &amp; recovery telemetry</li>
-            <li class="feature-item"><span class="feature-dot sky"></span> 100+ exercise library, awards &amp; workout history</li>
+            <li class="feature-item"><span class="feature-dot sky"></span> 14-night sleep architecture stage matrix</li>
+            <li class="feature-item"><span class="feature-dot sky"></span> Exercise video training library &amp; metrics</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Gati Fitness →
+        <div class="card-actions">
+          <a href="./gati/#/" class="btn-launch">
+            Launch Gati Fitness →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./gati/#/', 'Gati Fitness')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 14. Griha Living (गृह) -->
-      <a href="./griha/" class="suite-card">
+      <article class="suite-card" data-category="creative" data-keywords="griha living scandinavian furniture ceramics bento storefront kvist merchant admin gear bag">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-griha">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
             </div>
-            <span class="suite-tag">Home Goods &amp; Bento Store</span>
+            <div class="tag-group">
+              <span class="suite-tag">Home Goods &amp; Bento Store</span>
+              <span class="lang-badge">गृह</span>
+            </div>
           </div>
           <h2 class="suite-name">Griha Living</h2>
           <div class="suite-alias">Scandinavian Bento-Grid Storefront &amp; Merchant Admin</div>
           <p class="suite-desc">Minimalist bento-grid furniture &amp; ceramics storefront, interactive product customizer, slide-out gear bag, and real-time merchant admin telemetry.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot amber"></span> Bento-grid home goods showcase with 9 product categories</li>
-            <li class="feature-item"><span class="feature-dot amber"></span> Live merchant admin dashboard with order dispatch feed</li>
-            <li class="feature-item"><span class="feature-dot amber"></span> Interactive product drawer with finish &amp; material pickers</li>
+            <li class="feature-item"><span class="feature-dot amber"></span> Live timber finish and fabric color customizer</li>
+            <li class="feature-item"><span class="feature-dot amber"></span> Embedded back-office retail analytics drawer</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Griha Living →
+        <div class="card-actions">
+          <a href="./griha/" class="btn-launch">
+            Launch Griha Living →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./griha/', 'Griha Living')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
-      <!-- 15. Daksh Dev -->
-      <a href="./daksh/" class="suite-card">
+      <!-- 15. Daksh Dev (दक्ष) -->
+      <article class="suite-card" data-category="creative" data-keywords="daksh dev 3d webgl portfolio mobile architect case study showcase developer mobile mockup">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-daksh">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
             </div>
-            <span class="suite-tag">Engineer &amp; Creator Portfolio</span>
+            <div class="tag-group">
+              <span class="suite-tag">Engineer &amp; Creator Portfolio</span>
+              <span class="lang-badge">दक्ष</span>
+            </div>
           </div>
           <h2 class="suite-name">Daksh Dev</h2>
           <div class="suite-alias">Full-Stack &amp; Mobile Architect Portfolio</div>
           <p class="suite-desc">Animated developer showcase with floating phone viewport mockup, interactive case study cards, technical capability matrix, and contact drawer.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot purple"></span> Interactive floating mobile app viewport simulation</li>
-            <li class="feature-item"><span class="feature-dot purple"></span> Full-stack case studies (E-Commerce, Finance, HabitFlow)</li>
-            <li class="feature-item"><span class="feature-dot purple"></span> Fluid physics animations &amp; reactive dark developer mode</li>
+            <li class="feature-item"><span class="feature-dot purple"></span> Bento project matrix with interactive demo drawer</li>
+            <li class="feature-item"><span class="feature-dot purple"></span> Code snippet inspector and architecture blueprints</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Daksh Dev →
+        <div class="card-actions">
+          <a href="./daksh/" class="btn-launch">
+            Launch Daksh Dev →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./daksh/', 'Daksh Dev')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
-      <!-- 16. Yantra Auto -->
-      <a href="./yantra/" class="suite-card">
+      <!-- 16. Yantra Auto (यंत्र) -->
+      <article class="suite-card" data-category="auto" data-keywords="yantra auto high performance tuning 5-chassis vehicle dyno camber parts configurator track telemetry">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-yantra">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
             </div>
-            <span class="suite-tag">Performance Auto &amp; Tuning</span>
+            <div class="tag-group">
+              <span class="suite-tag">Performance Auto &amp; Tuning</span>
+              <span class="lang-badge">यंत्र</span>
+            </div>
           </div>
           <h2 class="suite-name">Yantra Auto</h2>
           <div class="suite-alias">High-Performance Parts &amp; Tuning Catalog</div>
           <p class="suite-desc">Interactive vehicle stage with 5-mode chassis switcher (Coupes, Motorcycles, Pickups, EV, Scooters), component hotspot callouts, and forged parts catalog.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot coral"></span> 5-vehicle chassis switcher with dynamic stage swap</li>
-            <li class="feature-item"><span class="feature-dot coral"></span> Interactive callout hotspots (brakes, wheels, coilovers)</li>
-            <li class="feature-item"><span class="feature-dot coral"></span> High-performance tuning store with bag checkout</li>
+            <li class="feature-item"><span class="feature-dot coral"></span> Interactive wheel customizer with finish presets</li>
+            <li class="feature-item"><span class="feature-dot coral"></span> Track telemetry video hero &amp; dynamometer curve</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Yantra Auto →
+        <div class="card-actions">
+          <a href="./yantra/" class="btn-launch">
+            Launch Yantra Auto →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./yantra/', 'Yantra Auto')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
-      <!-- 17. Yatra Mobility -->
-      <a href="./yatra/" class="suite-card">
+      <!-- 17. Yatra Mobility (यात्रा) -->
+      <article class="suite-card" data-category="auto" data-keywords="yatra mobility luxury supercar rental telematics strada booking concierge fleet specs pickup">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-yatra">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
             </div>
-            <span class="suite-tag">Luxury Car &amp; Fleet Mobility</span>
+            <div class="tag-group">
+              <span class="suite-tag">Luxury Car &amp; Fleet Mobility</span>
+              <span class="lang-badge">यात्रा</span>
+            </div>
           </div>
           <h2 class="suite-name">Yatra Mobility</h2>
           <div class="suite-alias">Luxury Car Rental &amp; Concierge Travel</div>
           <p class="suite-desc">Curated supercar &amp; luxury SUV fleet, interactive pickup booking bar, vehicle specs (horsepower, 0-100 km/h, range), and white-glove handover concierge.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot sky"></span> Interactive rental reservation bar with date &amp; city pickers</li>
-            <li class="feature-item"><span class="feature-dot sky"></span> High-res luxury fleet gallery (Veloce GT, Atlas SUV, Volt EV)</li>
-            <li class="feature-item"><span class="feature-dot sky"></span> White-glove concierge delivery &amp; insurance add-ons</li>
+            <li class="feature-item"><span class="feature-dot sky"></span> 5-vehicle supercar gallery with technical specs</li>
+            <li class="feature-item"><span class="feature-dot sky"></span> Client experience timeline &amp; concierge details</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Yatra Mobility →
+        <div class="card-actions">
+          <a href="./yatra/" class="btn-launch">
+            Launch Yatra Mobility →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./yatra/', 'Yatra Mobility')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
-      <!-- 18. Kaala Studio -->
-      <a href="./kaala/" class="suite-card">
+      <!-- 18. Kaala Studio (काला) -->
+      <article class="suite-card" data-category="creative" data-keywords="kaala studio audiophile planar magnetic headphones acoustic vanta hardware 360 scrub chamber frequency">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-kaala">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
             </div>
-            <span class="suite-tag">Audiophile Acoustic Studio</span>
+            <div class="tag-group">
+              <span class="suite-tag">Audiophile Acoustic Studio</span>
+              <span class="lang-badge">काला</span>
+            </div>
           </div>
           <h2 class="suite-name">Kaala Studio</h2>
           <div class="suite-alias">Planar Magnetic Audiophile Studio</div>
           <p class="suite-desc">Cinematic dark product showcase, interactive planar magnetic driver video scrub, acoustic chamber simulation, and frequency response graphs.</p>
           <ul class="feature-list">
             <li class="feature-item"><span class="feature-dot purple"></span> Scrubbable exploded planar magnetic driver video</li>
-            <li class="feature-item"><span class="feature-dot purple"></span> Frequency response acoustic chamber telemetry</li>
-            <li class="feature-item"><span class="feature-dot purple"></span> CNC machined aluminum &amp; lambskin ear cushion specs</li>
+            <li class="feature-item"><span class="feature-dot purple"></span> Interactive frequency response curve with EQ overlays</li>
+            <li class="feature-item"><span class="feature-dot purple"></span> Acoustic engineering chamber deep-dive</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Kaala Studio →
+        <div class="card-actions">
+          <a href="./kaala/" class="btn-launch">
+            Launch Kaala Studio →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./kaala/', 'Kaala Studio')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 19. Mishri 3D (मिश्री) -->
-      <a href="./mishri/#" class="suite-card">
+      <article class="suite-card" data-category="creative" data-keywords="mishri 3d artisanal chocolate tasting cacao pod sensory nero flavor wheel parallax cursor">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-mishri">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <span class="suite-tag">Artisanal 3D Confectionery</span>
+            <div class="tag-group">
+              <span class="suite-tag">Artisanal 3D Confectionery</span>
+              <span class="lang-badge">मिश्री</span>
+            </div>
           </div>
           <h2 class="suite-name">Mishri 3D</h2>
           <div class="suite-alias">Single-Origin Confectionery &amp; Tasting Studio</div>
@@ -733,19 +1611,27 @@
             <li class="feature-item"><span class="feature-dot amber"></span> Fluid magnetic cursor &amp; ambient acoustic audio track</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Mishri 3D →
+        <div class="card-actions">
+          <a href="./mishri/#" class="btn-launch">
+            Launch Mishri 3D →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./mishri/#', 'Mishri 3D')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- 20. Aarogya Clinic (आरोग्य) -->
-      <a href="./aarogya/#/today" class="suite-card">
+      <article class="suite-card" data-category="health" data-keywords="aarogya clinic patient flow board whatsapp crm doctor appointment tend medical logs clinical consultation">
         <div>
           <div class="card-top">
             <div class="suite-icon icon-aarogya">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.5s-7.5-4.4-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.8-7.5 10.2-7.5 10.2Z"/><path d="M8.5 12.5h2l1-2 1.6 4 1-2h1.4"/></svg>
             </div>
-            <span class="suite-tag">Clinical Practice &amp; WhatsApp CRM</span>
+            <div class="tag-group">
+              <span class="suite-tag">Clinical Practice &amp; WhatsApp CRM</span>
+              <span class="lang-badge">आरोग्य</span>
+            </div>
           </div>
           <h2 class="suite-name">Aarogya Clinic</h2>
           <div class="suite-alias">Clinical Practice CRM &amp; Patient Flow Board</div>
@@ -756,39 +1642,257 @@
             <li class="feature-item"><span class="feature-dot mint"></span> Patient records, doctor schedules &amp; clinical telemetry</li>
           </ul>
         </div>
-        <div class="btn-launch">
-          Launch Aarogya Clinic →
+        <div class="card-actions">
+          <a href="./aarogya/#/today" class="btn-launch">
+            Launch Aarogya Clinic →
+          </a>
+          <button class="btn-copy-url" onclick="copyLink('./aarogya/#/today', 'Aarogya Clinic')" title="Copy link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
         </div>
-      </a>
+      </article>
 
       <!-- Expanding Library / Roadmap Card -->
-      <div class="suite-card" style="border-style: dashed; border-color: rgba(255, 87, 34, 0.4); background: rgba(255, 87, 34, 0.03);">
+      <article class="suite-card roadmap-card" data-category="all" data-keywords="future roadmap additions upcoming pragya ai vridhi cloud vidya lms tarang dhan web3">
         <div>
           <div class="card-top">
-            <div class="suite-icon" style="background: rgba(255, 87, 34, 0.15); color: var(--accent-coral);">+</div>
-            <span class="suite-tag" style="background: rgba(255, 87, 34, 0.15); color: var(--accent-coral);">Roadmap &amp; Additions</span>
+            <div class="suite-icon" style="background: rgba(255, 87, 34, 0.15); color: var(--accent-coral); font-size: 26px;">+</div>
+            <div class="tag-group">
+              <span class="suite-tag" style="background: rgba(255, 87, 34, 0.15); color: var(--accent-coral); border-color: rgba(255, 87, 34, 0.3);">Pipeline</span>
+              <span class="lang-badge">आगामी</span>
+            </div>
           </div>
-          <h2 class="suite-name">More Templates in Development</h2>
-          <div class="suite-alias">Continuously Expanding Library</div>
-          <p class="suite-desc">New domain-specific dashboard suites, portfolios, and web apps are actively engineered and added to the Learnify Platform.</p>
+          <h2 class="suite-name">Upcoming Suites</h2>
+          <div class="suite-alias">Active Development Pipeline</div>
+          <p class="suite-desc">New domain-specific dashboard suites, developer portfolios, and interactive web tools are actively engineered and added to the Learnify Platform.</p>
           <ul class="feature-list">
-            <li class="feature-item"><span class="feature-dot" style="background: var(--accent-coral);"></span> 🤖 GenAI Prompt Studio &amp; Fine-Tuning Canvas</li>
-            <li class="feature-item"><span class="feature-dot" style="background: var(--accent-blue);"></span> 💳 SaaS Metric Cloud &amp; MRR Analytics</li>
-            <li class="feature-item"><span class="feature-dot" style="background: var(--accent-emerald);"></span> 🎓 EdTech Interactive Learning Platform</li>
+            <li class="feature-item"><span class="feature-dot" style="background: var(--accent-coral);"></span> 🤖 <strong>Pragya AI</strong> — Prompt Workbench &amp; Vector Canvas</li>
+            <li class="feature-item"><span class="feature-dot" style="background: var(--accent-sky);"></span> 💳 <strong>Vridhi Cloud</strong> — SaaS MRR &amp; Usage Billing</li>
+            <li class="feature-item"><span class="feature-dot" style="background: var(--accent-mint);"></span> 🎓 <strong>Vidya LMS</strong> — Student Certification OS</li>
           </ul>
         </div>
-        <div class="btn-launch" style="opacity: 0.85; pointer-events: none;">
-          Expanding Library • 20+ &amp; Growing
+        <div class="card-actions">
+          <a href="./INTERNAL_INDEX.md" class="btn-launch" style="background: rgba(255, 87, 34, 0.15); color: var(--accent-coral); border: 1px solid rgba(255, 87, 34, 0.3);">
+            View Platform Registry →
+          </a>
         </div>
-      </div>
+      </article>
+
     </div>
   </div>
 
-  <button class="theme-switcher" id="theme-btn" onclick="
-    const current = document.documentElement.dataset.theme;
-    const next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.dataset.theme = next;
-    this.textContent = next === 'dark' ? '☀️ Light' : '🌙 Dark';
-  ">☀️ Light</button>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-logo-tile" style="width: 28px; height: 28px;">
+          <svg width="16" height="16" viewBox="0 0 32 32" fill="none">
+            <path d="M9 7h4v14h10v4H9V7z" fill="#3B82F6"/>
+            <circle cx="23" cy="9" r="2.5" fill="#10B981"/>
+          </svg>
+        </div>
+        <span><strong>Learnify Dashboard Platform</strong> • Engineered for High-Impact Web Design</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#top" class="footer-link">Back to Top ↑</a>
+        <a href="https://github.com/Doctor9Trio/Learnify-Dashboard" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Repository</a>
+        <a href="./INTERNAL_INDEX.md" class="footer-link">Internal Registry</a>
+        <a href="https://github.com/Doctor9Trio" target="_blank" rel="noopener noreferrer" class="footer-link">Doctor9Trio</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Toast -->
+  <div class="toast" id="toast">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+    <span id="toast-text">Link copied to clipboard!</span>
+  </div>
+
+  <!-- Floating Theme Switcher -->
+  <button class="theme-switcher-floating" onclick="toggleTheme()" id="floating-theme-btn" aria-label="Toggle Dark / Light Theme">
+    🌙 Theme
+  </button>
+
+  <script>
+    // Theme Management with Persistent LocalStorage
+    function initTheme() {
+      const saved = localStorage.getItem('learnify-theme') || 'dark';
+      document.documentElement.dataset.theme = saved;
+      updateThemeButtons(saved);
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.dataset.theme;
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('learnify-theme', next);
+      updateThemeButtons(next);
+    }
+
+    function updateThemeButtons(theme) {
+      const navIcon = document.getElementById('nav-theme-icon');
+      const navBtn = document.getElementById('nav-theme-btn');
+      const floatBtn = document.getElementById('floating-theme-btn');
+      if (theme === 'dark') {
+        if (navIcon) navIcon.textContent = '🌙';
+        if (navBtn) navBtn.innerHTML = '<span>🌙</span> Dark Mode';
+        if (floatBtn) floatBtn.textContent = '☀️ Light';
+      } else {
+        if (navIcon) navIcon.textContent = '☀️';
+        if (navBtn) navBtn.innerHTML = '<span>☀️</span> Light Mode';
+        if (floatBtn) floatBtn.textContent = '🌙 Dark';
+      }
+    }
+
+    initTheme();
+
+    // Live Search & Category Filtering
+    const searchInput = document.getElementById('search-input');
+    const clearBtn = document.getElementById('clear-search-btn');
+    const filterPills = document.querySelectorAll('.pill-btn');
+    const cards = Array.from(document.querySelectorAll('.suite-card:not(.roadmap-card)'));
+    const roadmapCard = document.querySelector('.roadmap-card');
+    const resultsCountEl = document.getElementById('results-count');
+    const emptyState = document.getElementById('empty-state');
+    const emptyDesc = document.getElementById('empty-desc');
+
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    function filterCards() {
+      const query = searchQuery.trim().toLowerCase();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const category = card.dataset.category;
+        const keywords = card.dataset.keywords || '';
+        const title = card.querySelector('.suite-name')?.textContent || '';
+        const alias = card.querySelector('.suite-alias')?.textContent || '';
+        const desc = card.querySelector('.suite-desc')?.textContent || '';
+
+        const fullText = (title + ' ' + alias + ' ' + desc + ' ' + keywords).toLowerCase();
+
+        const matchesCategory = currentFilter === 'all' || category === currentFilter;
+        const matchesQuery = query === '' || fullText.includes(query);
+
+        if (matchesCategory && matchesQuery) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Roadmap card visibility
+      if (roadmapCard) {
+        if (currentFilter === 'all' && query === '') {
+          roadmapCard.style.display = 'flex';
+        } else {
+          roadmapCard.style.display = 'none';
+        }
+      }
+
+      // Update Results Badge
+      if (resultsCountEl) {
+        if (query) {
+          resultsCountEl.innerHTML = `Showing <strong>${visibleCount}</strong> results for "<em>${escapeHtml(query)}</em>"`;
+        } else if (currentFilter !== 'all') {
+          resultsCountEl.innerHTML = `Showing <strong>${visibleCount}</strong> templates in category`;
+        } else {
+          resultsCountEl.innerHTML = `Showing <strong>${visibleCount}</strong> of 20 templates`;
+        }
+      }
+
+      // Show/Hide Empty State
+      if (visibleCount === 0) {
+        emptyState.style.display = 'flex';
+        if (emptyDesc) {
+          emptyDesc.textContent = `No templates match "${query}". Try searching for terms like "retail", "clinic", "crm", or "auto".`;
+        }
+      } else {
+        emptyState.style.display = 'none';
+      }
+
+      // Clear button visibility
+      if (clearBtn) {
+        clearBtn.style.display = query ? 'inline-block' : 'none';
+      }
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      filterCards();
+    });
+
+    clearBtn.addEventListener('click', () => {
+      resetSearch();
+    });
+
+    function resetSearch() {
+      searchInput.value = '';
+      searchQuery = '';
+      currentFilter = 'all';
+      filterPills.forEach(p => p.classList.toggle('active', p.dataset.filter === 'all'));
+      filterCards();
+      searchInput.focus();
+    }
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        currentFilter = pill.dataset.filter;
+        filterCards();
+      });
+    });
+
+    // Keyboard Shortcuts: '/' or Ctrl/Cmd+K to search, Escape to clear
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+      } else if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+      } else if (e.key === 'Escape' && document.activeElement === searchInput) {
+        searchInput.value = '';
+        searchQuery = '';
+        filterCards();
+        searchInput.blur();
+      }
+    });
+
+    // Copy URL Toast
+    function copyLink(path, name) {
+      const url = new URL(path, window.location.href).href;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast(`Copied ${name} direct link!`);
+      }).catch(() => {
+        showToast('Link copied!');
+      });
+    }
+
+    let toastTimeout;
+    function showToast(text) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      if (!toast) return;
+      toastText.textContent = text;
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2400);
+    }
+  </script>
 </body>
 </html>
