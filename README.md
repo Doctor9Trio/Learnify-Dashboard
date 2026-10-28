@@ -1,69 +1,173 @@
-# Sarthak Dashboard Product Suites 🚀
+# Learnify Dashboard & Web Design Platform 🚀
 
-A flagship collection of pixel-perfect, zero-dependency, ultra-modern web application suites built for omnichannel retail, social media publishing, family wealth, lab inventory, restaurant hospitality, and clinical dental practice.
+> **The premier collection of 20 production-grade, zero-dependency web dashboard templates, interactive web design showcases, and developer portfolios.**  
+> Crafted with pixel-perfect precision, modern motion physics, responsive layouts, and zero-build web standards.
 
-Featuring a master launcher portal, full Single Page Application (SPA) routing, real-time interactive charts, slide-out drawer sheets, ⌘K universal command palettes, elastic ink-pill navigation, and zero-flash multi-palette light/dark theming.
-
----
-
-## 🌟 Live Suites in Ecosystem
-
-| # | Suite Name | Code Name | Domain & Key Features | Entry URL |
-|---|---|---|---|---|
-| **1** | **Vanijya Retail** *(वाणिज्य)* | `corbel` | Omnichannel Retail, Health Score Gauge, Dual-Year Revenue, Order Side-Sheets | `http://localhost:3456/corbel/#/dashboard` |
-| **2** | **Samvad Social** *(संवाद)* | `murmura` | 8-Network Multi-Publisher, Unified Inbox, Visual Calendar, Approvals | `http://localhost:3456/murmura/#/overview` |
-| **3** | **Kutumb Money** *(कुटुम्ब)* | `kinby` | Family Shared Finance, Flipping Card Wallet, Drag Budgets, Savings Pots | `http://localhost:3456/kinby/#/home` |
-| **4** | **Rasayan Lab** *(रसायन)* | `vessa` | Skincare Lab Inventory, Batch Formulation, QA Release, Pick-Pack-Ship Board | `http://localhost:3456/vessa/#/dashboard/overview` |
-| **5** | **Pangat POS** *(पंगत)* | `tavola` | Restaurant Operations, Kitchen Ticket Board (KOT), Dining Floor Plan | `http://localhost:3456/tavola/#/overview` |
-| **6** | **Dantika Clinic** *(दन्तिका)* | `ivora` | Dental Clinic Practice, Interactive 32-Tooth Chart, Chair Matrix & Labs | `http://localhost:3456/ivora/#/today` |
-| **7** | **Karkhana ERP** *(कारख़ाना)* | `cadra` | Workshop & Manufacturing ERP, Gantt Schedule, Multi-Warehouse, Till POS | `http://localhost:3456/cadra/#/dashboard` |
-| **8** | **Parivahan OS** *(परिवहन)* | `noria` | Freight Forwarding & Logistics Flow Automation, Node-Canvas Builder, Copilot | `http://localhost:3456/noria/#/overview` |
-| **9** | **Karigar Service** *(कारीगर)* | `mender` | Support-Desk CRM, Drag-and-Drop Case Pipeline, 4-Stage Journeys & SLA | `http://localhost:3456/mender/#/cases` |
-| **10** | **Bahi Khata** *(बही खाता)* | `ledge` | Shop POS Register, Stock Counting, Automated Reorder Alerts & Purchasing | `http://localhost:3456/ledge/#overview` |
-| **11** | **Srijan Studio** *(सृजन)* | `gesso` | Original Art Marketplace, Studio Sessions, Fan Artwork Gallery & Collector Tools | `http://localhost:3456/gesso/` |
-| **12** | **Bhoomi Outdoors** *(भूमि)* | `solum` | Trail Running & Outdoor Apparel, 10-Page Storefront, Scrub Runner Video & Admin Till | `http://localhost:3456/solum/` |
-| **13** | **Gati Fitness** *(गति)* | `stride` | 11-View Athletic Performance OS, Activity Rings, Sleep Architecture & Workouts | `http://localhost:3456/stride/#/` |
-| **14** | **Griha Living** *(गृह)* | `kvist` | Scandinavian Bento-Grid Storefront, Ceramics & Furniture, Order Dispatch Till | `http://localhost:3456/kvist/` |
-| **15** | **Daksh Dev** *(दक्ष)* | `portfolio` | Animated Mobile Architect Portfolio, 3D Phone Mockup, Case Study Showcase | `http://localhost:3456/portfolio/` |
-| **16** | **Yantra Auto** *(यंत्र)* | `camber` | High-Performance Auto Parts, 5-Chassis Switcher, Component Hotspots & Tuning Till | `http://localhost:3456/camber/` |
-| **17** | **Yatra Mobility** *(यात्रा)* | `strada` | Luxury Car & Supercar Rental, Pickup Booking Engine, Concierge Fleet Specs | `http://localhost:3456/strada/` |
-| **18** | **Kaala Studio** *(काला)* | `vanta` | Audiophile Planar Magnetic Headphones, 360 Video Scrub, Exploded Driver View | `http://localhost:3456/vanta/` |
-| **19** | **Mishri 3D** *(मिश्री)* | `nero` | Artisanal Confectionery Studio, 3D Floating Cacao Parallax, Tasting Flight | `http://localhost:3456/nero/#` |
-| **20** | **Aarogya Clinic** *(आरोग्य)* | `tend` | Clinic CRM & WhatsApp Patient Board, 4-Stage Patient Flow, Doctor Schedules | `http://localhost:3456/tend/#/today` |
+[![Platform](https://img.shields.io/badge/Platform-Learnify-FF5722.svg?style=flat-square)](#)
+[![Templates](https://img.shields.io/badge/Templates-20%20Suites-22C55E.svg?style=flat-square)](#-template-ecosystem--directory)
+[![Architecture](https://img.shields.io/badge/Architecture-Zero--Build%20Vanilla%20Web-38BDF8.svg?style=flat-square)](#-key-features--design-standards)
+[![License](https://img.shields.io/badge/License-MIT-purple.svg?style=flat-square)](#-license--author)
 
 ---
 
-## 🔬 Reverse-Engineering Assistant (REA) Architecture & Batch Protocol
+## 🌟 Welcome to the Learnify Platform
 
-To maintain the **gold standard 1:1 pixel-to-pixel (px to px) craftsmanship** established in `corbel` (**Vanijya Retail**) and `murmura` (**Samvad Social**), all suites follow the **REA Methodology** ([rea.tools](http://rea.tools/) & [github.com/morluto/rea](https://github.com/morluto/rea)):
-- **Zero Frameworks / Pure Web Standards**: Pure HTML5, Modular Vanilla CSS, and Vanilla ES6 modules.
-- **Strict 2-at-a-Time Execution**: Work is performed in batches of 2 suites per session to prevent LLM context saturation and ensure meticulous inspection of every button, modal, and animation.
-- **Master Documentation & Tracking**:
-  - 📖 [Pixel-Perfect REA Workflow Guide](PIXEL_PERFECT_REA_WORKFLOW.md)
-  - 📋 [Interactive 9-Batch Checklist](BATCH_EXECUTION_CHECKLIST.md)
-  - 🤖 [Agent Handoff & Session Prompt Playbook](AGENT_HANDOFF_PROMPT.md)
-  - 🛠️ Automated REA Token Harvester: `node bin/rea-inspector.mjs <suite_name>`
+**Learnify** provides web designers, developers, agencies, and entrepreneurs with award-winning, battle-tested web dashboard templates, interactive brand showcases, and creative portfolios.
+
+Instead of heavy framework lock-in, complex build toolchains, or generic component libraries, the **Learnify Dashboard Platform** delivers:
+- **Instant Previews**: 100% zero-build web standards — runs natively in any browser with zero compilation.
+- **State-of-the-Art Aesthetics**: Micro-interactions, GSAP physics animations, WebGL canvas shaders, and glassmorphism.
+- **Enterprise-Grade Depth**: Complete Single Page Applications (SPAs) with full routing, drawer sheets, ⌘K universal command palettes, and real-time interactive charts.
+- **100% Asset Integrity**: Zero broken images or 404s — all curated photography, bespoke product packaging, team portraits, video loops, and multi-resolution icons are bundled and verified.
 
 ---
 
-## 🛠️ Quick Start
+## 🧭 Master Showcase Portal
 
-Zero build step or compilation required! Runs directly in any modern browser via static HTTP server:
+Launch the entire ecosystem from a single unified portal with search, category filtering, and theme switching:
+
+```text
+http://localhost:3456/index.html
+```
+
+---
+
+## 📦 Template Ecosystem & Directory
+
+The Learnify Platform includes **20 specialized, industry-tailored dashboard and web design templates**:
+
+### 📊 E-Commerce, Retail & Sales Intelligence
+
+| Template | Code | Domain & Highlights | Live Entry URL |
+|---|---|---|---|
+| **Vanijya Retail** *(वाणिज्य)* | `corbel` | Omnichannel sales analytics, health score gauge, dual-year revenue chart, hourly visits heatmap, and order side-sheets. | `http://localhost:3456/corbel/#/dashboard` |
+| **Bhoomi Outdoors** *(भूमि)* | `solum` | Technical outdoor apparel storefront, 10-page layout, interactive runner video scrub, and admin register till. | `http://localhost:3456/solum/` |
+| **Bahi Khata** *(बही खाता)* | `ledge` | Fast shop POS register, stock reconciliation, barcode scanner simulation, and automated purchasing reorder alerts. | `http://localhost:3456/ledge/#overview` |
+
+### 📱 Social Media, Community & Fintech
+
+| Template | Code | Domain & Highlights | Live Entry URL |
+|---|---|---|---|
+| **Samvad Social** *(संवाद)* | `murmura` | 8-network multi-platform publishing suite, interactive calendar scheduler, unified comments/DM inbox, and approvals workflow. | `http://localhost:3456/murmura/#/overview` |
+| **Kutumb Money** *(कुटुम्ब)* | `kinby` | Family shared finance & wealth tracker, 3D interactive flipping card wallet, drag-and-drop budget allocations, and savings pots. | `http://localhost:3456/kinby/#/home` |
+
+### 🏥 Healthcare, Clinical Practice & Lab Science
+
+| Template | Code | Domain & Highlights | Live Entry URL |
+|---|---|---|---|
+| **Aarogya Clinic** *(आरोग्य)* | `tend` | Medical clinic CRM & WhatsApp patient board, 4-stage patient care flow, doctor appointments, and medical logs. | `http://localhost:3456/tend/#/today` |
+| **Dantika Clinic** *(दन्तिका)* | `ivora` | Dental clinic practice OS, interactive 32-tooth odontogram chart, treatment plans, chair matrix, and dental lab orders. | `http://localhost:3456/ivora/#/today` |
+| **Rasayan Lab** *(रसायन)* | `vessa` | Luxury skincare formulation & lab inventory, batch QA release tracking, and drag-and-drop pick-pack-ship fulfilment board. | `http://localhost:3456/vessa/#/dashboard/overview` |
+| **Karigar Service** *(कारीगर)* | `mender` | Support-desk CRM, drag-and-drop Kanban case pipeline, 4-stage customer journey timeline, and automated SLA warnings. | `http://localhost:3456/mender/#/cases` |
+
+### 🚗 Automotive, Performance Engineering & Logistics
+
+| Template | Code | Domain & Highlights | Live Entry URL |
+|---|---|---|---|
+| **Yantra Auto** *(यंत्र)* | `camber` | High-performance auto tuning, 5-chassis interactive vehicle switcher, parts configurator, dyno curve, and track video clips. | `http://localhost:3456/camber/` |
+| **Yatra Mobility** *(यात्रा)* | `strada` | Luxury supercar rental platform, vehicle telematics, concierge booking engine, and fleet specification comparison. | `http://localhost:3456/strada/` |
+| **Parivahan OS** *(परिवहन)* | `noria` | Logistics & freight flow automation, visual node-canvas pipeline builder, AI copilot, and automated shipment tracking. | `http://localhost:3456/noria/#/overview` |
+| **Karkhana ERP** *(कारख़ाना)* | `cadra` | Workshop & manufacturing ERP, visual Gantt production schedule, multi-warehouse stock matrix, and register till. | `http://localhost:3456/cadra/#/dashboard` |
+
+### 🎨 Creative Studios, Portfolios & Interactive Living
+
+| Template | Code | Domain & Highlights | Live Entry URL |
+|---|---|---|---|
+| **Daksh Dev** *(दक्ष)* | `portfolio` | 3D interactive WebGL creative portfolio, particle image morphing, project case studies, and responsive mobile mockups. | `http://localhost:3456/portfolio/` |
+| **Srijan Studio** *(सृजन)* | `gesso` | Fine art marketplace, studio artist profiles, collector management tools, and immersive video art banners. | `http://localhost:3456/gesso/` |
+| **Griha Living** *(गृह)* | `kvist` | Scandinavian furniture & ceramic storefront, bento-grid catalog layout, customer reviews, and order dispatch till. | `http://localhost:3456/kvist/` |
+| **Mishri 3D** *(मिश्री)* | `nero` | Artisanal chocolatier studio, 3D floating cacao pod parallax, flavor wheel, and interactive multi-course tasting flight. | `http://localhost:3456/nero/#` |
+| **Kaala Studio** *(काला)* | `vanta` | Audiophile planar magnetic headphones showcase, interactive 360 video scrub, exploded driver view, and sound engineering lab. | `http://localhost:3456/vanta/` |
+| **Gati Fitness** *(गति)* | `stride` | 11-view athletic training performance OS, Apple-style activity rings, sleep architecture analysis, and workout planners. | `http://localhost:3456/stride/#/` |
+| **Pangat POS** *(पंगत)* | `tavola` | Full-service restaurant management, dining floor table matrix, and real-time Kitchen Order Ticket (KOT) board. | `http://localhost:3456/tavola/#/overview` |
+
+---
+
+## ⚡ Key Features & Design Standards
+
+- **Zero-Build Web Standards**: Built entirely using standard HTML5, modern ECMAScript (ES6 modules), and modular CSS. No Webpack, Vite, Babel, or heavy dependency trees required for local preview.
+- **Pixel-Perfect Craftsmanship**: Designed following the Reverse-Engineering Assistant (REA) standard, ensuring 1:1 layout precision, cohesive typography hierarchies, and strict 8pt grid alignment.
+- **Micro-Interactions & Physics**: Powered by GSAP timelines, elastic spring animations, draggable surfaces, and smooth scrolling for an app-like experience.
+- **Multi-Palette Theme Engine**: Instant, zero-flash theme switching between Light, Dark, Mono, Pastel, Ocean, and Sage modes with persistent local storage caching.
+- **Universal ⌘K Command Palette**: Fast keyboard navigation across routes, views, search queries, and administrative shortcuts.
+- **Complete Media & Visual Assets**: Over 300+ bundled photorealistic product shots, culinary presentations, automotive builds, video loops, and SVG vector illustrations.
+
+---
+
+## 🚀 Quick Start Guide
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Doctor9Trio/Learnify-Dashboard.git
+cd Learnify-Dashboard
+```
+
+### 2. Start Local Server
+Run any lightweight static web server:
 
 ```bash
-# Using npx http-server
+# Using npx (Node.js)
 npx http-server -p 3456
 
-# Or using Python
+# Or using Python 3
 python -m http.server 3456
 ```
 
-Open `http://localhost:3456` in your browser to access the **Executive Master Portal Hub**.
+### 3. Open in Browser
+Visit **`http://localhost:3456`** to explore the **Master Showcase Portal**, or navigate directly to any suite (e.g., `http://localhost:3456/corbel/` or `http://localhost:3456/murmura/`).
 
 ---
 
-## 🎨 Technology Standards
-- **Core**: Vanilla HTML5, Modern ECMAScript (ES6 Modules)
-- **Styling**: Vanilla CSS with CSS Custom Properties tokens, responsive viewport queries, fluid physics animations
-- **Vector Graphics**: Pure inline SVG icons, gauges, charts, and tooth charts
-- **Zero Build Step Runtime**: Direct static bundle execution with relative asset resolution
+## 📁 Repository Architecture
+
+```text
+Learnify-Dashboard/
+├── index.html                   # Master Showcase Portal Hub
+├── favicon.ico / .svg           # Multi-resolution brand icons
+├── apple-touch-icon.png         # High-resolution touch icon
+├── BATCH_EXECUTION_CHECKLIST.md # Reverse-engineering implementation logs
+│
+├── cadra/                       # Karkhana Workshop ERP Suite
+├── camber/                      # Yantra Auto Tuning & Parts Configurator
+├── corbel/                      # Vanijya Retail Omnichannel Analytics
+├── gesso/                       # Srijan Studio Art Marketplace
+├── ivora/                       # Dantika Dental Clinic & Odontogram
+├── kinby/                       # Kutumb Money Family Shared Wealth
+├── kvist/                       # Griha Living Scandinavian Storefront
+├── ledge/                       # Bahi Khata Retail POS & Purchasing
+├── mender/                      # Karigar Service Support-Desk CRM
+├── murmura/                     # Samvad Social Media Management Suite
+├── nero/                        # Mishri 3D Artisanal Chocolatier
+├── noria/                       # Parivahan OS Logistics Flow Builder
+├── portfolio/                   # Daksh Dev 3D WebGL Portfolio
+├── solum/                       # Bhoomi Outdoors Technical Storefront
+├── strada/                      # Yatra Mobility Luxury Supercar Rental
+├── stride/                      # Gati Fitness Biometric Performance OS
+├── tavola/                      # Pangat POS Restaurant Management
+├── tend/                        # Aarogya Clinic Patient Care Board
+├── vanta/                       # Kaala Studio Audiophile Hardware
+└── vessa/                       # Rasayan Lab Luxury Formulation OS
+```
+
+Each suite folder contains:
+- `index.html`: Entry point with semantic HTML structure and meta tags.
+- `css/`: Modular CSS styling (`tokens.css`, `layout.css`, `components.css`).
+- `js/`: Modular JavaScript logic and application state machines.
+- `photos/` or `images/`: High-resolution, zero-404 visual media assets.
+
+---
+
+## 🛠️ Customization & Integration
+
+Every template in the Learnify Platform is self-contained and modular:
+1. **Copy the Suite**: Extract any suite folder (e.g., `corbel/` or `tend/`) directly into your own project or repository.
+2. **Customize Design Tokens**: Update the CSS custom properties in `tokens.css` or the `:root` block to match your client's brand palette, fonts, and border radii.
+3. **Connect Your Backend**: Hook up your REST, GraphQL, or Supabase endpoints to the clean, documented data fetchers in the `js/` folder.
+
+---
+
+## 📄 License & Author
+
+- **Platform**: [Learnify](https://github.com/Doctor9Trio/Learnify-Dashboard)
+- **Author / Maintainer**: [Doctor9Trio](https://github.com/Doctor9Trio)
+- **License**: MIT License — free for personal, commercial, and educational use.
