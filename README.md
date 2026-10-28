@@ -39,48 +39,48 @@ The Learnify Platform features an expanding ecosystem of **20+ specialized, indu
 
 ### 📊 E-Commerce, Retail & Sales Intelligence
 
-| Template | Code | Domain & Highlights | Live Entry URL |
+| Template | Folder / Slug | Domain & Highlights | Live Entry URL |
 |---|---|---|---|
-| **Vanijya Retail** *(वाणिज्य)* | `corbel` | Omnichannel sales analytics, health score gauge, dual-year revenue chart, hourly visits heatmap, and order side-sheets. | `http://localhost:3456/corbel/#/dashboard` |
-| **Bhoomi Outdoors** *(भूमि)* | `solum` | Technical outdoor apparel storefront, 10-page layout, interactive runner video scrub, and admin register till. | `http://localhost:3456/solum/` |
-| **Bahi Khata** *(बही खाता)* | `ledge` | Fast shop POS register, stock reconciliation, barcode scanner simulation, and automated purchasing reorder alerts. | `http://localhost:3456/ledge/#overview` |
+| **Vanijya Retail** *(वाणिज्य)* | `vanijya` | Omnichannel sales analytics, health score gauge, dual-year revenue chart, hourly visits heatmap, and order side-sheets. | `http://localhost:3456/vanijya/#/dashboard` |
+| **Bhoomi Outdoors** *(भूमि)* | `bhoomi` | Technical outdoor apparel storefront, 10-page layout, interactive runner video scrub, and admin register till. | `http://localhost:3456/bhoomi/` |
+| **Bahi Khata** *(बही खाता)* | `bahikhata` | Fast shop POS register, stock reconciliation, barcode scanner simulation, and automated purchasing reorder alerts. | `http://localhost:3456/bahikhata/#overview` |
 
 ### 📱 Social Media, Community & Fintech
 
-| Template | Code | Domain & Highlights | Live Entry URL |
+| Template | Folder / Slug | Domain & Highlights | Live Entry URL |
 |---|---|---|---|
-| **Samvad Social** *(संवाद)* | `murmura` | 8-network multi-platform publishing suite, interactive calendar scheduler, unified comments/DM inbox, and approvals workflow. | `http://localhost:3456/murmura/#/overview` |
-| **Kutumb Money** *(कुटुम्ब)* | `kinby` | Family shared finance & wealth tracker, 3D interactive flipping card wallet, drag-and-drop budget allocations, and savings pots. | `http://localhost:3456/kinby/#/home` |
+| **Samvad Social** *(संवाद)* | `samvad` | 8-network multi-platform publishing suite, interactive calendar scheduler, unified comments/DM inbox, and approvals workflow. | `http://localhost:3456/samvad/#/overview` |
+| **Kutumb Money** *(कुटुम्ब)* | `kutumb` | Family shared finance & wealth tracker, 3D interactive flipping card wallet, drag-and-drop budget allocations, and savings pots. | `http://localhost:3456/kutumb/#/home` |
 
 ### 🏥 Healthcare, Clinical Practice & Lab Science
 
-| Template | Code | Domain & Highlights | Live Entry URL |
+| Template | Folder / Slug | Domain & Highlights | Live Entry URL |
 |---|---|---|---|
-| **Aarogya Clinic** *(आरोग्य)* | `tend` | Medical clinic CRM & WhatsApp patient board, 4-stage patient care flow, doctor appointments, and medical logs. | `http://localhost:3456/tend/#/today` |
-| **Dantika Clinic** *(दन्तिका)* | `ivora` | Dental clinic practice OS, interactive 32-tooth odontogram chart, treatment plans, chair matrix, and dental lab orders. | `http://localhost:3456/ivora/#/today` |
-| **Rasayan Lab** *(रसायन)* | `vessa` | Luxury skincare formulation & lab inventory, batch QA release tracking, and drag-and-drop pick-pack-ship fulfilment board. | `http://localhost:3456/vessa/#/dashboard/overview` |
-| **Karigar Service** *(कारीगर)* | `mender` | Support-desk CRM, drag-and-drop Kanban case pipeline, 4-stage customer journey timeline, and automated SLA warnings. | `http://localhost:3456/mender/#/cases` |
+| **Aarogya Clinic** *(आरोग्य)* | `aarogya` | Medical clinic CRM & WhatsApp patient board, 4-stage patient care flow, doctor appointments, and medical logs. | `http://localhost:3456/aarogya/#/today` |
+| **Dantika Clinic** *(दन्तिका)* | `dantika` | Dental clinic practice OS, interactive 32-tooth odontogram chart, treatment plans, chair matrix, and dental lab orders. | `http://localhost:3456/dantika/#/today` |
+| **Rasayan Lab** *(रसायन)* | `rasayan` | Luxury skincare formulation & lab inventory, batch QA release tracking, and drag-and-drop pick-pack-ship fulfilment board. | `http://localhost:3456/rasayan/#/dashboard/overview` |
+| **Karigar Service** *(कारीगर)* | `karigar` | Support-desk CRM, drag-and-drop Kanban case pipeline, 4-stage customer journey timeline, and automated SLA warnings. | `http://localhost:3456/karigar/#/cases` |
 
 ### 🚗 Automotive, Performance Engineering & Logistics
 
-| Template | Code | Domain & Highlights | Live Entry URL |
+| Template | Folder / Slug | Domain & Highlights | Live Entry URL |
 |---|---|---|---|
-| **Yantra Auto** *(यंत्र)* | `camber` | High-performance auto tuning, 5-chassis interactive vehicle switcher, parts configurator, dyno curve, and track video clips. | `http://localhost:3456/camber/` |
-| **Yatra Mobility** *(यात्रा)* | `strada` | Luxury supercar rental platform, vehicle telematics, concierge booking engine, and fleet specification comparison. | `http://localhost:3456/strada/` |
-| **Parivahan OS** *(परिवहन)* | `noria` | Logistics & freight flow automation, visual node-canvas pipeline builder, AI copilot, and automated shipment tracking. | `http://localhost:3456/noria/#/overview` |
-| **Karkhana ERP** *(कारख़ाना)* | `cadra` | Workshop & manufacturing ERP, visual Gantt production schedule, multi-warehouse stock matrix, and register till. | `http://localhost:3456/cadra/#/dashboard` |
+| **Yantra Auto** *(यंत्र)* | `yantra` | High-performance auto tuning, 5-chassis interactive vehicle switcher, parts configurator, dyno curve, and track video clips. | `http://localhost:3456/yantra/` |
+| **Yatra Mobility** *(यात्रा)* | `yatra` | Luxury supercar rental platform, vehicle telematics, concierge booking engine, and fleet specification comparison. | `http://localhost:3456/yatra/` |
+| **Parivahan OS** *(परिवहन)* | `parivahan` | Logistics & freight flow automation, visual node-canvas pipeline builder, AI copilot, and automated shipment tracking. | `http://localhost:3456/parivahan/#/overview` |
+| **Karkhana ERP** *(कारख़ाना)* | `karkhana` | Workshop & manufacturing ERP, visual Gantt production schedule, multi-warehouse stock matrix, and register till. | `http://localhost:3456/karkhana/#/dashboard` |
 
 ### 🎨 Creative Studios, Portfolios & Interactive Living
 
-| Template | Code | Domain & Highlights | Live Entry URL |
+| Template | Folder / Slug | Domain & Highlights | Live Entry URL |
 |---|---|---|---|
-| **Daksh Dev** *(दक्ष)* | `portfolio` | 3D interactive WebGL creative portfolio, particle image morphing, project case studies, and responsive mobile mockups. | `http://localhost:3456/portfolio/` |
-| **Srijan Studio** *(सृजन)* | `gesso` | Fine art marketplace, studio artist profiles, collector management tools, and immersive video art banners. | `http://localhost:3456/gesso/` |
-| **Griha Living** *(गृह)* | `kvist` | Scandinavian furniture & ceramic storefront, bento-grid catalog layout, customer reviews, and order dispatch till. | `http://localhost:3456/kvist/` |
-| **Mishri 3D** *(मिश्री)* | `nero` | Artisanal chocolatier studio, 3D floating cacao pod parallax, flavor wheel, and interactive multi-course tasting flight. | `http://localhost:3456/nero/#` |
-| **Kaala Studio** *(काला)* | `vanta` | Audiophile planar magnetic headphones showcase, interactive 360 video scrub, exploded driver view, and sound engineering lab. | `http://localhost:3456/vanta/` |
-| **Gati Fitness** *(गति)* | `stride` | 11-view athletic training performance OS, Apple-style activity rings, sleep architecture analysis, and workout planners. | `http://localhost:3456/stride/#/` |
-| **Pangat POS** *(पंगत)* | `tavola` | Full-service restaurant management, dining floor table matrix, and real-time Kitchen Order Ticket (KOT) board. | `http://localhost:3456/tavola/#/overview` |
+| **Daksh Dev** *(दक्ष)* | `daksh` | 3D interactive WebGL creative portfolio, particle image morphing, project case studies, and responsive mobile mockups. | `http://localhost:3456/daksh/` |
+| **Srijan Studio** *(सृजन)* | `srijan` | Fine art marketplace, studio artist profiles, collector management tools, and immersive video art banners. | `http://localhost:3456/srijan/` |
+| **Griha Living** *(गृह)* | `griha` | Scandinavian furniture & ceramic storefront, bento-grid catalog layout, customer reviews, and order dispatch till. | `http://localhost:3456/griha/` |
+| **Mishri 3D** *(मिश्री)* | `mishri` | Artisanal chocolatier studio, 3D floating cacao pod parallax, flavor wheel, and interactive multi-course tasting flight. | `http://localhost:3456/mishri/#` |
+| **Kaala Studio** *(काला)* | `kaala` | Audiophile planar magnetic headphones showcase, interactive 360 video scrub, exploded driver view, and sound engineering lab. | `http://localhost:3456/kaala/` |
+| **Gati Fitness** *(गति)* | `gati` | 11-view athletic training performance OS, Apple-style activity rings, sleep architecture analysis, and workout planners. | `http://localhost:3456/gati/#/` |
+| **Pangat POS** *(पंगत)* | `pangat` | Full-service restaurant management, dining floor table matrix, and real-time Kitchen Order Ticket (KOT) board. | `http://localhost:3456/pangat/#/overview` |
 
 ---
 
@@ -142,7 +142,7 @@ python -m http.server 3456
 ```
 
 ### 3. Open in Browser
-Visit **`http://localhost:3456`** to explore the **Master Showcase Portal**, or navigate directly to any suite (e.g., `http://localhost:3456/corbel/` or `http://localhost:3456/murmura/`).
+Visit **`http://localhost:3456`** to explore the **Master Showcase Portal**, or navigate directly to any suite (e.g., `http://localhost:3456/vanijya/` or `http://localhost:3456/samvad/`).
 
 ---
 
@@ -151,38 +151,47 @@ Visit **`http://localhost:3456`** to explore the **Master Showcase Portal**, or 
 ```text
 Learnify-Dashboard/
 ├── index.html                   # Master Showcase Portal Hub
+├── INTERNAL_INDEX.md            # Master Internal Index & Legacy Code Registry
 ├── favicon.ico / .svg           # Multi-resolution brand icons
 ├── apple-touch-icon.png         # High-resolution touch icon
 ├── BATCH_EXECUTION_CHECKLIST.md # Reverse-engineering implementation logs
 │
-├── cadra/                       # Karkhana Workshop ERP Suite
-├── camber/                      # Yantra Auto Tuning & Parts Configurator
-├── corbel/                      # Vanijya Retail Omnichannel Analytics
-├── gesso/                       # Srijan Studio Art Marketplace
-├── ivora/                       # Dantika Dental Clinic & Odontogram
-├── kinby/                       # Kutumb Money Family Shared Wealth
-├── kvist/                       # Griha Living Scandinavian Storefront
-├── ledge/                       # Bahi Khata Retail POS & Purchasing
-├── mender/                      # Karigar Service Support-Desk CRM
-├── murmura/                     # Samvad Social Media Management Suite
-├── nero/                        # Mishri 3D Artisanal Chocolatier
-├── noria/                       # Parivahan OS Logistics Flow Builder
-├── portfolio/                   # Daksh Dev 3D WebGL Portfolio
-├── solum/                       # Bhoomi Outdoors Technical Storefront
-├── strada/                      # Yatra Mobility Luxury Supercar Rental
-├── stride/                      # Gati Fitness Biometric Performance OS
-├── tavola/                      # Pangat POS Restaurant Management
-├── tend/                        # Aarogya Clinic Patient Care Board
-├── vanta/                       # Kaala Studio Audiophile Hardware
-└── vessa/                       # Rasayan Lab Luxury Formulation OS
+├── aarogya/                     # Aarogya Clinic Patient Care Board
+├── bahikhata/                   # Bahi Khata Retail POS & Purchasing
+├── bhoomi/                      # Bhoomi Outdoors Technical Storefront
+├── daksh/                       # Daksh Dev 3D WebGL Portfolio
+├── dantika/                     # Dantika Dental Clinic & Odontogram
+├── gati/                        # Gati Fitness Biometric Performance OS
+├── griha/                       # Griha Living Scandinavian Storefront
+├── kaala/                       # Kaala Studio Audiophile Hardware
+├── karigar/                     # Karigar Service Support-Desk CRM
+├── karkhana/                    # Karkhana Workshop ERP Suite
+├── kutumb/                      # Kutumb Money Family Shared Wealth
+├── mishri/                      # Mishri 3D Artisanal Chocolatier
+├── pangat/                      # Pangat POS Restaurant Management
+├── parivahan/                   # Parivahan OS Logistics Flow Builder
+├── rasayan/                     # Rasayan Lab Luxury Formulation OS
+├── samvad/                      # Samvad Social Media Management Suite
+├── srijan/                      # Srijan Studio Art Marketplace
+├── vanijya/                     # Vanijya Retail Omnichannel Analytics
+├── yantra/                      # Yantra Auto Tuning & Parts Configurator
+└── yatra/                       # Yatra Mobility Luxury Supercar Rental
 ```
+
+---
+
+## 📋 Internal Indexing & Collision Prevention
+
+To maintain flawless organization as the Learnify Platform scales to 20+, 50+, or 100+ templates:
+- **Internal Mapping Registry**: See [INTERNAL_INDEX.md](file:///c:/Users/1000859/Desktop/Tools/Learnify%20Dashboard/INTERNAL_INDEX.md) for the authoritative record linking each Indian template name, active folder slug, and legacy source code identifier.
+- **Accidental Duplicate Guard**: Whenever a new template is planned or scaffolded, consult `INTERNAL_INDEX.md` to guarantee that neither the Indian name nor any legacy identifier is duplicated.
 
 ---
 
 ## 🛠️ Customization & Integration
 
 Every template in the Learnify Platform is self-contained and modular:
-1. **Extract Any Suite**: Copy any suite folder directly into your own project or repository.
+1. **Extract Any Suite**: Copy any suite folder (e.g., `vanijya/` or `aarogya/`) directly into your own project or repository.
 2. **Customize Tokens**: Update the CSS custom properties in `tokens.css` or `:root` to match your client's brand.
 3. **Connect Your Backend**: Hook up your REST, GraphQL, or Supabase endpoints to the clean, documented data fetchers in `js/`.
 
