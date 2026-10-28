@@ -890,6 +890,76 @@
         display: none;
       }
     }
+
+    /* File Protocol Notice Banner */
+    .file-protocol-banner {
+      width: 100%;
+      background: linear-gradient(90deg, #ea580c 0%, #c2410c 100%);
+      color: #ffffff;
+      padding: 10px 20px;
+      position: relative;
+      z-index: 1000;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+      font-size: 13.5px;
+      font-family: var(--font);
+    }
+    .banner-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+    .banner-content code {
+      background: rgba(0, 0, 0, 0.28);
+      padding: 2px 7px;
+      border-radius: 5px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .banner-tag {
+      background: #ffffff;
+      color: #ea580c;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.2s;
+    }
+    .banner-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .banner-btn {
+      background: #ffffff;
+      color: #111827;
+      padding: 7px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.15s, background 0.15s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    .banner-btn:hover {
+      background: #f0f4f8;
+      transform: translateY(-1px);
+    }
   </style>
 </head>
 <body>
@@ -899,6 +969,23 @@
     <i class="mesh__b"></i>
     <i class="mesh__c"></i>
   </div>
+
+  <!-- File Protocol Notice Banner (Only shown if opened via file://) -->
+  <aside id="file-protocol-banner" class="file-protocol-banner" style="display: none;" aria-label="Local Server Notice">
+    <div class="banner-inner">
+      <div class="banner-content">
+        <span class="banner-tag">Notice</span>
+        <span class="banner-text">
+          Opened via <code>file://</code>. Dashboard templates use ES modules that require an HTTP server.
+        </span>
+      </div>
+      <div class="banner-actions">
+        <a href="http://localhost:3456/index.html" class="banner-btn" id="banner-open-btn">
+          ⚡ Open on Local Server (http://localhost:3456)
+        </a>
+      </div>
+    </div>
+  </aside>
 
   <!-- Sticky Glassmorphic Navbar -->
   <header class="navbar" id="top">
@@ -1054,10 +1141,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./vanijya/#/dashboard" class="btn-launch">
+          <a href="./vanijya/index.html#/dashboard" class="btn-launch">
             Launch Vanijya Retail →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./vanijya/#/dashboard', 'Vanijya Retail')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./vanijya/index.html#/dashboard', 'Vanijya Retail')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1085,10 +1172,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./samvad/#/overview" class="btn-launch">
+          <a href="./samvad/index.html#/overview" class="btn-launch">
             Launch Samvad Social →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./samvad/#/overview', 'Samvad Social')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./samvad/index.html#/overview', 'Samvad Social')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1116,10 +1203,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./kutumb/#/home" class="btn-launch">
+          <a href="./kutumb/index.html#/home" class="btn-launch">
             Launch Kutumb Money →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./kutumb/#/home', 'Kutumb Money')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./kutumb/index.html#/home', 'Kutumb Money')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1147,10 +1234,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./rasayan/#/dashboard/overview" class="btn-launch">
+          <a href="./rasayan/index.html#/dashboard/overview" class="btn-launch">
             Launch Rasayan Lab →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./rasayan/#/dashboard/overview', 'Rasayan Lab')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./rasayan/index.html#/dashboard/overview', 'Rasayan Lab')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1178,10 +1265,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./pangat/#/overview" class="btn-launch">
+          <a href="./pangat/index.html#/overview" class="btn-launch">
             Launch Pangat POS →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./pangat/#/overview', 'Pangat POS')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./pangat/index.html#/overview', 'Pangat POS')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1209,10 +1296,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./dantika/#/today" class="btn-launch">
+          <a href="./dantika/index.html#/today" class="btn-launch">
             Launch Dantika Clinic →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./dantika/#/today', 'Dantika Clinic')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./dantika/index.html#/today', 'Dantika Clinic')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1240,10 +1327,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./karkhana/#/dashboard" class="btn-launch">
+          <a href="./karkhana/index.html#/dashboard" class="btn-launch">
             Launch Karkhana ERP →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./karkhana/#/dashboard', 'Karkhana ERP')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./karkhana/index.html#/dashboard', 'Karkhana ERP')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1271,10 +1358,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./parivahan/#/overview" class="btn-launch">
+          <a href="./parivahan/index.html#/overview" class="btn-launch">
             Launch Parivahan OS →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./parivahan/#/overview', 'Parivahan OS')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./parivahan/index.html#/overview', 'Parivahan OS')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1302,10 +1389,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./karigar/#/cases" class="btn-launch">
+          <a href="./karigar/index.html#/cases" class="btn-launch">
             Launch Karigar Service →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./karigar/#/cases', 'Karigar Service')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./karigar/index.html#/cases', 'Karigar Service')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1333,10 +1420,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./bahikhata/#overview" class="btn-launch">
+          <a href="./bahikhata/index.html#overview" class="btn-launch">
             Launch Bahi Khata →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./bahikhata/#overview', 'Bahi Khata')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./bahikhata/index.html#overview', 'Bahi Khata')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1364,10 +1451,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./srijan/" class="btn-launch">
+          <a href="./srijan/index.html" class="btn-launch">
             Launch Srijan Studio →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./srijan/', 'Srijan Studio')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./srijan/index.html', 'Srijan Studio')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1395,10 +1482,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./bhoomi/" class="btn-launch">
+          <a href="./bhoomi/index.html" class="btn-launch">
             Launch Bhoomi Outdoors →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./bhoomi/', 'Bhoomi Outdoors')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./bhoomi/index.html', 'Bhoomi Outdoors')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1426,10 +1513,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./gati/#/" class="btn-launch">
+          <a href="./gati/index.html#/" class="btn-launch">
             Launch Gati Fitness →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./gati/#/', 'Gati Fitness')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./gati/index.html#/', 'Gati Fitness')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1457,10 +1544,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./griha/" class="btn-launch">
+          <a href="./griha/index.html" class="btn-launch">
             Launch Griha Living →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./griha/', 'Griha Living')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./griha/index.html', 'Griha Living')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1488,10 +1575,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./daksh/" class="btn-launch">
+          <a href="./daksh/index.html" class="btn-launch">
             Launch Daksh Dev →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./daksh/', 'Daksh Dev')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./daksh/index.html', 'Daksh Dev')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1519,10 +1606,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./yantra/" class="btn-launch">
+          <a href="./yantra/index.html" class="btn-launch">
             Launch Yantra Auto →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./yantra/', 'Yantra Auto')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./yantra/index.html', 'Yantra Auto')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1550,10 +1637,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./yatra/" class="btn-launch">
+          <a href="./yatra/index.html" class="btn-launch">
             Launch Yatra Mobility →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./yatra/', 'Yatra Mobility')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./yatra/index.html', 'Yatra Mobility')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1581,10 +1668,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./kaala/" class="btn-launch">
+          <a href="./kaala/index.html" class="btn-launch">
             Launch Kaala Studio →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./kaala/', 'Kaala Studio')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./kaala/index.html', 'Kaala Studio')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1612,10 +1699,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./mishri/#" class="btn-launch">
+          <a href="./mishri/index.html#" class="btn-launch">
             Launch Mishri 3D →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./mishri/#', 'Mishri 3D')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./mishri/index.html#', 'Mishri 3D')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1643,10 +1730,10 @@
           </ul>
         </div>
         <div class="card-actions">
-          <a href="./aarogya/#/today" class="btn-launch">
+          <a href="./aarogya/index.html#/today" class="btn-launch">
             Launch Aarogya Clinic →
           </a>
-          <button class="btn-copy-url" onclick="copyLink('./aarogya/#/today', 'Aarogya Clinic')" title="Copy link">
+          <button class="btn-copy-url" onclick="copyLink('./aarogya/index.html#/today', 'Aarogya Clinic')" title="Copy link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </button>
         </div>
@@ -1873,8 +1960,13 @@
 
     // Copy URL Toast
     function copyLink(path, name) {
-      const url = new URL(path, window.location.href).href;
-      navigator.clipboard.writeText(url).then(() => {
+      let finalUrl;
+      if (window.location.protocol === 'file:') {
+        finalUrl = 'http://localhost:3456/' + path.replace(/^\.\//, '');
+      } else {
+        finalUrl = new URL(path, window.location.href).href;
+      }
+      navigator.clipboard.writeText(finalUrl).then(() => {
         showToast(`Copied ${name} direct link!`);
       }).catch(() => {
         showToast('Link copied!');
@@ -1893,6 +1985,53 @@
         toast.classList.remove('show');
       }, 2400);
     }
+
+    // File Protocol Detection & Local Server Auto-Upgrade
+    (function initProtocolHandling() {
+      if (window.location.protocol !== 'file:') return;
+
+      const banner = document.getElementById('file-protocol-banner');
+      if (banner) banner.style.display = 'block';
+
+      const devPort = 3456;
+      const localhostBase = `http://localhost:${devPort}/`;
+
+      // Upgrade launch button links so clicking from file:// navigates to running local server
+      document.querySelectorAll('.btn-launch').forEach(btn => {
+        const href = btn.getAttribute('href');
+        if (href && href.startsWith('./')) {
+          const cleanPath = href.replace(/^\.\//, '');
+          btn.setAttribute('href', `${localhostBase}${cleanPath}`);
+          btn.setAttribute('target', '_blank');
+          btn.setAttribute('rel', 'noopener noreferrer');
+        }
+      });
+
+      // Probe localhost:3456 to check if dev server is active
+      fetch(`${localhostBase}favicon.svg`, { mode: 'no-cors' })
+        .then(() => {
+          const bannerText = document.querySelector('.banner-text');
+          const bannerBtn = document.getElementById('banner-open-btn');
+          const bannerTag = document.querySelector('.banner-tag');
+          if (bannerTag) {
+            bannerTag.style.background = '#22c55e';
+            bannerTag.style.color = '#000';
+            bannerTag.textContent = 'Server Online';
+          }
+          if (bannerText) {
+            bannerText.innerHTML = `Local server is active on <code>http://localhost:3456</code>. Template launch buttons will open through the local server.`;
+          }
+          if (bannerBtn) {
+            bannerBtn.textContent = '🚀 Open Full Platform at http://localhost:3456';
+          }
+        })
+        .catch(() => {
+          const bannerText = document.querySelector('.banner-text');
+          if (bannerText) {
+            bannerText.innerHTML = `Opened via <code>file://</code>. Run <code>npx http-server -p 3456</code> in your project directory to run templates.`;
+          }
+        });
+    })();
   </script>
 </body>
 </html>
