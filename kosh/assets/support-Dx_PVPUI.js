@@ -49,9 +49,9 @@ import{Bt as e,C as t,Cn as n,D as r,E as i,Jt as a,P as o,Sn as s,W as c,Yt as 
         <section class="card sp-contact" aria-labelledby="spc-t">
           <header class="card__head"><h2 class="card__title" id="spc-t">${r(`phone`)}Talk to a person</h2></header>
           <div class="ad-rows">
-            <a class="ad-row" href="mailto:support@orvel.example">${r(`mail`)}<span><b>support@orvel.example</b><small>Replies within the working day</small></span>${r(`chevR`)}</a>
-            <a class="ad-row" href="tel:+31207004410">${r(`phone`)}<span><b>+31 20 700 44 10</b><small>Mon–Fri, 08:00–18:00 CET</small></span>${r(`chevR`)}</a>
-            <a class="ad-row" href="mailto:maud.jansen@orvel.example">${r(`user`)}<span><b>Maud Jansen</b><small>Your account manager since 2021</small></span>${r(`chevR`)}</a>
+            <a class="ad-row" href="mailto:support@kosh-treasury.in">${r(`mail`)}<span><b>support@kosh-treasury.in</b><small>Replies within 2 hours</small></span>${r(`chevR`)}</a>
+            <a class="ad-row" href="tel:+912269884410">${r(`phone`)}<span><b>+91 22 6988 4410</b><small>Mon–Fri, 09:30–18:30 IST · BKC Mumbai</small></span>${r(`chevR`)}</a>
+            <a class="ad-row" href="mailto:aarav.mehta@kosh-treasury.in">${r(`user`)}<span><b>Aarav Mehta</b><small>Your dedicated treasury advisor since 2022</small></span>${r(`chevR`)}</a>
           </div>
         </section>
       </div>
