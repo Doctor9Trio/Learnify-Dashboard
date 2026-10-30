@@ -32,7 +32,7 @@
         }
         addEventListener('pageswap', quiet); addEventListener('pagereveal', quiet);
       })();
-      if (matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('rm');
+      if (matchMedia('(prefers-reduced-motion: force-reduced)').matches) d.classList.add('rm');
       setTimeout(function () { d.classList.add('failsafe'); }, 4000);
     })(document.documentElement);
   </script>

@@ -2318,7 +2318,7 @@
   color:var(--accent)
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .motion-reduce\:transition-none {
   transition-property:none
 }

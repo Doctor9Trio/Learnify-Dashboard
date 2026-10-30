@@ -1934,7 +1934,7 @@ html.cl-dragging,html.cl-dragging * {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .cl-now i:after {
   animation:none
 }

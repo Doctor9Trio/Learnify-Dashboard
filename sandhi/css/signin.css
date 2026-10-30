@@ -1,0 +1,488 @@
+/*! Customers · Accord — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+.signin {
+  z-index:50;
+  background:var(--bg);
+  position:fixed;
+  inset:0;
+  overflow-y:auto
+}
+
+.signin[hidden] {
+  display:none
+}
+
+.si {
+  grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);
+  min-height:100%;
+  display:grid
+}
+
+.si-brand {
+  background:radial-gradient(120% 70% at 90% 0%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 60%), radial-gradient(80% 60% at 0% 100%, color-mix(in srgb, var(--c4) 18%, transparent), transparent 65%), var(--night);
+  color:var(--on-night);
+  isolation:isolate;
+  border-radius:22px;
+  grid-template-rows:auto auto 1fr auto;
+  gap:clamp(20px,3vh,36px);
+  margin:12px 0 12px 12px;
+  padding:clamp(24px,3.4vw,52px);
+  display:grid;
+  position:relative;
+  overflow:hidden
+}
+
+.si-logo {
+  letter-spacing:-.03em;
+  justify-self:start;
+  align-items:center;
+  gap:10px;
+  font-size:1.3rem;
+  font-weight:700;
+  display:inline-flex
+}
+
+.si-logo__mark {
+  width:30px;
+  height:30px;
+  color:var(--accent)
+}
+
+.si-brand .si-logo__mark {
+  color:var(--on-night)
+}
+
+.si-logo__mark svg {
+  width:100%;
+  height:100%
+}
+
+.si-copy {
+  gap:12px;
+  max-width:540px;
+  display:grid
+}
+
+.si-kicker {
+  font-size:var(--fs-xs);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--on-night-2);
+  font-weight:650
+}
+
+.si-head {
+  letter-spacing:-.035em;
+  font-size:clamp(1.9rem,1.1rem + 2.2vw,3.1rem);
+  font-weight:650;
+  line-height:1.04
+}
+
+.si-sub {
+  color:var(--on-night-2);
+  font-size:var(--fs-md);
+  max-width:40ch
+}
+
+.si-note {
+  font-size:var(--fs-xs);
+  color:var(--on-night-2);
+  align-items:center;
+  gap:8px;
+  display:inline-flex
+}
+
+.si-note .ico {
+  width:15px;
+  height:15px
+}
+
+.si-stage {
+  align-self:stretch;
+  min-height:300px;
+  position:relative
+}
+
+.si-track {
+  border-bottom:1px solid color-mix(in srgb, var(--on-night) 14%, transparent);
+  flex-wrap:wrap;
+  gap:18px;
+  padding-bottom:12px;
+  display:flex;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0
+}
+
+.si-track .stage {
+  color:var(--on-night-2)
+}
+
+.si-deal {
+  background:var(--surface);
+  width:min(300px,58%);
+  color:var(--ink);
+  border:1px solid var(--line-strong);
+  will-change:transform;
+  border-radius:14px;
+  gap:10px;
+  padding:14px 14px 12px;
+  display:grid;
+  position:absolute;
+  box-shadow:0 30px 60px -24px #0000008c,0 2px #0000000a
+}
+
+.si-deal--0 {
+  z-index:2;
+  top:22%;
+  left:2%
+}
+
+.si-deal--1 {
+  z-index:1;
+  top:13%;
+  right:2%
+}
+
+.si-deal--2 {
+  z-index:3;
+  top:52%;
+  left:30%
+}
+
+.si-deal.is-won {
+  box-shadow:0 0 0 2px var(--c3), 0 30px 60px -24px #0009
+}
+
+.si-deal__head {
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  display:flex
+}
+
+.si-deal__head .logo-tile {
+  border-radius:9px;
+  width:34px;
+  height:34px;
+  font-size:12px
+}
+
+.si-deal__id {
+  min-width:0;
+  line-height:1.25;
+  display:grid
+}
+
+.si-deal__id b {
+  font-size:var(--fs-sm);
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-weight:650;
+  overflow:hidden
+}
+
+.si-deal__id small {
+  font-size:var(--fs-xs);
+  color:var(--ink-3)
+}
+
+.si-deal__blurb {
+  font-size:var(--fs-xs);
+  color:var(--ink-2);
+  -webkit-line-clamp:2;
+  -webkit-box-orient:vertical;
+  line-height:1.4;
+  display:-webkit-box;
+  overflow:hidden
+}
+
+.si-deal__foot {
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px;
+  display:flex
+}
+
+.si-deal__foot .meta {
+  height:24px
+}
+
+.si-deal__value {
+  font-size:var(--fs-xs);
+  font-variant-numeric:tabular-nums;
+  margin-left:auto;
+  font-weight:700
+}
+
+.si-toast {
+  z-index:4;
+  background:var(--surface);
+  color:var(--ink);
+  border:1px solid var(--line-strong);
+  font-size:var(--fs-sm);
+  border-radius:12px;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px 10px 12px;
+  display:inline-flex;
+  position:absolute;
+  bottom:4%;
+  left:8%;
+  box-shadow:0 20px 40px -18px #0000008c
+}
+
+.si-toast .ico {
+  width:18px;
+  height:18px;
+  color:var(--good)
+}
+
+.si-toast b {
+  font-weight:650
+}
+
+.si-rate {
+  z-index:4;
+  background:color-mix(in srgb, var(--on-night) 10%, var(--night));
+  color:var(--on-night);
+  border:1px solid color-mix(in srgb, var(--on-night) 16%, transparent);
+  border-radius:14px;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px 10px 10px;
+  display:flex;
+  position:absolute;
+  bottom:10%;
+  right:4%
+}
+
+.si-rate svg {
+  width:40px;
+  height:40px;
+  transform:rotate(-90deg)
+}
+
+.si-rate circle {
+  fill:none;
+  stroke-width:4px;
+  stroke-linecap:round
+}
+
+.si-rate__base {
+  stroke:color-mix(in srgb, var(--on-night) 18%, transparent)
+}
+
+.si-rate__val {
+  stroke:var(--on-night)
+}
+
+.si-rate span {
+  line-height:1.15;
+  display:grid
+}
+
+.si-rate b {
+  font-size:var(--fs-lg);
+  font-variant-numeric:tabular-nums;
+  font-weight:650
+}
+
+.si-rate small {
+  font-size:var(--fs-xs);
+  color:var(--on-night-2)
+}
+
+.si-main {
+  place-items:center;
+  padding:clamp(28px,5vw,72px) clamp(20px,4vw,64px);
+  display:grid
+}
+
+.si-form {
+  gap:18px;
+  width:min(420px,100%);
+  display:grid
+}
+
+.si-logo--sm {
+  display:none
+}
+
+.si-intro {
+  gap:6px;
+  margin-bottom:6px;
+  display:grid
+}
+
+.si-title {
+  font-size:var(--fs-title);
+  letter-spacing:-.03em;
+  font-weight:650;
+  line-height:1.1
+}
+
+.si-title:focus {
+  outline:none
+}
+
+.si-lede {
+  color:var(--ink-2)
+}
+
+.si-lede b {
+  color:var(--ink);
+  font-weight:600
+}
+
+.si-form .input {
+  height:46px
+}
+
+.si-pass {
+  align-items:center;
+  display:flex;
+  position:relative
+}
+
+.si-pass .input {
+  padding-right:48px
+}
+
+.si-eye {
+  width:32px;
+  height:32px;
+  position:absolute;
+  right:8px
+}
+
+.si-row {
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  display:flex
+}
+
+.si-forgot {
+  font-size:var(--fs-sm);
+  color:var(--accent-deep);
+  background:0 0;
+  border:0;
+  border-radius:6px;
+  padding:4px 2px;
+  font-weight:600
+}
+
+.si-forgot:hover {
+  text-underline-offset:3px;
+  text-decoration:underline
+}
+
+.si-submit {
+  width:100%;
+  height:48px;
+  font-size:var(--fs-md);
+  margin-top:4px;
+  position:relative
+}
+
+.si-submit .ico {
+  transition:transform .3s var(--ease-out)
+}
+
+.si-submit:hover .ico {
+  transform:translate(3px)
+}
+
+.si-submit:disabled {
+  opacity:1;
+  cursor:progress
+}
+
+.si-spin {
+  border:2px solid color-mix(in srgb, var(--on-night) 30%, transparent);
+  border-top-color:var(--on-night);
+  border-radius:50%;
+  width:16px;
+  height:16px;
+  display:none
+}
+
+.si-submit.is-busy .si-spin {
+  animation:.7s linear infinite si-spin;
+  display:block
+}
+
+.si-submit.is-busy .ico {
+  display:none
+}
+
+@keyframes si-spin {
+  to {
+  transform:rotate(360deg)
+}
+
+}
+
+.si-demo {
+  background:var(--surface-2);
+  font-size:var(--fs-xs);
+  color:var(--ink-2);
+  border-radius:12px;
+  align-items:flex-start;
+  gap:10px;
+  padding:12px 14px;
+  line-height:1.45;
+  display:flex
+}
+
+.si-demo .ico {
+  width:16px;
+  height:16px;
+  color:var(--accent-deep);
+  margin-top:1px
+}
+
+@media (width<=1180px) {
+  .si-deal {
+  width:min(270px,64%)
+}
+
+.si-rate {
+  display:none
+}
+
+}
+
+@media (width<=860px) {
+  .si {
+  grid-template-columns:minmax(0,1fr)
+}
+
+.si-brand {
+  border-radius:18px;
+  grid-template-rows:auto auto;
+  gap:18px;
+  margin:10px 10px 0;
+  padding:22px 20px
+}
+
+.si-stage,.si-note {
+  display:none
+}
+
+.si-head {
+  font-size:clamp(1.5rem,1.1rem + 2vw,2rem)
+}
+
+.si-sub {
+  font-size:var(--fs-sm)
+}
+
+.si-main {
+  place-items:start center;
+  padding:28px 16px 40px
+}
+
+}

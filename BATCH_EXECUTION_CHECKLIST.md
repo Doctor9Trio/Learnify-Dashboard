@@ -9,7 +9,7 @@
 
 | Total Suites | Completed Suites | Remaining Suites | Progress | Current Active Suite |
 |:---:|:---:|:---:|:---:|:---:|
-| **20** | **20** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`, `portfolio`, `camber`, `strada`, `vanta`, `nero`, `tend`) | **0** | **100% — COMPLETE** | **🎉 ALL 20 SUITES FULLY REVERSE-ENGINEERED & MODULARIZED!** |
+| **26** | **26** (`corbel`, `murmura`, `kinby`, `vessa`, `tavola`, `ivora`, `cadra`, `noria`, `mender`, `ledge`, `gesso`, `solum`, `stride`, `kvist`, `portfolio`, `camber`, `strada`, `vanta`, `nero`, `tend`, `aarambh`, `aamrai`, `kosh`, `sandhi`, `maitri`, `vastu`) | **0** | **100% — COMPLETE** | **🎉 ALL 26 SUITES FULLY REVERSE-ENGINEERED & MODULARIZED!** |
 
 ---
 
@@ -400,7 +400,83 @@ These two suites serve as the architectural blueprint and quality reference for 
 
 ---
 
-## 🛠️ Batch Completion Protocol (Checklist for every session)
+### 📦 BATCH 10: Kinetic Brand Intro & Farm E-Commerce (COMPLETED)
+> **Suites**: `aarambh` (Aarambh Studio) & `aamrai` (Aamrai Orchards)  
+> **Status**: ✅ **COMPLETE (Pixel-Perfect Verified)**
+
+#### Suite 21: `aarambh` — Aarambh Studio *(आरम्भ)*
+- **Domain**: Kinetic Typography Brand Intro & Interactive Agency Timeline
+- **Target Path**: `http://localhost:3456/aarambh/`
+- [x] **Phase 1: REA Inspection & Assets**: Discovered and downloaded all primary and dynamic chunks into `./assets/`, downloaded `textures/grain.png`.
+- [x] **Phase 2: Tokens & Base**: Generated `aarambh/css/tokens.css` with 18 extracted colors, 20 custom CSS variables, and font stacks.
+- [x] **Phase 3: Shell & Motion**: Unconditional LAN motion fix (`force-reduced` applied to all animation rules).
+- [x] **Phase 4: Modular Styles**: `aarambh/css/index.css`.
+- [x] **Phase 5: Interactive JS**: `aarambh/js/theme.js`, `router.js`, `main.js`, and `index.js`.
+- [x] **Phase 6: QA**: 0 missing assets, 0 console errors, verified HTTP 200 OK.
+
+#### Suite 22: `aamrai` — Aamrai Orchards *(आमराई)*
+- **Domain**: Gourmet Sun-Ripened Mango Orchard & Direct-to-Consumer Store
+- **Target Path**: `http://localhost:3456/aamrai/`
+- [x] **Phase 1: REA Inspection & Assets**: Downloaded all 9 catalog media files (Alphonso, Himsagar, Langra, orchard hero, cut slices) into `photos/mango/`.
+- [x] **Phase 2: Tokens**: Generated `aamrai/css/tokens.css` with amber/saffron palette, 35 custom CSS variables.
+- [x] **Phase 3: Shell & Motion**: `force-reduced` media queries for unconditional smooth floating animations across LAN.
+- [x] **Phase 4: Modular Styles**: `aamrai/css/index.css`.
+- [x] **Phase 5: Interactive JS**: `aamrai/js/theme.js`, `router.js`, `main.js`, and `index.js`.
+- [x] **Phase 6: QA**: 0 missing assets, 0 console errors, verified HTTP 200 OK.
+
+---
+
+### 📦 BATCH 11: Treasury Finance & Deal Pipeline (COMPLETED)
+> **Suites**: `kosh` (Kosh Treasury) & `sandhi` (Sandhi Pipeline)  
+> **Status**: ✅ **COMPLETE (Pixel-Perfect Verified)**
+
+#### Suite 23: `kosh` — Kosh Treasury *(कोष)*
+- **Domain**: B2B Manufacturing Finance OS, Dot-Matrix Cashflow & Approvals
+- **Target Path**: `http://localhost:3456/kosh/#/overview`
+- [x] **Phase 1: REA Inspection & Assets**: Downloaded 13 stylesheets and 15 script chunks covering all sub-routes (`overview`, `transactions`, `accounts`, `cards`, `invoices`, `bills`, `contacts`, `team`, `analytics`, `documents`).
+- [x] **Phase 2: Tokens**: Generated `kosh/css/tokens.css` with 126 colors, 109 CSS variables, isolated `kosh:theme` storage.
+- [x] **Phase 3: Shell & Routing**: Hash router configured for all financial views (`#/overview`, `#/cards`, `#/invoices`, `#/bills`).
+- [x] **Phase 4: Modular Styles**: Formatted individual CSS files for each financial sub-view in `kosh/css/`.
+- [x] **Phase 5: Interactive JS**: Modularized view controllers in `kosh/js/`.
+- [x] **Phase 6: QA**: 0 missing assets, 0 console errors, verified HTTP 200 OK.
+
+#### Suite 24: `sandhi` — Sandhi Pipeline *(सन्धि)*
+- **Domain**: High-Touch Client CRM & Drag-and-Drop Deal Board
+- **Target Path**: `http://localhost:3456/sandhi/`
+- [x] **Phase 1: REA Inspection & Assets**: Downloaded all 10 team member avatars into `photos/165-accord/` and all route chunks (`dashboard`, `activity`, `tasks`, `projects`, `team`, `settings`, `signin`).
+- [x] **Phase 2: Tokens**: Generated `sandhi/css/tokens.css` with 92 colors, 104 custom CSS variables, isolated `sandhi:v1` storage.
+- [x] **Phase 3: Shell & Motion**: Unconditional LAN motion enabled with `force-reduced`.
+- [x] **Phase 4: Modular Styles**: Dedicated stylesheets for `activity.css`, `dashboard.css`, `projects.css`, `settings.css`, `tasks.css`, `team.css` in `sandhi/css/`.
+- [x] **Phase 5: Interactive JS**: Modularized view controllers in `sandhi/js/`.
+- [x] **Phase 6: QA**: 0 missing assets, 0 console errors, verified HTTP 200 OK.
+
+---
+
+### 📦 BATCH 12: Sales CRM & Architectural Living (COMPLETED)
+> **Suites**: `maitri` (Maitri CRM) & `vastu` (Vastu Living)  
+> **Status**: ✅ **COMPLETE (Pixel-Perfect Verified)**
+
+#### Suite 25: `maitri` — Maitri CRM *(मैत्री)*
+- **Domain**: Calm Sales CRM, Customer Interaction Ledger & Schedule
+- **Target Path**: `http://localhost:3456/maitri/#/overview`
+- [x] **Phase 1: REA Inspection & Assets**: Downloaded 9 stylesheets and 10 scripts covering `overview`, `pipeline`, `customers`, `schedule`, `finance`, `growth`, `projects`, `settings`.
+- [x] **Phase 2: Tokens**: Generated `maitri/css/tokens.css` with 96 colors, 118 custom CSS variables, isolated `maitri:theme` storage.
+- [x] **Phase 3: Shell & Motion**: Unconditional LAN motion enabled with `force-reduced`.
+- [x] **Phase 4: Modular Styles**: View-specific stylesheets (`customers.css`, `finance.css`, `growth.css`, `pipeline.css`, `schedule.css`, `settings.css`) in `maitri/css/`.
+- [x] **Phase 5: Interactive JS**: Modularized view controllers in `maitri/js/`.
+- [x] **Phase 6: QA**: 0 missing assets, 0 console errors, verified HTTP 200 OK.
+
+#### Suite 26: `vastu` — Vastu Living *(वास्तु)*
+- **Domain**: Architectural Furniture Storefront, Living Spaces & Checkout
+- **Target Path**: `http://localhost:3456/vastu/`
+- [x] **Phase 1: REA Inspection & Assets**: Downloaded all 24 high-res catalog images (A1-A3, C1-C5, H1-H2, P1-P7, W1) and 4 video vignettes (`hero-lg.mp4`, `hero-sm.mp4`, `workshop-lg.mp4`, `workshop-sm.mp4`) into `photos/oria/` and `video/oria/`.
+- [x] **Phase 2: Tokens**: Generated `vastu/css/tokens.css` with warm earth & stone palettes, 40 CSS variables, isolated `vastu:intro` storage.
+- [x] **Phase 3: Shell & Motion**: Rewrote dynamic media resolvers in `shell.js` to relative `./photos/oria/` and `./video/oria/`.
+- [x] **Phase 4: Modular Styles**: Formatted clean source in `vastu/css/home.css`.
+- [x] **Phase 5: Interactive JS**: Modularized view controllers in `vastu/js/`.
+- [x] **Phase 6: QA**: 0 missing assets, 0 console errors, verified HTTP 200 OK.
+
+---
 
 When finishing a batch of 2 suites, verify:
 1. [ ] Both suites have clean `css/` (`tokens.css`, `layout.css`, `components.css`, `pages/*.css`) and `js/` (`main.js`, `router.js`, `theme.js`).

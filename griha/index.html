@@ -11,6 +11,17 @@
     <meta property="og:title" content="Griha Living — Calm Objects for Mindful Homes" />
     <meta property="og:description" content="Furniture, lighting and textiles made to be lived with." />
     <meta property="og:type" content="website" />
+    <script>
+      // Universal shim for Non-Secure Contexts (HTTP on local IP)
+      if (!window.crypto) window.crypto = {};
+      if (!window.crypto.randomUUID) {
+        window.crypto.randomUUID = function() {
+          return '10000000-1000-4000-8000-100000000000'.replace(/[018]/g, function(c) {
+            return (c ^ (Math.random() * 16 >> (c / 4))).toString(16);
+          });
+        };
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Geist:wght@400..600&family=Geist+Mono:wght@400..500&display=swap" rel="stylesheet" />

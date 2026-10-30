@@ -106,7 +106,7 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .fan__tilt,
   .plan,
   .btn,

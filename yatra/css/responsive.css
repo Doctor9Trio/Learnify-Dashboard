@@ -216,7 +216,7 @@
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   *,:before,:after {
   transition-duration:.01ms!important;
   animation-duration:.01ms!important

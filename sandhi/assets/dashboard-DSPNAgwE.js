@@ -1,0 +1,114 @@
+import{A as e,B as t,C as n,D as r,F as i,G as a,I as o,K as s,L as c,O as l,Q as u,R as d,U as f,V as p,W as m,X as h,Z as g,at as _,ct as v,dt as y,f as b,g as x,h as S,it as C,j as w,k as T,l as E,lt as D,n as O,nt as k,o as A,ot as ee,q as te,r as ne,s as re,st as j,t as M,tt as ie,u as N,ut as ae,v as P,w as F,z as I}from"./index-DtoNja2p.js";import{n as oe}from"./activity-kinds-svnIYJct.js";function se(e){if(e<=0)return 4e3;let t=e/4,n=10**Math.floor(Math.log10(t)),r=t/n;return(r<=1?1:r<=2?2:r<=2.5?2.5:r<=5?5:10)*n*4}function ce(e,t){let n=e.length;if(n<2)return``;let r=[],i=[];for(let i=0;i<n-1;i++)r[i]=(t[i+1]-t[i])/(e[i+1]-e[i]||1);i[0]=r[0],i[n-1]=r[n-2];for(let e=1;e<n-1;e++)i[e]=r[e-1]*r[e]<=0?0:(r[e-1]+r[e])/2;for(let e=0;e<n-1;e++){if(r[e]===0){i[e]=0,i[e+1]=0;continue}let t=i[e]/r[e],n=i[e+1]/r[e],a=t*t+n*n;if(a>9){let o=3/Math.sqrt(a);i[e]=o*t*r[e],i[e+1]=o*n*r[e]}}let a=`M${e[0].toFixed(1)},${t[0].toFixed(1)}`;for(let r=0;r<n-1;r++){let n=(e[r+1]-e[r])/3;a+=`C${(e[r]+n).toFixed(1)},${(t[r]+i[r]*n).toFixed(1)} ${(e[r+1]-n).toFixed(1)},${(t[r+1]-i[r+1]*n).toFixed(1)} ${e[r+1].toFixed(1)},${t[r+1].toFixed(1)}`}return a}var L=e=>new Date(e).toLocaleDateString(`en-US`,{month:`short`}),R=e=>new Date(e).toLocaleDateString(`en-US`,{month:`long`,year:`numeric`});function le(e,t=12){e.classList.add(`rv`),e.tabIndex=0,e.setAttribute(`role`,`group`),e.setAttribute(`aria-label`,`Closed revenue by month. Use the left and right arrow keys to read each month.`),e.innerHTML=`
+    <svg class="rv__svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="rv-grad" x1="0" x2="0" y1="0" y2="1"><stop offset="0" class="rv__stop0"/><stop offset="1" class="rv__stop1"/></linearGradient>
+        <clipPath id="rv-clip"><rect class="rv__cliprect"/></clipPath>
+      </defs>
+      <g class="rv__grid"></g>
+      <g class="rv__x"></g>
+      <g clip-path="url(#rv-clip)"><path class="rv__area" fill="url(#rv-grad)"/><path class="rv__line"/></g>
+      <line class="rv__cross"/>
+      <circle class="rv__end" r="4.5"/>
+      <circle class="rv__dot" r="5.5"/>
+    </svg>
+    <div class="rv__tip" aria-hidden="true"><span class="rv__tip-m"></span><b class="rv__tip-v"></b><span class="rv__tip-d"></span></div>`;let r=e.querySelector(`svg`),i=r.querySelector(`.rv__grid`),a=r.querySelector(`.rv__x`),o=r.querySelector(`.rv__area`),s=r.querySelector(`.rv__line`),c=r.querySelector(`.rv__cliprect`),l=r.querySelector(`.rv__cross`),u=r.querySelector(`.rv__end`),d=r.querySelector(`.rv__dot`),f=e.querySelector(`.rv__tip`),p=f.querySelector(`.rv__tip-m`),m=f.querySelector(`.rv__tip-v`),h=f.querySelector(`.rv__tip-d`);y.set([l,d,f],{opacity:0});let g=[],_={s:6,yMax:4e3,v:[]},v=t,b=-1,x={L:0,T:0,pw:1,ph:1,W:0,H:0},S=()=>_.v.length,C=e=>x.L+(e-_.s)/Math.max(1e-4,S()-1-_.s)*x.pw,w=e=>x.T+x.ph-e/_.yMax*x.ph,T=(e,t)=>se(Math.max(...t.slice(t.length-e),1)*1.08);function E(){let t=e.clientWidth,n=e.clientHeight;if(!t||!n||!S())return;let p=t<420;x={L:p?42:52,T:12,pw:t-(p?42:52)-14,ph:n-12-30,W:t,H:n},r.setAttribute(`viewBox`,`0 0 ${t} ${n}`),r.setAttribute(`width`,String(t)),r.setAttribute(`height`,String(n)),c.setAttribute(`x`,String(x.L-1)),c.setAttribute(`y`,`0`),c.setAttribute(`width`,String(x.pw+14)),c.setAttribute(`height`,String(n));let m=``;for(let e=0;e<=4;e++){let t=_.yMax*e/4,n=w(t);m+=`<line x1="${x.L}" x2="${x.L+x.pw}" y1="${n.toFixed(1)}" y2="${n.toFixed(1)}"${e===0?` class="is-base"`:``}/><text x="${x.L-10}" y="${(n+4).toFixed(1)}" text-anchor="end">${e===0?`$0`:F(Math.round(t/100)*100)}</text>`}i.innerHTML=m;let h=x.pw/Math.max(1,S()-1-_.s)<46?2:1,v=``;for(let e=0;e<S();e++){if((S()-1-e)%h)continue;let t=C(e);if(t<x.L-2||t>x.L+x.pw+2)continue;let r=Math.max(0,Math.min(1,(e-_.s)*3+1));v+=`<text x="${t.toFixed(1)}" y="${n-8}" text-anchor="${e===S()-1?`end`:e-_.s<.5?`start`:`middle`}" opacity="${r.toFixed(2)}"${e===b?` class="is-on"`:``}>${L(g[e].t)}</text>`}a.innerHTML=v;let T=_.v.map((e,t)=>C(t)),E=_.v.map(e=>w(e)),D=ce(T,E);if(s.setAttribute(`d`,D),o.setAttribute(`d`,`${D}L${T[S()-1].toFixed(1)},${x.T+x.ph}L${T[0].toFixed(1)},${x.T+x.ph}Z`),u.setAttribute(`cx`,T[S()-1].toFixed(1)),u.setAttribute(`cy`,E[S()-1].toFixed(1)),b>=0){let e=T[b],n=E[b];l.setAttribute(`x1`,e.toFixed(1)),l.setAttribute(`x2`,e.toFixed(1)),l.setAttribute(`y1`,String(x.T)),l.setAttribute(`y2`,String(x.T+x.ph)),d.setAttribute(`cx`,e.toFixed(1)),d.setAttribute(`cy`,n.toFixed(1));let r=f.offsetWidth,i=f.offsetHeight,a=Math.min(t-r,Math.max(0,e-r/2)),o=n-i-16<0?n+16:n-i-16;y.set(f,{x:a,y:o})}}let O=()=>ae(E);new ResizeObserver(O).observe(e);function k(e,t=!1){if(e===b)return;let r=b;if(b=e,e<0){y.to([l,d,f],{opacity:0,duration:j(.15),overwrite:!0}),O();return}let i=g[e],a=g[e-1],o=_.v[e];if(p.textContent=R(i.t),m.textContent=n(i.v),a&&a.v){let e=(i.v-a.v)/a.v*100;h.textContent=`${e>=0?`+`:`−`}${Math.abs(e).toFixed(1)}% on ${L(a.t)}`}else h.textContent=``;E(),r<0&&(y.to([l,f],{opacity:1,duration:j(.15),overwrite:!0}),y.fromTo(d,{opacity:0,scale:.4,transformOrigin:`50% 50%`},{opacity:1,scale:1,duration:j(.35),ease:`back.out(2.5)`,overwrite:!0})),t&&M(`${R(i.t)}: ${n(o)}${h.textContent?`, ${h.textContent}`:``}.`)}let A=()=>Math.ceil(_.s-.001);return e.addEventListener(`pointermove`,e=>{let t=r.getBoundingClientRect(),n=e.clientX-t.left,i=Math.round(_.s+(n-x.L)/x.pw*(S()-1-_.s));k(Math.max(A(),Math.min(S()-1,i)))}),e.addEventListener(`pointerleave`,()=>k(-1)),e.addEventListener(`keydown`,e=>{let t=e.key;if(![`ArrowLeft`,`ArrowRight`,`Home`,`End`,`Escape`].includes(t))return;if(e.preventDefault(),t===`Escape`)return k(-1);let n=b<0?S()-1:b,r=t===`Home`?A():t===`End`?S()-1:n+(t===`ArrowRight`?1:-1);k(Math.max(A(),Math.min(S()-1,b<0?S()-1:r)),!0)}),e.addEventListener(`blur`,()=>k(-1)),{set(e,t){let n=!g.length;g=e;let r=e.map(e=>e.v);if(n||!t||D){_.v=r.slice(),_.s=r.length-v,_.yMax=T(v,r),E();return}let i={};if(r.forEach((e,t)=>{i[t]=e}),y.to(_.v,{...i,duration:j(.9),ease:`power3.inOut`,onUpdate:O,overwrite:!0}),y.to(_,{yMax:T(v,r),duration:j(.9),ease:`power3.inOut`,onUpdate:O,overwrite:`auto`}),b>=0){let e=b;b=-1,k(e)}},range(e,t){v=e,b>=0&&b<g.length-e&&k(-1);let n=g.length-e,r=T(e,g.map(e=>e.v));if(!t||D){_.s=n,_.yMax=r,E();return}y.to(_,{s:n,yMax:r,duration:.9,ease:`power3.inOut`,onUpdate:O,overwrite:`auto`})},drawOn(){if(E(),D)return;let e=s.getTotalLength();y.fromTo(s,{strokeDasharray:e,strokeDashoffset:e},{strokeDashoffset:0,duration:1.5,ease:`power2.inOut`,delay:.25,onComplete:()=>{y.set(s,{clearProps:`strokeDasharray,strokeDashoffset`})}}),y.fromTo(o,{opacity:0},{opacity:1,duration:.9,delay:.9,ease:`power1.out`,clearProps:`opacity`}),y.fromTo(u,{scale:0,transformOrigin:`50% 50%`},{scale:1,duration:.5,delay:1.6,ease:`back.out(3)`}),y.fromTo([i,a],{opacity:0},{opacity:1,duration:.6,ease:`power1.out`,clearProps:`opacity`})}}}var z,B,V=!1,H=!1,U=e=>{H=!0;try{e()}finally{H=!1}},ue={qualified:`c2`,talks:`c4`,proposal:`c1`,won:`c3`},de={qualified:.1,talks:.3,proposal:.6,won:1};function fe(e){return()=>{e|=0,e=e+1831565813|0;let t=Math.imul(e^e>>>15,1|e);return t=t+Math.imul(t^t>>>7,61|t)^t,((t^t>>>14)>>>0)/4294967296}}function pe(){let e=new Date,t=e.getFullYear(),n=e.getMonth(),r=fe(165e3+t*12+n),i=u.settings.workspace.fiscalQuarterTarget,a=n%3,o=k(),s=[[1],[.56,.44],[.38,.34,.28]][a],c=[];for(let e=0;e<12;e++){let l=new Date(t,n-11+e,1).getTime(),u=e-(11-a);if(u>=0){c.push({t:l,v:Math.round(o*s[u])});continue}let d=.42+e/11*.3,f=.86+r()*.28;c.push({t:l,v:Math.round(i/3*d*f/100)*100})}return c}var me=()=>Date.now()-30*c;function W(){let e=I(),t=me(),n=u.customers.filter(e=>e.createdAt<t),r=e.filter(e=>e.stage===`won`),i=pe(),a=n.filter(e=>!e.lost&&e.stage!==`won`).reduce((e,t)=>e+t.value,0),o=n.filter(e=>!e.lost&&e.stage===`won`).length,s=n.filter(e=>e.lost).length,c=o+s?Math.round(o/(o+s)*100):ie(),l=e.length?e.reduce((e,t)=>e+t.value,0)/e.length:0,d=n.filter(e=>!e.lost),f=d.length?d.reduce((e,t)=>e+t.value,0)/d.length:l;return{pipeline:te(),pipePrev:a,won:k(),wonMonth:i[11].v,wonPrevMonth:i[10].v,prevMonthName:new Date(i[10].t).toLocaleDateString(`en-US`,{month:`long`}),wonCount:r.length,rate:ie(),ratePrev:c,avg:Math.round(l),avgPrev:Math.round(f),target:u.settings.workspace.fiscalQuarterTarget,series:i}}function G(e,t,n,r){let i=n===`pts`?e-t:t?(e-t)/t*100:0,a=Math.abs(i)<(n===`pts`?.5:.05),o=i>0,s=n===`pts`?`${Math.abs(Math.round(i))} pts`:`${Math.abs(i).toFixed(1)}%`;return a?`<span class="delta delta--flat">${P(`arrow`)}<span class="sr-only">No change</span>0${n===`pts`?` pts`:`%`}</span><span class="db-kpi__vs">${v(r)}</span>`:`<span class="delta ${o?`delta--up`:`delta--down`}">${P(`up`)}<span class="sr-only">${o?`Up`:`Down`}</span>${o?`+`:`−`}${s}</span><span class="db-kpi__vs">${v(r)}</span>`}function K(){let e=new Date().getHours();return`Good ${e<5?`evening`:e<12?`morning`:e<17?`afternoon`:`evening`}, ${f(u.settings.profile.name)}`}function q(){let e=g(),t=e+c,n=u.tasks.filter(e=>!e.done&&e.assigneeId===u.me),r=n.filter(n=>n.due>=e&&n.due<t).length,i=n.filter(t=>t.due<e).length,a=I().filter(t=>t.stage!==`won`&&t.due!==null&&t.due>=e&&t.due<e+7*864e5).length;return[`<b>${r}</b> ${r===1?`task`:`tasks`} due today`,i?`<b>${i}</b> overdue`:``,`<b>${a}</b> ${a===1?`deal closes`:`deals close`} this week`].filter(Boolean).join(`<span class="db-dot" aria-hidden="true">·</span>`)}function J(e){let t=W(),n=(t,n,r=``)=>{ee(C(`#${t}`,z),n,e?{prefix:r,duration:1.4,from:0}:{prefix:r,duration:.7})};n(`db-pipe`,t.pipeline,`$`),n(`db-won`,t.won,`$`),n(`db-rate`,t.rate),n(`db-avg`,t.avg,`$`),C(`#db-pipe-d`,z).innerHTML=G(t.pipeline,t.pipePrev,`%`,`vs 30 days ago`),C(`#db-won-d`,z).innerHTML=G(t.wonMonth,t.wonPrevMonth,`%`,`vs ${t.prevMonthName}`),C(`#db-rate-d`,z).innerHTML=G(t.rate,t.ratePrev,`pts`,`vs 30 days ago`),C(`#db-avg-d`,z).innerHTML=G(t.avg,t.avgPrev,`%`,`vs 30 days ago`);let r=t.target?Math.min(1,t.won/t.target):0;C(`#db-quota-t`,z).innerHTML=`<b>${Math.round(r*100)}%</b> of the ${F(t.target)} quarter target`,C(`#db-quota`,z).setAttribute(`aria-label`,`${Math.round(r*100)}% of the quarter target`),y.to(C(`#db-quota i`,z),{scaleX:r,duration:j(e?1.3:.7),delay:j(e?.35:0),ease:`power3.out`,overwrite:!0}),C(`#db-lede`,z).innerHTML=q()}var Y=`12`;function X(e){let t=W();B.set(t.series,e);let r=t.series.slice(-Number(Y)).reduce((e,t)=>e+t.v,0);C(`#db-rev-total`,z).textContent=n(r),C(`#db-rev-cap`,z).textContent=`closed in the last ${Y} months`,C(`#db-rev-table tbody`,z).innerHTML=t.series.map(e=>`<tr><th scope="row">${new Date(e.t).toLocaleDateString(`en-US`,{month:`long`,year:`numeric`})}</th><td>${n(e.v)}</td></tr>`).join(``)}function Z(e){let t=I(),r=d.map(e=>{let n=t.filter(t=>t.stage===e);return{s:e,n:n.length,v:n.reduce((e,t)=>e+t.value,0)}}),i=Math.max(...r.map(e=>e.v),1),a=C(`#db-pipe-list`,z);a.children.length||(a.innerHTML=r.map(e=>`<li><a class="pl" href="#/customers" data-stage="${e.s}">
+        <span class="pl__top">${w(e.s)}<span class="pl__n"></span><b class="pl__v num"></b></span>
+        <span class="pl__well" aria-hidden="true"><i class="pl__fill" style="background:var(--${ue[e.s]})"></i></span>
+      </a></li>`).join(``),y.set(_(`.pl__fill`,a),{scaleX:0})),r.forEach((t,r)=>{let o=C(`.pl[data-stage="${t.s}"]`,a);C(`.stage`,o).lastChild.textContent=h(t.s),C(`.pl__n`,o).textContent=`${t.n} ${t.n===1?`deal`:`deals`}`,C(`.pl__v`,o).textContent=F(t.v),o.setAttribute(`aria-label`,`${h(t.s)}: ${t.n} deals worth ${n(t.v)}. Open the board.`),y.to(C(`.pl__fill`,o),{scaleX:t.v/i,duration:j(e?1.1:.7),delay:j(e?.3+r*.08:0),ease:e?`elastic.out(1, 0.8)`:`power3.out`,overwrite:!0})});let o=r.filter(e=>e.s!==`won`),s=o.reduce((e,t)=>e+t.v*de[t.s],0);C(`#db-pipe-total`,z).textContent=`${F(o.reduce((e,t)=>e+t.v,0))} open`,C(`#db-forecast`,z).textContent=n(Math.round(s/100)*100)}var he=()=>u.tasks.filter(e=>!e.done&&e.assigneeId===u.me).sort((e,t)=>e.due-t.due);function ge(e){let t=A(e.due),n=t<0?` meta--late`:t===0?` meta--soon`:``,r=t<0?`Overdue · ${S(e.due)}`:t===0?`Today ${x(e.due)}`:t===1?`Tomorrow`:S(e.due);return`<span class="meta${n}">${P(t<0?`flag`:`clock`)}<time datetime="${new Date(e.due).toISOString()}">${v(r)}</time></span>`}function _e(e){let t=p(e.customerId);return`<li class="ds" data-key="${e.id}">
+    <input type="checkbox" id="ds-${e.id}" data-task="${e.id}" />
+    <div class="ds__text"><label for="ds-${e.id}">${v(e.title)}</label>
+      ${t?`<a class="ds__sub" href="#/customers/${t.id}">${v(t.name)}</a>`:``}</div>
+    ${ge(e)}
+  </li>`}function Q(){let e=C(`#db-due`,z),t=he();C(`#db-due-n`,z).textContent=`${t.length} open`,e.innerHTML=t.length?t.slice(0,6).map(_e).join(``):`<li>${E(`All caught up`,`Nothing is waiting on you. New tasks land here.`,`check`)}</li>`}var ve=()=>b(C(`#db-due`,z),Q,{stagger:.04});function ye(e,n){e.done=!0,e.doneAt=Date.now(),n.classList.add(`is-done`),r(n.querySelector(`input`)),U(()=>t(`tasks`));let i=m(`task`,`Completed “${e.title}”.`,e.customerId);y.to(n,{opacity:0,x:24,duration:j(.32),delay:j(.55),ease:`power2.in`,onComplete:()=>{n.isConnected&&ve(),C(`#db-lede`,z).innerHTML=q()}}),o(`Task completed.`,{label:`Undo`,run:()=>{e.done=!1,e.doneAt=null;let r=u.activity.indexOf(i);r>=0&&(u.activity.splice(r,1),t(`activity`)),U(()=>t(`tasks`)),y.killTweensOf(n),ve(),C(`#db-lede`,z).innerHTML=q(),M(`“${e.title}” is open again.`)}}),M(`Completed “${e.title}”.`)}function be(e){let t=C(`#db-act`,z),n=new Set(_(`[data-key]`,t).map(e=>e.dataset.key)),r=u.activity.slice(0,6),i=()=>{t.innerHTML=r.map(e=>{let t=a(e.by),n=p(e.customerId);return`<li class="ra" data-key="${e.id}">
+        ${oe(e.kind,`sm`)}
+        <div class="ra__body"><p class="ra__text">${v(e.text)}</p>
+          <p class="ra__meta">${O(t,`xs`)}<span>${v(t?f(t.name):`Someone`)}</span>${n?`<span aria-hidden="true">·</span><a href="#/customers/${n.id}">${v(n.name)}</a>`:``}<span aria-hidden="true">·</span><time datetime="${new Date(e.at).toISOString()}" title="${v(new Date(e.at).toLocaleString(`en-US`))}">${l(e.at)}</time></p></div>
+      </li>`}).join(``)||`<li>${E(`No activity yet`,`Calls, emails and deal moves show up here.`,`trend`)}</li>`};if(!e||!n.size){i();return}b(t,i),_(`[data-key]`,t).filter(e=>!n.has(e.dataset.key)).forEach((e,t)=>{y.killTweensOf(e),e.classList.add(`is-new`),y.fromTo(e,{opacity:0,y:-14},{opacity:1,y:0,duration:j(.5),delay:j(t*.06),ease:`back.out(1.6)`,clearProps:`transform,opacity`}),setTimeout(()=>e.classList.remove(`is-new`),1600)})}function $(e){let t=I(),r=u.members.filter(e=>!e.invited).map(e=>({m:e,won:t.filter(t=>t.ownerId===e.id&&t.stage===`won`).reduce((e,t)=>e+t.value,0),deals:t.filter(t=>t.ownerId===e.id&&t.stage===`won`).length})).sort((e,t)=>t.won-e.won||t.m.quota-e.m.quota).slice(0,5),i=C(`#db-lead`,z);i.innerHTML=r.map((e,t)=>{let r=e.m.quota?e.won/e.m.quota:0;return`<li data-key="${e.m.id}"><a class="lb" href="#/team/${e.m.id}" aria-label="${t+1}. ${v(e.m.name)}, ${n(e.won)} won, ${Math.round(r*100)}% of quota">
+      <span class="lb__rank${t===0?` is-top`:``}" aria-hidden="true">${t+1}</span>
+      ${O(e.m,`md`)}
+      <span class="lb__who"><b>${v(e.m.name)}</b><small>${e.deals} won · ${Math.round(r*100)}% of ${F(e.m.quota)}</small>
+        <span class="lb__well" aria-hidden="true"><i data-p="${Math.min(1,r)}"></i></span></span>
+      <b class="lb__val num">${F(e.won)}</b>
+    </a></li>`}).join(``),_(`.lb__well i`,i).forEach((t,n)=>{y.fromTo(t,{scaleX:0},{scaleX:+t.dataset.p,duration:j(e?1.1:.6),delay:j(e?.4+n*.07:0),ease:`power3.out`})})}function xe(e){let t=C(`#db-proj`,z);t.innerHTML=u.projects.slice(0,4).map(e=>{let t=e.milestones.filter(e=>e.done).length,n=e.milestones.length?Math.round(t/e.milestones.length*100):0,r=e.milestones.find(e=>!e.done),i=e.memberIds.length-4,o=A(e.endsAt);return`<li><a class="pj" href="#/projects/${e.id}" aria-label="${v(e.name)}: ${t} of ${e.milestones.length} milestones done, ends ${S(e.endsAt)}">
+      <span class="pj__ring" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><circle class="pj__track" cx="24" cy="24" r="20"/><circle class="pj__arc" cx="24" cy="24" r="20" pathLength="100" data-p="${n}"/></svg>
+        <b class="num">${n}<small>%</small></b></span>
+      <span class="pj__body">
+        <span class="pj__name">${P(e.icon)}${v(e.name)}</span>
+        <span class="pj__sub">${t} of ${e.milestones.length} milestones${r?` · next: ${v(r.name)}`:``}</span>
+      </span>
+      <span class="pj__foot">
+        <span class="stack">${e.memberIds.slice(0,4).map(e=>O(a(e),`xs`)).join(``)}${i>0?`<span class="stack__more">+${i}</span>`:``}</span>
+        <span class="meta${o>=0&&o<=14?` meta--soon`:``}">${P(`calendar`)}Ends ${S(e.endsAt)}</span>
+      </span>
+    </a></li>`}).join(``),_(`.pj__arc`,t).forEach((t,n)=>{y.fromTo(t,{strokeDashoffset:100},{strokeDashoffset:100-t.dataset.p,duration:j(e?1.3:.6),delay:j(e?.5+n*.1:0),ease:`power3.out`})})}function Se(){let e=[[`Name`,`Industry`,`Stage`,`Status`,`Deal value (USD)`,`Deposit (USD)`,`Owner`,`Contact`,`Email`,`Phone`,`Website`,`Next step due`]];u.customers.forEach(t=>e.push([t.name,t.industry,h(t.stage),t.lost?`Lost`:`Active`,t.value,t.prepaid,a(t.ownerId)?.name??``,t.contact.name,t.contact.email,t.contact.phone,t.website,t.due?new Date(t.due).toISOString().slice(0,10):``])),re(`accord-customers-${new Date().toISOString().slice(0,10)}.csv`,e),o(`Exported ${u.customers.length} customers as CSV.`)}function Ce(e){C(`#db-eyebrow`,z).textContent=new Date().toLocaleDateString(`en-US`,{weekday:`long`,month:`long`,day:`numeric`}),X(!1),Z(e),Q(),be(!1),$(e),xe(e)}var we={title:`Dashboard`,mount(t){z=t;let n=(e,t,n,r=``,i=``)=>`
+      <section class="db-kpi" aria-labelledby="${e}-l">
+        <h2 class="db-kpi__label" id="${e}-l">${P(n)}${t}</h2>
+        <p class="db-kpi__value num"><span id="${e}">0</span>${i}</p>
+        <p class="db-kpi__delta" id="${e}-d"></p>
+        ${r}
+      </section>`;z.innerHTML=`
+      <div class="band db-band">
+        <div class="db-head">
+          <p class="eyebrow" id="db-eyebrow"></p>
+          <h1 class="title" tabindex="-1" id="db-title">${v(K())}</h1>
+          <p class="lede" id="db-lede"></p>
+        </div>
+        <div class="db-kpis">
+          ${n(`db-pipe`,`Open pipeline`,`briefcase`)}
+          ${n(`db-won`,`Won this quarter`,`trophy`,`<div class="db-quota"><div class="bar" id="db-quota" role="img"><i></i></div><p class="db-quota__t" id="db-quota-t"></p></div>`)}
+          ${n(`db-rate`,`Win rate`,`target`,``,`<span class="db-kpi__unit">%</span>`)}
+          ${n(`db-avg`,`Avg. deal size`,`dollar`)}
+        </div>
+      </div>
+      <div class="body">
+        <div class="db-grid">
+          <section class="card db-rev" aria-labelledby="db-rev-h">
+            <div class="card__head">
+              <div class="db-rev__head">
+                <h2 class="card__title" id="db-rev-h">Revenue</h2>
+                <p class="db-rev__sum"><b class="num" id="db-rev-total"></b> <span id="db-rev-cap"></span></p>
+              </div>
+              ${e(`range`,[[`6`,`6M`],[`12`,`12M`]],Y,`Revenue range`)}
+            </div>
+            <div id="db-chart"></div>
+            <table class="sr-only" id="db-rev-table"><caption>Closed revenue by month</caption><thead><tr><th scope="col">Month</th><th scope="col">Closed</th></tr></thead><tbody></tbody></table>
+          </section>
+
+          <section class="card db-pipe" aria-labelledby="db-pipe-h">
+            <div class="card__head"><h2 class="card__title" id="db-pipe-h">Pipeline by stage</h2><span class="card__aside" id="db-pipe-total"></span></div>
+            <ul class="pl-list" id="db-pipe-list"></ul>
+            <div class="db-forecast">
+              <span>${P(`trend`)}Weighted forecast</span>
+              <b class="num" id="db-forecast"></b>
+              <small>Open deals × the usual odds of closing from their stage.</small>
+            </div>
+          </section>
+
+          <section class="card db-due" aria-labelledby="db-due-h">
+            <div class="card__head"><h2 class="card__title" id="db-due-h">Due soon <span class="db-count" id="db-due-n"></span></h2>
+              <a class="card__link" href="#/tasks">All tasks ${P(`arrow`)}</a></div>
+            <ul class="ds-list" id="db-due"></ul>
+          </section>
+
+          <section class="card db-act" aria-labelledby="db-act-h">
+            <div class="card__head"><h2 class="card__title" id="db-act-h">Recent activity</h2>
+              <a class="card__link" href="#/activity">View all ${P(`arrow`)}</a></div>
+            <ul class="ra-list" id="db-act"></ul>
+          </section>
+
+          <section class="card db-lead" aria-labelledby="db-lead-h">
+            <div class="card__head"><h2 class="card__title" id="db-lead-h">Team leaderboard</h2>
+              <a class="card__link" href="#/team">Team ${P(`arrow`)}</a></div>
+            <ol class="lb-list" id="db-lead"></ol>
+          </section>
+
+          <section class="card db-projects" aria-labelledby="db-proj-h">
+            <div class="card__head"><h2 class="card__title" id="db-proj-h">Projects</h2>
+              <span class="card__aside">Milestones done</span></div>
+            <ul class="pj-list" id="db-proj"></ul>
+          </section>
+        </div>
+      </div>`,B=le(C(`#db-chart`,z),Number(Y)),ne(z,`range`,e=>{Y=e,B.range(Number(e),!0),X(!1),M(`Showing the last ${e} months.`)}),y.set(C(`#db-quota i`,z),{scaleX:0}),C(`#db-due`,z).addEventListener(`change`,e=>{let t=e.target,n=u.tasks.find(e=>e.id===t.dataset.task);!n||!t.checked||ye(n,t.closest(`.ds`))}),C(`#db-pipe-list`,z).addEventListener(`click`,e=>{let t=e.target.closest(`.pl`);t&&r(t)}),s(`customers`,()=>{J(!1),X(V),Z(V),$(!1)}),s(`tasks`,()=>{H||(Q(),C(`#db-lede`,z).innerHTML=q())}),s(`activity`,()=>be(V)),s(`projects`,()=>xe(!1)),s(`members`,()=>$(!1)),s(`settings`,()=>{V&&(C(`#db-title`,z).textContent=K()),J(!1),Z(!1),X(!1)})},enter(e){if(V=!0,e.same)return;let t=C(`#db-title`,z);Ce(!0),T(t,K()),N(_(`#db-eyebrow, #db-lede`,z),{y:10,stagger:.08,delay:.05}),N(_(`.db-kpi`,z),{y:16,stagger:.07,delay:.12}),J(!0),y.fromTo(_(`.db-grid > .card`,z),{opacity:0,y:26},{opacity:1,y:0,duration:j(.7),ease:`power3.out`,stagger:D?0:.07,delay:j(.18),clearProps:`transform,opacity`}),e.first?B.drawOn():B.range(Number(Y),!1),y.fromTo(_(`.ds, .ra, .lb-list li, .pj-list li`,z),{opacity:0,y:10},{opacity:1,y:0,duration:j(.5),ease:`power3.out`,stagger:D?0:.025,delay:j(.4),clearProps:`transform,opacity`})},actions(e){e.innerHTML=`
+      <button class="tool" type="button" data-act="export">${P(`download`)}<span>Export</span></button>
+      <button class="btn btn--primary" type="button" data-act="add">${P(`plus`)}Add customer</button>`,C(`[data-act="export"]`,e).addEventListener(`click`,e=>{r(e.currentTarget),Se()}),C(`[data-act="add"]`,e).addEventListener(`click`,()=>{i(`#/customers`),setTimeout(()=>document.dispatchEvent(new CustomEvent(`accord:add-customer`)),450)})},leave(){V=!1}};export{we as page};

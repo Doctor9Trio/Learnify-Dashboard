@@ -1490,7 +1490,7 @@
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   [data-view=floor] .fl-t.is-fit:after {
   opacity:.6;
   animation:none

@@ -530,7 +530,7 @@ html.js .pd__shot.is-on {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .buybar {
   transition:opacity .2s;
   transform:none

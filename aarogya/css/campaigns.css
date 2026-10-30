@@ -2024,7 +2024,7 @@
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   [data-view=campaigns] .cp-st--sending i,[data-view=campaigns] .cp-sending .ico,[data-view=campaigns] .cp-review i {
   animation:none
 }

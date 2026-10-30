@@ -4681,7 +4681,7 @@ var mi = {
   qn.registerPlugin(mi));
 var q = qn.registerPlugin(mi) || qn;
 q.core.Tween;
-var hi = matchMedia(`(prefers-reduced-motion: reduce)`),
+var hi = matchMedia(`(prefers-reduced-motion: force-reduced)`),
   gi = () => hi.matches,
   _i = matchMedia(`(hover: hover) and (pointer: fine)`),
   J = (e) => (hi.matches ? 0 : e);

@@ -861,7 +861,7 @@
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .ls-live.is-on i {
   animation:none
 }

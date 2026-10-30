@@ -6243,7 +6243,7 @@ var Gi = 1,
 ((Xa.version = `3.15.0`),
   typeof window < `u` && window.gsap && window.gsap.registerPlugin(Xa),
   U.registerPlugin(Xa));
-var Za = matchMedia(`(prefers-reduced-motion: reduce)`),
+var Za = matchMedia(`(prefers-reduced-motion: force-reduced)`),
   Qa = () => Za.matches,
   $a = matchMedia(`(hover: hover) and (pointer: fine)`),
   G = (e) => (Za.matches ? 0 : e);

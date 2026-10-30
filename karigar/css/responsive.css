@@ -332,7 +332,7 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .spin,
   .btn__busy i {
     animation: none;

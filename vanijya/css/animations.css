@@ -3,7 +3,7 @@
    ============================================================ */
 
 /* ── Respect user motion preferences ───────────────────────── */
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;

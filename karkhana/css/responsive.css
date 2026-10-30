@@ -255,7 +255,7 @@
 }
 
 /* ── Accessibility: Reduced Motion ────────────────────────── */
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   *,
   *::before,
   *::after {

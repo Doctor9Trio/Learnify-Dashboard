@@ -2363,7 +2363,7 @@ html.js:not(.rm) .rail {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .promise__track {
   animation:none
 }
@@ -2418,7 +2418,7 @@ html.js:not(.rm) .rail {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   @view-transition {
   navigation:none
 }

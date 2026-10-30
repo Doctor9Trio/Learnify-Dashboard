@@ -292,7 +292,7 @@ html.js .loader {
   inset:0
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   html.js .loader {
   display:none
 }
@@ -1546,7 +1546,7 @@ html.reduced .build__wash,html:not(.js) .build__wash {
 
 }
 
-@media (hover:hover) and (pointer:fine) and (width>=821px) and (prefers-reduced-motion:reduce) {
+@media (hover:hover) and (pointer:fine) and (width>=821px) and (prefers-reduced-motion: force-reduced) {
   .brand {
   transition:none
 }
@@ -2625,7 +2625,7 @@ html.reduced .build__beats,html:not(.js) .build__beats {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   *,:before,:after {
   transition-duration:.01ms!important;
   animation-duration:.01ms!important

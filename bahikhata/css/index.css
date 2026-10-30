@@ -2622,7 +2622,7 @@ to {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .live__dot:after,.t-beacon {
   animation:none!important
 }
@@ -3762,7 +3762,7 @@ to {
   transform:translateY(24px)
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .ticketbar {
   transition:none
 }

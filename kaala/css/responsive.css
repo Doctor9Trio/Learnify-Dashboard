@@ -314,7 +314,7 @@
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .curtain {
   display:none
 }
@@ -387,7 +387,7 @@
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .nav>*,.nav__mark,.chev,.nav__ind,.btn,.btn__body,.btn__body:after,.btn__body:before {
   transition:none
 }

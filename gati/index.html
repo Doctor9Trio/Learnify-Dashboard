@@ -38,7 +38,7 @@
       try { t = localStorage.getItem('gati-theme'); } catch (e) {}
       if (t === 'light' || t === 'dark') d.dataset.theme = t;
       d.classList.add('js');
-      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+      d.classList.add('motion');
       /* a recording rig loads ?record: hold the shell until it calls STRIDE.enter() */
       if (/[?&]record\b/.test(location.search)) d.classList.add('gated');
     })();

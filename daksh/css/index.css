@@ -2718,7 +2718,7 @@ button,input:where([type=button],[type=reset],[type=submit]) {
   color:var(--accent)
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .motion-reduce\:transition-none {
   transition-property:none
 }
@@ -3327,7 +3327,7 @@ to {
   background-size:100% 1px
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   *,:before,:after {
   scroll-behavior:auto!important;
   transition-duration:.01ms!important;

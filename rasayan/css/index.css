@@ -4022,7 +4022,7 @@ button.chip,a.chip {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   *,:before,:after {
   transition-duration:0s!important;
   animation-duration:0s!important

@@ -1,0 +1,47 @@
+/*! Customers · Accord — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. */
+.kico {
+  background:var(--surface-2);
+  width:34px;
+  height:34px;
+  color:var(--ink);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb, var(--ink) 6%, transparent);
+  border-radius:50%;
+  flex-shrink:0;
+  place-items:center;
+  display:grid
+}
+
+.kico .ico {
+  width:16px;
+  height:16px
+}
+
+.kico--sm {
+  width:28px;
+  height:28px
+}
+
+.kico--sm .ico {
+  width:14px;
+  height:14px
+}
+
+.kico--c1 {
+  background:var(--c1-soft)
+}
+
+.kico--c2 {
+  background:var(--c2-soft)
+}
+
+.kico--c3 {
+  background:var(--c3-soft)
+}
+
+.kico--c4 {
+  background:var(--c4-soft)
+}
+
+.kico--n {
+  background:var(--surface-3)
+}

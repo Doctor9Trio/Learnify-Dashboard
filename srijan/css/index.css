@@ -1963,7 +1963,7 @@ html.pin-h .feature__media {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .marquee__track,.band__track {
   animation:none
 }

@@ -491,7 +491,7 @@ html:not(.js) .loader {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
+@media (prefers-reduced-motion: force-reduced) {
   .snd.is-on .snd__bars i {
   animation:none
 }
