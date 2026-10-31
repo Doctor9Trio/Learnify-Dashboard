@@ -1,0 +1,632 @@
+{
+  "slug": "griha",
+  "name": "Griha Living",
+  "totalFiles": 74,
+  "totalLines": 9536,
+  "totalBytes": 3714521,
+  "totalSizeReadable": "3627.5 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/Account-B2N5coFK.js",
+    "assets/Categories-Cft_UNNR.js",
+    "assets/Checkout-DSADGQhE.js",
+    "assets/DashToast-C6xfI4Ro.js",
+    "assets/DashboardLayout-BX6keNjd.js",
+    "assets/LiveFeed-CzBbu0NV.js",
+    "assets/Orders-B8L_MFeM.js",
+    "assets/Overview-XQVkyL8-.js",
+    "assets/Products-D7MFQrm8.js",
+    "assets/catalog-Cw7vRJE1.js",
+    "assets/catalogStore-Ckks0jQ2.js",
+    "assets/createLucideIcon-B2BGxA2q.js",
+    "assets/demoBackend-DOyuzNdD.js",
+    "assets/generate-BDtnLb5E.js",
+    "assets/image-DjucDeuK.js",
+    "assets/index-B0FSjbCE.css",
+    "assets/index-hekDt3Nm.js",
+    "assets/lock-BUTx8K1s.js",
+    "assets/metrics-1ltoky-m.js",
+    "assets/package-BJfi1efW.js",
+    "assets/product-DkbhcmRG.js",
+    "assets/receipt-text-BsCJfoG-.js",
+    "assets/useOrders-Bp4xM_Ut.js",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "images/avatar-1.jpg",
+    "images/avatar-2.jpg",
+    "images/avatar-3.jpg",
+    "images/best-chair.jpg",
+    "images/best-lamp.jpg",
+    "images/best-throw.jpg",
+    "images/bowl.webp",
+    "images/chair.webp",
+    "images/cta.jpg",
+    "images/cushion.webp",
+    "images/feature-detail.jpg",
+    "images/interior.jpg",
+    "images/lamp.webp",
+    "images/pendant.webp",
+    "images/stool.webp",
+    "images/table.webp",
+    "images/throw.webp",
+    "images/vase.webp",
+    "index.html",
+    "js/Account.js",
+    "js/Categories.js",
+    "js/Checkout.js",
+    "js/DashToast.js",
+    "js/DashboardLayout.js",
+    "js/LiveFeed.js",
+    "js/Orders.js",
+    "js/Overview.js",
+    "js/Products.js",
+    "js/catalog.js",
+    "js/catalogStore.js",
+    "js/createLucideIcon.js",
+    "js/demoBackend.js",
+    "js/generate.js",
+    "js/image.js",
+    "js/index.js",
+    "js/lock.js",
+    "js/metrics.js",
+    "js/package.js",
+    "js/product.js",
+    "js/receipt-text.js",
+    "js/theme.js",
+    "js/useOrders.js"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Account-B2N5coFK.js",
+          "path": "assets/Account-B2N5coFK.js",
+          "type": "file",
+          "size": 4662,
+          "lines": 1
+        },
+        {
+          "name": "catalog-Cw7vRJE1.js",
+          "path": "assets/catalog-Cw7vRJE1.js",
+          "type": "file",
+          "size": 9026,
+          "lines": 2
+        },
+        {
+          "name": "catalogStore-Ckks0jQ2.js",
+          "path": "assets/catalogStore-Ckks0jQ2.js",
+          "type": "file",
+          "size": 1471,
+          "lines": 1
+        },
+        {
+          "name": "Categories-Cft_UNNR.js",
+          "path": "assets/Categories-Cft_UNNR.js",
+          "type": "file",
+          "size": 8666,
+          "lines": 1
+        },
+        {
+          "name": "Checkout-DSADGQhE.js",
+          "path": "assets/Checkout-DSADGQhE.js",
+          "type": "file",
+          "size": 11876,
+          "lines": 1
+        },
+        {
+          "name": "createLucideIcon-B2BGxA2q.js",
+          "path": "assets/createLucideIcon-B2BGxA2q.js",
+          "type": "file",
+          "size": 206486,
+          "lines": 1
+        },
+        {
+          "name": "DashboardLayout-BX6keNjd.js",
+          "path": "assets/DashboardLayout-BX6keNjd.js",
+          "type": "file",
+          "size": 9602,
+          "lines": 1
+        },
+        {
+          "name": "DashToast-C6xfI4Ro.js",
+          "path": "assets/DashToast-C6xfI4Ro.js",
+          "type": "file",
+          "size": 6899,
+          "lines": 1
+        },
+        {
+          "name": "demoBackend-DOyuzNdD.js",
+          "path": "assets/demoBackend-DOyuzNdD.js",
+          "type": "file",
+          "size": 5227,
+          "lines": 1
+        },
+        {
+          "name": "generate-BDtnLb5E.js",
+          "path": "assets/generate-BDtnLb5E.js",
+          "type": "file",
+          "size": 2093,
+          "lines": 1
+        },
+        {
+          "name": "image-DjucDeuK.js",
+          "path": "assets/image-DjucDeuK.js",
+          "type": "file",
+          "size": 882,
+          "lines": 1
+        },
+        {
+          "name": "index-B0FSjbCE.css",
+          "path": "assets/index-B0FSjbCE.css",
+          "type": "file",
+          "size": 65357,
+          "lines": 4
+        },
+        {
+          "name": "index-hekDt3Nm.js",
+          "path": "assets/index-hekDt3Nm.js",
+          "type": "file",
+          "size": 368036,
+          "lines": 18
+        },
+        {
+          "name": "LiveFeed-CzBbu0NV.js",
+          "path": "assets/LiveFeed-CzBbu0NV.js",
+          "type": "file",
+          "size": 3126,
+          "lines": 1
+        },
+        {
+          "name": "lock-BUTx8K1s.js",
+          "path": "assets/lock-BUTx8K1s.js",
+          "type": "file",
+          "size": 246,
+          "lines": 1
+        },
+        {
+          "name": "metrics-1ltoky-m.js",
+          "path": "assets/metrics-1ltoky-m.js",
+          "type": "file",
+          "size": 2087,
+          "lines": 1
+        },
+        {
+          "name": "Orders-B8L_MFeM.js",
+          "path": "assets/Orders-B8L_MFeM.js",
+          "type": "file",
+          "size": 10725,
+          "lines": 1
+        },
+        {
+          "name": "Overview-XQVkyL8-.js",
+          "path": "assets/Overview-XQVkyL8-.js",
+          "type": "file",
+          "size": 20416,
+          "lines": 1
+        },
+        {
+          "name": "package-BJfi1efW.js",
+          "path": "assets/package-BJfi1efW.js",
+          "type": "file",
+          "size": 412,
+          "lines": 1
+        },
+        {
+          "name": "product-DkbhcmRG.js",
+          "path": "assets/product-DkbhcmRG.js",
+          "type": "file",
+          "size": 3992,
+          "lines": 1
+        },
+        {
+          "name": "Products-D7MFQrm8.js",
+          "path": "assets/Products-D7MFQrm8.js",
+          "type": "file",
+          "size": 32208,
+          "lines": 1
+        },
+        {
+          "name": "receipt-text-BsCJfoG-.js",
+          "path": "assets/receipt-text-BsCJfoG-.js",
+          "type": "file",
+          "size": 703,
+          "lines": 1
+        },
+        {
+          "name": "useOrders-Bp4xM_Ut.js",
+          "path": "assets/useOrders-Bp4xM_Ut.js",
+          "type": "file",
+          "size": 656,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 48608,
+          "lines": 2914
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 78508,
+          "lines": 4571
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 894,
+          "lines": 33
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 4998,
+          "lines": 299
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 16673,
+          "lines": 1233
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 5936,
+          "lines": 207
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "images",
+      "path": "images",
+      "type": "directory",
+      "children": [
+        {
+          "name": "avatar-1.jpg",
+          "path": "images/avatar-1.jpg",
+          "type": "file",
+          "size": 7636,
+          "lines": 0
+        },
+        {
+          "name": "avatar-2.jpg",
+          "path": "images/avatar-2.jpg",
+          "type": "file",
+          "size": 6899,
+          "lines": 0
+        },
+        {
+          "name": "avatar-3.jpg",
+          "path": "images/avatar-3.jpg",
+          "type": "file",
+          "size": 6048,
+          "lines": 0
+        },
+        {
+          "name": "best-chair.jpg",
+          "path": "images/best-chair.jpg",
+          "type": "file",
+          "size": 207058,
+          "lines": 0
+        },
+        {
+          "name": "best-lamp.jpg",
+          "path": "images/best-lamp.jpg",
+          "type": "file",
+          "size": 156157,
+          "lines": 0
+        },
+        {
+          "name": "best-throw.jpg",
+          "path": "images/best-throw.jpg",
+          "type": "file",
+          "size": 226679,
+          "lines": 0
+        },
+        {
+          "name": "bowl.webp",
+          "path": "images/bowl.webp",
+          "type": "file",
+          "size": 60112,
+          "lines": 0
+        },
+        {
+          "name": "chair.webp",
+          "path": "images/chair.webp",
+          "type": "file",
+          "size": 183872,
+          "lines": 0
+        },
+        {
+          "name": "cta.jpg",
+          "path": "images/cta.jpg",
+          "type": "file",
+          "size": 236151,
+          "lines": 0
+        },
+        {
+          "name": "cushion.webp",
+          "path": "images/cushion.webp",
+          "type": "file",
+          "size": 142314,
+          "lines": 0
+        },
+        {
+          "name": "feature-detail.jpg",
+          "path": "images/feature-detail.jpg",
+          "type": "file",
+          "size": 114021,
+          "lines": 0
+        },
+        {
+          "name": "interior.jpg",
+          "path": "images/interior.jpg",
+          "type": "file",
+          "size": 235441,
+          "lines": 0
+        },
+        {
+          "name": "lamp.webp",
+          "path": "images/lamp.webp",
+          "type": "file",
+          "size": 70372,
+          "lines": 0
+        },
+        {
+          "name": "pendant.webp",
+          "path": "images/pendant.webp",
+          "type": "file",
+          "size": 53004,
+          "lines": 0
+        },
+        {
+          "name": "stool.webp",
+          "path": "images/stool.webp",
+          "type": "file",
+          "size": 63378,
+          "lines": 0
+        },
+        {
+          "name": "table.webp",
+          "path": "images/table.webp",
+          "type": "file",
+          "size": 64210,
+          "lines": 0
+        },
+        {
+          "name": "throw.webp",
+          "path": "images/throw.webp",
+          "type": "file",
+          "size": 127662,
+          "lines": 0
+        },
+        {
+          "name": "vase.webp",
+          "path": "images/vase.webp",
+          "type": "file",
+          "size": 97170,
+          "lines": 0
+        }
+      ]
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 6644,
+      "lines": 88
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "Account.js",
+          "path": "js/Account.js",
+          "type": "file",
+          "size": 4662,
+          "lines": 1
+        },
+        {
+          "name": "catalog.js",
+          "path": "js/catalog.js",
+          "type": "file",
+          "size": 9026,
+          "lines": 2
+        },
+        {
+          "name": "catalogStore.js",
+          "path": "js/catalogStore.js",
+          "type": "file",
+          "size": 1471,
+          "lines": 1
+        },
+        {
+          "name": "Categories.js",
+          "path": "js/Categories.js",
+          "type": "file",
+          "size": 8666,
+          "lines": 1
+        },
+        {
+          "name": "Checkout.js",
+          "path": "js/Checkout.js",
+          "type": "file",
+          "size": 11876,
+          "lines": 1
+        },
+        {
+          "name": "createLucideIcon.js",
+          "path": "js/createLucideIcon.js",
+          "type": "file",
+          "size": 206486,
+          "lines": 1
+        },
+        {
+          "name": "DashboardLayout.js",
+          "path": "js/DashboardLayout.js",
+          "type": "file",
+          "size": 9602,
+          "lines": 1
+        },
+        {
+          "name": "DashToast.js",
+          "path": "js/DashToast.js",
+          "type": "file",
+          "size": 6899,
+          "lines": 1
+        },
+        {
+          "name": "demoBackend.js",
+          "path": "js/demoBackend.js",
+          "type": "file",
+          "size": 5227,
+          "lines": 1
+        },
+        {
+          "name": "generate.js",
+          "path": "js/generate.js",
+          "type": "file",
+          "size": 2093,
+          "lines": 1
+        },
+        {
+          "name": "image.js",
+          "path": "js/image.js",
+          "type": "file",
+          "size": 882,
+          "lines": 1
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 368036,
+          "lines": 18
+        },
+        {
+          "name": "LiveFeed.js",
+          "path": "js/LiveFeed.js",
+          "type": "file",
+          "size": 3126,
+          "lines": 1
+        },
+        {
+          "name": "lock.js",
+          "path": "js/lock.js",
+          "type": "file",
+          "size": 246,
+          "lines": 1
+        },
+        {
+          "name": "metrics.js",
+          "path": "js/metrics.js",
+          "type": "file",
+          "size": 2087,
+          "lines": 1
+        },
+        {
+          "name": "Orders.js",
+          "path": "js/Orders.js",
+          "type": "file",
+          "size": 10725,
+          "lines": 1
+        },
+        {
+          "name": "Overview.js",
+          "path": "js/Overview.js",
+          "type": "file",
+          "size": 20416,
+          "lines": 1
+        },
+        {
+          "name": "package.js",
+          "path": "js/package.js",
+          "type": "file",
+          "size": 412,
+          "lines": 1
+        },
+        {
+          "name": "product.js",
+          "path": "js/product.js",
+          "type": "file",
+          "size": 3992,
+          "lines": 1
+        },
+        {
+          "name": "Products.js",
+          "path": "js/Products.js",
+          "type": "file",
+          "size": 32208,
+          "lines": 1
+        },
+        {
+          "name": "receipt-text.js",
+          "path": "js/receipt-text.js",
+          "type": "file",
+          "size": 703,
+          "lines": 1
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 2920,
+          "lines": 102
+        },
+        {
+          "name": "useOrders.js",
+          "path": "js/useOrders.js",
+          "type": "file",
+          "size": 656,
+          "lines": 1
+        }
+      ]
+    }
+  ]
+}

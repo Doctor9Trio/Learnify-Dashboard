@@ -1,0 +1,231 @@
+{
+  "slug": "bahikhata",
+  "name": "Bahi Khata",
+  "totalFiles": 23,
+  "totalLines": 7525,
+  "totalBytes": 862273,
+  "totalSizeReadable": "842.1 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/index-B3JbmTKm.css",
+    "assets/index-D-MEBuAf.js",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/index.js",
+    "js/theme.js",
+    "photos/163-ledge/bowl.webp",
+    "photos/163-ledge/chair.webp",
+    "photos/163-ledge/cushion.webp",
+    "photos/163-ledge/lamp.webp",
+    "photos/163-ledge/pendant.webp",
+    "photos/163-ledge/stool.webp",
+    "photos/163-ledge/table.webp",
+    "photos/163-ledge/throw.webp",
+    "photos/163-ledge/vase.webp"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index-B3JbmTKm.css",
+          "path": "assets/index-B3JbmTKm.css",
+          "type": "file",
+          "size": 67582,
+          "lines": 3
+        },
+        {
+          "name": "index-D-MEBuAf.js",
+          "path": "assets/index-D-MEBuAf.js",
+          "type": "file",
+          "size": 206713,
+          "lines": 115
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 5959,
+          "lines": 300
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 84480,
+          "lines": 5312
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 7179,
+          "lines": 374
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 2700,
+          "lines": 182
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 2719,
+          "lines": 144
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 5767,
+          "lines": 163
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 51998,
+      "lines": 741
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 206713,
+          "lines": 115
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 1902,
+          "lines": 71
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "163-ledge",
+          "path": "photos/163-ledge",
+          "type": "directory",
+          "children": [
+            {
+              "name": "bowl.webp",
+              "path": "photos/163-ledge/bowl.webp",
+              "type": "file",
+              "size": 15934,
+              "lines": 0
+            },
+            {
+              "name": "chair.webp",
+              "path": "photos/163-ledge/chair.webp",
+              "type": "file",
+              "size": 44098,
+              "lines": 0
+            },
+            {
+              "name": "cushion.webp",
+              "path": "photos/163-ledge/cushion.webp",
+              "type": "file",
+              "size": 26960,
+              "lines": 0
+            },
+            {
+              "name": "lamp.webp",
+              "path": "photos/163-ledge/lamp.webp",
+              "type": "file",
+              "size": 11808,
+              "lines": 0
+            },
+            {
+              "name": "pendant.webp",
+              "path": "photos/163-ledge/pendant.webp",
+              "type": "file",
+              "size": 11032,
+              "lines": 0
+            },
+            {
+              "name": "stool.webp",
+              "path": "photos/163-ledge/stool.webp",
+              "type": "file",
+              "size": 26556,
+              "lines": 0
+            },
+            {
+              "name": "table.webp",
+              "path": "photos/163-ledge/table.webp",
+              "type": "file",
+              "size": 20312,
+              "lines": 0
+            },
+            {
+              "name": "throw.webp",
+              "path": "photos/163-ledge/throw.webp",
+              "type": "file",
+              "size": 34456,
+              "lines": 0
+            },
+            {
+              "name": "vase.webp",
+              "path": "photos/163-ledge/vase.webp",
+              "type": "file",
+              "size": 20600,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+{
+  "slug": "karkhana",
+  "name": "Karkhana ERP",
+  "totalFiles": 72,
+  "totalLines": 23842,
+  "totalBytes": 1880790,
+  "totalSizeReadable": "1836.7 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/accounting-BfWTJ4Fw.js",
+    "assets/accounting-Bwy_fxhe.css",
+    "assets/charts-CRhe8hmB.js",
+    "assets/contacts-BszNLDov.css",
+    "assets/contacts-DDg8uxkA.js",
+    "assets/dashboard-6gJjRHPY.js",
+    "assets/dashboard-DDd1BzGC.css",
+    "assets/gantt-N1Z2Iag8.js",
+    "assets/hr-CwLxWljp.css",
+    "assets/hr-fcS2m8XH.js",
+    "assets/index-Br1zCaD6.js",
+    "assets/index-sTQDprZc.css",
+    "assets/inventory-BjIuvsVq.js",
+    "assets/inventory-DNSYl-HE.css",
+    "assets/logistics-BsSGsXin.css",
+    "assets/logistics-CTvSmxHc.js",
+    "assets/manufacturing-B1Yd-9n7.css",
+    "assets/manufacturing-BLp_B8Py.js",
+    "assets/pos-VbABMvly.css",
+    "assets/pos-fPGfg5Rs.js",
+    "assets/purchasing-CT99MAsD.css",
+    "assets/purchasing-CoTjQALm.js",
+    "assets/reporting-B1x6cRJ4.js",
+    "assets/reporting-BzMwbLuo.css",
+    "assets/sales-BFRPrVqC.css",
+    "assets/sales-BGwZMp9l.js",
+    "assets/settings-Ck_X2Kel.css",
+    "assets/settings-VVQzhBgq.js",
+    "assets/support-CXk0ZJ-3.css",
+    "assets/support-CrfTzzMZ.js",
+    "assets/ui-CTh0QF7r.js",
+    "css/accounting.css",
+    "css/components.css",
+    "css/contacts.css",
+    "css/dashboard.css",
+    "css/hr.css",
+    "css/index.css",
+    "css/inventory.css",
+    "css/layout.css",
+    "css/logistics.css",
+    "css/manufacturing.css",
+    "css/pos.css",
+    "css/purchasing.css",
+    "css/reporting.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/sales.css",
+    "css/settings.css",
+    "css/support.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/accounting.js",
+    "js/charts.js",
+    "js/contacts.js",
+    "js/dashboard.js",
+    "js/gantt.js",
+    "js/hr.js",
+    "js/index.js",
+    "js/inventory.js",
+    "js/logistics.js",
+    "js/manufacturing.js",
+    "js/pos.js",
+    "js/purchasing.js",
+    "js/reporting.js",
+    "js/sales.js",
+    "js/settings.js",
+    "js/support.js",
+    "js/theme.js",
+    "js/ui.js"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "accounting-BfWTJ4Fw.js",
+          "path": "assets/accounting-BfWTJ4Fw.js",
+          "type": "file",
+          "size": 52196,
+          "lines": 137
+        },
+        {
+          "name": "accounting-Bwy_fxhe.css",
+          "path": "assets/accounting-Bwy_fxhe.css",
+          "type": "file",
+          "size": 22038,
+          "lines": 3
+        },
+        {
+          "name": "charts-CRhe8hmB.js",
+          "path": "assets/charts-CRhe8hmB.js",
+          "type": "file",
+          "size": 9591,
+          "lines": 10
+        },
+        {
+          "name": "contacts-BszNLDov.css",
+          "path": "assets/contacts-BszNLDov.css",
+          "type": "file",
+          "size": 9441,
+          "lines": 3
+        },
+        {
+          "name": "contacts-DDg8uxkA.js",
+          "path": "assets/contacts-DDg8uxkA.js",
+          "type": "file",
+          "size": 15356,
+          "lines": 54
+        },
+        {
+          "name": "dashboard-6gJjRHPY.js",
+          "path": "assets/dashboard-6gJjRHPY.js",
+          "type": "file",
+          "size": 16602,
+          "lines": 48
+        },
+        {
+          "name": "dashboard-DDd1BzGC.css",
+          "path": "assets/dashboard-DDd1BzGC.css",
+          "type": "file",
+          "size": 9542,
+          "lines": 3
+        },
+        {
+          "name": "gantt-N1Z2Iag8.js",
+          "path": "assets/gantt-N1Z2Iag8.js",
+          "type": "file",
+          "size": 16975,
+          "lines": 14
+        },
+        {
+          "name": "hr-CwLxWljp.css",
+          "path": "assets/hr-CwLxWljp.css",
+          "type": "file",
+          "size": 27643,
+          "lines": 3
+        },
+        {
+          "name": "hr-fcS2m8XH.js",
+          "path": "assets/hr-fcS2m8XH.js",
+          "type": "file",
+          "size": 50623,
+          "lines": 108
+        },
+        {
+          "name": "index-Br1zCaD6.js",
+          "path": "assets/index-Br1zCaD6.js",
+          "type": "file",
+          "size": 31691,
+          "lines": 10
+        },
+        {
+          "name": "index-sTQDprZc.css",
+          "path": "assets/index-sTQDprZc.css",
+          "type": "file",
+          "size": 46342,
+          "lines": 3
+        },
+        {
+          "name": "inventory-BjIuvsVq.js",
+          "path": "assets/inventory-BjIuvsVq.js",
+          "type": "file",
+          "size": 32310,
+          "lines": 79
+        },
+        {
+          "name": "inventory-DNSYl-HE.css",
+          "path": "assets/inventory-DNSYl-HE.css",
+          "type": "file",
+          "size": 15416,
+          "lines": 3
+        },
+        {
+          "name": "logistics-BsSGsXin.css",
+          "path": "assets/logistics-BsSGsXin.css",
+          "type": "file",
+          "size": 13344,
+          "lines": 3
+        },
+        {
+          "name": "logistics-CTvSmxHc.js",
+          "path": "assets/logistics-CTvSmxHc.js",
+          "type": "file",
+          "size": 28626,
+          "lines": 77
+        },
+        {
+          "name": "manufacturing-B1Yd-9n7.css",
+          "path": "assets/manufacturing-B1Yd-9n7.css",
+          "type": "file",
+          "size": 18762,
+          "lines": 3
+        },
+        {
+          "name": "manufacturing-BLp_B8Py.js",
+          "path": "assets/manufacturing-BLp_B8Py.js",
+          "type": "file",
+          "size": 20555,
+          "lines": 64
+        },
+        {
+          "name": "pos-fPGfg5Rs.js",
+          "path": "assets/pos-fPGfg5Rs.js",
+          "type": "file",
+          "size": 22197,
+          "lines": 96
+        },
+        {
+          "name": "pos-VbABMvly.css",
+          "path": "assets/pos-VbABMvly.css",
+          "type": "file",
+          "size": 14245,
+          "lines": 3
+        },
+        {
+          "name": "purchasing-CoTjQALm.js",
+          "path": "assets/purchasing-CoTjQALm.js",
+          "type": "file",
+          "size": 36259,
+          "lines": 117
+        },
+        {
+          "name": "purchasing-CT99MAsD.css",
+          "path": "assets/purchasing-CT99MAsD.css",
+          "type": "file",
+          "size": 16062,
+          "lines": 3
+        },
+        {
+          "name": "reporting-B1x6cRJ4.js",
+          "path": "assets/reporting-B1x6cRJ4.js",
+          "type": "file",
+          "size": 22211,
+          "lines": 53
+        },
+        {
+          "name": "reporting-BzMwbLuo.css",
+          "path": "assets/reporting-BzMwbLuo.css",
+          "type": "file",
+          "size": 8384,
+          "lines": 3
+        },
+        {
+          "name": "sales-BFRPrVqC.css",
+          "path": "assets/sales-BFRPrVqC.css",
+          "type": "file",
+          "size": 19781,
+          "lines": 3
+        },
+        {
+          "name": "sales-BGwZMp9l.js",
+          "path": "assets/sales-BGwZMp9l.js",
+          "type": "file",
+          "size": 45346,
+          "lines": 114
+        },
+        {
+          "name": "settings-Ck_X2Kel.css",
+          "path": "assets/settings-Ck_X2Kel.css",
+          "type": "file",
+          "size": 17537,
+          "lines": 3
+        },
+        {
+          "name": "settings-VVQzhBgq.js",
+          "path": "assets/settings-VVQzhBgq.js",
+          "type": "file",
+          "size": 28682,
+          "lines": 53
+        },
+        {
+          "name": "support-CrfTzzMZ.js",
+          "path": "assets/support-CrfTzzMZ.js",
+          "type": "file",
+          "size": 28861,
+          "lines": 57
+        },
+        {
+          "name": "support-CXk0ZJ-3.css",
+          "path": "assets/support-CXk0ZJ-3.css",
+          "type": "file",
+          "size": 12479,
+          "lines": 3
+        },
+        {
+          "name": "ui-CTh0QF7r.js",
+          "path": "assets/ui-CTh0QF7r.js",
+          "type": "file",
+          "size": 174111,
+          "lines": 17
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "accounting.css",
+          "path": "css/accounting.css",
+          "type": "file",
+          "size": 27580,
+          "lines": 1773
+        },
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 11150,
+          "lines": 534
+        },
+        {
+          "name": "contacts.css",
+          "path": "css/contacts.css",
+          "type": "file",
+          "size": 11858,
+          "lines": 765
+        },
+        {
+          "name": "dashboard.css",
+          "path": "css/dashboard.css",
+          "type": "file",
+          "size": 11913,
+          "lines": 756
+        },
+        {
+          "name": "hr.css",
+          "path": "css/hr.css",
+          "type": "file",
+          "size": 34382,
+          "lines": 2145
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 58161,
+          "lines": 3702
+        },
+        {
+          "name": "inventory.css",
+          "path": "css/inventory.css",
+          "type": "file",
+          "size": 19243,
+          "lines": 1210
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 8025,
+          "lines": 390
+        },
+        {
+          "name": "logistics.css",
+          "path": "css/logistics.css",
+          "type": "file",
+          "size": 16651,
+          "lines": 1048
+        },
+        {
+          "name": "manufacturing.css",
+          "path": "css/manufacturing.css",
+          "type": "file",
+          "size": 23461,
+          "lines": 1472
+        },
+        {
+          "name": "pos.css",
+          "path": "css/pos.css",
+          "type": "file",
+          "size": 17724,
+          "lines": 1076
+        },
+        {
+          "name": "purchasing.css",
+          "path": "css/purchasing.css",
+          "type": "file",
+          "size": 20093,
+          "lines": 1275
+        },
+        {
+          "name": "reporting.css",
+          "path": "css/reporting.css",
+          "type": "file",
+          "size": 10579,
+          "lines": 717
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 2260,
+          "lines": 143
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 5031,
+          "lines": 268
+        },
+        {
+          "name": "sales.css",
+          "path": "css/sales.css",
+          "type": "file",
+          "size": 24689,
+          "lines": 1540
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 21842,
+          "lines": 1369
+        },
+        {
+          "name": "support.css",
+          "path": "css/support.css",
+          "type": "file",
+          "size": 15653,
+          "lines": 1003
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 6448,
+          "lines": 194
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 10045,
+      "lines": 136
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "accounting.js",
+          "path": "js/accounting.js",
+          "type": "file",
+          "size": 52196,
+          "lines": 137
+        },
+        {
+          "name": "charts.js",
+          "path": "js/charts.js",
+          "type": "file",
+          "size": 9591,
+          "lines": 10
+        },
+        {
+          "name": "contacts.js",
+          "path": "js/contacts.js",
+          "type": "file",
+          "size": 15356,
+          "lines": 54
+        },
+        {
+          "name": "dashboard.js",
+          "path": "js/dashboard.js",
+          "type": "file",
+          "size": 16602,
+          "lines": 48
+        },
+        {
+          "name": "gantt.js",
+          "path": "js/gantt.js",
+          "type": "file",
+          "size": 16975,
+          "lines": 14
+        },
+        {
+          "name": "hr.js",
+          "path": "js/hr.js",
+          "type": "file",
+          "size": 50623,
+          "lines": 108
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 31691,
+          "lines": 10
+        },
+        {
+          "name": "inventory.js",
+          "path": "js/inventory.js",
+          "type": "file",
+          "size": 32310,
+          "lines": 79
+        },
+        {
+          "name": "logistics.js",
+          "path": "js/logistics.js",
+          "type": "file",
+          "size": 28626,
+          "lines": 77
+        },
+        {
+          "name": "manufacturing.js",
+          "path": "js/manufacturing.js",
+          "type": "file",
+          "size": 20555,
+          "lines": 64
+        },
+        {
+          "name": "pos.js",
+          "path": "js/pos.js",
+          "type": "file",
+          "size": 22197,
+          "lines": 96
+        },
+        {
+          "name": "purchasing.js",
+          "path": "js/purchasing.js",
+          "type": "file",
+          "size": 36259,
+          "lines": 117
+        },
+        {
+          "name": "reporting.js",
+          "path": "js/reporting.js",
+          "type": "file",
+          "size": 22211,
+          "lines": 53
+        },
+        {
+          "name": "sales.js",
+          "path": "js/sales.js",
+          "type": "file",
+          "size": 45346,
+          "lines": 114
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 28682,
+          "lines": 53
+        },
+        {
+          "name": "support.js",
+          "path": "js/support.js",
+          "type": "file",
+          "size": 28861,
+          "lines": 57
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 1797,
+          "lines": 63
+        },
+        {
+          "name": "ui.js",
+          "path": "js/ui.js",
+          "type": "file",
+          "size": 174111,
+          "lines": 17
+        }
+      ]
+    }
+  ]
+}

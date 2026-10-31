@@ -1,0 +1,284 @@
+{
+  "slug": "mishri",
+  "name": "Mishri 3D",
+  "totalFiles": 27,
+  "totalLines": 1694,
+  "totalBytes": 10152547,
+  "totalSizeReadable": "9914.6 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/index-BYnotj9T.js",
+    "assets/index-C3HN1SaC.css",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon-nero.png",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/index.js",
+    "js/theme.js",
+    "photos/mishri/beans/bean1.png",
+    "photos/mishri/beans/bean2.png",
+    "photos/mishri/beans/bean3.png",
+    "photos/mishri/beans/bean4.png",
+    "photos/mishri/beans/bean5.png",
+    "photos/mishri/beans/bean6.png",
+    "photos/mishri/hero.png",
+    "photos/mishri/melt.png",
+    "photos/mishri/varieties/dark85.png",
+    "photos/mishri/varieties/orange.png",
+    "photos/mishri/varieties/seasalt.png",
+    "textures/grain.png"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index-BYnotj9T.js",
+          "path": "assets/index-BYnotj9T.js",
+          "type": "file",
+          "size": 79147,
+          "lines": 1
+        },
+        {
+          "name": "index-C3HN1SaC.css",
+          "path": "assets/index-C3HN1SaC.css",
+          "type": "file",
+          "size": 9197,
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 7826,
+          "lines": 486
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 11477,
+          "lines": 700
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 498,
+          "lines": 28
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 655,
+          "lines": 43
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 2131,
+          "lines": 169
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 1334,
+          "lines": 45
+        }
+      ]
+    },
+    {
+      "name": "favicon-nero.png",
+      "path": "favicon-nero.png",
+      "type": "file",
+      "size": 32031,
+      "lines": 0
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 9691,
+      "lines": 106
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 79147,
+          "lines": 1
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 2925,
+          "lines": 107
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "mishri",
+          "path": "photos/mishri",
+          "type": "directory",
+          "children": [
+            {
+              "name": "beans",
+              "path": "photos/mishri/beans",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "bean1.png",
+                  "path": "photos/mishri/beans/bean1.png",
+                  "type": "file",
+                  "size": 376589,
+                  "lines": 0
+                },
+                {
+                  "name": "bean2.png",
+                  "path": "photos/mishri/beans/bean2.png",
+                  "type": "file",
+                  "size": 244584,
+                  "lines": 0
+                },
+                {
+                  "name": "bean3.png",
+                  "path": "photos/mishri/beans/bean3.png",
+                  "type": "file",
+                  "size": 242462,
+                  "lines": 0
+                },
+                {
+                  "name": "bean4.png",
+                  "path": "photos/mishri/beans/bean4.png",
+                  "type": "file",
+                  "size": 363437,
+                  "lines": 0
+                },
+                {
+                  "name": "bean5.png",
+                  "path": "photos/mishri/beans/bean5.png",
+                  "type": "file",
+                  "size": 358765,
+                  "lines": 0
+                },
+                {
+                  "name": "bean6.png",
+                  "path": "photos/mishri/beans/bean6.png",
+                  "type": "file",
+                  "size": 288960,
+                  "lines": 0
+                }
+              ]
+            },
+            {
+              "name": "hero.png",
+              "path": "photos/mishri/hero.png",
+              "type": "file",
+              "size": 1206587,
+              "lines": 0
+            },
+            {
+              "name": "melt.png",
+              "path": "photos/mishri/melt.png",
+              "type": "file",
+              "size": 1802130,
+              "lines": 0
+            },
+            {
+              "name": "varieties",
+              "path": "photos/mishri/varieties",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "dark85.png",
+                  "path": "photos/mishri/varieties/dark85.png",
+                  "type": "file",
+                  "size": 1374201,
+                  "lines": 0
+                },
+                {
+                  "name": "orange.png",
+                  "path": "photos/mishri/varieties/orange.png",
+                  "type": "file",
+                  "size": 1536075,
+                  "lines": 0
+                },
+                {
+                  "name": "seasalt.png",
+                  "path": "photos/mishri/varieties/seasalt.png",
+                  "type": "file",
+                  "size": 2064749,
+                  "lines": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "textures",
+      "path": "textures",
+      "type": "directory",
+      "children": [
+        {
+          "name": "grain.png",
+          "path": "textures/grain.png",
+          "type": "file",
+          "size": 51144,
+          "lines": 0
+        }
+      ]
+    }
+  ]
+}

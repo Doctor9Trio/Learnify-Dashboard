@@ -1,0 +1,318 @@
+{
+  "slug": "daksh",
+  "name": "Daksh Dev",
+  "totalFiles": 33,
+  "totalLines": 7893,
+  "totalBytes": 4207611,
+  "totalSizeReadable": "4109.0 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/contact_bg-BZTj-iD6.mp4",
+    "assets/ecommerce-DVISmkX7.jpg",
+    "assets/expense-sbI4i9tg.jpg",
+    "assets/habitflow-BhEplUHh.jpg",
+    "assets/hero_center-BLC76ir0.png",
+    "assets/index-BJNuUqxu.js",
+    "assets/index-V1mGLk2S.css",
+    "assets/mindpixel-Bx0qpjdU.jpg",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/index.js",
+    "js/theme.js",
+    "photos/154-portfolio/favicon.svg",
+    "photos/154-portfolio/reels/lucid.jpg",
+    "photos/154-portfolio/reels/lucid.mp4",
+    "photos/154-portfolio/reels/meniscus.jpg",
+    "photos/154-portfolio/reels/meniscus.mp4",
+    "photos/154-portfolio/reels/parachute.jpg",
+    "photos/154-portfolio/reels/parachute.mp4",
+    "photos/154-portfolio/reels/quarto.jpg",
+    "photos/154-portfolio/reels/quarto.mp4",
+    "photos/154-portfolio/reels/quench.jpg",
+    "photos/154-portfolio/reels/quench.mp4",
+    "photos/154-portfolio/reels/sigil.jpg",
+    "photos/154-portfolio/reels/sigil.mp4"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "contact_bg-BZTj-iD6.mp4",
+          "path": "assets/contact_bg-BZTj-iD6.mp4",
+          "type": "file",
+          "size": 588482,
+          "lines": 0
+        },
+        {
+          "name": "ecommerce-DVISmkX7.jpg",
+          "path": "assets/ecommerce-DVISmkX7.jpg",
+          "type": "file",
+          "size": 93883,
+          "lines": 0
+        },
+        {
+          "name": "expense-sbI4i9tg.jpg",
+          "path": "assets/expense-sbI4i9tg.jpg",
+          "type": "file",
+          "size": 166028,
+          "lines": 0
+        },
+        {
+          "name": "habitflow-BhEplUHh.jpg",
+          "path": "assets/habitflow-BhEplUHh.jpg",
+          "type": "file",
+          "size": 93400,
+          "lines": 0
+        },
+        {
+          "name": "hero_center-BLC76ir0.png",
+          "path": "assets/hero_center-BLC76ir0.png",
+          "type": "file",
+          "size": 1830130,
+          "lines": 0
+        },
+        {
+          "name": "index-BJNuUqxu.js",
+          "path": "assets/index-BJNuUqxu.js",
+          "type": "file",
+          "size": 420976,
+          "lines": 116
+        },
+        {
+          "name": "index-V1mGLk2S.css",
+          "path": "assets/index-V1mGLk2S.css",
+          "type": "file",
+          "size": 59237,
+          "lines": 4
+        },
+        {
+          "name": "mindpixel-Bx0qpjdU.jpg",
+          "path": "assets/mindpixel-Bx0qpjdU.jpg",
+          "type": "file",
+          "size": 102291,
+          "lines": 0
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 42698,
+          "lines": 2328
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 70134,
+          "lines": 3721
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 665,
+          "lines": 26
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 4353,
+          "lines": 256
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 15065,
+          "lines": 999
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 5579,
+          "lines": 183
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 3953,
+      "lines": 45
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 420976,
+          "lines": 116
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 2386,
+          "lines": 88
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "154-portfolio",
+          "path": "photos/154-portfolio",
+          "type": "directory",
+          "children": [
+            {
+              "name": "favicon.svg",
+              "path": "photos/154-portfolio/favicon.svg",
+              "type": "file",
+              "size": 272,
+              "lines": 6
+            },
+            {
+              "name": "reels",
+              "path": "photos/154-portfolio/reels",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "lucid.jpg",
+                  "path": "photos/154-portfolio/reels/lucid.jpg",
+                  "type": "file",
+                  "size": 29284,
+                  "lines": 0
+                },
+                {
+                  "name": "lucid.mp4",
+                  "path": "photos/154-portfolio/reels/lucid.mp4",
+                  "type": "file",
+                  "size": 16418,
+                  "lines": 0
+                },
+                {
+                  "name": "meniscus.jpg",
+                  "path": "photos/154-portfolio/reels/meniscus.jpg",
+                  "type": "file",
+                  "size": 32629,
+                  "lines": 0
+                },
+                {
+                  "name": "meniscus.mp4",
+                  "path": "photos/154-portfolio/reels/meniscus.mp4",
+                  "type": "file",
+                  "size": 17677,
+                  "lines": 0
+                },
+                {
+                  "name": "parachute.jpg",
+                  "path": "photos/154-portfolio/reels/parachute.jpg",
+                  "type": "file",
+                  "size": 30327,
+                  "lines": 0
+                },
+                {
+                  "name": "parachute.mp4",
+                  "path": "photos/154-portfolio/reels/parachute.mp4",
+                  "type": "file",
+                  "size": 16450,
+                  "lines": 0
+                },
+                {
+                  "name": "quarto.jpg",
+                  "path": "photos/154-portfolio/reels/quarto.jpg",
+                  "type": "file",
+                  "size": 29125,
+                  "lines": 0
+                },
+                {
+                  "name": "quarto.mp4",
+                  "path": "photos/154-portfolio/reels/quarto.mp4",
+                  "type": "file",
+                  "size": 16654,
+                  "lines": 0
+                },
+                {
+                  "name": "quench.jpg",
+                  "path": "photos/154-portfolio/reels/quench.jpg",
+                  "type": "file",
+                  "size": 28919,
+                  "lines": 0
+                },
+                {
+                  "name": "quench.mp4",
+                  "path": "photos/154-portfolio/reels/quench.mp4",
+                  "type": "file",
+                  "size": 15398,
+                  "lines": 0
+                },
+                {
+                  "name": "sigil.jpg",
+                  "path": "photos/154-portfolio/reels/sigil.jpg",
+                  "type": "file",
+                  "size": 30894,
+                  "lines": 0
+                },
+                {
+                  "name": "sigil.mp4",
+                  "path": "photos/154-portfolio/reels/sigil.mp4",
+                  "type": "file",
+                  "size": 16523,
+                  "lines": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

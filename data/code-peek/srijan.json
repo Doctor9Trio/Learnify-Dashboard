@@ -1,0 +1,1101 @@
+{
+  "slug": "srijan",
+  "name": "Srijan Studio",
+  "totalFiles": 130,
+  "totalLines": 3402,
+  "totalBytes": 12314906,
+  "totalSizeReadable": "12026.3 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/index--QpMQd2W.js",
+    "assets/index-DztWIOzK.css",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/index.js",
+    "js/theme.js",
+    "photos/srijan/a1-480.webp",
+    "photos/srijan/a1-960.webp",
+    "photos/srijan/a2-480.webp",
+    "photos/srijan/a2-960.webp",
+    "photos/srijan/a3-480.webp",
+    "photos/srijan/a3-960.webp",
+    "photos/srijan/a4-480.webp",
+    "photos/srijan/a4-960.webp",
+    "photos/srijan/a5-480.webp",
+    "photos/srijan/a5-960.webp",
+    "photos/srijan/a6-480.webp",
+    "photos/srijan/a6-960.webp",
+    "photos/srijan/a7-480.webp",
+    "photos/srijan/a7-960.webp",
+    "photos/srijan/a8-480.webp",
+    "photos/srijan/a8-960.webp",
+    "photos/srijan/b1-480.webp",
+    "photos/srijan/b1-960.webp",
+    "photos/srijan/b2-480.webp",
+    "photos/srijan/b2-960.webp",
+    "photos/srijan/b3-480.webp",
+    "photos/srijan/b3-960.webp",
+    "photos/srijan/b4-480.webp",
+    "photos/srijan/b4-960.webp",
+    "photos/srijan/b5-480.webp",
+    "photos/srijan/b5-960.webp",
+    "photos/srijan/b6-480.webp",
+    "photos/srijan/b6-960.webp",
+    "photos/srijan/banner-poster.webp",
+    "photos/srijan/c1-1600.webp",
+    "photos/srijan/d1-240.webp",
+    "photos/srijan/d1-400.webp",
+    "photos/srijan/d10-240.webp",
+    "photos/srijan/d10-400.webp",
+    "photos/srijan/d11-240.webp",
+    "photos/srijan/d11-400.webp",
+    "photos/srijan/d12-240.webp",
+    "photos/srijan/d12-400.webp",
+    "photos/srijan/d13-240.webp",
+    "photos/srijan/d13-400.webp",
+    "photos/srijan/d14-240.webp",
+    "photos/srijan/d14-400.webp",
+    "photos/srijan/d15-240.webp",
+    "photos/srijan/d15-400.webp",
+    "photos/srijan/d16-240.webp",
+    "photos/srijan/d16-400.webp",
+    "photos/srijan/d2-240.webp",
+    "photos/srijan/d2-400.webp",
+    "photos/srijan/d3-240.webp",
+    "photos/srijan/d3-400.webp",
+    "photos/srijan/d4-240.webp",
+    "photos/srijan/d4-400.webp",
+    "photos/srijan/d5-240.webp",
+    "photos/srijan/d5-400.webp",
+    "photos/srijan/d6-240.webp",
+    "photos/srijan/d6-400.webp",
+    "photos/srijan/d7-240.webp",
+    "photos/srijan/d7-400.webp",
+    "photos/srijan/d8-240.webp",
+    "photos/srijan/d8-400.webp",
+    "photos/srijan/d9-240.webp",
+    "photos/srijan/d9-400.webp",
+    "photos/srijan/e1-1280.webp",
+    "photos/srijan/e1-640.webp",
+    "photos/srijan/e2-1280.webp",
+    "photos/srijan/e2-640.webp",
+    "photos/srijan/e3-1280.webp",
+    "photos/srijan/e3-640.webp",
+    "photos/srijan/f1-480.webp",
+    "photos/srijan/f1-960.webp",
+    "photos/srijan/f2-480.webp",
+    "photos/srijan/f2-960.webp",
+    "photos/srijan/f3-480.webp",
+    "photos/srijan/f3-960.webp",
+    "photos/srijan/f4-480.webp",
+    "photos/srijan/f4-960.webp",
+    "photos/srijan/f5-480.webp",
+    "photos/srijan/f5-960.webp",
+    "photos/srijan/f6-480.webp",
+    "photos/srijan/f6-960.webp",
+    "photos/srijan/feature-poster.webp",
+    "photos/srijan/g0-1280.webp",
+    "photos/srijan/g0-720.webp",
+    "photos/srijan/g1-480.webp",
+    "photos/srijan/g1-960.webp",
+    "photos/srijan/g10-480.webp",
+    "photos/srijan/g10-960.webp",
+    "photos/srijan/g11-480.webp",
+    "photos/srijan/g11-960.webp",
+    "photos/srijan/g12-480.webp",
+    "photos/srijan/g12-960.webp",
+    "photos/srijan/g2-480.webp",
+    "photos/srijan/g2-960.webp",
+    "photos/srijan/g3-480.webp",
+    "photos/srijan/g3-960.webp",
+    "photos/srijan/g4-480.webp",
+    "photos/srijan/g4-960.webp",
+    "photos/srijan/g5-480.webp",
+    "photos/srijan/g5-960.webp",
+    "photos/srijan/g6-480.webp",
+    "photos/srijan/g6-960.webp",
+    "photos/srijan/g7-480.webp",
+    "photos/srijan/g7-960.webp",
+    "photos/srijan/g8-480.webp",
+    "photos/srijan/g8-960.webp",
+    "photos/srijan/g9-480.webp",
+    "photos/srijan/g9-960.webp",
+    "photos/srijan/h1-1280.webp",
+    "photos/srijan/h1-640.webp",
+    "photos/srijan/h2-1280.webp",
+    "photos/srijan/h2-640.webp",
+    "photos/srijan/og.jpg",
+    "video/srijan/banner-lg.mp4",
+    "video/srijan/banner-sm.mp4",
+    "video/srijan/feature-lg.mp4",
+    "video/srijan/feature-sm.mp4"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index--QpMQd2W.js",
+          "path": "assets/index--QpMQd2W.js",
+          "type": "file",
+          "size": 146895,
+          "lines": 1
+        },
+        {
+          "name": "index-DztWIOzK.css",
+          "path": "assets/index-DztWIOzK.css",
+          "type": "file",
+          "size": 26402,
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 5332,
+          "lines": 281
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 32769,
+          "lines": 2004
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 3432,
+          "lines": 169
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 2889,
+          "lines": 200
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 2030,
+          "lines": 117
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 2664,
+          "lines": 66
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 42901,
+      "lines": 514
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 146895,
+          "lines": 1
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 1253,
+          "lines": 41
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "srijan",
+          "path": "photos/srijan",
+          "type": "directory",
+          "children": [
+            {
+              "name": "a1-480.webp",
+              "path": "photos/srijan/a1-480.webp",
+              "type": "file",
+              "size": 55562,
+              "lines": 0
+            },
+            {
+              "name": "a1-960.webp",
+              "path": "photos/srijan/a1-960.webp",
+              "type": "file",
+              "size": 183942,
+              "lines": 0
+            },
+            {
+              "name": "a2-480.webp",
+              "path": "photos/srijan/a2-480.webp",
+              "type": "file",
+              "size": 60598,
+              "lines": 0
+            },
+            {
+              "name": "a2-960.webp",
+              "path": "photos/srijan/a2-960.webp",
+              "type": "file",
+              "size": 189932,
+              "lines": 0
+            },
+            {
+              "name": "a3-480.webp",
+              "path": "photos/srijan/a3-480.webp",
+              "type": "file",
+              "size": 28786,
+              "lines": 0
+            },
+            {
+              "name": "a3-960.webp",
+              "path": "photos/srijan/a3-960.webp",
+              "type": "file",
+              "size": 87350,
+              "lines": 0
+            },
+            {
+              "name": "a4-480.webp",
+              "path": "photos/srijan/a4-480.webp",
+              "type": "file",
+              "size": 3452,
+              "lines": 0
+            },
+            {
+              "name": "a4-960.webp",
+              "path": "photos/srijan/a4-960.webp",
+              "type": "file",
+              "size": 12634,
+              "lines": 0
+            },
+            {
+              "name": "a5-480.webp",
+              "path": "photos/srijan/a5-480.webp",
+              "type": "file",
+              "size": 40124,
+              "lines": 0
+            },
+            {
+              "name": "a5-960.webp",
+              "path": "photos/srijan/a5-960.webp",
+              "type": "file",
+              "size": 94802,
+              "lines": 0
+            },
+            {
+              "name": "a6-480.webp",
+              "path": "photos/srijan/a6-480.webp",
+              "type": "file",
+              "size": 36786,
+              "lines": 0
+            },
+            {
+              "name": "a6-960.webp",
+              "path": "photos/srijan/a6-960.webp",
+              "type": "file",
+              "size": 130380,
+              "lines": 0
+            },
+            {
+              "name": "a7-480.webp",
+              "path": "photos/srijan/a7-480.webp",
+              "type": "file",
+              "size": 65534,
+              "lines": 0
+            },
+            {
+              "name": "a7-960.webp",
+              "path": "photos/srijan/a7-960.webp",
+              "type": "file",
+              "size": 229758,
+              "lines": 0
+            },
+            {
+              "name": "a8-480.webp",
+              "path": "photos/srijan/a8-480.webp",
+              "type": "file",
+              "size": 24812,
+              "lines": 0
+            },
+            {
+              "name": "a8-960.webp",
+              "path": "photos/srijan/a8-960.webp",
+              "type": "file",
+              "size": 75366,
+              "lines": 0
+            },
+            {
+              "name": "b1-480.webp",
+              "path": "photos/srijan/b1-480.webp",
+              "type": "file",
+              "size": 18390,
+              "lines": 0
+            },
+            {
+              "name": "b1-960.webp",
+              "path": "photos/srijan/b1-960.webp",
+              "type": "file",
+              "size": 59242,
+              "lines": 0
+            },
+            {
+              "name": "b2-480.webp",
+              "path": "photos/srijan/b2-480.webp",
+              "type": "file",
+              "size": 13808,
+              "lines": 0
+            },
+            {
+              "name": "b2-960.webp",
+              "path": "photos/srijan/b2-960.webp",
+              "type": "file",
+              "size": 34244,
+              "lines": 0
+            },
+            {
+              "name": "b3-480.webp",
+              "path": "photos/srijan/b3-480.webp",
+              "type": "file",
+              "size": 78330,
+              "lines": 0
+            },
+            {
+              "name": "b3-960.webp",
+              "path": "photos/srijan/b3-960.webp",
+              "type": "file",
+              "size": 244822,
+              "lines": 0
+            },
+            {
+              "name": "b4-480.webp",
+              "path": "photos/srijan/b4-480.webp",
+              "type": "file",
+              "size": 4368,
+              "lines": 0
+            },
+            {
+              "name": "b4-960.webp",
+              "path": "photos/srijan/b4-960.webp",
+              "type": "file",
+              "size": 11830,
+              "lines": 0
+            },
+            {
+              "name": "b5-480.webp",
+              "path": "photos/srijan/b5-480.webp",
+              "type": "file",
+              "size": 22324,
+              "lines": 0
+            },
+            {
+              "name": "b5-960.webp",
+              "path": "photos/srijan/b5-960.webp",
+              "type": "file",
+              "size": 64336,
+              "lines": 0
+            },
+            {
+              "name": "b6-480.webp",
+              "path": "photos/srijan/b6-480.webp",
+              "type": "file",
+              "size": 43162,
+              "lines": 0
+            },
+            {
+              "name": "b6-960.webp",
+              "path": "photos/srijan/b6-960.webp",
+              "type": "file",
+              "size": 200380,
+              "lines": 0
+            },
+            {
+              "name": "banner-poster.webp",
+              "path": "photos/srijan/banner-poster.webp",
+              "type": "file",
+              "size": 48556,
+              "lines": 0
+            },
+            {
+              "name": "c1-1600.webp",
+              "path": "photos/srijan/c1-1600.webp",
+              "type": "file",
+              "size": 43396,
+              "lines": 0
+            },
+            {
+              "name": "d1-240.webp",
+              "path": "photos/srijan/d1-240.webp",
+              "type": "file",
+              "size": 5358,
+              "lines": 0
+            },
+            {
+              "name": "d1-400.webp",
+              "path": "photos/srijan/d1-400.webp",
+              "type": "file",
+              "size": 10460,
+              "lines": 0
+            },
+            {
+              "name": "d10-240.webp",
+              "path": "photos/srijan/d10-240.webp",
+              "type": "file",
+              "size": 6114,
+              "lines": 0
+            },
+            {
+              "name": "d10-400.webp",
+              "path": "photos/srijan/d10-400.webp",
+              "type": "file",
+              "size": 17118,
+              "lines": 0
+            },
+            {
+              "name": "d11-240.webp",
+              "path": "photos/srijan/d11-240.webp",
+              "type": "file",
+              "size": 4472,
+              "lines": 0
+            },
+            {
+              "name": "d11-400.webp",
+              "path": "photos/srijan/d11-400.webp",
+              "type": "file",
+              "size": 8298,
+              "lines": 0
+            },
+            {
+              "name": "d12-240.webp",
+              "path": "photos/srijan/d12-240.webp",
+              "type": "file",
+              "size": 4580,
+              "lines": 0
+            },
+            {
+              "name": "d12-400.webp",
+              "path": "photos/srijan/d12-400.webp",
+              "type": "file",
+              "size": 9016,
+              "lines": 0
+            },
+            {
+              "name": "d13-240.webp",
+              "path": "photos/srijan/d13-240.webp",
+              "type": "file",
+              "size": 4698,
+              "lines": 0
+            },
+            {
+              "name": "d13-400.webp",
+              "path": "photos/srijan/d13-400.webp",
+              "type": "file",
+              "size": 10270,
+              "lines": 0
+            },
+            {
+              "name": "d14-240.webp",
+              "path": "photos/srijan/d14-240.webp",
+              "type": "file",
+              "size": 6408,
+              "lines": 0
+            },
+            {
+              "name": "d14-400.webp",
+              "path": "photos/srijan/d14-400.webp",
+              "type": "file",
+              "size": 16002,
+              "lines": 0
+            },
+            {
+              "name": "d15-240.webp",
+              "path": "photos/srijan/d15-240.webp",
+              "type": "file",
+              "size": 5574,
+              "lines": 0
+            },
+            {
+              "name": "d15-400.webp",
+              "path": "photos/srijan/d15-400.webp",
+              "type": "file",
+              "size": 11956,
+              "lines": 0
+            },
+            {
+              "name": "d16-240.webp",
+              "path": "photos/srijan/d16-240.webp",
+              "type": "file",
+              "size": 4540,
+              "lines": 0
+            },
+            {
+              "name": "d16-400.webp",
+              "path": "photos/srijan/d16-400.webp",
+              "type": "file",
+              "size": 8850,
+              "lines": 0
+            },
+            {
+              "name": "d2-240.webp",
+              "path": "photos/srijan/d2-240.webp",
+              "type": "file",
+              "size": 3518,
+              "lines": 0
+            },
+            {
+              "name": "d2-400.webp",
+              "path": "photos/srijan/d2-400.webp",
+              "type": "file",
+              "size": 6972,
+              "lines": 0
+            },
+            {
+              "name": "d3-240.webp",
+              "path": "photos/srijan/d3-240.webp",
+              "type": "file",
+              "size": 5158,
+              "lines": 0
+            },
+            {
+              "name": "d3-400.webp",
+              "path": "photos/srijan/d3-400.webp",
+              "type": "file",
+              "size": 10708,
+              "lines": 0
+            },
+            {
+              "name": "d4-240.webp",
+              "path": "photos/srijan/d4-240.webp",
+              "type": "file",
+              "size": 3324,
+              "lines": 0
+            },
+            {
+              "name": "d4-400.webp",
+              "path": "photos/srijan/d4-400.webp",
+              "type": "file",
+              "size": 8416,
+              "lines": 0
+            },
+            {
+              "name": "d5-240.webp",
+              "path": "photos/srijan/d5-240.webp",
+              "type": "file",
+              "size": 4180,
+              "lines": 0
+            },
+            {
+              "name": "d5-400.webp",
+              "path": "photos/srijan/d5-400.webp",
+              "type": "file",
+              "size": 7806,
+              "lines": 0
+            },
+            {
+              "name": "d6-240.webp",
+              "path": "photos/srijan/d6-240.webp",
+              "type": "file",
+              "size": 6434,
+              "lines": 0
+            },
+            {
+              "name": "d6-400.webp",
+              "path": "photos/srijan/d6-400.webp",
+              "type": "file",
+              "size": 14490,
+              "lines": 0
+            },
+            {
+              "name": "d7-240.webp",
+              "path": "photos/srijan/d7-240.webp",
+              "type": "file",
+              "size": 9502,
+              "lines": 0
+            },
+            {
+              "name": "d7-400.webp",
+              "path": "photos/srijan/d7-400.webp",
+              "type": "file",
+              "size": 22966,
+              "lines": 0
+            },
+            {
+              "name": "d8-240.webp",
+              "path": "photos/srijan/d8-240.webp",
+              "type": "file",
+              "size": 2348,
+              "lines": 0
+            },
+            {
+              "name": "d8-400.webp",
+              "path": "photos/srijan/d8-400.webp",
+              "type": "file",
+              "size": 4372,
+              "lines": 0
+            },
+            {
+              "name": "d9-240.webp",
+              "path": "photos/srijan/d9-240.webp",
+              "type": "file",
+              "size": 4024,
+              "lines": 0
+            },
+            {
+              "name": "d9-400.webp",
+              "path": "photos/srijan/d9-400.webp",
+              "type": "file",
+              "size": 7166,
+              "lines": 0
+            },
+            {
+              "name": "e1-1280.webp",
+              "path": "photos/srijan/e1-1280.webp",
+              "type": "file",
+              "size": 43790,
+              "lines": 0
+            },
+            {
+              "name": "e1-640.webp",
+              "path": "photos/srijan/e1-640.webp",
+              "type": "file",
+              "size": 16332,
+              "lines": 0
+            },
+            {
+              "name": "e2-1280.webp",
+              "path": "photos/srijan/e2-1280.webp",
+              "type": "file",
+              "size": 42398,
+              "lines": 0
+            },
+            {
+              "name": "e2-640.webp",
+              "path": "photos/srijan/e2-640.webp",
+              "type": "file",
+              "size": 18402,
+              "lines": 0
+            },
+            {
+              "name": "e3-1280.webp",
+              "path": "photos/srijan/e3-1280.webp",
+              "type": "file",
+              "size": 176062,
+              "lines": 0
+            },
+            {
+              "name": "e3-640.webp",
+              "path": "photos/srijan/e3-640.webp",
+              "type": "file",
+              "size": 70286,
+              "lines": 0
+            },
+            {
+              "name": "f1-480.webp",
+              "path": "photos/srijan/f1-480.webp",
+              "type": "file",
+              "size": 76236,
+              "lines": 0
+            },
+            {
+              "name": "f1-960.webp",
+              "path": "photos/srijan/f1-960.webp",
+              "type": "file",
+              "size": 153112,
+              "lines": 0
+            },
+            {
+              "name": "f2-480.webp",
+              "path": "photos/srijan/f2-480.webp",
+              "type": "file",
+              "size": 13672,
+              "lines": 0
+            },
+            {
+              "name": "f2-960.webp",
+              "path": "photos/srijan/f2-960.webp",
+              "type": "file",
+              "size": 31736,
+              "lines": 0
+            },
+            {
+              "name": "f3-480.webp",
+              "path": "photos/srijan/f3-480.webp",
+              "type": "file",
+              "size": 67120,
+              "lines": 0
+            },
+            {
+              "name": "f3-960.webp",
+              "path": "photos/srijan/f3-960.webp",
+              "type": "file",
+              "size": 201704,
+              "lines": 0
+            },
+            {
+              "name": "f4-480.webp",
+              "path": "photos/srijan/f4-480.webp",
+              "type": "file",
+              "size": 86194,
+              "lines": 0
+            },
+            {
+              "name": "f4-960.webp",
+              "path": "photos/srijan/f4-960.webp",
+              "type": "file",
+              "size": 310666,
+              "lines": 0
+            },
+            {
+              "name": "f5-480.webp",
+              "path": "photos/srijan/f5-480.webp",
+              "type": "file",
+              "size": 4382,
+              "lines": 0
+            },
+            {
+              "name": "f5-960.webp",
+              "path": "photos/srijan/f5-960.webp",
+              "type": "file",
+              "size": 11674,
+              "lines": 0
+            },
+            {
+              "name": "f6-480.webp",
+              "path": "photos/srijan/f6-480.webp",
+              "type": "file",
+              "size": 37634,
+              "lines": 0
+            },
+            {
+              "name": "f6-960.webp",
+              "path": "photos/srijan/f6-960.webp",
+              "type": "file",
+              "size": 148778,
+              "lines": 0
+            },
+            {
+              "name": "feature-poster.webp",
+              "path": "photos/srijan/feature-poster.webp",
+              "type": "file",
+              "size": 54644,
+              "lines": 0
+            },
+            {
+              "name": "g0-1280.webp",
+              "path": "photos/srijan/g0-1280.webp",
+              "type": "file",
+              "size": 65678,
+              "lines": 0
+            },
+            {
+              "name": "g0-720.webp",
+              "path": "photos/srijan/g0-720.webp",
+              "type": "file",
+              "size": 23296,
+              "lines": 0
+            },
+            {
+              "name": "g1-480.webp",
+              "path": "photos/srijan/g1-480.webp",
+              "type": "file",
+              "size": 44280,
+              "lines": 0
+            },
+            {
+              "name": "g1-960.webp",
+              "path": "photos/srijan/g1-960.webp",
+              "type": "file",
+              "size": 126808,
+              "lines": 0
+            },
+            {
+              "name": "g10-480.webp",
+              "path": "photos/srijan/g10-480.webp",
+              "type": "file",
+              "size": 35990,
+              "lines": 0
+            },
+            {
+              "name": "g10-960.webp",
+              "path": "photos/srijan/g10-960.webp",
+              "type": "file",
+              "size": 110128,
+              "lines": 0
+            },
+            {
+              "name": "g11-480.webp",
+              "path": "photos/srijan/g11-480.webp",
+              "type": "file",
+              "size": 56446,
+              "lines": 0
+            },
+            {
+              "name": "g11-960.webp",
+              "path": "photos/srijan/g11-960.webp",
+              "type": "file",
+              "size": 153800,
+              "lines": 0
+            },
+            {
+              "name": "g12-480.webp",
+              "path": "photos/srijan/g12-480.webp",
+              "type": "file",
+              "size": 27656,
+              "lines": 0
+            },
+            {
+              "name": "g12-960.webp",
+              "path": "photos/srijan/g12-960.webp",
+              "type": "file",
+              "size": 87068,
+              "lines": 0
+            },
+            {
+              "name": "g2-480.webp",
+              "path": "photos/srijan/g2-480.webp",
+              "type": "file",
+              "size": 25164,
+              "lines": 0
+            },
+            {
+              "name": "g2-960.webp",
+              "path": "photos/srijan/g2-960.webp",
+              "type": "file",
+              "size": 81052,
+              "lines": 0
+            },
+            {
+              "name": "g3-480.webp",
+              "path": "photos/srijan/g3-480.webp",
+              "type": "file",
+              "size": 26148,
+              "lines": 0
+            },
+            {
+              "name": "g3-960.webp",
+              "path": "photos/srijan/g3-960.webp",
+              "type": "file",
+              "size": 87286,
+              "lines": 0
+            },
+            {
+              "name": "g4-480.webp",
+              "path": "photos/srijan/g4-480.webp",
+              "type": "file",
+              "size": 42950,
+              "lines": 0
+            },
+            {
+              "name": "g4-960.webp",
+              "path": "photos/srijan/g4-960.webp",
+              "type": "file",
+              "size": 135396,
+              "lines": 0
+            },
+            {
+              "name": "g5-480.webp",
+              "path": "photos/srijan/g5-480.webp",
+              "type": "file",
+              "size": 33942,
+              "lines": 0
+            },
+            {
+              "name": "g5-960.webp",
+              "path": "photos/srijan/g5-960.webp",
+              "type": "file",
+              "size": 107902,
+              "lines": 0
+            },
+            {
+              "name": "g6-480.webp",
+              "path": "photos/srijan/g6-480.webp",
+              "type": "file",
+              "size": 20570,
+              "lines": 0
+            },
+            {
+              "name": "g6-960.webp",
+              "path": "photos/srijan/g6-960.webp",
+              "type": "file",
+              "size": 93984,
+              "lines": 0
+            },
+            {
+              "name": "g7-480.webp",
+              "path": "photos/srijan/g7-480.webp",
+              "type": "file",
+              "size": 36596,
+              "lines": 0
+            },
+            {
+              "name": "g7-960.webp",
+              "path": "photos/srijan/g7-960.webp",
+              "type": "file",
+              "size": 102498,
+              "lines": 0
+            },
+            {
+              "name": "g8-480.webp",
+              "path": "photos/srijan/g8-480.webp",
+              "type": "file",
+              "size": 34484,
+              "lines": 0
+            },
+            {
+              "name": "g8-960.webp",
+              "path": "photos/srijan/g8-960.webp",
+              "type": "file",
+              "size": 102240,
+              "lines": 0
+            },
+            {
+              "name": "g9-480.webp",
+              "path": "photos/srijan/g9-480.webp",
+              "type": "file",
+              "size": 23150,
+              "lines": 0
+            },
+            {
+              "name": "g9-960.webp",
+              "path": "photos/srijan/g9-960.webp",
+              "type": "file",
+              "size": 67842,
+              "lines": 0
+            },
+            {
+              "name": "h1-1280.webp",
+              "path": "photos/srijan/h1-1280.webp",
+              "type": "file",
+              "size": 58994,
+              "lines": 0
+            },
+            {
+              "name": "h1-640.webp",
+              "path": "photos/srijan/h1-640.webp",
+              "type": "file",
+              "size": 17104,
+              "lines": 0
+            },
+            {
+              "name": "h2-1280.webp",
+              "path": "photos/srijan/h2-1280.webp",
+              "type": "file",
+              "size": 109656,
+              "lines": 0
+            },
+            {
+              "name": "h2-640.webp",
+              "path": "photos/srijan/h2-640.webp",
+              "type": "file",
+              "size": 46240,
+              "lines": 0
+            },
+            {
+              "name": "og.jpg",
+              "path": "photos/srijan/og.jpg",
+              "type": "file",
+              "size": 123247,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "video",
+      "path": "video",
+      "type": "directory",
+      "children": [
+        {
+          "name": "srijan",
+          "path": "video/srijan",
+          "type": "directory",
+          "children": [
+            {
+              "name": "banner-lg.mp4",
+              "path": "video/srijan/banner-lg.mp4",
+              "type": "file",
+              "size": 2020244,
+              "lines": 0
+            },
+            {
+              "name": "banner-sm.mp4",
+              "path": "video/srijan/banner-sm.mp4",
+              "type": "file",
+              "size": 588482,
+              "lines": 0
+            },
+            {
+              "name": "feature-lg.mp4",
+              "path": "video/srijan/feature-lg.mp4",
+              "type": "file",
+              "size": 2719311,
+              "lines": 0
+            },
+            {
+              "name": "feature-sm.mp4",
+              "path": "video/srijan/feature-sm.mp4",
+              "type": "file",
+              "size": 432081,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

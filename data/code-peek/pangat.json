@@ -1,0 +1,989 @@
+{
+  "slug": "pangat",
+  "name": "Pangat POS",
+  "totalFiles": 116,
+  "totalLines": 15068,
+  "totalBytes": 9846922,
+  "totalSizeReadable": "9616.1 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/charts-CjQe7Tzb.js",
+    "assets/floor-Bvy3o6sg.js",
+    "assets/floor-Jp3SKya3.css",
+    "assets/index-BxVBuG1B.css",
+    "assets/index-DLOxTne6.js",
+    "assets/inventory-DizOVMzJ.js",
+    "assets/inventory-DxUB4K2y.css",
+    "assets/menu-DTfMb3Uw.css",
+    "assets/menu-IO5gMyVZ.js",
+    "assets/orders-Bt4FtbHZ.js",
+    "assets/orders-Dj5qWbgf.css",
+    "assets/overview-B9yEq10Y.js",
+    "assets/overview-DPuvKVhu.css",
+    "assets/reports-BSTcyp7Q.js",
+    "assets/reports-DrlDxLDM.css",
+    "assets/reservations-C_UPcI_H.js",
+    "assets/reservations-D3ypA6dQ.css",
+    "assets/settings-DZaR7z_G.js",
+    "assets/settings-D_-cSR9Y.css",
+    "assets/staff-ByoLpdie.css",
+    "assets/staff-D4DeCQCq.js",
+    "css/components.css",
+    "css/floor.css",
+    "css/index.css",
+    "css/inventory.css",
+    "css/layout.css",
+    "css/menu.css",
+    "css/orders.css",
+    "css/overview.css",
+    "css/reports.css",
+    "css/reservations.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/settings.css",
+    "css/staff.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/charts.js",
+    "js/floor.js",
+    "js/index.js",
+    "js/inventory.js",
+    "js/menu.js",
+    "js/orders.js",
+    "js/overview.js",
+    "js/reports.js",
+    "js/reservations.js",
+    "js/settings.js",
+    "js/staff.js",
+    "js/theme.js",
+    "photos/pangat/dishes/affogato-sm.jpg",
+    "photos/pangat/dishes/affogato.jpg",
+    "photos/pangat/dishes/arancini-sm.jpg",
+    "photos/pangat/dishes/arancini.jpg",
+    "photos/pangat/dishes/bistecca-sm.jpg",
+    "photos/pangat/dishes/bistecca.jpg",
+    "photos/pangat/dishes/branzino-sm.jpg",
+    "photos/pangat/dishes/branzino.jpg",
+    "photos/pangat/dishes/bruschetta-sm.jpg",
+    "photos/pangat/dishes/bruschetta.jpg",
+    "photos/pangat/dishes/burrata-sm.jpg",
+    "photos/pangat/dishes/burrata.jpg",
+    "photos/pangat/dishes/cacio-e-pepe-sm.jpg",
+    "photos/pangat/dishes/cacio-e-pepe.jpg",
+    "photos/pangat/dishes/carpaccio-sm.jpg",
+    "photos/pangat/dishes/carpaccio.jpg",
+    "photos/pangat/dishes/diavola-sm.jpg",
+    "photos/pangat/dishes/diavola.jpg",
+    "photos/pangat/dishes/margherita-sm.jpg",
+    "photos/pangat/dishes/margherita.jpg",
+    "photos/pangat/dishes/milanese-sm.jpg",
+    "photos/pangat/dishes/milanese.jpg",
+    "photos/pangat/dishes/negroni-sm.jpg",
+    "photos/pangat/dishes/negroni.jpg",
+    "photos/pangat/dishes/panna-cotta-sm.jpg",
+    "photos/pangat/dishes/panna-cotta.jpg",
+    "photos/pangat/dishes/ragu-sm.jpg",
+    "photos/pangat/dishes/ragu.jpg",
+    "photos/pangat/dishes/ravioli-sm.jpg",
+    "photos/pangat/dishes/ravioli.jpg",
+    "photos/pangat/dishes/red-wine-sm.jpg",
+    "photos/pangat/dishes/red-wine.jpg",
+    "photos/pangat/dishes/risotto-sm.jpg",
+    "photos/pangat/dishes/risotto.jpg",
+    "photos/pangat/dishes/spritz-sm.jpg",
+    "photos/pangat/dishes/spritz.jpg",
+    "photos/pangat/dishes/tiramisu-sm.jpg",
+    "photos/pangat/dishes/tiramisu.jpg",
+    "photos/pangat/dishes/vongole-sm.jpg",
+    "photos/pangat/dishes/vongole.jpg",
+    "photos/pangat/staff/ada-nwosu-sm.jpg",
+    "photos/pangat/staff/ada-nwosu.jpg",
+    "photos/pangat/staff/arjun-rao-sm.jpg",
+    "photos/pangat/staff/arjun-rao.jpg",
+    "photos/pangat/staff/clara-jansen-sm.jpg",
+    "photos/pangat/staff/clara-jansen.jpg",
+    "photos/pangat/staff/elin-berg-sm.jpg",
+    "photos/pangat/staff/elin-berg.jpg",
+    "photos/pangat/staff/enzo-marchetti-sm.jpg",
+    "photos/pangat/staff/enzo-marchetti.jpg",
+    "photos/pangat/staff/giulia-romano-sm.jpg",
+    "photos/pangat/staff/giulia-romano.jpg",
+    "photos/pangat/staff/kenji-sato-sm.jpg",
+    "photos/pangat/staff/kenji-sato.jpg",
+    "photos/pangat/staff/kofi-mensah-sm.jpg",
+    "photos/pangat/staff/kofi-mensah.jpg",
+    "photos/pangat/staff/lucia-vidal-sm.jpg",
+    "photos/pangat/staff/lucia-vidal.jpg",
+    "photos/pangat/staff/mei-lin-sm.jpg",
+    "photos/pangat/staff/mei-lin.jpg",
+    "photos/pangat/staff/omar-haddad-sm.jpg",
+    "photos/pangat/staff/omar-haddad.jpg",
+    "photos/pangat/staff/samuel-owusu-sm.jpg",
+    "photos/pangat/staff/samuel-owusu.jpg"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "charts-CjQe7Tzb.js",
+          "path": "assets/charts-CjQe7Tzb.js",
+          "type": "file",
+          "size": 7059,
+          "lines": 5
+        },
+        {
+          "name": "floor-Bvy3o6sg.js",
+          "path": "assets/floor-Bvy3o6sg.js",
+          "type": "file",
+          "size": 35708,
+          "lines": 73
+        },
+        {
+          "name": "floor-Jp3SKya3.css",
+          "path": "assets/floor-Jp3SKya3.css",
+          "type": "file",
+          "size": 23638,
+          "lines": 3
+        },
+        {
+          "name": "index-BxVBuG1B.css",
+          "path": "assets/index-BxVBuG1B.css",
+          "type": "file",
+          "size": 33557,
+          "lines": 3
+        },
+        {
+          "name": "index-DLOxTne6.js",
+          "path": "assets/index-DLOxTne6.js",
+          "type": "file",
+          "size": 176126,
+          "lines": 36
+        },
+        {
+          "name": "inventory-DizOVMzJ.js",
+          "path": "assets/inventory-DizOVMzJ.js",
+          "type": "file",
+          "size": 25982,
+          "lines": 66
+        },
+        {
+          "name": "inventory-DxUB4K2y.css",
+          "path": "assets/inventory-DxUB4K2y.css",
+          "type": "file",
+          "size": 19140,
+          "lines": 3
+        },
+        {
+          "name": "menu-DTfMb3Uw.css",
+          "path": "assets/menu-DTfMb3Uw.css",
+          "type": "file",
+          "size": 15921,
+          "lines": 3
+        },
+        {
+          "name": "menu-IO5gMyVZ.js",
+          "path": "assets/menu-IO5gMyVZ.js",
+          "type": "file",
+          "size": 23421,
+          "lines": 78
+        },
+        {
+          "name": "orders-Bt4FtbHZ.js",
+          "path": "assets/orders-Bt4FtbHZ.js",
+          "type": "file",
+          "size": 34780,
+          "lines": 75
+        },
+        {
+          "name": "orders-Dj5qWbgf.css",
+          "path": "assets/orders-Dj5qWbgf.css",
+          "type": "file",
+          "size": 23680,
+          "lines": 3
+        },
+        {
+          "name": "overview-B9yEq10Y.js",
+          "path": "assets/overview-B9yEq10Y.js",
+          "type": "file",
+          "size": 16784,
+          "lines": 40
+        },
+        {
+          "name": "overview-DPuvKVhu.css",
+          "path": "assets/overview-DPuvKVhu.css",
+          "type": "file",
+          "size": 13998,
+          "lines": 3
+        },
+        {
+          "name": "reports-BSTcyp7Q.js",
+          "path": "assets/reports-BSTcyp7Q.js",
+          "type": "file",
+          "size": 22459,
+          "lines": 38
+        },
+        {
+          "name": "reports-DrlDxLDM.css",
+          "path": "assets/reports-DrlDxLDM.css",
+          "type": "file",
+          "size": 10922,
+          "lines": 3
+        },
+        {
+          "name": "reservations-C_UPcI_H.js",
+          "path": "assets/reservations-C_UPcI_H.js",
+          "type": "file",
+          "size": 28216,
+          "lines": 64
+        },
+        {
+          "name": "reservations-D3ypA6dQ.css",
+          "path": "assets/reservations-D3ypA6dQ.css",
+          "type": "file",
+          "size": 20675,
+          "lines": 3
+        },
+        {
+          "name": "settings-DZaR7z_G.js",
+          "path": "assets/settings-DZaR7z_G.js",
+          "type": "file",
+          "size": 22082,
+          "lines": 46
+        },
+        {
+          "name": "settings-D_-cSR9Y.css",
+          "path": "assets/settings-D_-cSR9Y.css",
+          "type": "file",
+          "size": 14432,
+          "lines": 3
+        },
+        {
+          "name": "staff-ByoLpdie.css",
+          "path": "assets/staff-ByoLpdie.css",
+          "type": "file",
+          "size": 19811,
+          "lines": 3
+        },
+        {
+          "name": "staff-D4DeCQCq.js",
+          "path": "assets/staff-D4DeCQCq.js",
+          "type": "file",
+          "size": 24137,
+          "lines": 48
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 3896,
+          "lines": 171
+        },
+        {
+          "name": "floor.css",
+          "path": "css/floor.css",
+          "type": "file",
+          "size": 28584,
+          "lines": 1576
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 42153,
+          "lines": 2673
+        },
+        {
+          "name": "inventory.css",
+          "path": "css/inventory.css",
+          "type": "file",
+          "size": 22827,
+          "lines": 1203
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 4213,
+          "lines": 200
+        },
+        {
+          "name": "menu.css",
+          "path": "css/menu.css",
+          "type": "file",
+          "size": 19334,
+          "lines": 1079
+        },
+        {
+          "name": "orders.css",
+          "path": "css/orders.css",
+          "type": "file",
+          "size": 28593,
+          "lines": 1526
+        },
+        {
+          "name": "overview.css",
+          "path": "css/overview.css",
+          "type": "file",
+          "size": 16695,
+          "lines": 858
+        },
+        {
+          "name": "reports.css",
+          "path": "css/reports.css",
+          "type": "file",
+          "size": 12972,
+          "lines": 665
+        },
+        {
+          "name": "reservations.css",
+          "path": "css/reservations.css",
+          "type": "file",
+          "size": 24796,
+          "lines": 1320
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 2678,
+          "lines": 162
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 1126,
+          "lines": 60
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 17182,
+          "lines": 876
+        },
+        {
+          "name": "staff.css",
+          "path": "css/staff.css",
+          "type": "file",
+          "size": 23624,
+          "lines": 1220
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 5816,
+          "lines": 129
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 12757,
+      "lines": 139
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "charts.js",
+          "path": "js/charts.js",
+          "type": "file",
+          "size": 7059,
+          "lines": 5
+        },
+        {
+          "name": "floor.js",
+          "path": "js/floor.js",
+          "type": "file",
+          "size": 35708,
+          "lines": 73
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 176126,
+          "lines": 36
+        },
+        {
+          "name": "inventory.js",
+          "path": "js/inventory.js",
+          "type": "file",
+          "size": 25982,
+          "lines": 66
+        },
+        {
+          "name": "menu.js",
+          "path": "js/menu.js",
+          "type": "file",
+          "size": 23421,
+          "lines": 78
+        },
+        {
+          "name": "orders.js",
+          "path": "js/orders.js",
+          "type": "file",
+          "size": 34780,
+          "lines": 75
+        },
+        {
+          "name": "overview.js",
+          "path": "js/overview.js",
+          "type": "file",
+          "size": 16784,
+          "lines": 40
+        },
+        {
+          "name": "reports.js",
+          "path": "js/reports.js",
+          "type": "file",
+          "size": 22459,
+          "lines": 38
+        },
+        {
+          "name": "reservations.js",
+          "path": "js/reservations.js",
+          "type": "file",
+          "size": 28216,
+          "lines": 64
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 22082,
+          "lines": 46
+        },
+        {
+          "name": "staff.js",
+          "path": "js/staff.js",
+          "type": "file",
+          "size": 24137,
+          "lines": 48
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 1032,
+          "lines": 38
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "pangat",
+          "path": "photos/pangat",
+          "type": "directory",
+          "children": [
+            {
+              "name": "dishes",
+              "path": "photos/pangat/dishes",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "affogato-sm.jpg",
+                  "path": "photos/pangat/dishes/affogato-sm.jpg",
+                  "type": "file",
+                  "size": 6563,
+                  "lines": 0
+                },
+                {
+                  "name": "affogato.jpg",
+                  "path": "photos/pangat/dishes/affogato.jpg",
+                  "type": "file",
+                  "size": 36763,
+                  "lines": 0
+                },
+                {
+                  "name": "arancini-sm.jpg",
+                  "path": "photos/pangat/dishes/arancini-sm.jpg",
+                  "type": "file",
+                  "size": 8329,
+                  "lines": 0
+                },
+                {
+                  "name": "arancini.jpg",
+                  "path": "photos/pangat/dishes/arancini.jpg",
+                  "type": "file",
+                  "size": 45531,
+                  "lines": 0
+                },
+                {
+                  "name": "bistecca-sm.jpg",
+                  "path": "photos/pangat/dishes/bistecca-sm.jpg",
+                  "type": "file",
+                  "size": 7095,
+                  "lines": 0
+                },
+                {
+                  "name": "bistecca.jpg",
+                  "path": "photos/pangat/dishes/bistecca.jpg",
+                  "type": "file",
+                  "size": 39034,
+                  "lines": 0
+                },
+                {
+                  "name": "branzino-sm.jpg",
+                  "path": "photos/pangat/dishes/branzino-sm.jpg",
+                  "type": "file",
+                  "size": 7643,
+                  "lines": 0
+                },
+                {
+                  "name": "branzino.jpg",
+                  "path": "photos/pangat/dishes/branzino.jpg",
+                  "type": "file",
+                  "size": 42456,
+                  "lines": 0
+                },
+                {
+                  "name": "bruschetta-sm.jpg",
+                  "path": "photos/pangat/dishes/bruschetta-sm.jpg",
+                  "type": "file",
+                  "size": 8150,
+                  "lines": 0
+                },
+                {
+                  "name": "bruschetta.jpg",
+                  "path": "photos/pangat/dishes/bruschetta.jpg",
+                  "type": "file",
+                  "size": 44668,
+                  "lines": 0
+                },
+                {
+                  "name": "burrata-sm.jpg",
+                  "path": "photos/pangat/dishes/burrata-sm.jpg",
+                  "type": "file",
+                  "size": 9083,
+                  "lines": 0
+                },
+                {
+                  "name": "burrata.jpg",
+                  "path": "photos/pangat/dishes/burrata.jpg",
+                  "type": "file",
+                  "size": 47408,
+                  "lines": 0
+                },
+                {
+                  "name": "cacio-e-pepe-sm.jpg",
+                  "path": "photos/pangat/dishes/cacio-e-pepe-sm.jpg",
+                  "type": "file",
+                  "size": 8277,
+                  "lines": 0
+                },
+                {
+                  "name": "cacio-e-pepe.jpg",
+                  "path": "photos/pangat/dishes/cacio-e-pepe.jpg",
+                  "type": "file",
+                  "size": 44568,
+                  "lines": 0
+                },
+                {
+                  "name": "carpaccio-sm.jpg",
+                  "path": "photos/pangat/dishes/carpaccio-sm.jpg",
+                  "type": "file",
+                  "size": 7235,
+                  "lines": 0
+                },
+                {
+                  "name": "carpaccio.jpg",
+                  "path": "photos/pangat/dishes/carpaccio.jpg",
+                  "type": "file",
+                  "size": 40290,
+                  "lines": 0
+                },
+                {
+                  "name": "diavola-sm.jpg",
+                  "path": "photos/pangat/dishes/diavola-sm.jpg",
+                  "type": "file",
+                  "size": 7938,
+                  "lines": 0
+                },
+                {
+                  "name": "diavola.jpg",
+                  "path": "photos/pangat/dishes/diavola.jpg",
+                  "type": "file",
+                  "size": 43197,
+                  "lines": 0
+                },
+                {
+                  "name": "margherita-sm.jpg",
+                  "path": "photos/pangat/dishes/margherita-sm.jpg",
+                  "type": "file",
+                  "size": 8189,
+                  "lines": 0
+                },
+                {
+                  "name": "margherita.jpg",
+                  "path": "photos/pangat/dishes/margherita.jpg",
+                  "type": "file",
+                  "size": 43961,
+                  "lines": 0
+                },
+                {
+                  "name": "milanese-sm.jpg",
+                  "path": "photos/pangat/dishes/milanese-sm.jpg",
+                  "type": "file",
+                  "size": 8221,
+                  "lines": 0
+                },
+                {
+                  "name": "milanese.jpg",
+                  "path": "photos/pangat/dishes/milanese.jpg",
+                  "type": "file",
+                  "size": 44607,
+                  "lines": 0
+                },
+                {
+                  "name": "negroni-sm.jpg",
+                  "path": "photos/pangat/dishes/negroni-sm.jpg",
+                  "type": "file",
+                  "size": 6865,
+                  "lines": 0
+                },
+                {
+                  "name": "negroni.jpg",
+                  "path": "photos/pangat/dishes/negroni.jpg",
+                  "type": "file",
+                  "size": 38909,
+                  "lines": 0
+                },
+                {
+                  "name": "panna-cotta-sm.jpg",
+                  "path": "photos/pangat/dishes/panna-cotta-sm.jpg",
+                  "type": "file",
+                  "size": 8515,
+                  "lines": 0
+                },
+                {
+                  "name": "panna-cotta.jpg",
+                  "path": "photos/pangat/dishes/panna-cotta.jpg",
+                  "type": "file",
+                  "size": 46582,
+                  "lines": 0
+                },
+                {
+                  "name": "ragu-sm.jpg",
+                  "path": "photos/pangat/dishes/ragu-sm.jpg",
+                  "type": "file",
+                  "size": 7911,
+                  "lines": 0
+                },
+                {
+                  "name": "ragu.jpg",
+                  "path": "photos/pangat/dishes/ragu.jpg",
+                  "type": "file",
+                  "size": 43688,
+                  "lines": 0
+                },
+                {
+                  "name": "ravioli-sm.jpg",
+                  "path": "photos/pangat/dishes/ravioli-sm.jpg",
+                  "type": "file",
+                  "size": 8169,
+                  "lines": 0
+                },
+                {
+                  "name": "ravioli.jpg",
+                  "path": "photos/pangat/dishes/ravioli.jpg",
+                  "type": "file",
+                  "size": 44903,
+                  "lines": 0
+                },
+                {
+                  "name": "red-wine-sm.jpg",
+                  "path": "photos/pangat/dishes/red-wine-sm.jpg",
+                  "type": "file",
+                  "size": 7582,
+                  "lines": 0
+                },
+                {
+                  "name": "red-wine.jpg",
+                  "path": "photos/pangat/dishes/red-wine.jpg",
+                  "type": "file",
+                  "size": 40599,
+                  "lines": 0
+                },
+                {
+                  "name": "risotto-sm.jpg",
+                  "path": "photos/pangat/dishes/risotto-sm.jpg",
+                  "type": "file",
+                  "size": 7468,
+                  "lines": 0
+                },
+                {
+                  "name": "risotto.jpg",
+                  "path": "photos/pangat/dishes/risotto.jpg",
+                  "type": "file",
+                  "size": 41529,
+                  "lines": 0
+                },
+                {
+                  "name": "spritz-sm.jpg",
+                  "path": "photos/pangat/dishes/spritz-sm.jpg",
+                  "type": "file",
+                  "size": 7915,
+                  "lines": 0
+                },
+                {
+                  "name": "spritz.jpg",
+                  "path": "photos/pangat/dishes/spritz.jpg",
+                  "type": "file",
+                  "size": 43315,
+                  "lines": 0
+                },
+                {
+                  "name": "tiramisu-sm.jpg",
+                  "path": "photos/pangat/dishes/tiramisu-sm.jpg",
+                  "type": "file",
+                  "size": 6522,
+                  "lines": 0
+                },
+                {
+                  "name": "tiramisu.jpg",
+                  "path": "photos/pangat/dishes/tiramisu.jpg",
+                  "type": "file",
+                  "size": 37426,
+                  "lines": 0
+                },
+                {
+                  "name": "vongole-sm.jpg",
+                  "path": "photos/pangat/dishes/vongole-sm.jpg",
+                  "type": "file",
+                  "size": 7980,
+                  "lines": 0
+                },
+                {
+                  "name": "vongole.jpg",
+                  "path": "photos/pangat/dishes/vongole.jpg",
+                  "type": "file",
+                  "size": 44735,
+                  "lines": 0
+                }
+              ]
+            },
+            {
+              "name": "staff",
+              "path": "photos/pangat/staff",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "ada-nwosu-sm.jpg",
+                  "path": "photos/pangat/staff/ada-nwosu-sm.jpg",
+                  "type": "file",
+                  "size": 7636,
+                  "lines": 0
+                },
+                {
+                  "name": "ada-nwosu.jpg",
+                  "path": "photos/pangat/staff/ada-nwosu.jpg",
+                  "type": "file",
+                  "size": 7636,
+                  "lines": 0
+                },
+                {
+                  "name": "arjun-rao-sm.jpg",
+                  "path": "photos/pangat/staff/arjun-rao-sm.jpg",
+                  "type": "file",
+                  "size": 778773,
+                  "lines": 0
+                },
+                {
+                  "name": "arjun-rao.jpg",
+                  "path": "photos/pangat/staff/arjun-rao.jpg",
+                  "type": "file",
+                  "size": 778773,
+                  "lines": 0
+                },
+                {
+                  "name": "clara-jansen-sm.jpg",
+                  "path": "photos/pangat/staff/clara-jansen-sm.jpg",
+                  "type": "file",
+                  "size": 7636,
+                  "lines": 0
+                },
+                {
+                  "name": "clara-jansen.jpg",
+                  "path": "photos/pangat/staff/clara-jansen.jpg",
+                  "type": "file",
+                  "size": 7636,
+                  "lines": 0
+                },
+                {
+                  "name": "elin-berg-sm.jpg",
+                  "path": "photos/pangat/staff/elin-berg-sm.jpg",
+                  "type": "file",
+                  "size": 6048,
+                  "lines": 0
+                },
+                {
+                  "name": "elin-berg.jpg",
+                  "path": "photos/pangat/staff/elin-berg.jpg",
+                  "type": "file",
+                  "size": 6048,
+                  "lines": 0
+                },
+                {
+                  "name": "enzo-marchetti-sm.jpg",
+                  "path": "photos/pangat/staff/enzo-marchetti-sm.jpg",
+                  "type": "file",
+                  "size": 660299,
+                  "lines": 0
+                },
+                {
+                  "name": "enzo-marchetti.jpg",
+                  "path": "photos/pangat/staff/enzo-marchetti.jpg",
+                  "type": "file",
+                  "size": 660299,
+                  "lines": 0
+                },
+                {
+                  "name": "giulia-romano-sm.jpg",
+                  "path": "photos/pangat/staff/giulia-romano-sm.jpg",
+                  "type": "file",
+                  "size": 2219,
+                  "lines": 0
+                },
+                {
+                  "name": "giulia-romano.jpg",
+                  "path": "photos/pangat/staff/giulia-romano.jpg",
+                  "type": "file",
+                  "size": 2219,
+                  "lines": 0
+                },
+                {
+                  "name": "kenji-sato-sm.jpg",
+                  "path": "photos/pangat/staff/kenji-sato-sm.jpg",
+                  "type": "file",
+                  "size": 798079,
+                  "lines": 0
+                },
+                {
+                  "name": "kenji-sato.jpg",
+                  "path": "photos/pangat/staff/kenji-sato.jpg",
+                  "type": "file",
+                  "size": 798079,
+                  "lines": 0
+                },
+                {
+                  "name": "kofi-mensah-sm.jpg",
+                  "path": "photos/pangat/staff/kofi-mensah-sm.jpg",
+                  "type": "file",
+                  "size": 743342,
+                  "lines": 0
+                },
+                {
+                  "name": "kofi-mensah.jpg",
+                  "path": "photos/pangat/staff/kofi-mensah.jpg",
+                  "type": "file",
+                  "size": 743342,
+                  "lines": 0
+                },
+                {
+                  "name": "lucia-vidal-sm.jpg",
+                  "path": "photos/pangat/staff/lucia-vidal-sm.jpg",
+                  "type": "file",
+                  "size": 6048,
+                  "lines": 0
+                },
+                {
+                  "name": "lucia-vidal.jpg",
+                  "path": "photos/pangat/staff/lucia-vidal.jpg",
+                  "type": "file",
+                  "size": 6048,
+                  "lines": 0
+                },
+                {
+                  "name": "mei-lin-sm.jpg",
+                  "path": "photos/pangat/staff/mei-lin-sm.jpg",
+                  "type": "file",
+                  "size": 6048,
+                  "lines": 0
+                },
+                {
+                  "name": "mei-lin.jpg",
+                  "path": "photos/pangat/staff/mei-lin.jpg",
+                  "type": "file",
+                  "size": 6048,
+                  "lines": 0
+                },
+                {
+                  "name": "omar-haddad-sm.jpg",
+                  "path": "photos/pangat/staff/omar-haddad-sm.jpg",
+                  "type": "file",
+                  "size": 6899,
+                  "lines": 0
+                },
+                {
+                  "name": "omar-haddad.jpg",
+                  "path": "photos/pangat/staff/omar-haddad.jpg",
+                  "type": "file",
+                  "size": 6899,
+                  "lines": 0
+                },
+                {
+                  "name": "samuel-owusu-sm.jpg",
+                  "path": "photos/pangat/staff/samuel-owusu-sm.jpg",
+                  "type": "file",
+                  "size": 743342,
+                  "lines": 0
+                },
+                {
+                  "name": "samuel-owusu.jpg",
+                  "path": "photos/pangat/staff/samuel-owusu.jpg",
+                  "type": "file",
+                  "size": 743342,
+                  "lines": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

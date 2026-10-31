@@ -1,0 +1,695 @@
+{
+  "slug": "vanijya",
+  "name": "Vanijya Retail",
+  "totalFiles": 81,
+  "totalLines": 16796,
+  "totalBytes": 1120429,
+  "totalSizeReadable": "1094.2 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/analytics-Cmn8URPr.js",
+    "assets/analytics-OFgYFAKj.css",
+    "assets/automations-BNdLnRmq.css",
+    "assets/automations-DCjBvmRr.js",
+    "assets/customers-Bc7iFXlY.css",
+    "assets/customers-OZKdRnn6.js",
+    "assets/dashboard-CKi1od-B.js",
+    "assets/dashboard-_EurdMz5.css",
+    "assets/email-Bt8rTnCS.css",
+    "assets/email-l_3iO-B4.js",
+    "assets/feedback-C0CAlBgx.js",
+    "assets/feedback-DD3wa-x4.css",
+    "assets/help-C5w_teXF.js",
+    "assets/help-SqAPzPba.css",
+    "assets/index-CPU6Hf-a.js",
+    "assets/index-RTUh9KzA.css",
+    "assets/integrations-Bb1vtbE_.css",
+    "assets/integrations-CUGSezJh.js",
+    "assets/messages-CIp8YCJG.js",
+    "assets/messages-CMpbMN9a.css",
+    "assets/orders-BVDwrCP7.css",
+    "assets/orders-D85_2bBq.js",
+    "assets/products-DI5xHNCM.css",
+    "assets/products-DbFUUs6i.js",
+    "assets/settings-BwIdA_fS.js",
+    "assets/settings-x329h955.css",
+    "assets/workspace-CfQ-bDIx.css",
+    "assets/workspace-D4Bm8VGz.js",
+    "css/animations.css",
+    "css/corbel-base.css",
+    "css/kpi-cards.css",
+    "css/layout.css",
+    "css/overlays.css",
+    "css/pages/analytics.css",
+    "css/pages/automations.css",
+    "css/pages/customers.css",
+    "css/pages/dashboard.css",
+    "css/pages/email.css",
+    "css/pages/feedback.css",
+    "css/pages/help.css",
+    "css/pages/integrations.css",
+    "css/pages/messages.css",
+    "css/pages/orders.css",
+    "css/pages/products.css",
+    "css/pages/settings.css",
+    "css/pages/workspace.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "css/views-interactive.css",
+    "css/views-tables.css",
+    "css/widgets.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/chart-bar.js",
+    "js/donut.js",
+    "js/finder.js",
+    "js/gauge.js",
+    "js/heatmap.js",
+    "js/live-counter.js",
+    "js/main.js",
+    "js/notifications.js",
+    "js/pages/analytics.js",
+    "js/pages/automations.js",
+    "js/pages/customers.js",
+    "js/pages/email.js",
+    "js/pages/feedback.js",
+    "js/pages/help.js",
+    "js/pages/integrations.js",
+    "js/pages/messages.js",
+    "js/pages/orders.js",
+    "js/pages/products.js",
+    "js/pages/settings.js",
+    "js/pages/workspace.js",
+    "js/router.js",
+    "js/sheets-modal.js",
+    "js/store.js",
+    "js/tabs.js",
+    "js/theme.js"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "analytics-Cmn8URPr.js",
+          "path": "assets/analytics-Cmn8URPr.js",
+          "type": "file",
+          "size": 32163,
+          "lines": 136
+        },
+        {
+          "name": "analytics-OFgYFAKj.css",
+          "path": "assets/analytics-OFgYFAKj.css",
+          "type": "file",
+          "size": 10448,
+          "lines": 3
+        },
+        {
+          "name": "automations-BNdLnRmq.css",
+          "path": "assets/automations-BNdLnRmq.css",
+          "type": "file",
+          "size": 9879,
+          "lines": 3
+        },
+        {
+          "name": "automations-DCjBvmRr.js",
+          "path": "assets/automations-DCjBvmRr.js",
+          "type": "file",
+          "size": 22522,
+          "lines": 77
+        },
+        {
+          "name": "customers-Bc7iFXlY.css",
+          "path": "assets/customers-Bc7iFXlY.css",
+          "type": "file",
+          "size": 10249,
+          "lines": 3
+        },
+        {
+          "name": "customers-OZKdRnn6.js",
+          "path": "assets/customers-OZKdRnn6.js",
+          "type": "file",
+          "size": 23824,
+          "lines": 134
+        },
+        {
+          "name": "dashboard-CKi1od-B.js",
+          "path": "assets/dashboard-CKi1od-B.js",
+          "type": "file",
+          "size": 22318,
+          "lines": 100
+        },
+        {
+          "name": "dashboard-_EurdMz5.css",
+          "path": "assets/dashboard-_EurdMz5.css",
+          "type": "file",
+          "size": 10585,
+          "lines": 3
+        },
+        {
+          "name": "email-Bt8rTnCS.css",
+          "path": "assets/email-Bt8rTnCS.css",
+          "type": "file",
+          "size": 10184,
+          "lines": 3
+        },
+        {
+          "name": "email-l_3iO-B4.js",
+          "path": "assets/email-l_3iO-B4.js",
+          "type": "file",
+          "size": 20808,
+          "lines": 77
+        },
+        {
+          "name": "feedback-C0CAlBgx.js",
+          "path": "assets/feedback-C0CAlBgx.js",
+          "type": "file",
+          "size": 13975,
+          "lines": 65
+        },
+        {
+          "name": "feedback-DD3wa-x4.css",
+          "path": "assets/feedback-DD3wa-x4.css",
+          "type": "file",
+          "size": 5990,
+          "lines": 3
+        },
+        {
+          "name": "help-C5w_teXF.js",
+          "path": "assets/help-C5w_teXF.js",
+          "type": "file",
+          "size": 28046,
+          "lines": 81
+        },
+        {
+          "name": "help-SqAPzPba.css",
+          "path": "assets/help-SqAPzPba.css",
+          "type": "file",
+          "size": 10540,
+          "lines": 3
+        },
+        {
+          "name": "index-CPU6Hf-a.js",
+          "path": "assets/index-CPU6Hf-a.js",
+          "type": "file",
+          "size": 205462,
+          "lines": 7419
+        },
+        {
+          "name": "index-RTUh9KzA.css",
+          "path": "assets/index-RTUh9KzA.css",
+          "type": "file",
+          "size": 35013,
+          "lines": 3
+        },
+        {
+          "name": "integrations-Bb1vtbE_.css",
+          "path": "assets/integrations-Bb1vtbE_.css",
+          "type": "file",
+          "size": 6006,
+          "lines": 3
+        },
+        {
+          "name": "integrations-CUGSezJh.js",
+          "path": "assets/integrations-CUGSezJh.js",
+          "type": "file",
+          "size": 11359,
+          "lines": 45
+        },
+        {
+          "name": "messages-CIp8YCJG.js",
+          "path": "assets/messages-CIp8YCJG.js",
+          "type": "file",
+          "size": 20585,
+          "lines": 91
+        },
+        {
+          "name": "messages-CMpbMN9a.css",
+          "path": "assets/messages-CMpbMN9a.css",
+          "type": "file",
+          "size": 12434,
+          "lines": 3
+        },
+        {
+          "name": "orders-BVDwrCP7.css",
+          "path": "assets/orders-BVDwrCP7.css",
+          "type": "file",
+          "size": 10672,
+          "lines": 3
+        },
+        {
+          "name": "orders-D85_2bBq.js",
+          "path": "assets/orders-D85_2bBq.js",
+          "type": "file",
+          "size": 19591,
+          "lines": 89
+        },
+        {
+          "name": "products-DbFUUs6i.js",
+          "path": "assets/products-DbFUUs6i.js",
+          "type": "file",
+          "size": 25675,
+          "lines": 119
+        },
+        {
+          "name": "products-DI5xHNCM.css",
+          "path": "assets/products-DI5xHNCM.css",
+          "type": "file",
+          "size": 8487,
+          "lines": 3
+        },
+        {
+          "name": "settings-BwIdA_fS.js",
+          "path": "assets/settings-BwIdA_fS.js",
+          "type": "file",
+          "size": 24568,
+          "lines": 82
+        },
+        {
+          "name": "settings-x329h955.css",
+          "path": "assets/settings-x329h955.css",
+          "type": "file",
+          "size": 8220,
+          "lines": 3
+        },
+        {
+          "name": "workspace-CfQ-bDIx.css",
+          "path": "assets/workspace-CfQ-bDIx.css",
+          "type": "file",
+          "size": 10453,
+          "lines": 3
+        },
+        {
+          "name": "workspace-D4Bm8VGz.js",
+          "path": "assets/workspace-D4Bm8VGz.js",
+          "type": "file",
+          "size": 25443,
+          "lines": 82
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "animations.css",
+          "path": "css/animations.css",
+          "type": "file",
+          "size": 4584,
+          "lines": 154
+        },
+        {
+          "name": "corbel-base.css",
+          "path": "css/corbel-base.css",
+          "type": "file",
+          "size": 35013,
+          "lines": 3
+        },
+        {
+          "name": "kpi-cards.css",
+          "path": "css/kpi-cards.css",
+          "type": "file",
+          "size": 7074,
+          "lines": 263
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 13265,
+          "lines": 588
+        },
+        {
+          "name": "overlays.css",
+          "path": "css/overlays.css",
+          "type": "file",
+          "size": 9255,
+          "lines": 444
+        },
+        {
+          "name": "pages",
+          "path": "css/pages",
+          "type": "directory",
+          "children": [
+            {
+              "name": "analytics.css",
+              "path": "css/pages/analytics.css",
+              "type": "file",
+              "size": 10448,
+              "lines": 3
+            },
+            {
+              "name": "automations.css",
+              "path": "css/pages/automations.css",
+              "type": "file",
+              "size": 9879,
+              "lines": 3
+            },
+            {
+              "name": "customers.css",
+              "path": "css/pages/customers.css",
+              "type": "file",
+              "size": 10249,
+              "lines": 3
+            },
+            {
+              "name": "dashboard.css",
+              "path": "css/pages/dashboard.css",
+              "type": "file",
+              "size": 10585,
+              "lines": 3
+            },
+            {
+              "name": "email.css",
+              "path": "css/pages/email.css",
+              "type": "file",
+              "size": 10184,
+              "lines": 3
+            },
+            {
+              "name": "feedback.css",
+              "path": "css/pages/feedback.css",
+              "type": "file",
+              "size": 5990,
+              "lines": 3
+            },
+            {
+              "name": "help.css",
+              "path": "css/pages/help.css",
+              "type": "file",
+              "size": 10540,
+              "lines": 3
+            },
+            {
+              "name": "integrations.css",
+              "path": "css/pages/integrations.css",
+              "type": "file",
+              "size": 6006,
+              "lines": 3
+            },
+            {
+              "name": "messages.css",
+              "path": "css/pages/messages.css",
+              "type": "file",
+              "size": 12434,
+              "lines": 3
+            },
+            {
+              "name": "orders.css",
+              "path": "css/pages/orders.css",
+              "type": "file",
+              "size": 10672,
+              "lines": 3
+            },
+            {
+              "name": "products.css",
+              "path": "css/pages/products.css",
+              "type": "file",
+              "size": 8487,
+              "lines": 3
+            },
+            {
+              "name": "settings.css",
+              "path": "css/pages/settings.css",
+              "type": "file",
+              "size": 8220,
+              "lines": 3
+            },
+            {
+              "name": "workspace.css",
+              "path": "css/pages/workspace.css",
+              "type": "file",
+              "size": 10453,
+              "lines": 3
+            }
+          ]
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 1033,
+          "lines": 60
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 4813,
+          "lines": 228
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 10741,
+          "lines": 218
+        },
+        {
+          "name": "views-interactive.css",
+          "path": "css/views-interactive.css",
+          "type": "file",
+          "size": 11498,
+          "lines": 561
+        },
+        {
+          "name": "views-tables.css",
+          "path": "css/views-tables.css",
+          "type": "file",
+          "size": 5732,
+          "lines": 248
+        },
+        {
+          "name": "widgets.css",
+          "path": "css/widgets.css",
+          "type": "file",
+          "size": 11442,
+          "lines": 538
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 19419,
+      "lines": 211
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "chart-bar.js",
+          "path": "js/chart-bar.js",
+          "type": "file",
+          "size": 11138,
+          "lines": 312
+        },
+        {
+          "name": "donut.js",
+          "path": "js/donut.js",
+          "type": "file",
+          "size": 2346,
+          "lines": 68
+        },
+        {
+          "name": "finder.js",
+          "path": "js/finder.js",
+          "type": "file",
+          "size": 6468,
+          "lines": 203
+        },
+        {
+          "name": "gauge.js",
+          "path": "js/gauge.js",
+          "type": "file",
+          "size": 4963,
+          "lines": 134
+        },
+        {
+          "name": "heatmap.js",
+          "path": "js/heatmap.js",
+          "type": "file",
+          "size": 2785,
+          "lines": 99
+        },
+        {
+          "name": "live-counter.js",
+          "path": "js/live-counter.js",
+          "type": "file",
+          "size": 622,
+          "lines": 23
+        },
+        {
+          "name": "main.js",
+          "path": "js/main.js",
+          "type": "file",
+          "size": 4851,
+          "lines": 142
+        },
+        {
+          "name": "notifications.js",
+          "path": "js/notifications.js",
+          "type": "file",
+          "size": 1890,
+          "lines": 65
+        },
+        {
+          "name": "pages",
+          "path": "js/pages",
+          "type": "directory",
+          "children": [
+            {
+              "name": "analytics.js",
+              "path": "js/pages/analytics.js",
+              "type": "file",
+              "size": 11740,
+              "lines": 228
+            },
+            {
+              "name": "automations.js",
+              "path": "js/pages/automations.js",
+              "type": "file",
+              "size": 8089,
+              "lines": 168
+            },
+            {
+              "name": "customers.js",
+              "path": "js/pages/customers.js",
+              "type": "file",
+              "size": 11657,
+              "lines": 273
+            },
+            {
+              "name": "email.js",
+              "path": "js/pages/email.js",
+              "type": "file",
+              "size": 8314,
+              "lines": 172
+            },
+            {
+              "name": "feedback.js",
+              "path": "js/pages/feedback.js",
+              "type": "file",
+              "size": 6698,
+              "lines": 157
+            },
+            {
+              "name": "help.js",
+              "path": "js/pages/help.js",
+              "type": "file",
+              "size": 8968,
+              "lines": 198
+            },
+            {
+              "name": "integrations.js",
+              "path": "js/pages/integrations.js",
+              "type": "file",
+              "size": 8430,
+              "lines": 179
+            },
+            {
+              "name": "messages.js",
+              "path": "js/pages/messages.js",
+              "type": "file",
+              "size": 8340,
+              "lines": 194
+            },
+            {
+              "name": "orders.js",
+              "path": "js/pages/orders.js",
+              "type": "file",
+              "size": 14000,
+              "lines": 336
+            },
+            {
+              "name": "products.js",
+              "path": "js/pages/products.js",
+              "type": "file",
+              "size": 13857,
+              "lines": 322
+            },
+            {
+              "name": "settings.js",
+              "path": "js/pages/settings.js",
+              "type": "file",
+              "size": 9114,
+              "lines": 177
+            },
+            {
+              "name": "workspace.js",
+              "path": "js/pages/workspace.js",
+              "type": "file",
+              "size": 11697,
+              "lines": 254
+            }
+          ]
+        },
+        {
+          "name": "router.js",
+          "path": "js/router.js",
+          "type": "file",
+          "size": 3458,
+          "lines": 127
+        },
+        {
+          "name": "sheets-modal.js",
+          "path": "js/sheets-modal.js",
+          "type": "file",
+          "size": 4460,
+          "lines": 165
+        },
+        {
+          "name": "store.js",
+          "path": "js/store.js",
+          "type": "file",
+          "size": 26649,
+          "lines": 355
+        },
+        {
+          "name": "tabs.js",
+          "path": "js/tabs.js",
+          "type": "file",
+          "size": 7679,
+          "lines": 189
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 1896,
+          "lines": 57
+        }
+      ]
+    }
+  ]
+}

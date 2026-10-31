@@ -1,0 +1,417 @@
+{
+  "slug": "maitri",
+  "name": "Maitri CRM",
+  "totalFiles": 44,
+  "totalLines": 9933,
+  "totalBytes": 992991,
+  "totalSizeReadable": "969.7 KB",
+  "fileList": [
+    "assets/charts-DZ93ArZm.js",
+    "assets/customers-BKd8WRW4.css",
+    "assets/customers-DfpAyrPQ.js",
+    "assets/finance-8xkieMc-.js",
+    "assets/finance-xaw0gAQF.css",
+    "assets/growth-CLLZ__wZ.js",
+    "assets/growth-UUCB0_ZR.css",
+    "assets/index-Dxe3jV5a.css",
+    "assets/index-Dywa6qru.js",
+    "assets/overview-B5nk_6Xf.css",
+    "assets/overview-miobGYkq.js",
+    "assets/pipeline-B75gsvlZ.js",
+    "assets/pipeline-BFzOllNL.css",
+    "assets/projects-ByG3aeRi.js",
+    "assets/projects-DHVOFd1L.css",
+    "assets/schedule-D1EmyAoQ.css",
+    "assets/schedule-D5eRMeQQ.js",
+    "assets/settings-D9kdrttJ.css",
+    "assets/settings-Wt2GehgQ.js",
+    "css/customers.css",
+    "css/finance.css",
+    "css/growth.css",
+    "css/index.css",
+    "css/overview.css",
+    "css/pipeline.css",
+    "css/projects.css",
+    "css/schedule.css",
+    "css/settings.css",
+    "css/tokens.css",
+    "index.html",
+    "js/charts.js",
+    "js/customers.js",
+    "js/finance.js",
+    "js/growth.js",
+    "js/index.js",
+    "js/main.js",
+    "js/overview.js",
+    "js/pipeline.js",
+    "js/projects.js",
+    "js/router.js",
+    "js/schedule.js",
+    "js/settings.js",
+    "js/theme.js",
+    "photos/168-rapport/sofia-reyes-sm.jpg"
+  ],
+  "tree": [
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "charts-DZ93ArZm.js",
+          "path": "assets/charts-DZ93ArZm.js",
+          "type": "file",
+          "size": 7371,
+          "lines": 5
+        },
+        {
+          "name": "customers-BKd8WRW4.css",
+          "path": "assets/customers-BKd8WRW4.css",
+          "type": "file",
+          "size": 15183,
+          "lines": 3
+        },
+        {
+          "name": "customers-DfpAyrPQ.js",
+          "path": "assets/customers-DfpAyrPQ.js",
+          "type": "file",
+          "size": 35971,
+          "lines": 115
+        },
+        {
+          "name": "finance-8xkieMc-.js",
+          "path": "assets/finance-8xkieMc-.js",
+          "type": "file",
+          "size": 22736,
+          "lines": 74
+        },
+        {
+          "name": "finance-xaw0gAQF.css",
+          "path": "assets/finance-xaw0gAQF.css",
+          "type": "file",
+          "size": 8107,
+          "lines": 3
+        },
+        {
+          "name": "growth-CLLZ__wZ.js",
+          "path": "assets/growth-CLLZ__wZ.js",
+          "type": "file",
+          "size": 18859,
+          "lines": 36
+        },
+        {
+          "name": "growth-UUCB0_ZR.css",
+          "path": "assets/growth-UUCB0_ZR.css",
+          "type": "file",
+          "size": 9098,
+          "lines": 3
+        },
+        {
+          "name": "index-Dxe3jV5a.css",
+          "path": "assets/index-Dxe3jV5a.css",
+          "type": "file",
+          "size": 30792,
+          "lines": 3
+        },
+        {
+          "name": "index-Dywa6qru.js",
+          "path": "assets/index-Dywa6qru.js",
+          "type": "file",
+          "size": 159783,
+          "lines": 36
+        },
+        {
+          "name": "overview-B5nk_6Xf.css",
+          "path": "assets/overview-B5nk_6Xf.css",
+          "type": "file",
+          "size": 12974,
+          "lines": 3
+        },
+        {
+          "name": "overview-miobGYkq.js",
+          "path": "assets/overview-miobGYkq.js",
+          "type": "file",
+          "size": 18328,
+          "lines": 43
+        },
+        {
+          "name": "pipeline-B75gsvlZ.js",
+          "path": "assets/pipeline-B75gsvlZ.js",
+          "type": "file",
+          "size": 31882,
+          "lines": 63
+        },
+        {
+          "name": "pipeline-BFzOllNL.css",
+          "path": "assets/pipeline-BFzOllNL.css",
+          "type": "file",
+          "size": 16301,
+          "lines": 3
+        },
+        {
+          "name": "projects-ByG3aeRi.js",
+          "path": "assets/projects-ByG3aeRi.js",
+          "type": "file",
+          "size": 17167,
+          "lines": 37
+        },
+        {
+          "name": "projects-DHVOFd1L.css",
+          "path": "assets/projects-DHVOFd1L.css",
+          "type": "file",
+          "size": 8680,
+          "lines": 3
+        },
+        {
+          "name": "schedule-D1EmyAoQ.css",
+          "path": "assets/schedule-D1EmyAoQ.css",
+          "type": "file",
+          "size": 14618,
+          "lines": 3
+        },
+        {
+          "name": "schedule-D5eRMeQQ.js",
+          "path": "assets/schedule-D5eRMeQQ.js",
+          "type": "file",
+          "size": 22593,
+          "lines": 47
+        },
+        {
+          "name": "settings-D9kdrttJ.css",
+          "path": "assets/settings-D9kdrttJ.css",
+          "type": "file",
+          "size": 8855,
+          "lines": 3
+        },
+        {
+          "name": "settings-Wt2GehgQ.js",
+          "path": "assets/settings-Wt2GehgQ.js",
+          "type": "file",
+          "size": 19252,
+          "lines": 65
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "customers.css",
+          "path": "css/customers.css",
+          "type": "file",
+          "size": 17528,
+          "lines": 1094
+        },
+        {
+          "name": "finance.css",
+          "path": "css/finance.css",
+          "type": "file",
+          "size": 9250,
+          "lines": 543
+        },
+        {
+          "name": "growth.css",
+          "path": "css/growth.css",
+          "type": "file",
+          "size": 10226,
+          "lines": 549
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 36341,
+          "lines": 2514
+        },
+        {
+          "name": "overview.css",
+          "path": "css/overview.css",
+          "type": "file",
+          "size": 14686,
+          "lines": 797
+        },
+        {
+          "name": "pages",
+          "path": "css/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "pipeline.css",
+          "path": "css/pipeline.css",
+          "type": "file",
+          "size": 18565,
+          "lines": 1053
+        },
+        {
+          "name": "projects.css",
+          "path": "css/projects.css",
+          "type": "file",
+          "size": 9980,
+          "lines": 613
+        },
+        {
+          "name": "schedule.css",
+          "path": "css/schedule.css",
+          "type": "file",
+          "size": 16540,
+          "lines": 894
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 10061,
+          "lines": 561
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 1012,
+          "lines": 41
+        }
+      ]
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 12643,
+      "lines": 144
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "charts.js",
+          "path": "js/charts.js",
+          "type": "file",
+          "size": 7371,
+          "lines": 5
+        },
+        {
+          "name": "components",
+          "path": "js/components",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "customers.js",
+          "path": "js/customers.js",
+          "type": "file",
+          "size": 35971,
+          "lines": 115
+        },
+        {
+          "name": "finance.js",
+          "path": "js/finance.js",
+          "type": "file",
+          "size": 22736,
+          "lines": 74
+        },
+        {
+          "name": "growth.js",
+          "path": "js/growth.js",
+          "type": "file",
+          "size": 18859,
+          "lines": 36
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 159783,
+          "lines": 36
+        },
+        {
+          "name": "main.js",
+          "path": "js/main.js",
+          "type": "file",
+          "size": 322,
+          "lines": 13
+        },
+        {
+          "name": "overview.js",
+          "path": "js/overview.js",
+          "type": "file",
+          "size": 18328,
+          "lines": 43
+        },
+        {
+          "name": "pages",
+          "path": "js/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "pipeline.js",
+          "path": "js/pipeline.js",
+          "type": "file",
+          "size": 31882,
+          "lines": 63
+        },
+        {
+          "name": "projects.js",
+          "path": "js/projects.js",
+          "type": "file",
+          "size": 17167,
+          "lines": 37
+        },
+        {
+          "name": "router.js",
+          "path": "js/router.js",
+          "type": "file",
+          "size": 477,
+          "lines": 23
+        },
+        {
+          "name": "schedule.js",
+          "path": "js/schedule.js",
+          "type": "file",
+          "size": 22593,
+          "lines": 47
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 19252,
+          "lines": 65
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 649,
+          "lines": 25
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "168-rapport",
+          "path": "photos/168-rapport",
+          "type": "directory",
+          "children": [
+            {
+              "name": "sofia-reyes-sm.jpg",
+              "path": "photos/168-rapport/sofia-reyes-sm.jpg",
+              "type": "file",
+              "size": 2219,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

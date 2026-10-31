@@ -1,0 +1,673 @@
+{
+  "slug": "dantika",
+  "name": "Dantika Clinic",
+  "totalFiles": 80,
+  "totalLines": 18462,
+  "totalBytes": 1779348,
+  "totalSizeReadable": "1737.6 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/assist-CRNhAFx4.js",
+    "assets/assist-QipDanqj.css",
+    "assets/billing-D1Ib7vmL.js",
+    "assets/billing-DdMSnVPk.css",
+    "assets/charts-BsjahuFw.js",
+    "assets/drag-BJS8oGDX.js",
+    "assets/help-F5-AsY1Q.js",
+    "assets/help-PRpSJR4e.css",
+    "assets/index-BaZ_hZ0F.js",
+    "assets/index-DzAZluWn.css",
+    "assets/insights-CWDrPMOc.css",
+    "assets/insights-nSylGcKs.js",
+    "assets/labs-5sCaWIt2.css",
+    "assets/labs-CwgO1Q9N.js",
+    "assets/messages-BlrRcG3r.js",
+    "assets/messages-C5YHyBI7.css",
+    "assets/patients-D0w_MggY.js",
+    "assets/patients-Dn8F5de4.css",
+    "assets/plans-Bp0g4mHY.js",
+    "assets/plans-jvCKNlH-.css",
+    "assets/records-CmB91EuW.css",
+    "assets/records-DWhlKoDa.js",
+    "assets/schedule-DuxGHSaT.css",
+    "assets/schedule-TDDlK0vg.js",
+    "assets/scripts-Cuukhd-i.css",
+    "assets/scripts-DQLpvp9c.js",
+    "assets/settings-CahBnCHw.css",
+    "assets/settings-DeI0f7kK.js",
+    "assets/supplies-C79jtkLm.css",
+    "assets/supplies-C_EvGQKG.js",
+    "assets/tasks-B5diTj9u.css",
+    "assets/tasks-B6dvwAnk.js",
+    "assets/teeth-BIe3aw_C.js",
+    "assets/today-C2Ewizmk.css",
+    "assets/today-WwhmPD70.js",
+    "css/assist.css",
+    "css/billing.css",
+    "css/components.css",
+    "css/help.css",
+    "css/index.css",
+    "css/insights.css",
+    "css/labs.css",
+    "css/layout.css",
+    "css/messages.css",
+    "css/patients.css",
+    "css/plans.css",
+    "css/records.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/schedule.css",
+    "css/scripts.css",
+    "css/settings.css",
+    "css/supplies.css",
+    "css/tasks.css",
+    "css/today.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/assist.js",
+    "js/billing.js",
+    "js/charts.js",
+    "js/drag.js",
+    "js/help.js",
+    "js/index.js",
+    "js/insights.js",
+    "js/labs.js",
+    "js/messages.js",
+    "js/patients.js",
+    "js/plans.js",
+    "js/records.js",
+    "js/schedule.js",
+    "js/scripts.js",
+    "js/settings.js",
+    "js/supplies.js",
+    "js/tasks.js",
+    "js/teeth.js",
+    "js/theme.js",
+    "js/today.js"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "assist-CRNhAFx4.js",
+          "path": "assets/assist-CRNhAFx4.js",
+          "type": "file",
+          "size": 22964,
+          "lines": 47
+        },
+        {
+          "name": "assist-QipDanqj.css",
+          "path": "assets/assist-QipDanqj.css",
+          "type": "file",
+          "size": 9861,
+          "lines": 3
+        },
+        {
+          "name": "billing-D1Ib7vmL.js",
+          "path": "assets/billing-D1Ib7vmL.js",
+          "type": "file",
+          "size": 35686,
+          "lines": 119
+        },
+        {
+          "name": "billing-DdMSnVPk.css",
+          "path": "assets/billing-DdMSnVPk.css",
+          "type": "file",
+          "size": 14392,
+          "lines": 3
+        },
+        {
+          "name": "charts-BsjahuFw.js",
+          "path": "assets/charts-BsjahuFw.js",
+          "type": "file",
+          "size": 9645,
+          "lines": 10
+        },
+        {
+          "name": "drag-BJS8oGDX.js",
+          "path": "assets/drag-BJS8oGDX.js",
+          "type": "file",
+          "size": 2555,
+          "lines": 1
+        },
+        {
+          "name": "help-F5-AsY1Q.js",
+          "path": "assets/help-F5-AsY1Q.js",
+          "type": "file",
+          "size": 22640,
+          "lines": 35
+        },
+        {
+          "name": "help-PRpSJR4e.css",
+          "path": "assets/help-PRpSJR4e.css",
+          "type": "file",
+          "size": 8278,
+          "lines": 3
+        },
+        {
+          "name": "index-BaZ_hZ0F.js",
+          "path": "assets/index-BaZ_hZ0F.js",
+          "type": "file",
+          "size": 215272,
+          "lines": 54
+        },
+        {
+          "name": "index-DzAZluWn.css",
+          "path": "assets/index-DzAZluWn.css",
+          "type": "file",
+          "size": 49181,
+          "lines": 3
+        },
+        {
+          "name": "insights-CWDrPMOc.css",
+          "path": "assets/insights-CWDrPMOc.css",
+          "type": "file",
+          "size": 8452,
+          "lines": 3
+        },
+        {
+          "name": "insights-nSylGcKs.js",
+          "path": "assets/insights-nSylGcKs.js",
+          "type": "file",
+          "size": 17493,
+          "lines": 20
+        },
+        {
+          "name": "labs-5sCaWIt2.css",
+          "path": "assets/labs-5sCaWIt2.css",
+          "type": "file",
+          "size": 16782,
+          "lines": 3
+        },
+        {
+          "name": "labs-CwgO1Q9N.js",
+          "path": "assets/labs-CwgO1Q9N.js",
+          "type": "file",
+          "size": 27341,
+          "lines": 72
+        },
+        {
+          "name": "messages-BlrRcG3r.js",
+          "path": "assets/messages-BlrRcG3r.js",
+          "type": "file",
+          "size": 19648,
+          "lines": 42
+        },
+        {
+          "name": "messages-C5YHyBI7.css",
+          "path": "assets/messages-C5YHyBI7.css",
+          "type": "file",
+          "size": 12028,
+          "lines": 3
+        },
+        {
+          "name": "patients-D0w_MggY.js",
+          "path": "assets/patients-D0w_MggY.js",
+          "type": "file",
+          "size": 34451,
+          "lines": 83
+        },
+        {
+          "name": "patients-Dn8F5de4.css",
+          "path": "assets/patients-Dn8F5de4.css",
+          "type": "file",
+          "size": 16502,
+          "lines": 3
+        },
+        {
+          "name": "plans-Bp0g4mHY.js",
+          "path": "assets/plans-Bp0g4mHY.js",
+          "type": "file",
+          "size": 27069,
+          "lines": 54
+        },
+        {
+          "name": "plans-jvCKNlH-.css",
+          "path": "assets/plans-jvCKNlH-.css",
+          "type": "file",
+          "size": 11083,
+          "lines": 3
+        },
+        {
+          "name": "records-CmB91EuW.css",
+          "path": "assets/records-CmB91EuW.css",
+          "type": "file",
+          "size": 14147,
+          "lines": 3
+        },
+        {
+          "name": "records-DWhlKoDa.js",
+          "path": "assets/records-DWhlKoDa.js",
+          "type": "file",
+          "size": 29400,
+          "lines": 88
+        },
+        {
+          "name": "schedule-DuxGHSaT.css",
+          "path": "assets/schedule-DuxGHSaT.css",
+          "type": "file",
+          "size": 13367,
+          "lines": 3
+        },
+        {
+          "name": "schedule-TDDlK0vg.js",
+          "path": "assets/schedule-TDDlK0vg.js",
+          "type": "file",
+          "size": 19125,
+          "lines": 42
+        },
+        {
+          "name": "scripts-Cuukhd-i.css",
+          "path": "assets/scripts-Cuukhd-i.css",
+          "type": "file",
+          "size": 9586,
+          "lines": 3
+        },
+        {
+          "name": "scripts-DQLpvp9c.js",
+          "path": "assets/scripts-DQLpvp9c.js",
+          "type": "file",
+          "size": 19610,
+          "lines": 53
+        },
+        {
+          "name": "settings-CahBnCHw.css",
+          "path": "assets/settings-CahBnCHw.css",
+          "type": "file",
+          "size": 14357,
+          "lines": 3
+        },
+        {
+          "name": "settings-DeI0f7kK.js",
+          "path": "assets/settings-DeI0f7kK.js",
+          "type": "file",
+          "size": 30766,
+          "lines": 77
+        },
+        {
+          "name": "supplies-C79jtkLm.css",
+          "path": "assets/supplies-C79jtkLm.css",
+          "type": "file",
+          "size": 11906,
+          "lines": 3
+        },
+        {
+          "name": "supplies-C_EvGQKG.js",
+          "path": "assets/supplies-C_EvGQKG.js",
+          "type": "file",
+          "size": 27355,
+          "lines": 74
+        },
+        {
+          "name": "tasks-B5diTj9u.css",
+          "path": "assets/tasks-B5diTj9u.css",
+          "type": "file",
+          "size": 12796,
+          "lines": 3
+        },
+        {
+          "name": "tasks-B6dvwAnk.js",
+          "path": "assets/tasks-B6dvwAnk.js",
+          "type": "file",
+          "size": 21744,
+          "lines": 51
+        },
+        {
+          "name": "teeth-BIe3aw_C.js",
+          "path": "assets/teeth-BIe3aw_C.js",
+          "type": "file",
+          "size": 8472,
+          "lines": 7
+        },
+        {
+          "name": "today-C2Ewizmk.css",
+          "path": "assets/today-C2Ewizmk.css",
+          "type": "file",
+          "size": 12984,
+          "lines": 3
+        },
+        {
+          "name": "today-WwhmPD70.js",
+          "path": "assets/today-WwhmPD70.js",
+          "type": "file",
+          "size": 19058,
+          "lines": 44
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "assist.css",
+          "path": "css/assist.css",
+          "type": "file",
+          "size": 11842,
+          "lines": 622
+        },
+        {
+          "name": "billing.css",
+          "path": "css/billing.css",
+          "type": "file",
+          "size": 17289,
+          "lines": 925
+        },
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 2948,
+          "lines": 133
+        },
+        {
+          "name": "help.css",
+          "path": "css/help.css",
+          "type": "file",
+          "size": 10031,
+          "lines": 562
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 61619,
+          "lines": 3883
+        },
+        {
+          "name": "insights.css",
+          "path": "css/insights.css",
+          "type": "file",
+          "size": 10082,
+          "lines": 523
+        },
+        {
+          "name": "labs.css",
+          "path": "css/labs.css",
+          "type": "file",
+          "size": 20008,
+          "lines": 1006
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 3523,
+          "lines": 163
+        },
+        {
+          "name": "messages.css",
+          "path": "css/messages.css",
+          "type": "file",
+          "size": 14335,
+          "lines": 720
+        },
+        {
+          "name": "patients.css",
+          "path": "css/patients.css",
+          "type": "file",
+          "size": 19718,
+          "lines": 1022
+        },
+        {
+          "name": "plans.css",
+          "path": "css/plans.css",
+          "type": "file",
+          "size": 13222,
+          "lines": 674
+        },
+        {
+          "name": "records.css",
+          "path": "css/records.css",
+          "type": "file",
+          "size": 17002,
+          "lines": 886
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 2180,
+          "lines": 138
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 1037,
+          "lines": 57
+        },
+        {
+          "name": "schedule.css",
+          "path": "css/schedule.css",
+          "type": "file",
+          "size": 16015,
+          "lines": 825
+        },
+        {
+          "name": "scripts.css",
+          "path": "css/scripts.css",
+          "type": "file",
+          "size": 11570,
+          "lines": 635
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 17095,
+          "lines": 875
+        },
+        {
+          "name": "supplies.css",
+          "path": "css/supplies.css",
+          "type": "file",
+          "size": 14340,
+          "lines": 774
+        },
+        {
+          "name": "tasks.css",
+          "path": "css/tasks.css",
+          "type": "file",
+          "size": 15390,
+          "lines": 818
+        },
+        {
+          "name": "today.css",
+          "path": "css/today.css",
+          "type": "file",
+          "size": 15682,
+          "lines": 853
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 5399,
+          "lines": 164
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 14890,
+      "lines": 167
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "assist.js",
+          "path": "js/assist.js",
+          "type": "file",
+          "size": 22964,
+          "lines": 47
+        },
+        {
+          "name": "billing.js",
+          "path": "js/billing.js",
+          "type": "file",
+          "size": 35686,
+          "lines": 119
+        },
+        {
+          "name": "charts.js",
+          "path": "js/charts.js",
+          "type": "file",
+          "size": 9645,
+          "lines": 10
+        },
+        {
+          "name": "drag.js",
+          "path": "js/drag.js",
+          "type": "file",
+          "size": 2555,
+          "lines": 1
+        },
+        {
+          "name": "help.js",
+          "path": "js/help.js",
+          "type": "file",
+          "size": 22640,
+          "lines": 35
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 215272,
+          "lines": 54
+        },
+        {
+          "name": "insights.js",
+          "path": "js/insights.js",
+          "type": "file",
+          "size": 17493,
+          "lines": 20
+        },
+        {
+          "name": "labs.js",
+          "path": "js/labs.js",
+          "type": "file",
+          "size": 27341,
+          "lines": 72
+        },
+        {
+          "name": "messages.js",
+          "path": "js/messages.js",
+          "type": "file",
+          "size": 19648,
+          "lines": 42
+        },
+        {
+          "name": "patients.js",
+          "path": "js/patients.js",
+          "type": "file",
+          "size": 34451,
+          "lines": 83
+        },
+        {
+          "name": "plans.js",
+          "path": "js/plans.js",
+          "type": "file",
+          "size": 27069,
+          "lines": 54
+        },
+        {
+          "name": "records.js",
+          "path": "js/records.js",
+          "type": "file",
+          "size": 29400,
+          "lines": 88
+        },
+        {
+          "name": "schedule.js",
+          "path": "js/schedule.js",
+          "type": "file",
+          "size": 19125,
+          "lines": 42
+        },
+        {
+          "name": "scripts.js",
+          "path": "js/scripts.js",
+          "type": "file",
+          "size": 19610,
+          "lines": 53
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 30766,
+          "lines": 77
+        },
+        {
+          "name": "supplies.js",
+          "path": "js/supplies.js",
+          "type": "file",
+          "size": 27355,
+          "lines": 74
+        },
+        {
+          "name": "tasks.js",
+          "path": "js/tasks.js",
+          "type": "file",
+          "size": 21744,
+          "lines": 51
+        },
+        {
+          "name": "teeth.js",
+          "path": "js/teeth.js",
+          "type": "file",
+          "size": 8472,
+          "lines": 7
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 1036,
+          "lines": 38
+        },
+        {
+          "name": "today.js",
+          "path": "js/today.js",
+          "type": "file",
+          "size": 19058,
+          "lines": 44
+        }
+      ]
+    }
+  ]
+}

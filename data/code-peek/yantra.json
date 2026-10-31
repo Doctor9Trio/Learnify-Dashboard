@@ -1,0 +1,1995 @@
+{
+  "slug": "yantra",
+  "name": "Yantra Auto",
+  "totalFiles": 240,
+  "totalLines": 6689,
+  "totalBytes": 14200603,
+  "totalSizeReadable": "13867.8 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/index-CCPDaXHJ.js",
+    "assets/index-DxhggGhw.css",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/index.js",
+    "js/theme.js",
+    "photos/yantra/brand-ardent.jpg",
+    "photos/yantra/brand-helix.jpg",
+    "photos/yantra/brand-kovac.jpg",
+    "photos/yantra/build-end.jpg",
+    "photos/yantra/build.jpg",
+    "photos/yantra/build/001.webp",
+    "photos/yantra/build/002.webp",
+    "photos/yantra/build/003.webp",
+    "photos/yantra/build/004.webp",
+    "photos/yantra/build/005.webp",
+    "photos/yantra/build/006.webp",
+    "photos/yantra/build/007.webp",
+    "photos/yantra/build/008.webp",
+    "photos/yantra/build/009.webp",
+    "photos/yantra/build/010.webp",
+    "photos/yantra/build/011.webp",
+    "photos/yantra/build/012.webp",
+    "photos/yantra/build/013.webp",
+    "photos/yantra/build/014.webp",
+    "photos/yantra/build/015.webp",
+    "photos/yantra/build/016.webp",
+    "photos/yantra/build/017.webp",
+    "photos/yantra/build/018.webp",
+    "photos/yantra/build/019.webp",
+    "photos/yantra/build/020.webp",
+    "photos/yantra/build/021.webp",
+    "photos/yantra/build/022.webp",
+    "photos/yantra/build/023.webp",
+    "photos/yantra/build/024.webp",
+    "photos/yantra/build/025.webp",
+    "photos/yantra/build/026.webp",
+    "photos/yantra/build/027.webp",
+    "photos/yantra/build/028.webp",
+    "photos/yantra/build/029.webp",
+    "photos/yantra/build/030.webp",
+    "photos/yantra/build/031.webp",
+    "photos/yantra/build/032.webp",
+    "photos/yantra/build/033.webp",
+    "photos/yantra/build/034.webp",
+    "photos/yantra/build/035.webp",
+    "photos/yantra/build/036.webp",
+    "photos/yantra/build/037.webp",
+    "photos/yantra/build/038.webp",
+    "photos/yantra/build/039.webp",
+    "photos/yantra/build/040.webp",
+    "photos/yantra/build/041.webp",
+    "photos/yantra/build/042.webp",
+    "photos/yantra/build/043.webp",
+    "photos/yantra/build/044.webp",
+    "photos/yantra/build/045.webp",
+    "photos/yantra/build/046.webp",
+    "photos/yantra/build/047.webp",
+    "photos/yantra/build/048.webp",
+    "photos/yantra/build/049.webp",
+    "photos/yantra/build/050.webp",
+    "photos/yantra/build/051.webp",
+    "photos/yantra/build/052.webp",
+    "photos/yantra/build/053.webp",
+    "photos/yantra/build/054.webp",
+    "photos/yantra/build/055.webp",
+    "photos/yantra/build/056.webp",
+    "photos/yantra/build/057.webp",
+    "photos/yantra/build/058.webp",
+    "photos/yantra/build/059.webp",
+    "photos/yantra/build/060.webp",
+    "photos/yantra/build/061.webp",
+    "photos/yantra/build/062.webp",
+    "photos/yantra/build/063.webp",
+    "photos/yantra/build/064.webp",
+    "photos/yantra/build/065.webp",
+    "photos/yantra/build/066.webp",
+    "photos/yantra/build/067.webp",
+    "photos/yantra/build/068.webp",
+    "photos/yantra/build/069.webp",
+    "photos/yantra/build/070.webp",
+    "photos/yantra/build/071.webp",
+    "photos/yantra/build/072.webp",
+    "photos/yantra/build/073.webp",
+    "photos/yantra/build/074.webp",
+    "photos/yantra/build/075.webp",
+    "photos/yantra/build/076.webp",
+    "photos/yantra/build/077.webp",
+    "photos/yantra/build/078.webp",
+    "photos/yantra/build/079.webp",
+    "photos/yantra/build/080.webp",
+    "photos/yantra/build/081.webp",
+    "photos/yantra/build/082.webp",
+    "photos/yantra/build/083.webp",
+    "photos/yantra/build/084.webp",
+    "photos/yantra/build/085.webp",
+    "photos/yantra/build/086.webp",
+    "photos/yantra/build/087.webp",
+    "photos/yantra/build/088.webp",
+    "photos/yantra/build/089.webp",
+    "photos/yantra/build/090.webp",
+    "photos/yantra/build/091.webp",
+    "photos/yantra/build/092.webp",
+    "photos/yantra/build/093.webp",
+    "photos/yantra/build/094.webp",
+    "photos/yantra/build/095.webp",
+    "photos/yantra/build/096.webp",
+    "photos/yantra/build/097.webp",
+    "photos/yantra/build/098.webp",
+    "photos/yantra/build/099.webp",
+    "photos/yantra/build/100.webp",
+    "photos/yantra/build/101.webp",
+    "photos/yantra/build/102.webp",
+    "photos/yantra/build/103.webp",
+    "photos/yantra/build/104.webp",
+    "photos/yantra/build/105.webp",
+    "photos/yantra/build/106.webp",
+    "photos/yantra/build/107.webp",
+    "photos/yantra/build/108.webp",
+    "photos/yantra/build/109.webp",
+    "photos/yantra/build/110.webp",
+    "photos/yantra/build/111.webp",
+    "photos/yantra/build/112.webp",
+    "photos/yantra/build/113.webp",
+    "photos/yantra/build/114.webp",
+    "photos/yantra/build/115.webp",
+    "photos/yantra/build/116.webp",
+    "photos/yantra/build/117.webp",
+    "photos/yantra/build/118.webp",
+    "photos/yantra/build/119.webp",
+    "photos/yantra/build/120.webp",
+    "photos/yantra/build/121.webp",
+    "photos/yantra/build/122.webp",
+    "photos/yantra/build/123.webp",
+    "photos/yantra/build/124.webp",
+    "photos/yantra/build/125.webp",
+    "photos/yantra/build/126.webp",
+    "photos/yantra/build/127.webp",
+    "photos/yantra/build/128.webp",
+    "photos/yantra/build/129.webp",
+    "photos/yantra/build/130.webp",
+    "photos/yantra/build/131.webp",
+    "photos/yantra/build/132.webp",
+    "photos/yantra/build/133.webp",
+    "photos/yantra/build/134.webp",
+    "photos/yantra/build/135.webp",
+    "photos/yantra/build/136.webp",
+    "photos/yantra/build/137.webp",
+    "photos/yantra/build/138.webp",
+    "photos/yantra/build/139.webp",
+    "photos/yantra/build/140.webp",
+    "photos/yantra/build/141.webp",
+    "photos/yantra/build/142.webp",
+    "photos/yantra/build/143.webp",
+    "photos/yantra/build/144.webp",
+    "photos/yantra/build/145.webp",
+    "photos/yantra/build/146.webp",
+    "photos/yantra/build/147.webp",
+    "photos/yantra/build/148.webp",
+    "photos/yantra/build/149.webp",
+    "photos/yantra/build/150.webp",
+    "photos/yantra/build/151.webp",
+    "photos/yantra/build/152.webp",
+    "photos/yantra/build/153.webp",
+    "photos/yantra/build/154.webp",
+    "photos/yantra/build/155.webp",
+    "photos/yantra/build/156.webp",
+    "photos/yantra/build/157.webp",
+    "photos/yantra/build/158.webp",
+    "photos/yantra/build/159.webp",
+    "photos/yantra/build/160.webp",
+    "photos/yantra/build/161.webp",
+    "photos/yantra/build/162.webp",
+    "photos/yantra/build/163.webp",
+    "photos/yantra/build/164.webp",
+    "photos/yantra/build/165.webp",
+    "photos/yantra/build/166.webp",
+    "photos/yantra/build/167.webp",
+    "photos/yantra/build/168.webp",
+    "photos/yantra/build/169.webp",
+    "photos/yantra/build/170.webp",
+    "photos/yantra/build/171.webp",
+    "photos/yantra/build/172.webp",
+    "photos/yantra/build/173.webp",
+    "photos/yantra/build/174.webp",
+    "photos/yantra/build/175.webp",
+    "photos/yantra/build/176.webp",
+    "photos/yantra/build/177.webp",
+    "photos/yantra/build/178.webp",
+    "photos/yantra/build/179.webp",
+    "photos/yantra/build/180.webp",
+    "photos/yantra/build/181.webp",
+    "photos/yantra/build/182.webp",
+    "photos/yantra/build/183.webp",
+    "photos/yantra/build/184.webp",
+    "photos/yantra/build/185.webp",
+    "photos/yantra/build/186.webp",
+    "photos/yantra/build/187.webp",
+    "photos/yantra/build/188.webp",
+    "photos/yantra/build/189.webp",
+    "photos/yantra/build/190.webp",
+    "photos/yantra/build/191.webp",
+    "photos/yantra/build/192.webp",
+    "photos/yantra/drift.jpg",
+    "photos/yantra/gallery-01.jpg",
+    "photos/yantra/gallery-02.jpg",
+    "photos/yantra/gallery-03.jpg",
+    "photos/yantra/gallery-04.jpg",
+    "photos/yantra/gallery-05.jpg",
+    "photos/yantra/gallery-06.jpg",
+    "photos/yantra/hero-car.webp",
+    "photos/yantra/hero-electric.webp",
+    "photos/yantra/hero-motorcycle.webp",
+    "photos/yantra/hero-pickup.webp",
+    "photos/yantra/hero-scooter.webp",
+    "photos/yantra/journal-01.jpg",
+    "photos/yantra/journal-02.jpg",
+    "photos/yantra/journal-03.jpg",
+    "photos/yantra/og.jpg",
+    "photos/yantra/part-01.webp",
+    "photos/yantra/part-02.webp",
+    "photos/yantra/part-03.webp",
+    "photos/yantra/part-04.webp",
+    "photos/yantra/slicks.webp",
+    "photos/yantra/wheel-01.webp",
+    "photos/yantra/wheel-02.webp",
+    "photos/yantra/wheel-03.webp",
+    "photos/yantra/wheel-04.webp",
+    "photos/yantra/wheel.webp",
+    "textures/grain.png",
+    "video/yantra/bench.mp4",
+    "video/yantra/drift.mp4"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index-CCPDaXHJ.js",
+          "path": "assets/index-CCPDaXHJ.js",
+          "type": "file",
+          "size": 176867,
+          "lines": 1
+        },
+        {
+          "name": "index-DxhggGhw.css",
+          "path": "assets/index-DxhggGhw.css",
+          "type": "file",
+          "size": 41242,
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 36678,
+          "lines": 2207
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 50660,
+          "lines": 2929
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 887,
+          "lines": 38
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 1118,
+          "lines": 77
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 9275,
+          "lines": 622
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 2558,
+          "lines": 92
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 46506,
+      "lines": 607
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 176867,
+          "lines": 1
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 2947,
+          "lines": 107
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "yantra",
+          "path": "photos/yantra",
+          "type": "directory",
+          "children": [
+            {
+              "name": "brand-ardent.jpg",
+              "path": "photos/yantra/brand-ardent.jpg",
+              "type": "file",
+              "size": 146454,
+              "lines": 0
+            },
+            {
+              "name": "brand-helix.jpg",
+              "path": "photos/yantra/brand-helix.jpg",
+              "type": "file",
+              "size": 321600,
+              "lines": 0
+            },
+            {
+              "name": "brand-kovac.jpg",
+              "path": "photos/yantra/brand-kovac.jpg",
+              "type": "file",
+              "size": 164882,
+              "lines": 0
+            },
+            {
+              "name": "build",
+              "path": "photos/yantra/build",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "001.webp",
+                  "path": "photos/yantra/build/001.webp",
+                  "type": "file",
+                  "size": 30752,
+                  "lines": 0
+                },
+                {
+                  "name": "002.webp",
+                  "path": "photos/yantra/build/002.webp",
+                  "type": "file",
+                  "size": 30936,
+                  "lines": 0
+                },
+                {
+                  "name": "003.webp",
+                  "path": "photos/yantra/build/003.webp",
+                  "type": "file",
+                  "size": 30964,
+                  "lines": 0
+                },
+                {
+                  "name": "004.webp",
+                  "path": "photos/yantra/build/004.webp",
+                  "type": "file",
+                  "size": 31246,
+                  "lines": 0
+                },
+                {
+                  "name": "005.webp",
+                  "path": "photos/yantra/build/005.webp",
+                  "type": "file",
+                  "size": 31244,
+                  "lines": 0
+                },
+                {
+                  "name": "006.webp",
+                  "path": "photos/yantra/build/006.webp",
+                  "type": "file",
+                  "size": 30940,
+                  "lines": 0
+                },
+                {
+                  "name": "007.webp",
+                  "path": "photos/yantra/build/007.webp",
+                  "type": "file",
+                  "size": 30842,
+                  "lines": 0
+                },
+                {
+                  "name": "008.webp",
+                  "path": "photos/yantra/build/008.webp",
+                  "type": "file",
+                  "size": 30708,
+                  "lines": 0
+                },
+                {
+                  "name": "009.webp",
+                  "path": "photos/yantra/build/009.webp",
+                  "type": "file",
+                  "size": 30608,
+                  "lines": 0
+                },
+                {
+                  "name": "010.webp",
+                  "path": "photos/yantra/build/010.webp",
+                  "type": "file",
+                  "size": 30752,
+                  "lines": 0
+                },
+                {
+                  "name": "011.webp",
+                  "path": "photos/yantra/build/011.webp",
+                  "type": "file",
+                  "size": 31554,
+                  "lines": 0
+                },
+                {
+                  "name": "012.webp",
+                  "path": "photos/yantra/build/012.webp",
+                  "type": "file",
+                  "size": 31716,
+                  "lines": 0
+                },
+                {
+                  "name": "013.webp",
+                  "path": "photos/yantra/build/013.webp",
+                  "type": "file",
+                  "size": 31954,
+                  "lines": 0
+                },
+                {
+                  "name": "014.webp",
+                  "path": "photos/yantra/build/014.webp",
+                  "type": "file",
+                  "size": 30778,
+                  "lines": 0
+                },
+                {
+                  "name": "015.webp",
+                  "path": "photos/yantra/build/015.webp",
+                  "type": "file",
+                  "size": 30914,
+                  "lines": 0
+                },
+                {
+                  "name": "016.webp",
+                  "path": "photos/yantra/build/016.webp",
+                  "type": "file",
+                  "size": 29530,
+                  "lines": 0
+                },
+                {
+                  "name": "017.webp",
+                  "path": "photos/yantra/build/017.webp",
+                  "type": "file",
+                  "size": 28482,
+                  "lines": 0
+                },
+                {
+                  "name": "018.webp",
+                  "path": "photos/yantra/build/018.webp",
+                  "type": "file",
+                  "size": 27108,
+                  "lines": 0
+                },
+                {
+                  "name": "019.webp",
+                  "path": "photos/yantra/build/019.webp",
+                  "type": "file",
+                  "size": 26590,
+                  "lines": 0
+                },
+                {
+                  "name": "020.webp",
+                  "path": "photos/yantra/build/020.webp",
+                  "type": "file",
+                  "size": 26072,
+                  "lines": 0
+                },
+                {
+                  "name": "021.webp",
+                  "path": "photos/yantra/build/021.webp",
+                  "type": "file",
+                  "size": 26506,
+                  "lines": 0
+                },
+                {
+                  "name": "022.webp",
+                  "path": "photos/yantra/build/022.webp",
+                  "type": "file",
+                  "size": 26290,
+                  "lines": 0
+                },
+                {
+                  "name": "023.webp",
+                  "path": "photos/yantra/build/023.webp",
+                  "type": "file",
+                  "size": 26496,
+                  "lines": 0
+                },
+                {
+                  "name": "024.webp",
+                  "path": "photos/yantra/build/024.webp",
+                  "type": "file",
+                  "size": 26168,
+                  "lines": 0
+                },
+                {
+                  "name": "025.webp",
+                  "path": "photos/yantra/build/025.webp",
+                  "type": "file",
+                  "size": 26524,
+                  "lines": 0
+                },
+                {
+                  "name": "026.webp",
+                  "path": "photos/yantra/build/026.webp",
+                  "type": "file",
+                  "size": 26200,
+                  "lines": 0
+                },
+                {
+                  "name": "027.webp",
+                  "path": "photos/yantra/build/027.webp",
+                  "type": "file",
+                  "size": 26432,
+                  "lines": 0
+                },
+                {
+                  "name": "028.webp",
+                  "path": "photos/yantra/build/028.webp",
+                  "type": "file",
+                  "size": 26756,
+                  "lines": 0
+                },
+                {
+                  "name": "029.webp",
+                  "path": "photos/yantra/build/029.webp",
+                  "type": "file",
+                  "size": 27172,
+                  "lines": 0
+                },
+                {
+                  "name": "030.webp",
+                  "path": "photos/yantra/build/030.webp",
+                  "type": "file",
+                  "size": 27310,
+                  "lines": 0
+                },
+                {
+                  "name": "031.webp",
+                  "path": "photos/yantra/build/031.webp",
+                  "type": "file",
+                  "size": 27256,
+                  "lines": 0
+                },
+                {
+                  "name": "032.webp",
+                  "path": "photos/yantra/build/032.webp",
+                  "type": "file",
+                  "size": 27650,
+                  "lines": 0
+                },
+                {
+                  "name": "033.webp",
+                  "path": "photos/yantra/build/033.webp",
+                  "type": "file",
+                  "size": 27880,
+                  "lines": 0
+                },
+                {
+                  "name": "034.webp",
+                  "path": "photos/yantra/build/034.webp",
+                  "type": "file",
+                  "size": 28516,
+                  "lines": 0
+                },
+                {
+                  "name": "035.webp",
+                  "path": "photos/yantra/build/035.webp",
+                  "type": "file",
+                  "size": 29170,
+                  "lines": 0
+                },
+                {
+                  "name": "036.webp",
+                  "path": "photos/yantra/build/036.webp",
+                  "type": "file",
+                  "size": 29990,
+                  "lines": 0
+                },
+                {
+                  "name": "037.webp",
+                  "path": "photos/yantra/build/037.webp",
+                  "type": "file",
+                  "size": 30788,
+                  "lines": 0
+                },
+                {
+                  "name": "038.webp",
+                  "path": "photos/yantra/build/038.webp",
+                  "type": "file",
+                  "size": 30408,
+                  "lines": 0
+                },
+                {
+                  "name": "039.webp",
+                  "path": "photos/yantra/build/039.webp",
+                  "type": "file",
+                  "size": 30606,
+                  "lines": 0
+                },
+                {
+                  "name": "040.webp",
+                  "path": "photos/yantra/build/040.webp",
+                  "type": "file",
+                  "size": 30478,
+                  "lines": 0
+                },
+                {
+                  "name": "041.webp",
+                  "path": "photos/yantra/build/041.webp",
+                  "type": "file",
+                  "size": 30118,
+                  "lines": 0
+                },
+                {
+                  "name": "042.webp",
+                  "path": "photos/yantra/build/042.webp",
+                  "type": "file",
+                  "size": 29704,
+                  "lines": 0
+                },
+                {
+                  "name": "043.webp",
+                  "path": "photos/yantra/build/043.webp",
+                  "type": "file",
+                  "size": 29730,
+                  "lines": 0
+                },
+                {
+                  "name": "044.webp",
+                  "path": "photos/yantra/build/044.webp",
+                  "type": "file",
+                  "size": 29712,
+                  "lines": 0
+                },
+                {
+                  "name": "045.webp",
+                  "path": "photos/yantra/build/045.webp",
+                  "type": "file",
+                  "size": 29812,
+                  "lines": 0
+                },
+                {
+                  "name": "046.webp",
+                  "path": "photos/yantra/build/046.webp",
+                  "type": "file",
+                  "size": 28664,
+                  "lines": 0
+                },
+                {
+                  "name": "047.webp",
+                  "path": "photos/yantra/build/047.webp",
+                  "type": "file",
+                  "size": 28484,
+                  "lines": 0
+                },
+                {
+                  "name": "048.webp",
+                  "path": "photos/yantra/build/048.webp",
+                  "type": "file",
+                  "size": 28222,
+                  "lines": 0
+                },
+                {
+                  "name": "049.webp",
+                  "path": "photos/yantra/build/049.webp",
+                  "type": "file",
+                  "size": 28586,
+                  "lines": 0
+                },
+                {
+                  "name": "050.webp",
+                  "path": "photos/yantra/build/050.webp",
+                  "type": "file",
+                  "size": 29092,
+                  "lines": 0
+                },
+                {
+                  "name": "051.webp",
+                  "path": "photos/yantra/build/051.webp",
+                  "type": "file",
+                  "size": 30358,
+                  "lines": 0
+                },
+                {
+                  "name": "052.webp",
+                  "path": "photos/yantra/build/052.webp",
+                  "type": "file",
+                  "size": 31272,
+                  "lines": 0
+                },
+                {
+                  "name": "053.webp",
+                  "path": "photos/yantra/build/053.webp",
+                  "type": "file",
+                  "size": 32536,
+                  "lines": 0
+                },
+                {
+                  "name": "054.webp",
+                  "path": "photos/yantra/build/054.webp",
+                  "type": "file",
+                  "size": 32654,
+                  "lines": 0
+                },
+                {
+                  "name": "055.webp",
+                  "path": "photos/yantra/build/055.webp",
+                  "type": "file",
+                  "size": 32800,
+                  "lines": 0
+                },
+                {
+                  "name": "056.webp",
+                  "path": "photos/yantra/build/056.webp",
+                  "type": "file",
+                  "size": 32596,
+                  "lines": 0
+                },
+                {
+                  "name": "057.webp",
+                  "path": "photos/yantra/build/057.webp",
+                  "type": "file",
+                  "size": 33056,
+                  "lines": 0
+                },
+                {
+                  "name": "058.webp",
+                  "path": "photos/yantra/build/058.webp",
+                  "type": "file",
+                  "size": 33142,
+                  "lines": 0
+                },
+                {
+                  "name": "059.webp",
+                  "path": "photos/yantra/build/059.webp",
+                  "type": "file",
+                  "size": 33186,
+                  "lines": 0
+                },
+                {
+                  "name": "060.webp",
+                  "path": "photos/yantra/build/060.webp",
+                  "type": "file",
+                  "size": 33316,
+                  "lines": 0
+                },
+                {
+                  "name": "061.webp",
+                  "path": "photos/yantra/build/061.webp",
+                  "type": "file",
+                  "size": 34144,
+                  "lines": 0
+                },
+                {
+                  "name": "062.webp",
+                  "path": "photos/yantra/build/062.webp",
+                  "type": "file",
+                  "size": 33136,
+                  "lines": 0
+                },
+                {
+                  "name": "063.webp",
+                  "path": "photos/yantra/build/063.webp",
+                  "type": "file",
+                  "size": 33060,
+                  "lines": 0
+                },
+                {
+                  "name": "064.webp",
+                  "path": "photos/yantra/build/064.webp",
+                  "type": "file",
+                  "size": 32794,
+                  "lines": 0
+                },
+                {
+                  "name": "065.webp",
+                  "path": "photos/yantra/build/065.webp",
+                  "type": "file",
+                  "size": 33532,
+                  "lines": 0
+                },
+                {
+                  "name": "066.webp",
+                  "path": "photos/yantra/build/066.webp",
+                  "type": "file",
+                  "size": 33424,
+                  "lines": 0
+                },
+                {
+                  "name": "067.webp",
+                  "path": "photos/yantra/build/067.webp",
+                  "type": "file",
+                  "size": 33838,
+                  "lines": 0
+                },
+                {
+                  "name": "068.webp",
+                  "path": "photos/yantra/build/068.webp",
+                  "type": "file",
+                  "size": 34424,
+                  "lines": 0
+                },
+                {
+                  "name": "069.webp",
+                  "path": "photos/yantra/build/069.webp",
+                  "type": "file",
+                  "size": 34912,
+                  "lines": 0
+                },
+                {
+                  "name": "070.webp",
+                  "path": "photos/yantra/build/070.webp",
+                  "type": "file",
+                  "size": 34564,
+                  "lines": 0
+                },
+                {
+                  "name": "071.webp",
+                  "path": "photos/yantra/build/071.webp",
+                  "type": "file",
+                  "size": 35128,
+                  "lines": 0
+                },
+                {
+                  "name": "072.webp",
+                  "path": "photos/yantra/build/072.webp",
+                  "type": "file",
+                  "size": 34682,
+                  "lines": 0
+                },
+                {
+                  "name": "073.webp",
+                  "path": "photos/yantra/build/073.webp",
+                  "type": "file",
+                  "size": 35324,
+                  "lines": 0
+                },
+                {
+                  "name": "074.webp",
+                  "path": "photos/yantra/build/074.webp",
+                  "type": "file",
+                  "size": 35242,
+                  "lines": 0
+                },
+                {
+                  "name": "075.webp",
+                  "path": "photos/yantra/build/075.webp",
+                  "type": "file",
+                  "size": 35360,
+                  "lines": 0
+                },
+                {
+                  "name": "076.webp",
+                  "path": "photos/yantra/build/076.webp",
+                  "type": "file",
+                  "size": 35842,
+                  "lines": 0
+                },
+                {
+                  "name": "077.webp",
+                  "path": "photos/yantra/build/077.webp",
+                  "type": "file",
+                  "size": 35918,
+                  "lines": 0
+                },
+                {
+                  "name": "078.webp",
+                  "path": "photos/yantra/build/078.webp",
+                  "type": "file",
+                  "size": 35770,
+                  "lines": 0
+                },
+                {
+                  "name": "079.webp",
+                  "path": "photos/yantra/build/079.webp",
+                  "type": "file",
+                  "size": 35314,
+                  "lines": 0
+                },
+                {
+                  "name": "080.webp",
+                  "path": "photos/yantra/build/080.webp",
+                  "type": "file",
+                  "size": 35218,
+                  "lines": 0
+                },
+                {
+                  "name": "081.webp",
+                  "path": "photos/yantra/build/081.webp",
+                  "type": "file",
+                  "size": 35480,
+                  "lines": 0
+                },
+                {
+                  "name": "082.webp",
+                  "path": "photos/yantra/build/082.webp",
+                  "type": "file",
+                  "size": 34998,
+                  "lines": 0
+                },
+                {
+                  "name": "083.webp",
+                  "path": "photos/yantra/build/083.webp",
+                  "type": "file",
+                  "size": 34876,
+                  "lines": 0
+                },
+                {
+                  "name": "084.webp",
+                  "path": "photos/yantra/build/084.webp",
+                  "type": "file",
+                  "size": 34960,
+                  "lines": 0
+                },
+                {
+                  "name": "085.webp",
+                  "path": "photos/yantra/build/085.webp",
+                  "type": "file",
+                  "size": 35244,
+                  "lines": 0
+                },
+                {
+                  "name": "086.webp",
+                  "path": "photos/yantra/build/086.webp",
+                  "type": "file",
+                  "size": 35176,
+                  "lines": 0
+                },
+                {
+                  "name": "087.webp",
+                  "path": "photos/yantra/build/087.webp",
+                  "type": "file",
+                  "size": 35630,
+                  "lines": 0
+                },
+                {
+                  "name": "088.webp",
+                  "path": "photos/yantra/build/088.webp",
+                  "type": "file",
+                  "size": 35652,
+                  "lines": 0
+                },
+                {
+                  "name": "089.webp",
+                  "path": "photos/yantra/build/089.webp",
+                  "type": "file",
+                  "size": 37012,
+                  "lines": 0
+                },
+                {
+                  "name": "090.webp",
+                  "path": "photos/yantra/build/090.webp",
+                  "type": "file",
+                  "size": 37920,
+                  "lines": 0
+                },
+                {
+                  "name": "091.webp",
+                  "path": "photos/yantra/build/091.webp",
+                  "type": "file",
+                  "size": 38986,
+                  "lines": 0
+                },
+                {
+                  "name": "092.webp",
+                  "path": "photos/yantra/build/092.webp",
+                  "type": "file",
+                  "size": 39842,
+                  "lines": 0
+                },
+                {
+                  "name": "093.webp",
+                  "path": "photos/yantra/build/093.webp",
+                  "type": "file",
+                  "size": 40778,
+                  "lines": 0
+                },
+                {
+                  "name": "094.webp",
+                  "path": "photos/yantra/build/094.webp",
+                  "type": "file",
+                  "size": 40678,
+                  "lines": 0
+                },
+                {
+                  "name": "095.webp",
+                  "path": "photos/yantra/build/095.webp",
+                  "type": "file",
+                  "size": 40726,
+                  "lines": 0
+                },
+                {
+                  "name": "096.webp",
+                  "path": "photos/yantra/build/096.webp",
+                  "type": "file",
+                  "size": 40530,
+                  "lines": 0
+                },
+                {
+                  "name": "097.webp",
+                  "path": "photos/yantra/build/097.webp",
+                  "type": "file",
+                  "size": 41152,
+                  "lines": 0
+                },
+                {
+                  "name": "098.webp",
+                  "path": "photos/yantra/build/098.webp",
+                  "type": "file",
+                  "size": 41284,
+                  "lines": 0
+                },
+                {
+                  "name": "099.webp",
+                  "path": "photos/yantra/build/099.webp",
+                  "type": "file",
+                  "size": 41634,
+                  "lines": 0
+                },
+                {
+                  "name": "100.webp",
+                  "path": "photos/yantra/build/100.webp",
+                  "type": "file",
+                  "size": 41872,
+                  "lines": 0
+                },
+                {
+                  "name": "101.webp",
+                  "path": "photos/yantra/build/101.webp",
+                  "type": "file",
+                  "size": 42382,
+                  "lines": 0
+                },
+                {
+                  "name": "102.webp",
+                  "path": "photos/yantra/build/102.webp",
+                  "type": "file",
+                  "size": 41778,
+                  "lines": 0
+                },
+                {
+                  "name": "103.webp",
+                  "path": "photos/yantra/build/103.webp",
+                  "type": "file",
+                  "size": 42328,
+                  "lines": 0
+                },
+                {
+                  "name": "104.webp",
+                  "path": "photos/yantra/build/104.webp",
+                  "type": "file",
+                  "size": 42356,
+                  "lines": 0
+                },
+                {
+                  "name": "105.webp",
+                  "path": "photos/yantra/build/105.webp",
+                  "type": "file",
+                  "size": 42544,
+                  "lines": 0
+                },
+                {
+                  "name": "106.webp",
+                  "path": "photos/yantra/build/106.webp",
+                  "type": "file",
+                  "size": 42546,
+                  "lines": 0
+                },
+                {
+                  "name": "107.webp",
+                  "path": "photos/yantra/build/107.webp",
+                  "type": "file",
+                  "size": 42896,
+                  "lines": 0
+                },
+                {
+                  "name": "108.webp",
+                  "path": "photos/yantra/build/108.webp",
+                  "type": "file",
+                  "size": 42922,
+                  "lines": 0
+                },
+                {
+                  "name": "109.webp",
+                  "path": "photos/yantra/build/109.webp",
+                  "type": "file",
+                  "size": 43516,
+                  "lines": 0
+                },
+                {
+                  "name": "110.webp",
+                  "path": "photos/yantra/build/110.webp",
+                  "type": "file",
+                  "size": 43206,
+                  "lines": 0
+                },
+                {
+                  "name": "111.webp",
+                  "path": "photos/yantra/build/111.webp",
+                  "type": "file",
+                  "size": 42830,
+                  "lines": 0
+                },
+                {
+                  "name": "112.webp",
+                  "path": "photos/yantra/build/112.webp",
+                  "type": "file",
+                  "size": 42714,
+                  "lines": 0
+                },
+                {
+                  "name": "113.webp",
+                  "path": "photos/yantra/build/113.webp",
+                  "type": "file",
+                  "size": 42534,
+                  "lines": 0
+                },
+                {
+                  "name": "114.webp",
+                  "path": "photos/yantra/build/114.webp",
+                  "type": "file",
+                  "size": 42762,
+                  "lines": 0
+                },
+                {
+                  "name": "115.webp",
+                  "path": "photos/yantra/build/115.webp",
+                  "type": "file",
+                  "size": 43024,
+                  "lines": 0
+                },
+                {
+                  "name": "116.webp",
+                  "path": "photos/yantra/build/116.webp",
+                  "type": "file",
+                  "size": 43262,
+                  "lines": 0
+                },
+                {
+                  "name": "117.webp",
+                  "path": "photos/yantra/build/117.webp",
+                  "type": "file",
+                  "size": 43614,
+                  "lines": 0
+                },
+                {
+                  "name": "118.webp",
+                  "path": "photos/yantra/build/118.webp",
+                  "type": "file",
+                  "size": 43392,
+                  "lines": 0
+                },
+                {
+                  "name": "119.webp",
+                  "path": "photos/yantra/build/119.webp",
+                  "type": "file",
+                  "size": 43192,
+                  "lines": 0
+                },
+                {
+                  "name": "120.webp",
+                  "path": "photos/yantra/build/120.webp",
+                  "type": "file",
+                  "size": 43268,
+                  "lines": 0
+                },
+                {
+                  "name": "121.webp",
+                  "path": "photos/yantra/build/121.webp",
+                  "type": "file",
+                  "size": 43522,
+                  "lines": 0
+                },
+                {
+                  "name": "122.webp",
+                  "path": "photos/yantra/build/122.webp",
+                  "type": "file",
+                  "size": 43696,
+                  "lines": 0
+                },
+                {
+                  "name": "123.webp",
+                  "path": "photos/yantra/build/123.webp",
+                  "type": "file",
+                  "size": 44332,
+                  "lines": 0
+                },
+                {
+                  "name": "124.webp",
+                  "path": "photos/yantra/build/124.webp",
+                  "type": "file",
+                  "size": 44482,
+                  "lines": 0
+                },
+                {
+                  "name": "125.webp",
+                  "path": "photos/yantra/build/125.webp",
+                  "type": "file",
+                  "size": 44908,
+                  "lines": 0
+                },
+                {
+                  "name": "126.webp",
+                  "path": "photos/yantra/build/126.webp",
+                  "type": "file",
+                  "size": 44412,
+                  "lines": 0
+                },
+                {
+                  "name": "127.webp",
+                  "path": "photos/yantra/build/127.webp",
+                  "type": "file",
+                  "size": 44860,
+                  "lines": 0
+                },
+                {
+                  "name": "128.webp",
+                  "path": "photos/yantra/build/128.webp",
+                  "type": "file",
+                  "size": 44226,
+                  "lines": 0
+                },
+                {
+                  "name": "129.webp",
+                  "path": "photos/yantra/build/129.webp",
+                  "type": "file",
+                  "size": 46574,
+                  "lines": 0
+                },
+                {
+                  "name": "130.webp",
+                  "path": "photos/yantra/build/130.webp",
+                  "type": "file",
+                  "size": 46402,
+                  "lines": 0
+                },
+                {
+                  "name": "131.webp",
+                  "path": "photos/yantra/build/131.webp",
+                  "type": "file",
+                  "size": 47108,
+                  "lines": 0
+                },
+                {
+                  "name": "132.webp",
+                  "path": "photos/yantra/build/132.webp",
+                  "type": "file",
+                  "size": 47478,
+                  "lines": 0
+                },
+                {
+                  "name": "133.webp",
+                  "path": "photos/yantra/build/133.webp",
+                  "type": "file",
+                  "size": 47856,
+                  "lines": 0
+                },
+                {
+                  "name": "134.webp",
+                  "path": "photos/yantra/build/134.webp",
+                  "type": "file",
+                  "size": 47254,
+                  "lines": 0
+                },
+                {
+                  "name": "135.webp",
+                  "path": "photos/yantra/build/135.webp",
+                  "type": "file",
+                  "size": 47026,
+                  "lines": 0
+                },
+                {
+                  "name": "136.webp",
+                  "path": "photos/yantra/build/136.webp",
+                  "type": "file",
+                  "size": 46930,
+                  "lines": 0
+                },
+                {
+                  "name": "137.webp",
+                  "path": "photos/yantra/build/137.webp",
+                  "type": "file",
+                  "size": 46746,
+                  "lines": 0
+                },
+                {
+                  "name": "138.webp",
+                  "path": "photos/yantra/build/138.webp",
+                  "type": "file",
+                  "size": 46898,
+                  "lines": 0
+                },
+                {
+                  "name": "139.webp",
+                  "path": "photos/yantra/build/139.webp",
+                  "type": "file",
+                  "size": 46452,
+                  "lines": 0
+                },
+                {
+                  "name": "140.webp",
+                  "path": "photos/yantra/build/140.webp",
+                  "type": "file",
+                  "size": 46632,
+                  "lines": 0
+                },
+                {
+                  "name": "141.webp",
+                  "path": "photos/yantra/build/141.webp",
+                  "type": "file",
+                  "size": 47606,
+                  "lines": 0
+                },
+                {
+                  "name": "142.webp",
+                  "path": "photos/yantra/build/142.webp",
+                  "type": "file",
+                  "size": 46478,
+                  "lines": 0
+                },
+                {
+                  "name": "143.webp",
+                  "path": "photos/yantra/build/143.webp",
+                  "type": "file",
+                  "size": 46224,
+                  "lines": 0
+                },
+                {
+                  "name": "144.webp",
+                  "path": "photos/yantra/build/144.webp",
+                  "type": "file",
+                  "size": 46856,
+                  "lines": 0
+                },
+                {
+                  "name": "145.webp",
+                  "path": "photos/yantra/build/145.webp",
+                  "type": "file",
+                  "size": 47296,
+                  "lines": 0
+                },
+                {
+                  "name": "146.webp",
+                  "path": "photos/yantra/build/146.webp",
+                  "type": "file",
+                  "size": 46452,
+                  "lines": 0
+                },
+                {
+                  "name": "147.webp",
+                  "path": "photos/yantra/build/147.webp",
+                  "type": "file",
+                  "size": 47090,
+                  "lines": 0
+                },
+                {
+                  "name": "148.webp",
+                  "path": "photos/yantra/build/148.webp",
+                  "type": "file",
+                  "size": 46970,
+                  "lines": 0
+                },
+                {
+                  "name": "149.webp",
+                  "path": "photos/yantra/build/149.webp",
+                  "type": "file",
+                  "size": 47410,
+                  "lines": 0
+                },
+                {
+                  "name": "150.webp",
+                  "path": "photos/yantra/build/150.webp",
+                  "type": "file",
+                  "size": 47212,
+                  "lines": 0
+                },
+                {
+                  "name": "151.webp",
+                  "path": "photos/yantra/build/151.webp",
+                  "type": "file",
+                  "size": 46986,
+                  "lines": 0
+                },
+                {
+                  "name": "152.webp",
+                  "path": "photos/yantra/build/152.webp",
+                  "type": "file",
+                  "size": 46758,
+                  "lines": 0
+                },
+                {
+                  "name": "153.webp",
+                  "path": "photos/yantra/build/153.webp",
+                  "type": "file",
+                  "size": 46676,
+                  "lines": 0
+                },
+                {
+                  "name": "154.webp",
+                  "path": "photos/yantra/build/154.webp",
+                  "type": "file",
+                  "size": 46640,
+                  "lines": 0
+                },
+                {
+                  "name": "155.webp",
+                  "path": "photos/yantra/build/155.webp",
+                  "type": "file",
+                  "size": 46266,
+                  "lines": 0
+                },
+                {
+                  "name": "156.webp",
+                  "path": "photos/yantra/build/156.webp",
+                  "type": "file",
+                  "size": 46748,
+                  "lines": 0
+                },
+                {
+                  "name": "157.webp",
+                  "path": "photos/yantra/build/157.webp",
+                  "type": "file",
+                  "size": 46972,
+                  "lines": 0
+                },
+                {
+                  "name": "158.webp",
+                  "path": "photos/yantra/build/158.webp",
+                  "type": "file",
+                  "size": 46214,
+                  "lines": 0
+                },
+                {
+                  "name": "159.webp",
+                  "path": "photos/yantra/build/159.webp",
+                  "type": "file",
+                  "size": 46142,
+                  "lines": 0
+                },
+                {
+                  "name": "160.webp",
+                  "path": "photos/yantra/build/160.webp",
+                  "type": "file",
+                  "size": 45662,
+                  "lines": 0
+                },
+                {
+                  "name": "161.webp",
+                  "path": "photos/yantra/build/161.webp",
+                  "type": "file",
+                  "size": 46724,
+                  "lines": 0
+                },
+                {
+                  "name": "162.webp",
+                  "path": "photos/yantra/build/162.webp",
+                  "type": "file",
+                  "size": 45632,
+                  "lines": 0
+                },
+                {
+                  "name": "163.webp",
+                  "path": "photos/yantra/build/163.webp",
+                  "type": "file",
+                  "size": 46442,
+                  "lines": 0
+                },
+                {
+                  "name": "164.webp",
+                  "path": "photos/yantra/build/164.webp",
+                  "type": "file",
+                  "size": 46098,
+                  "lines": 0
+                },
+                {
+                  "name": "165.webp",
+                  "path": "photos/yantra/build/165.webp",
+                  "type": "file",
+                  "size": 47058,
+                  "lines": 0
+                },
+                {
+                  "name": "166.webp",
+                  "path": "photos/yantra/build/166.webp",
+                  "type": "file",
+                  "size": 46788,
+                  "lines": 0
+                },
+                {
+                  "name": "167.webp",
+                  "path": "photos/yantra/build/167.webp",
+                  "type": "file",
+                  "size": 46192,
+                  "lines": 0
+                },
+                {
+                  "name": "168.webp",
+                  "path": "photos/yantra/build/168.webp",
+                  "type": "file",
+                  "size": 46076,
+                  "lines": 0
+                },
+                {
+                  "name": "169.webp",
+                  "path": "photos/yantra/build/169.webp",
+                  "type": "file",
+                  "size": 47134,
+                  "lines": 0
+                },
+                {
+                  "name": "170.webp",
+                  "path": "photos/yantra/build/170.webp",
+                  "type": "file",
+                  "size": 47668,
+                  "lines": 0
+                },
+                {
+                  "name": "171.webp",
+                  "path": "photos/yantra/build/171.webp",
+                  "type": "file",
+                  "size": 47828,
+                  "lines": 0
+                },
+                {
+                  "name": "172.webp",
+                  "path": "photos/yantra/build/172.webp",
+                  "type": "file",
+                  "size": 48066,
+                  "lines": 0
+                },
+                {
+                  "name": "173.webp",
+                  "path": "photos/yantra/build/173.webp",
+                  "type": "file",
+                  "size": 48134,
+                  "lines": 0
+                },
+                {
+                  "name": "174.webp",
+                  "path": "photos/yantra/build/174.webp",
+                  "type": "file",
+                  "size": 47760,
+                  "lines": 0
+                },
+                {
+                  "name": "175.webp",
+                  "path": "photos/yantra/build/175.webp",
+                  "type": "file",
+                  "size": 47566,
+                  "lines": 0
+                },
+                {
+                  "name": "176.webp",
+                  "path": "photos/yantra/build/176.webp",
+                  "type": "file",
+                  "size": 47486,
+                  "lines": 0
+                },
+                {
+                  "name": "177.webp",
+                  "path": "photos/yantra/build/177.webp",
+                  "type": "file",
+                  "size": 47192,
+                  "lines": 0
+                },
+                {
+                  "name": "178.webp",
+                  "path": "photos/yantra/build/178.webp",
+                  "type": "file",
+                  "size": 47586,
+                  "lines": 0
+                },
+                {
+                  "name": "179.webp",
+                  "path": "photos/yantra/build/179.webp",
+                  "type": "file",
+                  "size": 47608,
+                  "lines": 0
+                },
+                {
+                  "name": "180.webp",
+                  "path": "photos/yantra/build/180.webp",
+                  "type": "file",
+                  "size": 47374,
+                  "lines": 0
+                },
+                {
+                  "name": "181.webp",
+                  "path": "photos/yantra/build/181.webp",
+                  "type": "file",
+                  "size": 47742,
+                  "lines": 0
+                },
+                {
+                  "name": "182.webp",
+                  "path": "photos/yantra/build/182.webp",
+                  "type": "file",
+                  "size": 47424,
+                  "lines": 0
+                },
+                {
+                  "name": "183.webp",
+                  "path": "photos/yantra/build/183.webp",
+                  "type": "file",
+                  "size": 47346,
+                  "lines": 0
+                },
+                {
+                  "name": "184.webp",
+                  "path": "photos/yantra/build/184.webp",
+                  "type": "file",
+                  "size": 46994,
+                  "lines": 0
+                },
+                {
+                  "name": "185.webp",
+                  "path": "photos/yantra/build/185.webp",
+                  "type": "file",
+                  "size": 47594,
+                  "lines": 0
+                },
+                {
+                  "name": "186.webp",
+                  "path": "photos/yantra/build/186.webp",
+                  "type": "file",
+                  "size": 46662,
+                  "lines": 0
+                },
+                {
+                  "name": "187.webp",
+                  "path": "photos/yantra/build/187.webp",
+                  "type": "file",
+                  "size": 46980,
+                  "lines": 0
+                },
+                {
+                  "name": "188.webp",
+                  "path": "photos/yantra/build/188.webp",
+                  "type": "file",
+                  "size": 47564,
+                  "lines": 0
+                },
+                {
+                  "name": "189.webp",
+                  "path": "photos/yantra/build/189.webp",
+                  "type": "file",
+                  "size": 47120,
+                  "lines": 0
+                },
+                {
+                  "name": "190.webp",
+                  "path": "photos/yantra/build/190.webp",
+                  "type": "file",
+                  "size": 47208,
+                  "lines": 0
+                },
+                {
+                  "name": "191.webp",
+                  "path": "photos/yantra/build/191.webp",
+                  "type": "file",
+                  "size": 46674,
+                  "lines": 0
+                },
+                {
+                  "name": "192.webp",
+                  "path": "photos/yantra/build/192.webp",
+                  "type": "file",
+                  "size": 47396,
+                  "lines": 0
+                }
+              ]
+            },
+            {
+              "name": "build-end.jpg",
+              "path": "photos/yantra/build-end.jpg",
+              "type": "file",
+              "size": 72832,
+              "lines": 0
+            },
+            {
+              "name": "build.jpg",
+              "path": "photos/yantra/build.jpg",
+              "type": "file",
+              "size": 51914,
+              "lines": 0
+            },
+            {
+              "name": "drift.jpg",
+              "path": "photos/yantra/drift.jpg",
+              "type": "file",
+              "size": 70991,
+              "lines": 0
+            },
+            {
+              "name": "gallery-01.jpg",
+              "path": "photos/yantra/gallery-01.jpg",
+              "type": "file",
+              "size": 98701,
+              "lines": 0
+            },
+            {
+              "name": "gallery-02.jpg",
+              "path": "photos/yantra/gallery-02.jpg",
+              "type": "file",
+              "size": 246810,
+              "lines": 0
+            },
+            {
+              "name": "gallery-03.jpg",
+              "path": "photos/yantra/gallery-03.jpg",
+              "type": "file",
+              "size": 220825,
+              "lines": 0
+            },
+            {
+              "name": "gallery-04.jpg",
+              "path": "photos/yantra/gallery-04.jpg",
+              "type": "file",
+              "size": 185745,
+              "lines": 0
+            },
+            {
+              "name": "gallery-05.jpg",
+              "path": "photos/yantra/gallery-05.jpg",
+              "type": "file",
+              "size": 146213,
+              "lines": 0
+            },
+            {
+              "name": "gallery-06.jpg",
+              "path": "photos/yantra/gallery-06.jpg",
+              "type": "file",
+              "size": 248451,
+              "lines": 0
+            },
+            {
+              "name": "hero-car.webp",
+              "path": "photos/yantra/hero-car.webp",
+              "type": "file",
+              "size": 127028,
+              "lines": 0
+            },
+            {
+              "name": "hero-electric.webp",
+              "path": "photos/yantra/hero-electric.webp",
+              "type": "file",
+              "size": 112320,
+              "lines": 0
+            },
+            {
+              "name": "hero-motorcycle.webp",
+              "path": "photos/yantra/hero-motorcycle.webp",
+              "type": "file",
+              "size": 150804,
+              "lines": 0
+            },
+            {
+              "name": "hero-pickup.webp",
+              "path": "photos/yantra/hero-pickup.webp",
+              "type": "file",
+              "size": 165064,
+              "lines": 0
+            },
+            {
+              "name": "hero-scooter.webp",
+              "path": "photos/yantra/hero-scooter.webp",
+              "type": "file",
+              "size": 86764,
+              "lines": 0
+            },
+            {
+              "name": "journal-01.jpg",
+              "path": "photos/yantra/journal-01.jpg",
+              "type": "file",
+              "size": 242864,
+              "lines": 0
+            },
+            {
+              "name": "journal-02.jpg",
+              "path": "photos/yantra/journal-02.jpg",
+              "type": "file",
+              "size": 249748,
+              "lines": 0
+            },
+            {
+              "name": "journal-03.jpg",
+              "path": "photos/yantra/journal-03.jpg",
+              "type": "file",
+              "size": 235512,
+              "lines": 0
+            },
+            {
+              "name": "og.jpg",
+              "path": "photos/yantra/og.jpg",
+              "type": "file",
+              "size": 73242,
+              "lines": 0
+            },
+            {
+              "name": "part-01.webp",
+              "path": "photos/yantra/part-01.webp",
+              "type": "file",
+              "size": 175528,
+              "lines": 0
+            },
+            {
+              "name": "part-02.webp",
+              "path": "photos/yantra/part-02.webp",
+              "type": "file",
+              "size": 62568,
+              "lines": 0
+            },
+            {
+              "name": "part-03.webp",
+              "path": "photos/yantra/part-03.webp",
+              "type": "file",
+              "size": 238326,
+              "lines": 0
+            },
+            {
+              "name": "part-04.webp",
+              "path": "photos/yantra/part-04.webp",
+              "type": "file",
+              "size": 177492,
+              "lines": 0
+            },
+            {
+              "name": "slicks.webp",
+              "path": "photos/yantra/slicks.webp",
+              "type": "file",
+              "size": 188812,
+              "lines": 0
+            },
+            {
+              "name": "wheel-01.webp",
+              "path": "photos/yantra/wheel-01.webp",
+              "type": "file",
+              "size": 149846,
+              "lines": 0
+            },
+            {
+              "name": "wheel-02.webp",
+              "path": "photos/yantra/wheel-02.webp",
+              "type": "file",
+              "size": 149212,
+              "lines": 0
+            },
+            {
+              "name": "wheel-03.webp",
+              "path": "photos/yantra/wheel-03.webp",
+              "type": "file",
+              "size": 173622,
+              "lines": 0
+            },
+            {
+              "name": "wheel-04.webp",
+              "path": "photos/yantra/wheel-04.webp",
+              "type": "file",
+              "size": 158304,
+              "lines": 0
+            },
+            {
+              "name": "wheel.webp",
+              "path": "photos/yantra/wheel.webp",
+              "type": "file",
+              "size": 229996,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "textures",
+      "path": "textures",
+      "type": "directory",
+      "children": [
+        {
+          "name": "grain.png",
+          "path": "textures/grain.png",
+          "type": "file",
+          "size": 51144,
+          "lines": 0
+        }
+      ]
+    },
+    {
+      "name": "video",
+      "path": "video",
+      "type": "directory",
+      "children": [
+        {
+          "name": "yantra",
+          "path": "video/yantra",
+          "type": "directory",
+          "children": [
+            {
+              "name": "bench.mp4",
+              "path": "video/yantra/bench.mp4",
+              "type": "file",
+              "size": 432081,
+              "lines": 0
+            },
+            {
+              "name": "drift.mp4",
+              "path": "video/yantra/drift.mp4",
+              "type": "file",
+              "size": 588482,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

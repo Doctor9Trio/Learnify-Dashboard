@@ -1,0 +1,145 @@
+{
+  "slug": "gati",
+  "name": "Gati Fitness",
+  "totalFiles": 14,
+  "totalLines": 7367,
+  "totalBytes": 358621,
+  "totalSizeReadable": "350.2 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/index-B11zBT4W.css",
+    "assets/index-jhZd1miL.js",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/index.js",
+    "js/theme.js"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index-B11zBT4W.css",
+          "path": "assets/index-B11zBT4W.css",
+          "type": "file",
+          "size": 38031,
+          "lines": 3
+        },
+        {
+          "name": "index-jhZd1miL.js",
+          "path": "assets/index-jhZd1miL.js",
+          "type": "file",
+          "size": 82628,
+          "lines": 78
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 34193,
+          "lines": 2368
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 47988,
+          "lines": 3127
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 4620,
+          "lines": 243
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 1819,
+          "lines": 124
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 4631,
+          "lines": 362
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 2858,
+          "lines": 134
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 49266,
+      "lines": 726
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 82628,
+          "lines": 78
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 3154,
+          "lines": 119
+        }
+      ]
+    }
+  ]
+}

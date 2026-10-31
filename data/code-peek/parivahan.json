@@ -1,0 +1,481 @@
+{
+  "slug": "parivahan",
+  "name": "Parivahan OS",
+  "totalFiles": 56,
+  "totalLines": 10164,
+  "totalBytes": 946218,
+  "totalSizeReadable": "924.0 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/builder-B9eKgd-3.css",
+    "assets/builder-D5jN6DnC.js",
+    "assets/charts-CixMsTRQ.js",
+    "assets/connections-B6wU2Bfz.css",
+    "assets/connections-D7wfu1WG.js",
+    "assets/copilot-CLyn7Pax.css",
+    "assets/copilot-Dwatsm_i.js",
+    "assets/flows-CDqb9iXy.css",
+    "assets/flows-CYxZ2hDJ.js",
+    "assets/help-511PesCA.css",
+    "assets/help-BwNmYLel.js",
+    "assets/index-DO-KsshO.js",
+    "assets/index-FXRyovZf.css",
+    "assets/overview-Bwl2lamX.js",
+    "assets/overview-Bz-z76zO.css",
+    "assets/recipes-C_HzdVD7.js",
+    "assets/recipes-DhkHF4iS.css",
+    "assets/runs-BI-oyp2F.css",
+    "assets/runs-DblKoLLf.js",
+    "assets/settings-BizST-G0.js",
+    "assets/settings-CnbkbY6x.css",
+    "assets/store-DbhXnLis.js",
+    "assets/ui-CH4Vfa-C.js",
+    "css/builder.css",
+    "css/components.css",
+    "css/connections.css",
+    "css/copilot.css",
+    "css/flows.css",
+    "css/help.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/overview.css",
+    "css/recipes.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/runs.css",
+    "css/settings.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/builder.js",
+    "js/charts.js",
+    "js/connections.js",
+    "js/copilot.js",
+    "js/flows.js",
+    "js/help.js",
+    "js/index.js",
+    "js/overview.js",
+    "js/recipes.js",
+    "js/runs.js",
+    "js/settings.js",
+    "js/store.js",
+    "js/theme.js",
+    "js/ui.js"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "builder-B9eKgd-3.css",
+          "path": "assets/builder-B9eKgd-3.css",
+          "type": "file",
+          "size": 9303,
+          "lines": 3
+        },
+        {
+          "name": "builder-D5jN6DnC.js",
+          "path": "assets/builder-D5jN6DnC.js",
+          "type": "file",
+          "size": 31195,
+          "lines": 66
+        },
+        {
+          "name": "charts-CixMsTRQ.js",
+          "path": "assets/charts-CixMsTRQ.js",
+          "type": "file",
+          "size": 6579,
+          "lines": 3
+        },
+        {
+          "name": "connections-B6wU2Bfz.css",
+          "path": "assets/connections-B6wU2Bfz.css",
+          "type": "file",
+          "size": 3168,
+          "lines": 3
+        },
+        {
+          "name": "connections-D7wfu1WG.js",
+          "path": "assets/connections-D7wfu1WG.js",
+          "type": "file",
+          "size": 8290,
+          "lines": 29
+        },
+        {
+          "name": "copilot-CLyn7Pax.css",
+          "path": "assets/copilot-CLyn7Pax.css",
+          "type": "file",
+          "size": 6083,
+          "lines": 3
+        },
+        {
+          "name": "copilot-Dwatsm_i.js",
+          "path": "assets/copilot-Dwatsm_i.js",
+          "type": "file",
+          "size": 15514,
+          "lines": 20
+        },
+        {
+          "name": "flows-CDqb9iXy.css",
+          "path": "assets/flows-CDqb9iXy.css",
+          "type": "file",
+          "size": 6618,
+          "lines": 3
+        },
+        {
+          "name": "flows-CYxZ2hDJ.js",
+          "path": "assets/flows-CYxZ2hDJ.js",
+          "type": "file",
+          "size": 15556,
+          "lines": 53
+        },
+        {
+          "name": "help-511PesCA.css",
+          "path": "assets/help-511PesCA.css",
+          "type": "file",
+          "size": 3601,
+          "lines": 3
+        },
+        {
+          "name": "help-BwNmYLel.js",
+          "path": "assets/help-BwNmYLel.js",
+          "type": "file",
+          "size": 13332,
+          "lines": 22
+        },
+        {
+          "name": "index-DO-KsshO.js",
+          "path": "assets/index-DO-KsshO.js",
+          "type": "file",
+          "size": 37167,
+          "lines": 5
+        },
+        {
+          "name": "index-FXRyovZf.css",
+          "path": "assets/index-FXRyovZf.css",
+          "type": "file",
+          "size": 43595,
+          "lines": 3
+        },
+        {
+          "name": "overview-Bwl2lamX.js",
+          "path": "assets/overview-Bwl2lamX.js",
+          "type": "file",
+          "size": 18325,
+          "lines": 35
+        },
+        {
+          "name": "overview-Bz-z76zO.css",
+          "path": "assets/overview-Bz-z76zO.css",
+          "type": "file",
+          "size": 8874,
+          "lines": 3
+        },
+        {
+          "name": "recipes-C_HzdVD7.js",
+          "path": "assets/recipes-C_HzdVD7.js",
+          "type": "file",
+          "size": 7765,
+          "lines": 25
+        },
+        {
+          "name": "recipes-DhkHF4iS.css",
+          "path": "assets/recipes-DhkHF4iS.css",
+          "type": "file",
+          "size": 4893,
+          "lines": 3
+        },
+        {
+          "name": "runs-BI-oyp2F.css",
+          "path": "assets/runs-BI-oyp2F.css",
+          "type": "file",
+          "size": 4911,
+          "lines": 3
+        },
+        {
+          "name": "runs-DblKoLLf.js",
+          "path": "assets/runs-DblKoLLf.js",
+          "type": "file",
+          "size": 16120,
+          "lines": 47
+        },
+        {
+          "name": "settings-BizST-G0.js",
+          "path": "assets/settings-BizST-G0.js",
+          "type": "file",
+          "size": 12420,
+          "lines": 33
+        },
+        {
+          "name": "settings-CnbkbY6x.css",
+          "path": "assets/settings-CnbkbY6x.css",
+          "type": "file",
+          "size": 3701,
+          "lines": 3
+        },
+        {
+          "name": "store-DbhXnLis.js",
+          "path": "assets/store-DbhXnLis.js",
+          "type": "file",
+          "size": 29550,
+          "lines": 1
+        },
+        {
+          "name": "ui-CH4Vfa-C.js",
+          "path": "assets/ui-CH4Vfa-C.js",
+          "type": "file",
+          "size": 127428,
+          "lines": 25
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "builder.css",
+          "path": "css/builder.css",
+          "type": "file",
+          "size": 11507,
+          "lines": 686
+        },
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 7950,
+          "lines": 405
+        },
+        {
+          "name": "connections.css",
+          "path": "css/connections.css",
+          "type": "file",
+          "size": 3955,
+          "lines": 251
+        },
+        {
+          "name": "copilot.css",
+          "path": "css/copilot.css",
+          "type": "file",
+          "size": 7649,
+          "lines": 491
+        },
+        {
+          "name": "flows.css",
+          "path": "css/flows.css",
+          "type": "file",
+          "size": 8349,
+          "lines": 555
+        },
+        {
+          "name": "help.css",
+          "path": "css/help.css",
+          "type": "file",
+          "size": 4532,
+          "lines": 297
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 54657,
+          "lines": 3455
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 10042,
+          "lines": 579
+        },
+        {
+          "name": "overview.css",
+          "path": "css/overview.css",
+          "type": "file",
+          "size": 11112,
+          "lines": 715
+        },
+        {
+          "name": "recipes.css",
+          "path": "css/recipes.css",
+          "type": "file",
+          "size": 6062,
+          "lines": 367
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 2661,
+          "lines": 173
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 5435,
+          "lines": 328
+        },
+        {
+          "name": "runs.css",
+          "path": "css/runs.css",
+          "type": "file",
+          "size": 6194,
+          "lines": 416
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 4636,
+          "lines": 301
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 4659,
+          "lines": 138
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 13963,
+      "lines": 155
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "builder.js",
+          "path": "js/builder.js",
+          "type": "file",
+          "size": 31195,
+          "lines": 66
+        },
+        {
+          "name": "charts.js",
+          "path": "js/charts.js",
+          "type": "file",
+          "size": 6579,
+          "lines": 3
+        },
+        {
+          "name": "connections.js",
+          "path": "js/connections.js",
+          "type": "file",
+          "size": 8290,
+          "lines": 29
+        },
+        {
+          "name": "copilot.js",
+          "path": "js/copilot.js",
+          "type": "file",
+          "size": 15514,
+          "lines": 20
+        },
+        {
+          "name": "flows.js",
+          "path": "js/flows.js",
+          "type": "file",
+          "size": 15556,
+          "lines": 53
+        },
+        {
+          "name": "help.js",
+          "path": "js/help.js",
+          "type": "file",
+          "size": 13332,
+          "lines": 22
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 37167,
+          "lines": 5
+        },
+        {
+          "name": "overview.js",
+          "path": "js/overview.js",
+          "type": "file",
+          "size": 18325,
+          "lines": 35
+        },
+        {
+          "name": "recipes.js",
+          "path": "js/recipes.js",
+          "type": "file",
+          "size": 7765,
+          "lines": 25
+        },
+        {
+          "name": "runs.js",
+          "path": "js/runs.js",
+          "type": "file",
+          "size": 16120,
+          "lines": 47
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 12420,
+          "lines": 33
+        },
+        {
+          "name": "store.js",
+          "path": "js/store.js",
+          "type": "file",
+          "size": 29550,
+          "lines": 1
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 2821,
+          "lines": 89
+        },
+        {
+          "name": "ui.js",
+          "path": "js/ui.js",
+          "type": "file",
+          "size": 127428,
+          "lines": 25
+        }
+      ]
+    }
+  ]
+}

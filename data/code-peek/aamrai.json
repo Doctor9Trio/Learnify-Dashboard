@@ -1,0 +1,231 @@
+{
+  "slug": "aamrai",
+  "name": "Aamrai Orchards",
+  "totalFiles": 19,
+  "totalLines": 1435,
+  "totalBytes": 7510873,
+  "totalSizeReadable": "7334.8 KB",
+  "fileList": [
+    "assets/index-BV44VLqv.css",
+    "assets/index-CHGHMWDL.js",
+    "css/index.css",
+    "css/tokens.css",
+    "index.html",
+    "js/index.js",
+    "js/main.js",
+    "js/router.js",
+    "js/theme.js",
+    "photos/mango/cut.png",
+    "photos/mango/hero.png",
+    "photos/mango/orchard.jpg",
+    "photos/mango/story-pack.jpg",
+    "photos/mango/story-pick.jpg",
+    "photos/mango/story-ship.jpg",
+    "photos/mango/varieties/alphonso.png",
+    "photos/mango/varieties/himsagar.png",
+    "photos/mango/varieties/langra.png",
+    "textures/grain.png"
+  ],
+  "tree": [
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index-BV44VLqv.css",
+          "path": "assets/index-BV44VLqv.css",
+          "type": "file",
+          "size": 14686,
+          "lines": 3
+        },
+        {
+          "name": "index-CHGHMWDL.js",
+          "path": "assets/index-CHGHMWDL.js",
+          "type": "file",
+          "size": 143743,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 17113,
+          "lines": 1070
+        },
+        {
+          "name": "pages",
+          "path": "css/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 1012,
+          "lines": 41
+        }
+      ]
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 15104,
+      "lines": 258
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components",
+          "path": "js/components",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 143743,
+          "lines": 1
+        },
+        {
+          "name": "main.js",
+          "path": "js/main.js",
+          "type": "file",
+          "size": 322,
+          "lines": 13
+        },
+        {
+          "name": "pages",
+          "path": "js/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "router.js",
+          "path": "js/router.js",
+          "type": "file",
+          "size": 477,
+          "lines": 23
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 649,
+          "lines": 25
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "mango",
+          "path": "photos/mango",
+          "type": "directory",
+          "children": [
+            {
+              "name": "cut.png",
+              "path": "photos/mango/cut.png",
+              "type": "file",
+              "size": 1032351,
+              "lines": 0
+            },
+            {
+              "name": "hero.png",
+              "path": "photos/mango/hero.png",
+              "type": "file",
+              "size": 1228510,
+              "lines": 0
+            },
+            {
+              "name": "orchard.jpg",
+              "path": "photos/mango/orchard.jpg",
+              "type": "file",
+              "size": 647773,
+              "lines": 0
+            },
+            {
+              "name": "story-pack.jpg",
+              "path": "photos/mango/story-pack.jpg",
+              "type": "file",
+              "size": 319081,
+              "lines": 0
+            },
+            {
+              "name": "story-pick.jpg",
+              "path": "photos/mango/story-pick.jpg",
+              "type": "file",
+              "size": 265485,
+              "lines": 0
+            },
+            {
+              "name": "story-ship.jpg",
+              "path": "photos/mango/story-ship.jpg",
+              "type": "file",
+              "size": 251243,
+              "lines": 0
+            },
+            {
+              "name": "varieties",
+              "path": "photos/mango/varieties",
+              "type": "directory",
+              "children": [
+                {
+                  "name": "alphonso.png",
+                  "path": "photos/mango/varieties/alphonso.png",
+                  "type": "file",
+                  "size": 1189082,
+                  "lines": 0
+                },
+                {
+                  "name": "himsagar.png",
+                  "path": "photos/mango/varieties/himsagar.png",
+                  "type": "file",
+                  "size": 1031764,
+                  "lines": 0
+                },
+                {
+                  "name": "langra.png",
+                  "path": "photos/mango/varieties/langra.png",
+                  "type": "file",
+                  "size": 1157591,
+                  "lines": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "textures",
+      "path": "textures",
+      "type": "directory",
+      "children": [
+        {
+          "name": "grain.png",
+          "path": "textures/grain.png",
+          "type": "file",
+          "size": 51144,
+          "lines": 0
+        }
+      ]
+    }
+  ]
+}

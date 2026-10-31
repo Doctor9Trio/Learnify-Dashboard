@@ -1,0 +1,254 @@
+{
+  "slug": "yatra",
+  "name": "Yatra Mobility",
+  "totalFiles": 25,
+  "totalLines": 4895,
+  "totalBytes": 1510780,
+  "totalSizeReadable": "1475.4 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/index-CGt1RG-2.css",
+    "assets/index-DqZ2ZTNk.js",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/index.js",
+    "js/theme.js",
+    "photos/yatra/car-atlas.webp",
+    "photos/yatra/car-meridia.webp",
+    "photos/yatra/car-riviera.webp",
+    "photos/yatra/car-veloce.webp",
+    "photos/yatra/car-volt.webp",
+    "photos/yatra/deal-drive.jpg",
+    "photos/yatra/deal-handover.jpg",
+    "photos/yatra/deal-keys.jpg",
+    "photos/yatra/journey.jpg",
+    "photos/yatra/og.jpg",
+    "textures/grain.png"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index-CGt1RG-2.css",
+          "path": "assets/index-CGt1RG-2.css",
+          "type": "file",
+          "size": 28641,
+          "lines": 3
+        },
+        {
+          "name": "index-DqZ2ZTNk.js",
+          "path": "assets/index-DqZ2ZTNk.js",
+          "type": "file",
+          "size": 170993,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 28603,
+          "lines": 1785
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 35540,
+          "lines": 2127
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 759,
+          "lines": 34
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 1347,
+          "lines": 96
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 2913,
+          "lines": 227
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 2452,
+          "lines": 84
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 28086,
+      "lines": 425
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 170993,
+          "lines": 1
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 2933,
+          "lines": 107
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "yatra",
+          "path": "photos/yatra",
+          "type": "directory",
+          "children": [
+            {
+              "name": "car-atlas.webp",
+              "path": "photos/yatra/car-atlas.webp",
+              "type": "file",
+              "size": 90564,
+              "lines": 0
+            },
+            {
+              "name": "car-meridia.webp",
+              "path": "photos/yatra/car-meridia.webp",
+              "type": "file",
+              "size": 81144,
+              "lines": 0
+            },
+            {
+              "name": "car-riviera.webp",
+              "path": "photos/yatra/car-riviera.webp",
+              "type": "file",
+              "size": 93296,
+              "lines": 0
+            },
+            {
+              "name": "car-veloce.webp",
+              "path": "photos/yatra/car-veloce.webp",
+              "type": "file",
+              "size": 73196,
+              "lines": 0
+            },
+            {
+              "name": "car-volt.webp",
+              "path": "photos/yatra/car-volt.webp",
+              "type": "file",
+              "size": 69090,
+              "lines": 0
+            },
+            {
+              "name": "deal-drive.jpg",
+              "path": "photos/yatra/deal-drive.jpg",
+              "type": "file",
+              "size": 107565,
+              "lines": 0
+            },
+            {
+              "name": "deal-handover.jpg",
+              "path": "photos/yatra/deal-handover.jpg",
+              "type": "file",
+              "size": 101814,
+              "lines": 0
+            },
+            {
+              "name": "deal-keys.jpg",
+              "path": "photos/yatra/deal-keys.jpg",
+              "type": "file",
+              "size": 125948,
+              "lines": 0
+            },
+            {
+              "name": "journey.jpg",
+              "path": "photos/yatra/journey.jpg",
+              "type": "file",
+              "size": 188203,
+              "lines": 0
+            },
+            {
+              "name": "og.jpg",
+              "path": "photos/yatra/og.jpg",
+              "type": "file",
+              "size": 48751,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "textures",
+      "path": "textures",
+      "type": "directory",
+      "children": [
+        {
+          "name": "grain.png",
+          "path": "textures/grain.png",
+          "type": "file",
+          "size": 51144,
+          "lines": 0
+        }
+      ]
+    }
+  ]
+}

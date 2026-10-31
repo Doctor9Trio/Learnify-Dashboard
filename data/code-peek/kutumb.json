@@ -1,0 +1,553 @@
+{
+  "slug": "kutumb",
+  "name": "Kutumb Money",
+  "totalFiles": 65,
+  "totalLines": 11474,
+  "totalBytes": 988699,
+  "totalSizeReadable": "965.5 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/activity-6Pxx5bnS.css",
+    "assets/activity-nk3wmZYt.js",
+    "assets/bills-BY0vmNOa.js",
+    "assets/bills-HlhjdIgd.css",
+    "assets/budgets-DeXqT-sa.css",
+    "assets/budgets-rlCrxEnZ.js",
+    "assets/cards-DLGg7CZF.js",
+    "assets/cards-DMOOspLc.css",
+    "assets/charts-SAPQBfDX.js",
+    "assets/family-CjKZJ3Gx.js",
+    "assets/family-DDGQG3lf.css",
+    "assets/home-CgdoCxOK.js",
+    "assets/home-D1FsPUnk.css",
+    "assets/index-COawYdjM.js",
+    "assets/index-DjzPSmGM.css",
+    "assets/insights-CUwo0hAv.css",
+    "assets/insights-DE5ZHnRO.js",
+    "assets/settings-D1FnlfwV.js",
+    "assets/settings-_K3F2G-S.css",
+    "assets/store-BiL8l5dO.js",
+    "assets/support-DsSzBdd6.js",
+    "assets/support-eEGBbJ9j.css",
+    "assets/transfers-C2554UsO.js",
+    "assets/transfers-Dl2kAqGw.css",
+    "assets/txn-C5WcMPDu.js",
+    "assets/ui-dJAy9Ank.js",
+    "assets/wallet-FRgxm34j.js",
+    "css/activity.css",
+    "css/animations.css",
+    "css/bills.css",
+    "css/budgets.css",
+    "css/cards.css",
+    "css/components.css",
+    "css/family.css",
+    "css/home.css",
+    "css/index.css",
+    "css/insights.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/settings.css",
+    "css/support.css",
+    "css/tokens.css",
+    "css/transfers.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/activity.js",
+    "js/bills.js",
+    "js/budgets.js",
+    "js/cards.js",
+    "js/charts.js",
+    "js/family.js",
+    "js/home.js",
+    "js/index.js",
+    "js/insights.js",
+    "js/settings.js",
+    "js/store.js",
+    "js/support.js",
+    "js/theme.js",
+    "js/transfers.js",
+    "js/txn.js",
+    "js/ui.js",
+    "js/wallet.js"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "activity-6Pxx5bnS.css",
+          "path": "assets/activity-6Pxx5bnS.css",
+          "type": "file",
+          "size": 1923,
+          "lines": 3
+        },
+        {
+          "name": "activity-nk3wmZYt.js",
+          "path": "assets/activity-nk3wmZYt.js",
+          "type": "file",
+          "size": 7303,
+          "lines": 25
+        },
+        {
+          "name": "bills-BY0vmNOa.js",
+          "path": "assets/bills-BY0vmNOa.js",
+          "type": "file",
+          "size": 14367,
+          "lines": 49
+        },
+        {
+          "name": "bills-HlhjdIgd.css",
+          "path": "assets/bills-HlhjdIgd.css",
+          "type": "file",
+          "size": 5254,
+          "lines": 3
+        },
+        {
+          "name": "budgets-DeXqT-sa.css",
+          "path": "assets/budgets-DeXqT-sa.css",
+          "type": "file",
+          "size": 5750,
+          "lines": 3
+        },
+        {
+          "name": "budgets-rlCrxEnZ.js",
+          "path": "assets/budgets-rlCrxEnZ.js",
+          "type": "file",
+          "size": 13873,
+          "lines": 56
+        },
+        {
+          "name": "cards-DLGg7CZF.js",
+          "path": "assets/cards-DLGg7CZF.js",
+          "type": "file",
+          "size": 10877,
+          "lines": 46
+        },
+        {
+          "name": "cards-DMOOspLc.css",
+          "path": "assets/cards-DMOOspLc.css",
+          "type": "file",
+          "size": 4564,
+          "lines": 3
+        },
+        {
+          "name": "charts-SAPQBfDX.js",
+          "path": "assets/charts-SAPQBfDX.js",
+          "type": "file",
+          "size": 10584,
+          "lines": 8
+        },
+        {
+          "name": "family-CjKZJ3Gx.js",
+          "path": "assets/family-CjKZJ3Gx.js",
+          "type": "file",
+          "size": 10138,
+          "lines": 27
+        },
+        {
+          "name": "family-DDGQG3lf.css",
+          "path": "assets/family-DDGQG3lf.css",
+          "type": "file",
+          "size": 5287,
+          "lines": 3
+        },
+        {
+          "name": "home-CgdoCxOK.js",
+          "path": "assets/home-CgdoCxOK.js",
+          "type": "file",
+          "size": 13599,
+          "lines": 38
+        },
+        {
+          "name": "home-D1FsPUnk.css",
+          "path": "assets/home-D1FsPUnk.css",
+          "type": "file",
+          "size": 7964,
+          "lines": 3
+        },
+        {
+          "name": "index-COawYdjM.js",
+          "path": "assets/index-COawYdjM.js",
+          "type": "file",
+          "size": 43850,
+          "lines": 11
+        },
+        {
+          "name": "index-DjzPSmGM.css",
+          "path": "assets/index-DjzPSmGM.css",
+          "type": "file",
+          "size": 62502,
+          "lines": 3
+        },
+        {
+          "name": "insights-CUwo0hAv.css",
+          "path": "assets/insights-CUwo0hAv.css",
+          "type": "file",
+          "size": 2829,
+          "lines": 3
+        },
+        {
+          "name": "insights-DE5ZHnRO.js",
+          "path": "assets/insights-DE5ZHnRO.js",
+          "type": "file",
+          "size": 11402,
+          "lines": 28
+        },
+        {
+          "name": "settings-D1FnlfwV.js",
+          "path": "assets/settings-D1FnlfwV.js",
+          "type": "file",
+          "size": 13358,
+          "lines": 38
+        },
+        {
+          "name": "settings-_K3F2G-S.css",
+          "path": "assets/settings-_K3F2G-S.css",
+          "type": "file",
+          "size": 4373,
+          "lines": 3
+        },
+        {
+          "name": "store-BiL8l5dO.js",
+          "path": "assets/store-BiL8l5dO.js",
+          "type": "file",
+          "size": 21476,
+          "lines": 1
+        },
+        {
+          "name": "support-DsSzBdd6.js",
+          "path": "assets/support-DsSzBdd6.js",
+          "type": "file",
+          "size": 9906,
+          "lines": 18
+        },
+        {
+          "name": "support-eEGBbJ9j.css",
+          "path": "assets/support-eEGBbJ9j.css",
+          "type": "file",
+          "size": 3735,
+          "lines": 3
+        },
+        {
+          "name": "transfers-C2554UsO.js",
+          "path": "assets/transfers-C2554UsO.js",
+          "type": "file",
+          "size": 13687,
+          "lines": 58
+        },
+        {
+          "name": "transfers-Dl2kAqGw.css",
+          "path": "assets/transfers-Dl2kAqGw.css",
+          "type": "file",
+          "size": 6479,
+          "lines": 3
+        },
+        {
+          "name": "txn-C5WcMPDu.js",
+          "path": "assets/txn-C5WcMPDu.js",
+          "type": "file",
+          "size": 6170,
+          "lines": 23
+        },
+        {
+          "name": "ui-dJAy9Ank.js",
+          "path": "assets/ui-dJAy9Ank.js",
+          "type": "file",
+          "size": 133610,
+          "lines": 28
+        },
+        {
+          "name": "wallet-FRgxm34j.js",
+          "path": "assets/wallet-FRgxm34j.js",
+          "type": "file",
+          "size": 9466,
+          "lines": 21
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "activity.css",
+          "path": "css/activity.css",
+          "type": "file",
+          "size": 2436,
+          "lines": 168
+        },
+        {
+          "name": "animations.css",
+          "path": "css/animations.css",
+          "type": "file",
+          "size": 1880,
+          "lines": 81
+        },
+        {
+          "name": "bills.css",
+          "path": "css/bills.css",
+          "type": "file",
+          "size": 6551,
+          "lines": 409
+        },
+        {
+          "name": "budgets.css",
+          "path": "css/budgets.css",
+          "type": "file",
+          "size": 7294,
+          "lines": 492
+        },
+        {
+          "name": "cards.css",
+          "path": "css/cards.css",
+          "type": "file",
+          "size": 5726,
+          "lines": 373
+        },
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 8964,
+          "lines": 441
+        },
+        {
+          "name": "family.css",
+          "path": "css/family.css",
+          "type": "file",
+          "size": 6648,
+          "lines": 428
+        },
+        {
+          "name": "home.css",
+          "path": "css/home.css",
+          "type": "file",
+          "size": 10006,
+          "lines": 648
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 78158,
+          "lines": 4889
+        },
+        {
+          "name": "insights.css",
+          "path": "css/insights.css",
+          "type": "file",
+          "size": 3613,
+          "lines": 262
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 10418,
+          "lines": 509
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 2863,
+          "lines": 174
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 3292,
+          "lines": 166
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 5443,
+          "lines": 346
+        },
+        {
+          "name": "support.css",
+          "path": "css/support.css",
+          "type": "file",
+          "size": 4622,
+          "lines": 284
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 4246,
+          "lines": 116
+        },
+        {
+          "name": "transfers.css",
+          "path": "css/transfers.css",
+          "type": "file",
+          "size": 8111,
+          "lines": 511
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 12586,
+      "lines": 151
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "activity.js",
+          "path": "js/activity.js",
+          "type": "file",
+          "size": 7303,
+          "lines": 25
+        },
+        {
+          "name": "bills.js",
+          "path": "js/bills.js",
+          "type": "file",
+          "size": 14367,
+          "lines": 49
+        },
+        {
+          "name": "budgets.js",
+          "path": "js/budgets.js",
+          "type": "file",
+          "size": 13873,
+          "lines": 56
+        },
+        {
+          "name": "cards.js",
+          "path": "js/cards.js",
+          "type": "file",
+          "size": 10877,
+          "lines": 46
+        },
+        {
+          "name": "charts.js",
+          "path": "js/charts.js",
+          "type": "file",
+          "size": 10584,
+          "lines": 8
+        },
+        {
+          "name": "family.js",
+          "path": "js/family.js",
+          "type": "file",
+          "size": 10138,
+          "lines": 27
+        },
+        {
+          "name": "home.js",
+          "path": "js/home.js",
+          "type": "file",
+          "size": 13599,
+          "lines": 38
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 43850,
+          "lines": 11
+        },
+        {
+          "name": "insights.js",
+          "path": "js/insights.js",
+          "type": "file",
+          "size": 11402,
+          "lines": 28
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 13358,
+          "lines": 38
+        },
+        {
+          "name": "store.js",
+          "path": "js/store.js",
+          "type": "file",
+          "size": 21476,
+          "lines": 1
+        },
+        {
+          "name": "support.js",
+          "path": "js/support.js",
+          "type": "file",
+          "size": 9906,
+          "lines": 18
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 1045,
+          "lines": 38
+        },
+        {
+          "name": "transfers.js",
+          "path": "js/transfers.js",
+          "type": "file",
+          "size": 13687,
+          "lines": 58
+        },
+        {
+          "name": "txn.js",
+          "path": "js/txn.js",
+          "type": "file",
+          "size": 6170,
+          "lines": 23
+        },
+        {
+          "name": "ui.js",
+          "path": "js/ui.js",
+          "type": "file",
+          "size": 133610,
+          "lines": 28
+        },
+        {
+          "name": "wallet.js",
+          "path": "js/wallet.js",
+          "type": "file",
+          "size": 9466,
+          "lines": 21
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "slug": "kaala",
+  "name": "Kaala Studio",
+  "totalFiles": 31,
+  "totalLines": 5544,
+  "totalBytes": 21842304,
+  "totalSizeReadable": "21330.4 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/index-BwYIWWHp.css",
+    "assets/index-CFaVXTUv.js",
+    "css/components.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/index.js",
+    "js/theme.js",
+    "photos/kaala/gesture-01.jpg",
+    "photos/kaala/pill-01.jpg",
+    "photos/kaala/pill-02.jpg",
+    "photos/kaala/pill-03.jpg",
+    "photos/kaala/pill-04.jpg",
+    "photos/kaala/pill-05.jpg",
+    "photos/kaala/pill-06.jpg",
+    "photos/kaala/pill-07.jpg",
+    "photos/kaala/pill-08.jpg",
+    "video/kaala/gesture.jpg",
+    "video/kaala/gesture.mp4",
+    "video/kaala/hero.jpg",
+    "video/kaala/hero.mp4",
+    "video/kaala/room.jpg",
+    "video/kaala/room.mp4",
+    "video/kaala/specs.jpg",
+    "video/kaala/specs.mp4"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index-BwYIWWHp.css",
+          "path": "assets/index-BwYIWWHp.css",
+          "type": "file",
+          "size": 33527,
+          "lines": 3
+        },
+        {
+          "name": "index-CFaVXTUv.js",
+          "path": "assets/index-CFaVXTUv.js",
+          "type": "file",
+          "size": 145029,
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 32261,
+          "lines": 1982
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 41505,
+          "lines": 2477
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 946,
+          "lines": 46
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 1280,
+          "lines": 98
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 5308,
+          "lines": 400
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 1686,
+          "lines": 61
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 27474,
+      "lines": 363
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 145029,
+          "lines": 1
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 2947,
+          "lines": 107
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "kaala",
+          "path": "photos/kaala",
+          "type": "directory",
+          "children": [
+            {
+              "name": "gesture-01.jpg",
+              "path": "photos/kaala/gesture-01.jpg",
+              "type": "file",
+              "size": 65722,
+              "lines": 0
+            },
+            {
+              "name": "pill-01.jpg",
+              "path": "photos/kaala/pill-01.jpg",
+              "type": "file",
+              "size": 37206,
+              "lines": 0
+            },
+            {
+              "name": "pill-02.jpg",
+              "path": "photos/kaala/pill-02.jpg",
+              "type": "file",
+              "size": 33361,
+              "lines": 0
+            },
+            {
+              "name": "pill-03.jpg",
+              "path": "photos/kaala/pill-03.jpg",
+              "type": "file",
+              "size": 53671,
+              "lines": 0
+            },
+            {
+              "name": "pill-04.jpg",
+              "path": "photos/kaala/pill-04.jpg",
+              "type": "file",
+              "size": 129061,
+              "lines": 0
+            },
+            {
+              "name": "pill-05.jpg",
+              "path": "photos/kaala/pill-05.jpg",
+              "type": "file",
+              "size": 47094,
+              "lines": 0
+            },
+            {
+              "name": "pill-06.jpg",
+              "path": "photos/kaala/pill-06.jpg",
+              "type": "file",
+              "size": 33332,
+              "lines": 0
+            },
+            {
+              "name": "pill-07.jpg",
+              "path": "photos/kaala/pill-07.jpg",
+              "type": "file",
+              "size": 40737,
+              "lines": 0
+            },
+            {
+              "name": "pill-08.jpg",
+              "path": "photos/kaala/pill-08.jpg",
+              "type": "file",
+              "size": 112758,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "video",
+      "path": "video",
+      "type": "directory",
+      "children": [
+        {
+          "name": "kaala",
+          "path": "video/kaala",
+          "type": "directory",
+          "children": [
+            {
+              "name": "gesture.jpg",
+              "path": "video/kaala/gesture.jpg",
+              "type": "file",
+              "size": 52854,
+              "lines": 0
+            },
+            {
+              "name": "gesture.mp4",
+              "path": "video/kaala/gesture.mp4",
+              "type": "file",
+              "size": 6242039,
+              "lines": 0
+            },
+            {
+              "name": "hero.jpg",
+              "path": "video/kaala/hero.jpg",
+              "type": "file",
+              "size": 24342,
+              "lines": 0
+            },
+            {
+              "name": "hero.mp4",
+              "path": "video/kaala/hero.mp4",
+              "type": "file",
+              "size": 4201717,
+              "lines": 0
+            },
+            {
+              "name": "room.jpg",
+              "path": "video/kaala/room.jpg",
+              "type": "file",
+              "size": 107214,
+              "lines": 0
+            },
+            {
+              "name": "room.mp4",
+              "path": "video/kaala/room.mp4",
+              "type": "file",
+              "size": 7077013,
+              "lines": 0
+            },
+            {
+              "name": "specs.jpg",
+              "path": "video/kaala/specs.jpg",
+              "type": "file",
+              "size": 29012,
+              "lines": 0
+            },
+            {
+              "name": "specs.mp4",
+              "path": "video/kaala/specs.mp4",
+              "type": "file",
+              "size": 3111374,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

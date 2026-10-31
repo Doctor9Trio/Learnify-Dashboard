@@ -1,0 +1,547 @@
+{
+  "slug": "kosh",
+  "name": "Kosh Treasury",
+  "totalFiles": 62,
+  "totalLines": 14001,
+  "totalBytes": 1237510,
+  "totalSizeReadable": "1208.5 KB",
+  "fileList": [
+    "assets/accounts-BkP6GIkx.js",
+    "assets/accounts-FSJJos8x.css",
+    "assets/analytics-B_dbFzu7.js",
+    "assets/analytics-DOx5wLIP.css",
+    "assets/bills-D4MRM_YY.css",
+    "assets/bills-DPpbgMXq.js",
+    "assets/cards-C2lyPmCr.css",
+    "assets/cards-rRqP34A6.js",
+    "assets/charts-CWjp6m1s.js",
+    "assets/contacts-ChEe3u-l.css",
+    "assets/contacts-Co1Y3dZY.js",
+    "assets/documents-Cs4LrnkE.js",
+    "assets/documents-r65rX4jw.css",
+    "assets/index-CsNrSoeX.css",
+    "assets/index-OrFaLgBI.js",
+    "assets/invoices-BL3B2o4P.js",
+    "assets/invoices-SLjkv6d2.css",
+    "assets/overview-CU7FiU47.css",
+    "assets/overview-Cr9CyfE1.js",
+    "assets/settings-Bm7bXoYT.js",
+    "assets/settings-D6rkNo5c.css",
+    "assets/support-BH4Tk-86.css",
+    "assets/support-Dx_PVPUI.js",
+    "assets/team-CHaV_0Mc.css",
+    "assets/team-DfLP-0hM.js",
+    "assets/transactions-7G4suQg_.js",
+    "assets/transactions-nzU67ljP.css",
+    "assets/ui-BJ6NGEmN.js",
+    "css/accounts.css",
+    "css/analytics.css",
+    "css/bills.css",
+    "css/cards.css",
+    "css/contacts.css",
+    "css/documents.css",
+    "css/index.css",
+    "css/invoices.css",
+    "css/overview.css",
+    "css/settings.css",
+    "css/support.css",
+    "css/team.css",
+    "css/tokens.css",
+    "css/transactions.css",
+    "fair-tables.jpg",
+    "index.html",
+    "js/accounts.js",
+    "js/analytics.js",
+    "js/bills.js",
+    "js/cards.js",
+    "js/charts.js",
+    "js/contacts.js",
+    "js/documents.js",
+    "js/index.js",
+    "js/invoices.js",
+    "js/main.js",
+    "js/overview.js",
+    "js/router.js",
+    "js/settings.js",
+    "js/support.js",
+    "js/team.js",
+    "js/theme.js",
+    "js/transactions.js",
+    "js/ui.js"
+  ],
+  "tree": [
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "accounts-BkP6GIkx.js",
+          "path": "assets/accounts-BkP6GIkx.js",
+          "type": "file",
+          "size": 15030,
+          "lines": 53
+        },
+        {
+          "name": "accounts-FSJJos8x.css",
+          "path": "assets/accounts-FSJJos8x.css",
+          "type": "file",
+          "size": 7961,
+          "lines": 3
+        },
+        {
+          "name": "analytics-B_dbFzu7.js",
+          "path": "assets/analytics-B_dbFzu7.js",
+          "type": "file",
+          "size": 10732,
+          "lines": 15
+        },
+        {
+          "name": "analytics-DOx5wLIP.css",
+          "path": "assets/analytics-DOx5wLIP.css",
+          "type": "file",
+          "size": 3664,
+          "lines": 3
+        },
+        {
+          "name": "bills-D4MRM_YY.css",
+          "path": "assets/bills-D4MRM_YY.css",
+          "type": "file",
+          "size": 6161,
+          "lines": 3
+        },
+        {
+          "name": "bills-DPpbgMXq.js",
+          "path": "assets/bills-DPpbgMXq.js",
+          "type": "file",
+          "size": 14410,
+          "lines": 31
+        },
+        {
+          "name": "cards-C2lyPmCr.css",
+          "path": "assets/cards-C2lyPmCr.css",
+          "type": "file",
+          "size": 6360,
+          "lines": 3
+        },
+        {
+          "name": "cards-rRqP34A6.js",
+          "path": "assets/cards-rRqP34A6.js",
+          "type": "file",
+          "size": 14760,
+          "lines": 46
+        },
+        {
+          "name": "charts-CWjp6m1s.js",
+          "path": "assets/charts-CWjp6m1s.js",
+          "type": "file",
+          "size": 5297,
+          "lines": 4
+        },
+        {
+          "name": "contacts-ChEe3u-l.css",
+          "path": "assets/contacts-ChEe3u-l.css",
+          "type": "file",
+          "size": 6260,
+          "lines": 3
+        },
+        {
+          "name": "contacts-Co1Y3dZY.js",
+          "path": "assets/contacts-Co1Y3dZY.js",
+          "type": "file",
+          "size": 16491,
+          "lines": 46
+        },
+        {
+          "name": "documents-Cs4LrnkE.js",
+          "path": "assets/documents-Cs4LrnkE.js",
+          "type": "file",
+          "size": 31818,
+          "lines": 101
+        },
+        {
+          "name": "documents-r65rX4jw.css",
+          "path": "assets/documents-r65rX4jw.css",
+          "type": "file",
+          "size": 15198,
+          "lines": 3
+        },
+        {
+          "name": "index-CsNrSoeX.css",
+          "path": "assets/index-CsNrSoeX.css",
+          "type": "file",
+          "size": 51878,
+          "lines": 3
+        },
+        {
+          "name": "index-OrFaLgBI.js",
+          "path": "assets/index-OrFaLgBI.js",
+          "type": "file",
+          "size": 44281,
+          "lines": 3
+        },
+        {
+          "name": "invoices-BL3B2o4P.js",
+          "path": "assets/invoices-BL3B2o4P.js",
+          "type": "file",
+          "size": 14475,
+          "lines": 32
+        },
+        {
+          "name": "invoices-SLjkv6d2.css",
+          "path": "assets/invoices-SLjkv6d2.css",
+          "type": "file",
+          "size": 4552,
+          "lines": 3
+        },
+        {
+          "name": "overview-Cr9CyfE1.js",
+          "path": "assets/overview-Cr9CyfE1.js",
+          "type": "file",
+          "size": 13297,
+          "lines": 46
+        },
+        {
+          "name": "overview-CU7FiU47.css",
+          "path": "assets/overview-CU7FiU47.css",
+          "type": "file",
+          "size": 7509,
+          "lines": 3
+        },
+        {
+          "name": "settings-Bm7bXoYT.js",
+          "path": "assets/settings-Bm7bXoYT.js",
+          "type": "file",
+          "size": 21800,
+          "lines": 61
+        },
+        {
+          "name": "settings-D6rkNo5c.css",
+          "path": "assets/settings-D6rkNo5c.css",
+          "type": "file",
+          "size": 8092,
+          "lines": 3
+        },
+        {
+          "name": "support-BH4Tk-86.css",
+          "path": "assets/support-BH4Tk-86.css",
+          "type": "file",
+          "size": 7861,
+          "lines": 3
+        },
+        {
+          "name": "support-Dx_PVPUI.js",
+          "path": "assets/support-Dx_PVPUI.js",
+          "type": "file",
+          "size": 19757,
+          "lines": 58
+        },
+        {
+          "name": "team-CHaV_0Mc.css",
+          "path": "assets/team-CHaV_0Mc.css",
+          "type": "file",
+          "size": 12260,
+          "lines": 3
+        },
+        {
+          "name": "team-DfLP-0hM.js",
+          "path": "assets/team-DfLP-0hM.js",
+          "type": "file",
+          "size": 22748,
+          "lines": 77
+        },
+        {
+          "name": "transactions-7G4suQg_.js",
+          "path": "assets/transactions-7G4suQg_.js",
+          "type": "file",
+          "size": 38530,
+          "lines": 89
+        },
+        {
+          "name": "transactions-nzU67ljP.css",
+          "path": "assets/transactions-nzU67ljP.css",
+          "type": "file",
+          "size": 14973,
+          "lines": 3
+        },
+        {
+          "name": "ui-BJ6NGEmN.js",
+          "path": "assets/ui-BJ6NGEmN.js",
+          "type": "file",
+          "size": 158902,
+          "lines": 27
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "accounts.css",
+          "path": "css/accounts.css",
+          "type": "file",
+          "size": 9324,
+          "lines": 631
+        },
+        {
+          "name": "analytics.css",
+          "path": "css/analytics.css",
+          "type": "file",
+          "size": 4324,
+          "lines": 312
+        },
+        {
+          "name": "bills.css",
+          "path": "css/bills.css",
+          "type": "file",
+          "size": 7255,
+          "lines": 510
+        },
+        {
+          "name": "cards.css",
+          "path": "css/cards.css",
+          "type": "file",
+          "size": 7472,
+          "lines": 522
+        },
+        {
+          "name": "contacts.css",
+          "path": "css/contacts.css",
+          "type": "file",
+          "size": 7405,
+          "lines": 533
+        },
+        {
+          "name": "documents.css",
+          "path": "css/documents.css",
+          "type": "file",
+          "size": 17662,
+          "lines": 1160
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 61066,
+          "lines": 4211
+        },
+        {
+          "name": "invoices.css",
+          "path": "css/invoices.css",
+          "type": "file",
+          "size": 5363,
+          "lines": 375
+        },
+        {
+          "name": "overview.css",
+          "path": "css/overview.css",
+          "type": "file",
+          "size": 8762,
+          "lines": 584
+        },
+        {
+          "name": "pages",
+          "path": "css/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 9472,
+          "lines": 645
+        },
+        {
+          "name": "support.css",
+          "path": "css/support.css",
+          "type": "file",
+          "size": 9179,
+          "lines": 604
+        },
+        {
+          "name": "team.css",
+          "path": "css/team.css",
+          "type": "file",
+          "size": 14436,
+          "lines": 1002
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 1010,
+          "lines": 41
+        },
+        {
+          "name": "transactions.css",
+          "path": "css/transactions.css",
+          "type": "file",
+          "size": 17591,
+          "lines": 1212
+        }
+      ]
+    },
+    {
+      "name": "fair-tables.jpg",
+      "path": "fair-tables.jpg",
+      "type": "file",
+      "size": 134,
+      "lines": 0
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 16623,
+      "lines": 174
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "accounts.js",
+          "path": "js/accounts.js",
+          "type": "file",
+          "size": 15030,
+          "lines": 53
+        },
+        {
+          "name": "analytics.js",
+          "path": "js/analytics.js",
+          "type": "file",
+          "size": 10732,
+          "lines": 15
+        },
+        {
+          "name": "bills.js",
+          "path": "js/bills.js",
+          "type": "file",
+          "size": 14410,
+          "lines": 31
+        },
+        {
+          "name": "cards.js",
+          "path": "js/cards.js",
+          "type": "file",
+          "size": 14760,
+          "lines": 46
+        },
+        {
+          "name": "charts.js",
+          "path": "js/charts.js",
+          "type": "file",
+          "size": 5297,
+          "lines": 4
+        },
+        {
+          "name": "components",
+          "path": "js/components",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "contacts.js",
+          "path": "js/contacts.js",
+          "type": "file",
+          "size": 16491,
+          "lines": 46
+        },
+        {
+          "name": "documents.js",
+          "path": "js/documents.js",
+          "type": "file",
+          "size": 31818,
+          "lines": 101
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 44281,
+          "lines": 3
+        },
+        {
+          "name": "invoices.js",
+          "path": "js/invoices.js",
+          "type": "file",
+          "size": 14475,
+          "lines": 32
+        },
+        {
+          "name": "main.js",
+          "path": "js/main.js",
+          "type": "file",
+          "size": 320,
+          "lines": 13
+        },
+        {
+          "name": "overview.js",
+          "path": "js/overview.js",
+          "type": "file",
+          "size": 13297,
+          "lines": 46
+        },
+        {
+          "name": "pages",
+          "path": "js/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "router.js",
+          "path": "js/router.js",
+          "type": "file",
+          "size": 477,
+          "lines": 23
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 21800,
+          "lines": 61
+        },
+        {
+          "name": "support.js",
+          "path": "js/support.js",
+          "type": "file",
+          "size": 21360,
+          "lines": 65
+        },
+        {
+          "name": "team.js",
+          "path": "js/team.js",
+          "type": "file",
+          "size": 22748,
+          "lines": 77
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 647,
+          "lines": 25
+        },
+        {
+          "name": "transactions.js",
+          "path": "js/transactions.js",
+          "type": "file",
+          "size": 38530,
+          "lines": 89
+        },
+        {
+          "name": "ui.js",
+          "path": "js/ui.js",
+          "type": "file",
+          "size": 158902,
+          "lines": 27
+        }
+      ]
+    }
+  ]
+}

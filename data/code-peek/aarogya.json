@@ -1,0 +1,401 @@
+{
+  "slug": "aarogya",
+  "name": "Aarogya Clinic",
+  "totalFiles": 46,
+  "totalLines": 18341,
+  "totalBytes": 1427307,
+  "totalSizeReadable": "1393.9 KB",
+  "fileList": [
+    "apple-touch-icon.png",
+    "assets/campaigns-2hk80XtZ.css",
+    "assets/campaigns-ChfRlS5v.js",
+    "assets/charts-rcCLLbpX.js",
+    "assets/inbox-D1osjwsi.js",
+    "assets/inbox-uSRulYbE.css",
+    "assets/index-C_0VME2I.css",
+    "assets/index-DwjwKIcQ.js",
+    "assets/patients-B1Ct_RWM.css",
+    "assets/patients-DgUJnzR9.js",
+    "assets/reports-9hIUbvIF.css",
+    "assets/reports-data-dQSaGnST.js",
+    "assets/reports-fMtct1-O.js",
+    "assets/schedule-DRtwJxcu.js",
+    "assets/schedule-SZWs3o6S.css",
+    "assets/settings-BZ16vYlf.css",
+    "assets/settings-CzGEb0DE.js",
+    "assets/today-D1rpBgY4.js",
+    "assets/today-rY2azoiN.css",
+    "css/campaigns.css",
+    "css/components.css",
+    "css/inbox.css",
+    "css/index.css",
+    "css/layout.css",
+    "css/patients.css",
+    "css/reports.css",
+    "css/reset.css",
+    "css/responsive.css",
+    "css/schedule.css",
+    "css/settings.css",
+    "css/today.css",
+    "css/tokens.css",
+    "favicon.ico",
+    "favicon.svg",
+    "index.html",
+    "js/campaigns.js",
+    "js/charts.js",
+    "js/inbox.js",
+    "js/index.js",
+    "js/patients.js",
+    "js/reports-data.js",
+    "js/reports.js",
+    "js/schedule.js",
+    "js/settings.js",
+    "js/theme.js",
+    "js/today.js"
+  ],
+  "tree": [
+    {
+      "name": "apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "type": "file",
+      "size": 2286,
+      "lines": 0
+    },
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "campaigns-2hk80XtZ.css",
+          "path": "assets/campaigns-2hk80XtZ.css",
+          "type": "file",
+          "size": 33546,
+          "lines": 3
+        },
+        {
+          "name": "campaigns-ChfRlS5v.js",
+          "path": "assets/campaigns-ChfRlS5v.js",
+          "type": "file",
+          "size": 57310,
+          "lines": 147
+        },
+        {
+          "name": "charts-rcCLLbpX.js",
+          "path": "assets/charts-rcCLLbpX.js",
+          "type": "file",
+          "size": 6014,
+          "lines": 4
+        },
+        {
+          "name": "inbox-D1osjwsi.js",
+          "path": "assets/inbox-D1osjwsi.js",
+          "type": "file",
+          "size": 41045,
+          "lines": 85
+        },
+        {
+          "name": "inbox-uSRulYbE.css",
+          "path": "assets/inbox-uSRulYbE.css",
+          "type": "file",
+          "size": 27574,
+          "lines": 3
+        },
+        {
+          "name": "index-C_0VME2I.css",
+          "path": "assets/index-C_0VME2I.css",
+          "type": "file",
+          "size": 38330,
+          "lines": 3
+        },
+        {
+          "name": "index-DwjwKIcQ.js",
+          "path": "assets/index-DwjwKIcQ.js",
+          "type": "file",
+          "size": 186639,
+          "lines": 42
+        },
+        {
+          "name": "patients-B1Ct_RWM.css",
+          "path": "assets/patients-B1Ct_RWM.css",
+          "type": "file",
+          "size": 23799,
+          "lines": 3
+        },
+        {
+          "name": "patients-DgUJnzR9.js",
+          "path": "assets/patients-DgUJnzR9.js",
+          "type": "file",
+          "size": 42105,
+          "lines": 124
+        },
+        {
+          "name": "reports-9hIUbvIF.css",
+          "path": "assets/reports-9hIUbvIF.css",
+          "type": "file",
+          "size": 15696,
+          "lines": 3
+        },
+        {
+          "name": "reports-data-dQSaGnST.js",
+          "path": "assets/reports-data-dQSaGnST.js",
+          "type": "file",
+          "size": 3857,
+          "lines": 1
+        },
+        {
+          "name": "reports-fMtct1-O.js",
+          "path": "assets/reports-fMtct1-O.js",
+          "type": "file",
+          "size": 25726,
+          "lines": 52
+        },
+        {
+          "name": "schedule-DRtwJxcu.js",
+          "path": "assets/schedule-DRtwJxcu.js",
+          "type": "file",
+          "size": 34235,
+          "lines": 58
+        },
+        {
+          "name": "schedule-SZWs3o6S.css",
+          "path": "assets/schedule-SZWs3o6S.css",
+          "type": "file",
+          "size": 24722,
+          "lines": 3
+        },
+        {
+          "name": "settings-BZ16vYlf.css",
+          "path": "assets/settings-BZ16vYlf.css",
+          "type": "file",
+          "size": 23875,
+          "lines": 3
+        },
+        {
+          "name": "settings-CzGEb0DE.js",
+          "path": "assets/settings-CzGEb0DE.js",
+          "type": "file",
+          "size": 38284,
+          "lines": 155
+        },
+        {
+          "name": "today-D1rpBgY4.js",
+          "path": "assets/today-D1rpBgY4.js",
+          "type": "file",
+          "size": 20089,
+          "lines": 33
+        },
+        {
+          "name": "today-rY2azoiN.css",
+          "path": "assets/today-rY2azoiN.css",
+          "type": "file",
+          "size": 15824,
+          "lines": 3
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "campaigns.css",
+          "path": "css/campaigns.css",
+          "type": "file",
+          "size": 40052,
+          "lines": 2033
+        },
+        {
+          "name": "components.css",
+          "path": "css/components.css",
+          "type": "file",
+          "size": 32102,
+          "lines": 2270
+        },
+        {
+          "name": "inbox.css",
+          "path": "css/inbox.css",
+          "type": "file",
+          "size": 33289,
+          "lines": 1778
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 48486,
+          "lines": 3187
+        },
+        {
+          "name": "layout.css",
+          "path": "css/layout.css",
+          "type": "file",
+          "size": 2714,
+          "lines": 180
+        },
+        {
+          "name": "patients.css",
+          "path": "css/patients.css",
+          "type": "file",
+          "size": 28658,
+          "lines": 1561
+        },
+        {
+          "name": "reports.css",
+          "path": "css/reports.css",
+          "type": "file",
+          "size": 18786,
+          "lines": 990
+        },
+        {
+          "name": "reset.css",
+          "path": "css/reset.css",
+          "type": "file",
+          "size": 1837,
+          "lines": 119
+        },
+        {
+          "name": "responsive.css",
+          "path": "css/responsive.css",
+          "type": "file",
+          "size": 7167,
+          "lines": 547
+        },
+        {
+          "name": "schedule.css",
+          "path": "css/schedule.css",
+          "type": "file",
+          "size": 29108,
+          "lines": 1361
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 28701,
+          "lines": 1530
+        },
+        {
+          "name": "today.css",
+          "path": "css/today.css",
+          "type": "file",
+          "size": 19074,
+          "lines": 1026
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 2345,
+          "lines": 96
+        }
+      ]
+    },
+    {
+      "name": "favicon.ico",
+      "path": "favicon.ico",
+      "type": "file",
+      "size": 4286,
+      "lines": 0
+    },
+    {
+      "name": "favicon.svg",
+      "path": "favicon.svg",
+      "type": "file",
+      "size": 233,
+      "lines": 5
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 11252,
+      "lines": 130
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "campaigns.js",
+          "path": "js/campaigns.js",
+          "type": "file",
+          "size": 57310,
+          "lines": 147
+        },
+        {
+          "name": "charts.js",
+          "path": "js/charts.js",
+          "type": "file",
+          "size": 6014,
+          "lines": 4
+        },
+        {
+          "name": "inbox.js",
+          "path": "js/inbox.js",
+          "type": "file",
+          "size": 41045,
+          "lines": 85
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 186639,
+          "lines": 42
+        },
+        {
+          "name": "patients.js",
+          "path": "js/patients.js",
+          "type": "file",
+          "size": 42105,
+          "lines": 124
+        },
+        {
+          "name": "reports-data.js",
+          "path": "js/reports-data.js",
+          "type": "file",
+          "size": 3857,
+          "lines": 1
+        },
+        {
+          "name": "reports.js",
+          "path": "js/reports.js",
+          "type": "file",
+          "size": 25726,
+          "lines": 52
+        },
+        {
+          "name": "schedule.js",
+          "path": "js/schedule.js",
+          "type": "file",
+          "size": 34235,
+          "lines": 58
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 38284,
+          "lines": 155
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 2957,
+          "lines": 102
+        },
+        {
+          "name": "today.js",
+          "path": "js/today.js",
+          "type": "file",
+          "size": 20089,
+          "lines": 33
+        }
+      ]
+    }
+  ]
+}

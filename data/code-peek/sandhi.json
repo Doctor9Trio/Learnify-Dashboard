@@ -1,0 +1,473 @@
+{
+  "slug": "sandhi",
+  "name": "Sandhi Pipeline",
+  "totalFiles": 51,
+  "totalLines": 9786,
+  "totalBytes": 891085,
+  "totalSizeReadable": "870.2 KB",
+  "fileList": [
+    "assets/activity-B_DHRv2S.css",
+    "assets/activity-CjNDTpeu.js",
+    "assets/activity-kinds-BCmEI-WJ.css",
+    "assets/activity-kinds-svnIYJct.js",
+    "assets/dashboard-CP_YXrcB.css",
+    "assets/dashboard-DSPNAgwE.js",
+    "assets/index-BOpfnzOw.css",
+    "assets/index-DtoNja2p.js",
+    "assets/projects-DgG1rdh3.css",
+    "assets/projects-DnTLlJ8U.js",
+    "assets/settings-Bv98KEl8.js",
+    "assets/settings-C4bte89Z.css",
+    "assets/signin-BfhjfR16.js",
+    "assets/signin-VTUx4zFr.css",
+    "assets/tasks-BtGJalJH.css",
+    "assets/tasks-CGvfHKyd.js",
+    "assets/tasks-kit-C8lflFOS.css",
+    "assets/tasks-kit-ChhXq3vn.js",
+    "assets/team-BRX428dQ.css",
+    "assets/team-DpLPSJ7O.js",
+    "css/activity.css",
+    "css/dashboard.css",
+    "css/index.css",
+    "css/projects.css",
+    "css/settings.css",
+    "css/signin.css",
+    "css/tasks.css",
+    "css/team.css",
+    "css/tokens.css",
+    "index.html",
+    "js/activity.js",
+    "js/dashboard.js",
+    "js/index.js",
+    "js/main.js",
+    "js/projects.js",
+    "js/router.js",
+    "js/settings.js",
+    "js/signin.js",
+    "js/tasks.js",
+    "js/team.js",
+    "js/theme.js",
+    "photos/165-accord/person-1.jpg",
+    "photos/165-accord/person-10.jpg",
+    "photos/165-accord/person-2.jpg",
+    "photos/165-accord/person-3.jpg",
+    "photos/165-accord/person-4.jpg",
+    "photos/165-accord/person-5.jpg",
+    "photos/165-accord/person-6.jpg",
+    "photos/165-accord/person-7.jpg",
+    "photos/165-accord/person-8.jpg",
+    "photos/165-accord/person-9.jpg"
+  ],
+  "tree": [
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "activity-B_DHRv2S.css",
+          "path": "assets/activity-B_DHRv2S.css",
+          "type": "file",
+          "size": 7188,
+          "lines": 3
+        },
+        {
+          "name": "activity-CjNDTpeu.js",
+          "path": "assets/activity-CjNDTpeu.js",
+          "type": "file",
+          "size": 14538,
+          "lines": 67
+        },
+        {
+          "name": "activity-kinds-BCmEI-WJ.css",
+          "path": "assets/activity-kinds-BCmEI-WJ.css",
+          "type": "file",
+          "size": 614,
+          "lines": 3
+        },
+        {
+          "name": "activity-kinds-svnIYJct.js",
+          "path": "assets/activity-kinds-svnIYJct.js",
+          "type": "file",
+          "size": 690,
+          "lines": 1
+        },
+        {
+          "name": "dashboard-CP_YXrcB.css",
+          "path": "assets/dashboard-CP_YXrcB.css",
+          "type": "file",
+          "size": 9763,
+          "lines": 3
+        },
+        {
+          "name": "dashboard-DSPNAgwE.js",
+          "path": "assets/dashboard-DSPNAgwE.js",
+          "type": "file",
+          "size": 22838,
+          "lines": 114
+        },
+        {
+          "name": "index-BOpfnzOw.css",
+          "path": "assets/index-BOpfnzOw.css",
+          "type": "file",
+          "size": 44868,
+          "lines": 3
+        },
+        {
+          "name": "index-DtoNja2p.js",
+          "path": "assets/index-DtoNja2p.js",
+          "type": "file",
+          "size": 162293,
+          "lines": 197
+        },
+        {
+          "name": "projects-DgG1rdh3.css",
+          "path": "assets/projects-DgG1rdh3.css",
+          "type": "file",
+          "size": 10570,
+          "lines": 3
+        },
+        {
+          "name": "projects-DnTLlJ8U.js",
+          "path": "assets/projects-DnTLlJ8U.js",
+          "type": "file",
+          "size": 22237,
+          "lines": 105
+        },
+        {
+          "name": "settings-Bv98KEl8.js",
+          "path": "assets/settings-Bv98KEl8.js",
+          "type": "file",
+          "size": 21161,
+          "lines": 118
+        },
+        {
+          "name": "settings-C4bte89Z.css",
+          "path": "assets/settings-C4bte89Z.css",
+          "type": "file",
+          "size": 10900,
+          "lines": 3
+        },
+        {
+          "name": "signin-BfhjfR16.js",
+          "path": "assets/signin-BfhjfR16.js",
+          "type": "file",
+          "size": 8494,
+          "lines": 45
+        },
+        {
+          "name": "signin-VTUx4zFr.css",
+          "path": "assets/signin-VTUx4zFr.css",
+          "type": "file",
+          "size": 6264,
+          "lines": 3
+        },
+        {
+          "name": "tasks-BtGJalJH.css",
+          "path": "assets/tasks-BtGJalJH.css",
+          "type": "file",
+          "size": 10970,
+          "lines": 3
+        },
+        {
+          "name": "tasks-CGvfHKyd.js",
+          "path": "assets/tasks-CGvfHKyd.js",
+          "type": "file",
+          "size": 21400,
+          "lines": 97
+        },
+        {
+          "name": "tasks-kit-C8lflFOS.css",
+          "path": "assets/tasks-kit-C8lflFOS.css",
+          "type": "file",
+          "size": 4417,
+          "lines": 3
+        },
+        {
+          "name": "tasks-kit-ChhXq3vn.js",
+          "path": "assets/tasks-kit-ChhXq3vn.js",
+          "type": "file",
+          "size": 7361,
+          "lines": 17
+        },
+        {
+          "name": "team-BRX428dQ.css",
+          "path": "assets/team-BRX428dQ.css",
+          "type": "file",
+          "size": 12612,
+          "lines": 3
+        },
+        {
+          "name": "team-DpLPSJ7O.js",
+          "path": "assets/team-DpLPSJ7O.js",
+          "type": "file",
+          "size": 22856,
+          "lines": 140
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "activity.css",
+          "path": "css/activity.css",
+          "type": "file",
+          "size": 708,
+          "lines": 48
+        },
+        {
+          "name": "dashboard.css",
+          "path": "css/dashboard.css",
+          "type": "file",
+          "size": 11530,
+          "lines": 803
+        },
+        {
+          "name": "index.css",
+          "path": "css/index.css",
+          "type": "file",
+          "size": 52492,
+          "lines": 3434
+        },
+        {
+          "name": "pages",
+          "path": "css/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "projects.css",
+          "path": "css/projects.css",
+          "type": "file",
+          "size": 12412,
+          "lines": 853
+        },
+        {
+          "name": "settings.css",
+          "path": "css/settings.css",
+          "type": "file",
+          "size": 12741,
+          "lines": 835
+        },
+        {
+          "name": "signin.css",
+          "path": "css/signin.css",
+          "type": "file",
+          "size": 7342,
+          "lines": 489
+        },
+        {
+          "name": "tasks.css",
+          "path": "css/tasks.css",
+          "type": "file",
+          "size": 5054,
+          "lines": 294
+        },
+        {
+          "name": "team.css",
+          "path": "css/team.css",
+          "type": "file",
+          "size": 14787,
+          "lines": 1000
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 1012,
+          "lines": 41
+        }
+      ]
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 13401,
+      "lines": 260
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "activity.js",
+          "path": "js/activity.js",
+          "type": "file",
+          "size": 690,
+          "lines": 1
+        },
+        {
+          "name": "components",
+          "path": "js/components",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "dashboard.js",
+          "path": "js/dashboard.js",
+          "type": "file",
+          "size": 22838,
+          "lines": 114
+        },
+        {
+          "name": "index.js",
+          "path": "js/index.js",
+          "type": "file",
+          "size": 162293,
+          "lines": 197
+        },
+        {
+          "name": "main.js",
+          "path": "js/main.js",
+          "type": "file",
+          "size": 322,
+          "lines": 13
+        },
+        {
+          "name": "pages",
+          "path": "js/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "projects.js",
+          "path": "js/projects.js",
+          "type": "file",
+          "size": 22237,
+          "lines": 105
+        },
+        {
+          "name": "router.js",
+          "path": "js/router.js",
+          "type": "file",
+          "size": 477,
+          "lines": 23
+        },
+        {
+          "name": "settings.js",
+          "path": "js/settings.js",
+          "type": "file",
+          "size": 21161,
+          "lines": 118
+        },
+        {
+          "name": "signin.js",
+          "path": "js/signin.js",
+          "type": "file",
+          "size": 8494,
+          "lines": 45
+        },
+        {
+          "name": "tasks.js",
+          "path": "js/tasks.js",
+          "type": "file",
+          "size": 7361,
+          "lines": 17
+        },
+        {
+          "name": "team.js",
+          "path": "js/team.js",
+          "type": "file",
+          "size": 22856,
+          "lines": 140
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 649,
+          "lines": 25
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "165-accord",
+          "path": "photos/165-accord",
+          "type": "directory",
+          "children": [
+            {
+              "name": "person-1.jpg",
+              "path": "photos/165-accord/person-1.jpg",
+              "type": "file",
+              "size": 7033,
+              "lines": 0
+            },
+            {
+              "name": "person-10.jpg",
+              "path": "photos/165-accord/person-10.jpg",
+              "type": "file",
+              "size": 8530,
+              "lines": 0
+            },
+            {
+              "name": "person-2.jpg",
+              "path": "photos/165-accord/person-2.jpg",
+              "type": "file",
+              "size": 5792,
+              "lines": 0
+            },
+            {
+              "name": "person-3.jpg",
+              "path": "photos/165-accord/person-3.jpg",
+              "type": "file",
+              "size": 7664,
+              "lines": 0
+            },
+            {
+              "name": "person-4.jpg",
+              "path": "photos/165-accord/person-4.jpg",
+              "type": "file",
+              "size": 6119,
+              "lines": 0
+            },
+            {
+              "name": "person-5.jpg",
+              "path": "photos/165-accord/person-5.jpg",
+              "type": "file",
+              "size": 7153,
+              "lines": 0
+            },
+            {
+              "name": "person-6.jpg",
+              "path": "photos/165-accord/person-6.jpg",
+              "type": "file",
+              "size": 6126,
+              "lines": 0
+            },
+            {
+              "name": "person-7.jpg",
+              "path": "photos/165-accord/person-7.jpg",
+              "type": "file",
+              "size": 6241,
+              "lines": 0
+            },
+            {
+              "name": "person-8.jpg",
+              "path": "photos/165-accord/person-8.jpg",
+              "type": "file",
+              "size": 6908,
+              "lines": 0
+            },
+            {
+              "name": "person-9.jpg",
+              "path": "photos/165-accord/person-9.jpg",
+              "type": "file",
+              "size": 6628,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

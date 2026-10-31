@@ -1,0 +1,511 @@
+{
+  "slug": "vastu",
+  "name": "Vastu Living",
+  "totalFiles": 54,
+  "totalLines": 1962,
+  "totalBytes": 11477139,
+  "totalSizeReadable": "11208.1 KB",
+  "fileList": [
+    "assets/home-ByYgmzbG.js",
+    "assets/home-nnrqR0KS.css",
+    "assets/shell-7p__bljo.js",
+    "css/home.css",
+    "css/tokens.css",
+    "index.html",
+    "js/home.js",
+    "js/main.js",
+    "js/router.js",
+    "js/shell.js",
+    "js/theme.js",
+    "photos/oria/a1-1600.webp",
+    "photos/oria/a1-800.webp",
+    "photos/oria/a2-1600.webp",
+    "photos/oria/a2-800.webp",
+    "photos/oria/a3-1600.webp",
+    "photos/oria/a3-800.webp",
+    "photos/oria/c1-1600.webp",
+    "photos/oria/c1-800.webp",
+    "photos/oria/c2-1600.webp",
+    "photos/oria/c2-800.webp",
+    "photos/oria/c3-1600.webp",
+    "photos/oria/c3-800.webp",
+    "photos/oria/c4-1600.webp",
+    "photos/oria/c4-800.webp",
+    "photos/oria/c5-1600.webp",
+    "photos/oria/c5-800.webp",
+    "photos/oria/h1-1280.webp",
+    "photos/oria/h1-1920.webp",
+    "photos/oria/h1-2560.webp",
+    "photos/oria/h2-1080.webp",
+    "photos/oria/h2-720.webp",
+    "photos/oria/og.jpg",
+    "photos/oria/p1-1600.webp",
+    "photos/oria/p1-800.webp",
+    "photos/oria/p2-1600.webp",
+    "photos/oria/p2-800.webp",
+    "photos/oria/p3-1600.webp",
+    "photos/oria/p3-800.webp",
+    "photos/oria/p4-1600.webp",
+    "photos/oria/p4-800.webp",
+    "photos/oria/p5-1600.webp",
+    "photos/oria/p5-800.webp",
+    "photos/oria/p6-1600.webp",
+    "photos/oria/p6-800.webp",
+    "photos/oria/p7-1600.webp",
+    "photos/oria/p7-800.webp",
+    "photos/oria/w1-1600.webp",
+    "photos/oria/w1-2400.webp",
+    "photos/oria/w1-960.webp",
+    "video/oria/hero-lg.mp4",
+    "video/oria/hero-sm.mp4",
+    "video/oria/workshop-lg.mp4",
+    "video/oria/workshop-sm.mp4"
+  ],
+  "tree": [
+    {
+      "name": "assets",
+      "path": "assets",
+      "type": "directory",
+      "children": [
+        {
+          "name": "home-ByYgmzbG.js",
+          "path": "assets/home-ByYgmzbG.js",
+          "type": "file",
+          "size": 9549,
+          "lines": 1
+        },
+        {
+          "name": "home-nnrqR0KS.css",
+          "path": "assets/home-nnrqR0KS.css",
+          "type": "file",
+          "size": 19140,
+          "lines": 3
+        },
+        {
+          "name": "shell-7p__bljo.js",
+          "path": "assets/shell-7p__bljo.js",
+          "type": "file",
+          "size": 151502,
+          "lines": 17
+        }
+      ]
+    },
+    {
+      "name": "css",
+      "path": "css",
+      "type": "directory",
+      "children": [
+        {
+          "name": "home.css",
+          "path": "css/home.css",
+          "type": "file",
+          "size": 22176,
+          "lines": 1406
+        },
+        {
+          "name": "pages",
+          "path": "css/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "tokens.css",
+          "path": "css/tokens.css",
+          "type": "file",
+          "size": 1011,
+          "lines": 41
+        }
+      ]
+    },
+    {
+      "name": "index.html",
+      "path": "index.html",
+      "type": "file",
+      "size": 22153,
+      "lines": 415
+    },
+    {
+      "name": "js",
+      "path": "js",
+      "type": "directory",
+      "children": [
+        {
+          "name": "components",
+          "path": "js/components",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "home.js",
+          "path": "js/home.js",
+          "type": "file",
+          "size": 9549,
+          "lines": 1
+        },
+        {
+          "name": "main.js",
+          "path": "js/main.js",
+          "type": "file",
+          "size": 321,
+          "lines": 13
+        },
+        {
+          "name": "pages",
+          "path": "js/pages",
+          "type": "directory",
+          "children": []
+        },
+        {
+          "name": "router.js",
+          "path": "js/router.js",
+          "type": "file",
+          "size": 477,
+          "lines": 23
+        },
+        {
+          "name": "shell.js",
+          "path": "js/shell.js",
+          "type": "file",
+          "size": 151502,
+          "lines": 17
+        },
+        {
+          "name": "theme.js",
+          "path": "js/theme.js",
+          "type": "file",
+          "size": 648,
+          "lines": 25
+        }
+      ]
+    },
+    {
+      "name": "photos",
+      "path": "photos",
+      "type": "directory",
+      "children": [
+        {
+          "name": "oria",
+          "path": "photos/oria",
+          "type": "directory",
+          "children": [
+            {
+              "name": "a1-1600.webp",
+              "path": "photos/oria/a1-1600.webp",
+              "type": "file",
+              "size": 48308,
+              "lines": 0
+            },
+            {
+              "name": "a1-800.webp",
+              "path": "photos/oria/a1-800.webp",
+              "type": "file",
+              "size": 16518,
+              "lines": 0
+            },
+            {
+              "name": "a2-1600.webp",
+              "path": "photos/oria/a2-1600.webp",
+              "type": "file",
+              "size": 47246,
+              "lines": 0
+            },
+            {
+              "name": "a2-800.webp",
+              "path": "photos/oria/a2-800.webp",
+              "type": "file",
+              "size": 18044,
+              "lines": 0
+            },
+            {
+              "name": "a3-1600.webp",
+              "path": "photos/oria/a3-1600.webp",
+              "type": "file",
+              "size": 62322,
+              "lines": 0
+            },
+            {
+              "name": "a3-800.webp",
+              "path": "photos/oria/a3-800.webp",
+              "type": "file",
+              "size": 23662,
+              "lines": 0
+            },
+            {
+              "name": "c1-1600.webp",
+              "path": "photos/oria/c1-1600.webp",
+              "type": "file",
+              "size": 66726,
+              "lines": 0
+            },
+            {
+              "name": "c1-800.webp",
+              "path": "photos/oria/c1-800.webp",
+              "type": "file",
+              "size": 19342,
+              "lines": 0
+            },
+            {
+              "name": "c2-1600.webp",
+              "path": "photos/oria/c2-1600.webp",
+              "type": "file",
+              "size": 55454,
+              "lines": 0
+            },
+            {
+              "name": "c2-800.webp",
+              "path": "photos/oria/c2-800.webp",
+              "type": "file",
+              "size": 17740,
+              "lines": 0
+            },
+            {
+              "name": "c3-1600.webp",
+              "path": "photos/oria/c3-1600.webp",
+              "type": "file",
+              "size": 43812,
+              "lines": 0
+            },
+            {
+              "name": "c3-800.webp",
+              "path": "photos/oria/c3-800.webp",
+              "type": "file",
+              "size": 14628,
+              "lines": 0
+            },
+            {
+              "name": "c4-1600.webp",
+              "path": "photos/oria/c4-1600.webp",
+              "type": "file",
+              "size": 41132,
+              "lines": 0
+            },
+            {
+              "name": "c4-800.webp",
+              "path": "photos/oria/c4-800.webp",
+              "type": "file",
+              "size": 13978,
+              "lines": 0
+            },
+            {
+              "name": "c5-1600.webp",
+              "path": "photos/oria/c5-1600.webp",
+              "type": "file",
+              "size": 93430,
+              "lines": 0
+            },
+            {
+              "name": "c5-800.webp",
+              "path": "photos/oria/c5-800.webp",
+              "type": "file",
+              "size": 28420,
+              "lines": 0
+            },
+            {
+              "name": "h1-1280.webp",
+              "path": "photos/oria/h1-1280.webp",
+              "type": "file",
+              "size": 31502,
+              "lines": 0
+            },
+            {
+              "name": "h1-1920.webp",
+              "path": "photos/oria/h1-1920.webp",
+              "type": "file",
+              "size": 67634,
+              "lines": 0
+            },
+            {
+              "name": "h1-2560.webp",
+              "path": "photos/oria/h1-2560.webp",
+              "type": "file",
+              "size": 116556,
+              "lines": 0
+            },
+            {
+              "name": "h2-1080.webp",
+              "path": "photos/oria/h2-1080.webp",
+              "type": "file",
+              "size": 82264,
+              "lines": 0
+            },
+            {
+              "name": "h2-720.webp",
+              "path": "photos/oria/h2-720.webp",
+              "type": "file",
+              "size": 36672,
+              "lines": 0
+            },
+            {
+              "name": "og.jpg",
+              "path": "photos/oria/og.jpg",
+              "type": "file",
+              "size": 41177,
+              "lines": 0
+            },
+            {
+              "name": "p1-1600.webp",
+              "path": "photos/oria/p1-1600.webp",
+              "type": "file",
+              "size": 56962,
+              "lines": 0
+            },
+            {
+              "name": "p1-800.webp",
+              "path": "photos/oria/p1-800.webp",
+              "type": "file",
+              "size": 16316,
+              "lines": 0
+            },
+            {
+              "name": "p2-1600.webp",
+              "path": "photos/oria/p2-1600.webp",
+              "type": "file",
+              "size": 41758,
+              "lines": 0
+            },
+            {
+              "name": "p2-800.webp",
+              "path": "photos/oria/p2-800.webp",
+              "type": "file",
+              "size": 12974,
+              "lines": 0
+            },
+            {
+              "name": "p3-1600.webp",
+              "path": "photos/oria/p3-1600.webp",
+              "type": "file",
+              "size": 38674,
+              "lines": 0
+            },
+            {
+              "name": "p3-800.webp",
+              "path": "photos/oria/p3-800.webp",
+              "type": "file",
+              "size": 13334,
+              "lines": 0
+            },
+            {
+              "name": "p4-1600.webp",
+              "path": "photos/oria/p4-1600.webp",
+              "type": "file",
+              "size": 87528,
+              "lines": 0
+            },
+            {
+              "name": "p4-800.webp",
+              "path": "photos/oria/p4-800.webp",
+              "type": "file",
+              "size": 21626,
+              "lines": 0
+            },
+            {
+              "name": "p5-1600.webp",
+              "path": "photos/oria/p5-1600.webp",
+              "type": "file",
+              "size": 53574,
+              "lines": 0
+            },
+            {
+              "name": "p5-800.webp",
+              "path": "photos/oria/p5-800.webp",
+              "type": "file",
+              "size": 17976,
+              "lines": 0
+            },
+            {
+              "name": "p6-1600.webp",
+              "path": "photos/oria/p6-1600.webp",
+              "type": "file",
+              "size": 53820,
+              "lines": 0
+            },
+            {
+              "name": "p6-800.webp",
+              "path": "photos/oria/p6-800.webp",
+              "type": "file",
+              "size": 17514,
+              "lines": 0
+            },
+            {
+              "name": "p7-1600.webp",
+              "path": "photos/oria/p7-1600.webp",
+              "type": "file",
+              "size": 44286,
+              "lines": 0
+            },
+            {
+              "name": "p7-800.webp",
+              "path": "photos/oria/p7-800.webp",
+              "type": "file",
+              "size": 14822,
+              "lines": 0
+            },
+            {
+              "name": "w1-1600.webp",
+              "path": "photos/oria/w1-1600.webp",
+              "type": "file",
+              "size": 106268,
+              "lines": 0
+            },
+            {
+              "name": "w1-2400.webp",
+              "path": "photos/oria/w1-2400.webp",
+              "type": "file",
+              "size": 199514,
+              "lines": 0
+            },
+            {
+              "name": "w1-960.webp",
+              "path": "photos/oria/w1-960.webp",
+              "type": "file",
+              "size": 52962,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "video",
+      "path": "video",
+      "type": "directory",
+      "children": [
+        {
+          "name": "oria",
+          "path": "video/oria",
+          "type": "directory",
+          "children": [
+            {
+              "name": "hero-lg.mp4",
+              "path": "video/oria/hero-lg.mp4",
+              "type": "file",
+              "size": 2152147,
+              "lines": 0
+            },
+            {
+              "name": "hero-sm.mp4",
+              "path": "video/oria/hero-sm.mp4",
+              "type": "file",
+              "size": 554313,
+              "lines": 0
+            },
+            {
+              "name": "workshop-lg.mp4",
+              "path": "video/oria/workshop-lg.mp4",
+              "type": "file",
+              "size": 5049975,
+              "lines": 0
+            },
+            {
+              "name": "workshop-sm.mp4",
+              "path": "video/oria/workshop-sm.mp4",
+              "type": "file",
+              "size": 1496201,
+              "lines": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
