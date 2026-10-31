@@ -133,3 +133,4 @@ for (const tmpl of templatesToProcess) {
 }
 
 console.log(`\n\x1b[32mSuccessfully generated ${processedCount} Code-Peek manifests in data/code-peek/\x1b[0m\n`);
+

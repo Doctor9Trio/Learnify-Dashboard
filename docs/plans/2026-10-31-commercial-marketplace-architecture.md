@@ -351,3 +351,4 @@ gantt
 2. **REA Packager**: Build `bin/package-template.mjs` and `bin/generate-code-peek.mjs`.
 3. **Template Detail Page & Demo Viewer**: Scaffold the modular detail page and device-responsive demo viewer shell.
 4. **Checkout Integration**: Implement the Hyperswitch / Polar drop-in checkout and Contact Us concierge workflow.
+

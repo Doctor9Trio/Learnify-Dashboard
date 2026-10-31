@@ -165,3 +165,4 @@ For support or questions: support@learnify.store
 }
 
 console.log(`\n\x1b[32mPackaging process completed!\x1b[0m\n`);
+
